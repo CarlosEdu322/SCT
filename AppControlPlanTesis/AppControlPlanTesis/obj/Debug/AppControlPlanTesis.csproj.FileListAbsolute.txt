@@ -26,3 +26,17 @@ C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLL
 C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
 C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
 C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb

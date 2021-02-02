@@ -15,44 +15,68 @@ namespace LibFormularios
         public FrmPrincipal()
         {
             InitializeComponent();
+            esconderSubMenu();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        #region FuncionesSubMenus
+        private void esconderSubMenu()
         {
-            FrmTesista oFrmTesista = new FrmTesista();
-            oFrmTesista.ShowDialog();
+            panelSubMenuMantenimiento.Visible = false;
+            panelSubMenuOperaciones.Visible = false;
+            //PARA MAS SUBMENUS ...
         }
+        private void mostrarSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                esconderSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        #endregion
 
-        private void button2_Click(object sender, EventArgs e)
+        #region AbrirFormHijo
+        private Form activeForm = null;
+        private void abrirFormHijoEnPanel(Form formHijo)
         {
-            FrmDocente oFrmTesista = new FrmDocente();
-            oFrmTesista.ShowDialog();
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            Panel_Contenedor.Controls.Add(formHijo);
+            Panel_Contenedor.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
         }
+        #endregion
 
         private void btnManTesista_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmTesista());
+            abrirFormHijoEnPanel(new FrmTesista());
         }
 
         private void btnManDocente_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmDocente());
-        }
-        private void AbrirFormInPanel(object formhijo)
-        {
-            if (this.Panel_Contenedor.Controls.Count > 0)
-                this.Panel_Contenedor.Controls.RemoveAt(0);
-            Form fh = formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.Panel_Contenedor.Controls.Add(fh);
-            this.Panel_Contenedor.Tag = fh;
-            fh.Show();
+            abrirFormHijoEnPanel(new FrmDocente());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnMantenimiento_Click(object sender, EventArgs e)
+        {
+            mostrarSubMenu(panelSubMenuMantenimiento);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mostrarSubMenu(panelSubMenuOperaciones);
         }
     }
 }
