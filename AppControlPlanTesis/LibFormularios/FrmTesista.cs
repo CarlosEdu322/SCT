@@ -28,11 +28,10 @@ namespace LibFormularios
                 TxtCodTesista.Text,
                 TxtApellidos.Text,
                 TxtNombres.Text,
-                TxtDireccion.Text,
+                TxtCorreo.Text,
                 TxtTelefono.Text,
-                TxtDNI.Text,
-                TxtSexo.Text,
-                TxtCorreo.Text
+                TxtDNI.Text
+                
             };
         }
         // 	
@@ -42,13 +41,10 @@ namespace LibFormularios
             TxtCodTesista.Text = aEntidad.ValorAtributo("CodTesista");
             TxtApellidos.Text = aEntidad.ValorAtributo("Apellidos");
             TxtNombres.Text = aEntidad.ValorAtributo("Nombres");
-            TxtDireccion.Text = aEntidad.ValorAtributo("Direccion");
-
-            TxtTelefono.Text = aEntidad.ValorAtributo("Telefono");
-
-            TxtDNI.Text = aEntidad.ValorAtributo("DNI");
-            TxtSexo.Text = aEntidad.ValorAtributo("Sexo");
             TxtCorreo.Text = aEntidad.ValorAtributo("Correo");
+            TxtTelefono.Text = aEntidad.ValorAtributo("Telefono");
+            TxtDNI.Text = aEntidad.ValorAtributo("DNI");
+            
         }
         // 	
         //-- Iniciar los atributos clave y no clave en blanco 
@@ -62,11 +58,9 @@ namespace LibFormularios
             TxtCodTesista.Text = "";
             TxtApellidos.Text = "";
             TxtNombres.Text = "";
-            TxtDireccion.Text = "";
+            TxtCorreo.Text = "";
             TxtTelefono.Text = "";
             TxtDNI.Text = "";
-            TxtSexo.Text = "";
-            TxtCorreo.Text = "";
         }
         // 	
         //-- Listar los registros y mostrarlos en el datagrid 
@@ -83,11 +77,10 @@ namespace LibFormularios
             if ((TxtCodTesista.Text != "")&&
             (TxtApellidos.Text != "")&&
             (TxtNombres.Text != "")&&
-            (TxtDireccion.Text != "")&&
+             (TxtCorreo.Text != "") &&
             (TxtTelefono.Text != "")&&
-             (TxtDNI.Text != "")&&
-             (TxtSexo.Text != "")&&
-             (TxtCorreo.Text != ""))
+             (TxtDNI.Text != "")
+            )
                 return true;
             else
                 return false;

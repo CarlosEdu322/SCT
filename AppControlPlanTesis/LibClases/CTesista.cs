@@ -22,11 +22,10 @@ namespace LibClases
             return new string[] { "CodTesista",
                 "Apellidos",
                 "Nombres",
-                "Direccion",
+                 "Correo",
                 "Telefono",
-                "DNI",
-                "Sexo",
-                "Correo" };
+                "DNI"
+                };
         }
     }
 }

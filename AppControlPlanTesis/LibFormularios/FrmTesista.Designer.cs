@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtSexo = new System.Windows.Forms.TextBox();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.TxtDNI = new System.Windows.Forms.TextBox();
@@ -96,8 +92,6 @@
             this.panel3.Controls.Add(this.DgvTesista);
             this.panel3.Controls.Add(this.TxtCodTesista);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
@@ -105,24 +99,11 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.TxtApellidos);
             this.panel3.Controls.Add(this.TxtNombres);
-            this.panel3.Controls.Add(this.TxtDireccion);
             this.panel3.Controls.Add(this.TxtTelefono);
             this.panel3.Controls.Add(this.TxtDNI);
             this.panel3.Controls.Add(this.TxtCorreo);
-            this.panel3.Controls.Add(this.TxtSexo);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Size = new System.Drawing.Size(1100, 811);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(88, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 22);
-            this.label10.TabIndex = 116;
-            this.label10.Text = "Direccion:";
             // 
             // label2
             // 
@@ -140,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(88, 380);
+            this.label1.Location = new System.Drawing.Point(88, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 22);
             this.label1.TabIndex = 110;
@@ -168,17 +149,6 @@
             this.label4.TabIndex = 106;
             this.label4.Text = "Nombres:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(88, 345);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 22);
-            this.label8.TabIndex = 115;
-            this.label8.Text = "Sexo:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -201,24 +171,6 @@
             this.label5.TabIndex = 112;
             this.label5.Text = "DNI:";
             // 
-            // TxtSexo
-            // 
-            this.TxtSexo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtSexo.Location = new System.Drawing.Point(213, 341);
-            this.TxtSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtSexo.Name = "TxtSexo";
-            this.TxtSexo.Size = new System.Drawing.Size(828, 30);
-            this.TxtSexo.TabIndex = 114;
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDireccion.Location = new System.Drawing.Point(213, 234);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(828, 30);
-            this.TxtDireccion.TabIndex = 117;
-            // 
             // TxtTelefono
             // 
             this.TxtTelefono.Font = new System.Drawing.Font("Century Gothic", 10.8F);
@@ -231,7 +183,7 @@
             // TxtCorreo
             // 
             this.TxtCorreo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCorreo.Location = new System.Drawing.Point(213, 377);
+            this.TxtCorreo.Location = new System.Drawing.Point(213, 232);
             this.TxtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(828, 30);
@@ -280,7 +232,7 @@
             this.DgvTesista.AllowUserToDeleteRows = false;
             this.DgvTesista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTesista.Location = new System.Drawing.Point(16, 438);
+            this.DgvTesista.Location = new System.Drawing.Point(19, 415);
             this.DgvTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvTesista.Name = "DgvTesista";
             this.DgvTesista.ReadOnly = true;
@@ -310,17 +262,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label10;
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtSexo;
-        private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.TextBox TxtCorreo;
         private System.Windows.Forms.TextBox TxtDNI;

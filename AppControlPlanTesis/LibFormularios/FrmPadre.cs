@@ -50,7 +50,8 @@ namespace LibFormularios
         }
         //
         public virtual void InicializarAtributos()
-        {   //-- Dar valor inicial a todos los atributos del formulario InicializarAtributoClave();
+        {   //-- Dar valor inicial a todos los atributos del formulario 
+            InicializarAtributoClave();
             InicializarAtributosNoClave();
         }
         //

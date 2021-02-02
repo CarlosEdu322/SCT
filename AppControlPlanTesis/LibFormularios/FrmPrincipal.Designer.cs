@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(248, 112);
+            this.label1.Location = new System.Drawing.Point(206, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(644, 28);
             this.label1.TabIndex = 1;
@@ -242,7 +242,7 @@
             this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(333, 49);
             this.button7.TabIndex = 3;
-            this.button7.Text = "Mantenimiento Y";
+            this.button7.Text = "Mantenimiento Requisitos";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;

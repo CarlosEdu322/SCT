@@ -18,11 +18,9 @@ create table TTesista
 CodTesista varchar(6) check (CodTesista like '[0-9][0-9][0-9][0-9][0-9][0-9]'),
 Apellidos varchar(20),
 Nombres varchar(20),
-Direccion varchar(40),
+Correo varchar(20),
 Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Sexo varchar(20),
-Correo varchar(20),
 -- especificacion de claves
 primary key (CodTesista)
 )
@@ -216,6 +214,7 @@ insert into TTesista values ('142322','Duran Zarate','Rosa','Av. La Cultura 461'
 
 
 insert into TTesis values('T00001','162531','D00001','Infraestructura Tecnologica 1','Dictamen','Ninguno')
-insert into TTesis values('T00001','142322','D00002','Infraestructura Tecnologica 2','Dictamen','Ninguno')
-insert into TTesis values('T00001','162565','D00003','Infraestructura Tecnologica 3','Dictamen','Ninguno')
-insert into TTesis values('T00001','156231','D00004','Infraestructura Tecnologica 4','Dictamen','Ninguno')
+insert into TTesis values('T00002','142322','D00002','Infraestructura Tecnologica 2','Dictamen','Ninguno')
+insert into TTesis values('T00003','162565','D00003','Infraestructura Tecnologica 3','Dictamen','Ninguno')
+insert into TTesis values('T00004','156231','D00004','Infraestructura Tecnologica 4','Dictamen','Ninguno')
+select * from TTesis

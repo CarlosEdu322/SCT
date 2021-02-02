@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.DgvDocentes = new System.Windows.Forms.DataGridView();
-            this.TxtCargo = new System.Windows.Forms.TextBox();
             this.TxtImpedimento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtCodDocente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,6 +92,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.CboCategoria);
             this.panel3.Controls.Add(this.DgvDocentes);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label2);
@@ -101,7 +102,6 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.TxtCargo);
             this.panel3.Controls.Add(this.TxtImpedimento);
             this.panel3.Controls.Add(this.TxtTelefono);
             this.panel3.Controls.Add(this.TxtCorreo);
@@ -126,15 +126,6 @@
             this.DgvDocentes.RowTemplate.Height = 24;
             this.DgvDocentes.Size = new System.Drawing.Size(1071, 258);
             this.DgvDocentes.TabIndex = 102;
-            // 
-            // TxtCargo
-            // 
-            this.TxtCargo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCargo.Location = new System.Drawing.Point(235, 357);
-            this.TxtCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCargo.Name = "TxtCargo";
-            this.TxtCargo.Size = new System.Drawing.Size(730, 30);
-            this.TxtCargo.TabIndex = 98;
             // 
             // TxtImpedimento
             // 
@@ -163,9 +154,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label8.Location = new System.Drawing.Point(73, 361);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 22);
+            this.label8.Size = new System.Drawing.Size(109, 22);
             this.label8.TabIndex = 99;
-            this.label8.Text = "Cargo:";
+            this.label8.Text = "Categoria:";
             // 
             // label1
             // 
@@ -288,6 +279,19 @@
             this.label3.TabIndex = 89;
             this.label3.Text = "Apellidos:";
             // 
+            // CboCategoria
+            // 
+            this.CboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboCategoria.FormattingEnabled = true;
+            this.CboCategoria.Items.AddRange(new object[] {
+            "Contratado",
+            "Nombrado"});
+            this.CboCategoria.Location = new System.Drawing.Point(235, 356);
+            this.CboCategoria.Name = "CboCategoria";
+            this.CboCategoria.Size = new System.Drawing.Size(730, 30);
+            this.CboCategoria.TabIndex = 103;
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,7 +315,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvDocentes;
-        private System.Windows.Forms.TextBox TxtCargo;
         private System.Windows.Forms.TextBox TxtImpedimento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -327,5 +330,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtCodDocente;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox CboCategoria;
     }
 }
