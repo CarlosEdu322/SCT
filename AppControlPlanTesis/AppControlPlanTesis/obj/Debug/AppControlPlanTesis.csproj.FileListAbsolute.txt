@@ -40,3 +40,17 @@ C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppC
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
