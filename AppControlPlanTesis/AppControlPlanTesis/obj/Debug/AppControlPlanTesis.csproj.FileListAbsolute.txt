@@ -1,0 +1,28 @@
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+D:\DS1\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb

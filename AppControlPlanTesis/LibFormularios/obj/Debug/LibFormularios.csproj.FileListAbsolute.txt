@@ -1,0 +1,29 @@
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csprojAssemblyReference.cache
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPadre.resources
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.cache
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CoreCompileInputs.cache
+D:\DS1\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.dll
+D:\DS1\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.pdb
+D:\DS1\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.dll
+D:\DS1\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.pdb
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDocente.resources
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesista.resources
+D:\DS1\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPrincipal.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csprojAssemblyReference.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDocente.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPadre.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPrincipal.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesista.resources
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\Ingenieria Informática y de Sistemas\2020-II\DESARROLLO DE SOFTWARE I\2P\Proyecto\Primer Entregable\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources

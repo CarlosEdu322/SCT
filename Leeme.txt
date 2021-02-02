@@ -1,0 +1,9 @@
+Integrantes:
+- Huillca Mozo Bryan
+- Inca Cruz Carlos Eduardo
+- Rojas Cahuana Etson Ronaldao
+Este primer entregable contiene:
+ - El script de la base de datos, hecho en base al modelo relacional.
+ - La aplicación tiene una estructura a 3 capas.
+ - El formulario de mantenimiento de Docentes y Tesistas tienen las funciones para las operaciones de insertar y actualizar.
+
