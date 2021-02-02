@@ -133,7 +133,7 @@
             this.TxtCargo.Location = new System.Drawing.Point(235, 357);
             this.TxtCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCargo.Name = "TxtCargo";
-            this.TxtCargo.Size = new System.Drawing.Size(784, 30);
+            this.TxtCargo.Size = new System.Drawing.Size(730, 30);
             this.TxtCargo.TabIndex = 98;
             // 
             // TxtImpedimento
@@ -142,7 +142,7 @@
             this.TxtImpedimento.Location = new System.Drawing.Point(235, 393);
             this.TxtImpedimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtImpedimento.Name = "TxtImpedimento";
-            this.TxtImpedimento.Size = new System.Drawing.Size(784, 30);
+            this.TxtImpedimento.Size = new System.Drawing.Size(730, 30);
             this.TxtImpedimento.TabIndex = 101;
             // 
             // label7
@@ -184,7 +184,7 @@
             this.TxtTelefono.Location = new System.Drawing.Point(235, 286);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(784, 30);
+            this.TxtTelefono.Size = new System.Drawing.Size(730, 30);
             this.TxtTelefono.TabIndex = 93;
             // 
             // TxtDNI
@@ -193,7 +193,7 @@
             this.TxtDNI.Location = new System.Drawing.Point(235, 321);
             this.TxtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNI.Name = "TxtDNI";
-            this.TxtDNI.Size = new System.Drawing.Size(784, 30);
+            this.TxtDNI.Size = new System.Drawing.Size(730, 30);
             this.TxtDNI.TabIndex = 97;
             // 
             // label5
@@ -213,7 +213,7 @@
             this.TxtCorreo.Location = new System.Drawing.Point(235, 250);
             this.TxtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(784, 30);
+            this.TxtCorreo.Size = new System.Drawing.Size(730, 30);
             this.TxtCorreo.TabIndex = 92;
             // 
             // label6
@@ -244,7 +244,7 @@
             this.TxtApellidos.Location = new System.Drawing.Point(235, 178);
             this.TxtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(784, 30);
+            this.TxtApellidos.Size = new System.Drawing.Size(730, 30);
             this.TxtApellidos.TabIndex = 87;
             // 
             // TxtNombres
@@ -253,7 +253,7 @@
             this.TxtNombres.Location = new System.Drawing.Point(235, 214);
             this.TxtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombres.Name = "TxtNombres";
-            this.TxtNombres.Size = new System.Drawing.Size(784, 30);
+            this.TxtNombres.Size = new System.Drawing.Size(730, 30);
             this.TxtNombres.TabIndex = 91;
             // 
             // label4
@@ -273,7 +273,7 @@
             this.TxtCodDocente.Location = new System.Drawing.Point(235, 143);
             this.TxtCodDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodDocente.Name = "TxtCodDocente";
-            this.TxtCodDocente.Size = new System.Drawing.Size(784, 30);
+            this.TxtCodDocente.Size = new System.Drawing.Size(730, 30);
             this.TxtCodDocente.TabIndex = 86;
             this.TxtCodDocente.Leave += new System.EventHandler(this.TxtCodDocente_Leave);
             // 
