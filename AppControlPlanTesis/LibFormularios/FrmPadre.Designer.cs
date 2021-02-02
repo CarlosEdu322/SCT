@@ -41,22 +41,23 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.LblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 63);
+            this.panel1.Size = new System.Drawing.Size(960, 78);
             this.panel1.TabIndex = 0;
             // 
             // LblTitulo
             // 
             this.LblTitulo.AutoSize = true;
-            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.Location = new System.Drawing.Point(255, 26);
-            this.LblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblTitulo.Location = new System.Drawing.Point(388, 21);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(47, 20);
+            this.LblTitulo.Size = new System.Drawing.Size(96, 38);
             this.LblTitulo.TabIndex = 0;
             this.LblTitulo.Text = "Titulo";
             // 
@@ -66,10 +67,10 @@
             this.panel2.Controls.Add(this.BtnGuardar);
             this.panel2.Controls.Add(this.BtnNuevo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 419);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 515);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 68);
+            this.panel2.Size = new System.Drawing.Size(960, 84);
             this.panel2.TabIndex = 1;
             // 
             // BtnSalir
@@ -81,10 +82,10 @@
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(12, 9);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSalir.Location = new System.Drawing.Point(16, 11);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(161, 48);
+            this.BtnSalir.Size = new System.Drawing.Size(215, 59);
             this.BtnSalir.TabIndex = 3;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
@@ -99,10 +100,10 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(321, 9);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnGuardar.Location = new System.Drawing.Point(428, 11);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(219, 48);
+            this.BtnGuardar.Size = new System.Drawing.Size(292, 59);
             this.BtnGuardar.TabIndex = 15;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -117,10 +118,10 @@
             this.BtnNuevo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevo.Location = new System.Drawing.Point(545, 9);
-            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNuevo.Location = new System.Drawing.Point(727, 11);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(164, 48);
+            this.BtnNuevo.Size = new System.Drawing.Size(219, 59);
             this.BtnNuevo.TabIndex = 16;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = false;
@@ -130,20 +131,20 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(720, 487);
+            this.panel3.Size = new System.Drawing.Size(960, 599);
             this.panel3.TabIndex = 2;
             // 
             // FrmPadre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 487);
+            this.ClientSize = new System.Drawing.Size(960, 599);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPadre";
             this.Text = "FrmPadre";
             this.panel1.ResumeLayout(false);

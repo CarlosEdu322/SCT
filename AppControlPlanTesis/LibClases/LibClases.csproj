@@ -44,7 +44,7 @@
     <Compile Include="CConexion.cs" />
     <Compile Include="CDocente.cs" />
     <Compile Include="CEntidad.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CTesis.cs" />
     <Compile Include="CTesista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

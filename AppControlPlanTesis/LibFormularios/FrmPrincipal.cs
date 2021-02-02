@@ -78,5 +78,10 @@ namespace LibFormularios
         {
             mostrarSubMenu(panelSubMenuOperaciones);
         }
+
+        private void btnManTesis_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmTesis());
+        }
     }
 }

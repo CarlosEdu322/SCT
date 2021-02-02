@@ -55,37 +55,41 @@
             // 
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.BtnGuardar.Location = new System.Drawing.Point(426, 22);
+            this.BtnGuardar.Location = new System.Drawing.Point(568, 27);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             // 
             // BtnNuevo
             // 
             this.BtnNuevo.FlatAppearance.BorderSize = 0;
             this.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.BtnNuevo.Location = new System.Drawing.Point(650, 22);
+            this.BtnNuevo.Location = new System.Drawing.Point(867, 27);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             // 
             // BtnSalir
             // 
             this.BtnSalir.FlatAppearance.BorderSize = 0;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.BtnSalir.Location = new System.Drawing.Point(12, 22);
+            this.BtnSalir.Location = new System.Drawing.Point(16, 27);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel1.Size = new System.Drawing.Size(825, 85);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel1.Size = new System.Drawing.Size(1100, 105);
             // 
             // LblTitulo
             // 
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LblTitulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.LblTitulo.Location = new System.Drawing.Point(271, 28);
-            this.LblTitulo.Size = new System.Drawing.Size(232, 23);
+            this.LblTitulo.Location = new System.Drawing.Point(361, 34);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTitulo.Size = new System.Drawing.Size(294, 28);
             this.LblTitulo.Text = "MANTENIMIENTO TESISTA";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 571);
-            this.panel2.Size = new System.Drawing.Size(825, 88);
+            this.panel2.Location = new System.Drawing.Point(0, 703);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel2.Size = new System.Drawing.Size(1100, 108);
             // 
             // panel3
             // 
@@ -106,17 +110,17 @@
             this.panel3.Controls.Add(this.TxtDNI);
             this.panel3.Controls.Add(this.TxtCorreo);
             this.panel3.Controls.Add(this.TxtSexo);
-            this.panel3.Size = new System.Drawing.Size(825, 659);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel3.Size = new System.Drawing.Size(1100, 811);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(66, 193);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(88, 238);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.Size = new System.Drawing.Size(101, 22);
             this.label10.TabIndex = 116;
             this.label10.Text = "Direccion:";
             // 
@@ -125,10 +129,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(66, 106);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(88, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.Size = new System.Drawing.Size(112, 22);
             this.label2.TabIndex = 104;
             this.label2.Text = "CodTesista:";
             // 
@@ -137,10 +140,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(66, 309);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(88, 380);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(78, 22);
             this.label1.TabIndex = 110;
             this.label1.Text = "Correo:";
             // 
@@ -149,10 +151,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(66, 135);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(88, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 105;
             this.label3.Text = "Apellidos:";
             // 
@@ -161,10 +162,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(66, 164);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(88, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(96, 22);
             this.label4.TabIndex = 106;
             this.label4.Text = "Nombres:";
             // 
@@ -173,10 +173,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(66, 280);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(88, 345);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 20);
+            this.label8.Size = new System.Drawing.Size(57, 22);
             this.label8.TabIndex = 115;
             this.label8.Text = "Sexo:";
             // 
@@ -185,10 +184,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(66, 222);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(88, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 20);
+            this.label6.Size = new System.Drawing.Size(92, 22);
             this.label6.TabIndex = 111;
             this.label6.Text = "Telefono:";
             // 
@@ -197,106 +195,107 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(66, 251);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(88, 309);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 20);
+            this.label5.Size = new System.Drawing.Size(48, 22);
             this.label5.TabIndex = 112;
             this.label5.Text = "DNI:";
             // 
             // TxtSexo
             // 
             this.TxtSexo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtSexo.Location = new System.Drawing.Point(160, 277);
-            this.TxtSexo.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtSexo.Location = new System.Drawing.Point(213, 341);
+            this.TxtSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtSexo.Name = "TxtSexo";
-            this.TxtSexo.Size = new System.Drawing.Size(622, 25);
+            this.TxtSexo.Size = new System.Drawing.Size(828, 30);
             this.TxtSexo.TabIndex = 114;
             // 
             // TxtDireccion
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDireccion.Location = new System.Drawing.Point(160, 190);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDireccion.Location = new System.Drawing.Point(213, 234);
+            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(622, 25);
+            this.TxtDireccion.Size = new System.Drawing.Size(828, 30);
             this.TxtDireccion.TabIndex = 117;
             // 
             // TxtTelefono
             // 
             this.TxtTelefono.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtTelefono.Location = new System.Drawing.Point(160, 219);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtTelefono.Location = new System.Drawing.Point(213, 270);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(622, 25);
+            this.TxtTelefono.Size = new System.Drawing.Size(828, 30);
             this.TxtTelefono.TabIndex = 109;
             // 
             // TxtCorreo
             // 
             this.TxtCorreo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCorreo.Location = new System.Drawing.Point(160, 306);
-            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCorreo.Location = new System.Drawing.Point(213, 377);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(622, 25);
+            this.TxtCorreo.Size = new System.Drawing.Size(828, 30);
             this.TxtCorreo.TabIndex = 108;
             // 
             // TxtDNI
             // 
             this.TxtDNI.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNI.Location = new System.Drawing.Point(160, 248);
-            this.TxtDNI.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDNI.Location = new System.Drawing.Point(213, 305);
+            this.TxtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNI.Name = "TxtDNI";
-            this.TxtDNI.Size = new System.Drawing.Size(622, 25);
+            this.TxtDNI.Size = new System.Drawing.Size(828, 30);
             this.TxtDNI.TabIndex = 113;
             // 
             // TxtApellidos
             // 
             this.TxtApellidos.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidos.Location = new System.Drawing.Point(160, 132);
-            this.TxtApellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtApellidos.Location = new System.Drawing.Point(213, 162);
+            this.TxtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(622, 25);
+            this.TxtApellidos.Size = new System.Drawing.Size(828, 30);
             this.TxtApellidos.TabIndex = 103;
             // 
             // TxtCodTesista
             // 
             this.TxtCodTesista.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista.Location = new System.Drawing.Point(160, 103);
-            this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCodTesista.Location = new System.Drawing.Point(213, 127);
+            this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesista.Name = "TxtCodTesista";
-            this.TxtCodTesista.Size = new System.Drawing.Size(622, 25);
+            this.TxtCodTesista.Size = new System.Drawing.Size(828, 30);
             this.TxtCodTesista.TabIndex = 102;
             this.TxtCodTesista.Leave += new System.EventHandler(this.TxtCodTesista_Leave);
             // 
             // TxtNombres
             // 
             this.TxtNombres.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombres.Location = new System.Drawing.Point(160, 161);
-            this.TxtNombres.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtNombres.Location = new System.Drawing.Point(213, 198);
+            this.TxtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombres.Name = "TxtNombres";
-            this.TxtNombres.Size = new System.Drawing.Size(622, 25);
+            this.TxtNombres.Size = new System.Drawing.Size(828, 30);
             this.TxtNombres.TabIndex = 107;
             // 
             // DgvTesista
             // 
             this.DgvTesista.AllowUserToAddRows = false;
             this.DgvTesista.AllowUserToDeleteRows = false;
+            this.DgvTesista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTesista.Location = new System.Drawing.Point(12, 356);
-            this.DgvTesista.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvTesista.Location = new System.Drawing.Point(16, 438);
+            this.DgvTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvTesista.Name = "DgvTesista";
             this.DgvTesista.ReadOnly = true;
             this.DgvTesista.RowHeadersWidth = 51;
             this.DgvTesista.RowTemplate.Height = 24;
-            this.DgvTesista.Size = new System.Drawing.Size(802, 211);
+            this.DgvTesista.Size = new System.Drawing.Size(1069, 260);
             this.DgvTesista.TabIndex = 118;
             // 
             // FrmTesista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 659);
+            this.ClientSize = new System.Drawing.Size(1100, 811);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FrmTesista";
             this.Text = "FrmTesista";
             this.Load += new System.EventHandler(this.FrmTesista_Load);
