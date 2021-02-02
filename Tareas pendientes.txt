@@ -1,0 +1,2 @@
+Tareas pendientes
+*centrar label en el panel superior

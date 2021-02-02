@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtCodTesista = new System.Windows.Forms.TextBox();
+            this.TxtCodTesis = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TxtDNI = new System.Windows.Forms.TextBox();
+            this.TxtTitulo = new System.Windows.Forms.TextBox();
+            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.TxtObservaciones = new System.Windows.Forms.TextBox();
             this.DgvTesis = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CboCodTesista = new System.Windows.Forms.ComboBox();
+            this.CboCodDocente = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,29 +79,30 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.CboCodDocente);
+            this.panel3.Controls.Add(this.CboCodTesista);
             this.panel3.Controls.Add(this.DgvTesis);
-            this.panel3.Controls.Add(this.TxtCodTesista);
+            this.panel3.Controls.Add(this.TxtCodTesis);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.TxtDireccion);
-            this.panel3.Controls.Add(this.TxtTelefono);
-            this.panel3.Controls.Add(this.TxtDNI);
+            this.panel3.Controls.Add(this.TxtTitulo);
+            this.panel3.Controls.Add(this.TxtEstado);
+            this.panel3.Controls.Add(this.TxtObservaciones);
             this.panel3.Size = new System.Drawing.Size(937, 712);
             // 
-            // TxtCodTesista
+            // TxtCodTesis
             // 
-            this.TxtCodTesista.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista.Location = new System.Drawing.Point(279, 95);
-            this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCodTesista.Name = "TxtCodTesista";
-            this.TxtCodTesista.Size = new System.Drawing.Size(591, 30);
-            this.TxtCodTesista.TabIndex = 118;
+            this.TxtCodTesis.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtCodTesis.Location = new System.Drawing.Point(279, 95);
+            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodTesis.Name = "TxtCodTesis";
+            this.TxtCodTesis.Size = new System.Drawing.Size(500, 30);
+            this.TxtCodTesis.TabIndex = 118;
+            this.TxtCodTesis.Leave += new System.EventHandler(this.TxtCodTesis_Leave);
             // 
             // label10
             // 
@@ -169,32 +170,32 @@
             this.label4.TabIndex = 122;
             this.label4.Text = "CodDocente:";
             // 
-            // TxtDireccion
+            // TxtTitulo
             // 
-            this.TxtDireccion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDireccion.Location = new System.Drawing.Point(279, 202);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(591, 30);
-            this.TxtDireccion.TabIndex = 133;
+            this.TxtTitulo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtTitulo.Location = new System.Drawing.Point(279, 202);
+            this.TxtTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTitulo.Name = "TxtTitulo";
+            this.TxtTitulo.Size = new System.Drawing.Size(500, 30);
+            this.TxtTitulo.TabIndex = 133;
             // 
-            // TxtTelefono
+            // TxtEstado
             // 
-            this.TxtTelefono.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtTelefono.Location = new System.Drawing.Point(279, 238);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(591, 30);
-            this.TxtTelefono.TabIndex = 125;
+            this.TxtEstado.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtEstado.Location = new System.Drawing.Point(279, 238);
+            this.TxtEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtEstado.Name = "TxtEstado";
+            this.TxtEstado.Size = new System.Drawing.Size(500, 30);
+            this.TxtEstado.TabIndex = 125;
             // 
-            // TxtDNI
+            // TxtObservaciones
             // 
-            this.TxtDNI.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNI.Location = new System.Drawing.Point(279, 273);
-            this.TxtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDNI.Name = "TxtDNI";
-            this.TxtDNI.Size = new System.Drawing.Size(591, 30);
-            this.TxtDNI.TabIndex = 129;
+            this.TxtObservaciones.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtObservaciones.Location = new System.Drawing.Point(279, 273);
+            this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtObservaciones.Name = "TxtObservaciones";
+            this.TxtObservaciones.Size = new System.Drawing.Size(500, 30);
+            this.TxtObservaciones.TabIndex = 129;
             // 
             // DgvTesis
             // 
@@ -211,35 +212,35 @@
             this.DgvTesis.Size = new System.Drawing.Size(807, 277);
             this.DgvTesis.TabIndex = 134;
             // 
-            // comboBox1
+            // CboCodTesista
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(279, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(591, 30);
-            this.comboBox1.TabIndex = 135;
+            this.CboCodTesista.BackColor = System.Drawing.SystemColors.Control;
+            this.CboCodTesista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboCodTesista.FormattingEnabled = true;
+            this.CboCodTesista.Location = new System.Drawing.Point(279, 130);
+            this.CboCodTesista.Name = "CboCodTesista";
+            this.CboCodTesista.Size = new System.Drawing.Size(500, 30);
+            this.CboCodTesista.TabIndex = 135;
             // 
-            // comboBox2
+            // CboCodDocente
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(279, 166);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(591, 30);
-            this.comboBox2.TabIndex = 136;
+            this.CboCodDocente.BackColor = System.Drawing.SystemColors.Control;
+            this.CboCodDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboCodDocente.FormattingEnabled = true;
+            this.CboCodDocente.Location = new System.Drawing.Point(279, 166);
+            this.CboCodDocente.Name = "CboCodDocente";
+            this.CboCodDocente.Size = new System.Drawing.Size(500, 30);
+            this.CboCodDocente.TabIndex = 136;
             // 
             // FrmTesis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 712);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTesis";
             this.Text = "FrmTesis";
+            this.Load += new System.EventHandler(this.FrmTesis_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -252,18 +253,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtCodTesista;
+        private System.Windows.Forms.TextBox TxtCodTesis;
         private System.Windows.Forms.Label label10;
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.TextBox TxtTelefono;
-        private System.Windows.Forms.TextBox TxtDNI;
+        private System.Windows.Forms.TextBox TxtTitulo;
+        private System.Windows.Forms.TextBox TxtEstado;
+        private System.Windows.Forms.TextBox TxtObservaciones;
         private System.Windows.Forms.DataGridView DgvTesis;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CboCodDocente;
+        private System.Windows.Forms.ComboBox CboCodTesista;
     }
 }

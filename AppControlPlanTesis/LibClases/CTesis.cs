@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibClases
 {
-    class CTesis:CEntidad
+    public class CTesis:CEntidad
     {
         //=============== ATRIBUTOS =======================
         //--	Todos heredados de CEntidad	----

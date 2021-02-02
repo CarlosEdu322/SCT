@@ -197,7 +197,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,7 +252,7 @@
             this.btnManTesis.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManTesis.FlatAppearance.BorderSize = 0;
             this.btnManTesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManTesis.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnManTesis.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManTesis.ForeColor = System.Drawing.SystemColors.Control;
             this.btnManTesis.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesis.Image")));
             this.btnManTesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,7 +273,7 @@
             this.btnManDocente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManDocente.FlatAppearance.BorderSize = 0;
             this.btnManDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManDocente.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnManDocente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManDocente.ForeColor = System.Drawing.SystemColors.Control;
             this.btnManDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnManDocente.Image")));
             this.btnManDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +294,7 @@
             this.btnManTesista.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManTesista.FlatAppearance.BorderSize = 0;
             this.btnManTesista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManTesista.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnManTesista.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManTesista.ForeColor = System.Drawing.SystemColors.Control;
             this.btnManTesista.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesista.Image")));
             this.btnManTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,7 +316,7 @@
             this.btnMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMantenimiento.FlatAppearance.BorderSize = 0;
             this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimiento.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnMantenimiento.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenimiento.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

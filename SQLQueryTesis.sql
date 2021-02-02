@@ -58,6 +58,9 @@ foreign key (CodTesista) references TTesista,
 foreign key (CodDocente) references TDocente
 )
 go
+
+
+
 --------------------------------------------------
 create table TTramite
 ( -- lista de atributos
@@ -194,6 +197,7 @@ Estado varchar(6),
 foreign key (CodDocente) references TDocente,
 )
 
+
 ---------------------------------------
 -- INSERTAMOS DATOS A LAS TABLAS --
 ---------------------------------------
@@ -208,3 +212,10 @@ insert into TTesista values ('162565','Obregon Garcia','Wilfredo','Av. Ejercito 
 insert into TTesista values ('162456','Jara Zarate','Maria','Av. La Cultura 459','965555025','72633215','Femenino','162456@unsaac.edu.pe')
 insert into TTesista values ('142531','Huaman Paz','Ana','Av. Ejercito 460','965733325','72612345','Femenino','142531@unsaac.edu.pe')
 insert into TTesista values ('142322','Duran Zarate','Rosa','Av. La Cultura 461','965777725','72111545','Femenino','142322@unsaac.edu.pe')
+
+
+
+insert into TTesis values('T00001','162531','D00001','Infraestructura Tecnologica 1','Dictamen','Ninguno')
+insert into TTesis values('T00001','142322','D00002','Infraestructura Tecnologica 2','Dictamen','Ninguno')
+insert into TTesis values('T00001','162565','D00003','Infraestructura Tecnologica 3','Dictamen','Ninguno')
+insert into TTesis values('T00001','156231','D00004','Infraestructura Tecnologica 4','Dictamen','Ninguno')
