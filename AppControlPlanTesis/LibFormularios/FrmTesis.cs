@@ -48,6 +48,7 @@ namespace LibFormularios
         //-- Iniciar los atributos clave y no clave en blanco 
         public override void InicializarAtributoClave()
         {
+            TxtCodTesis.Enabled = true;
             TxtCodTesis.Text = "";
 
         }
@@ -85,6 +86,7 @@ namespace LibFormularios
         private void TxtCodTesis_Leave(object sender, EventArgs e)
         {
             ProcesarClave();
+            TxtCodTesis.Enabled = false;
         }
 
 

@@ -34,7 +34,8 @@ Nombres varchar(20),
 Correo varchar(40),
 Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Categoria varchar(20) (Categoria like in('Contratado','Nombrado')),
+Categoria varchar(20) (Categoria like in ('Contratado','Nombrado')),
+Especialidad varchar(50) (Especialidad like in('Auditoria en Redes','Ingenieria de Software','Gestion de Tecnologias de la Informacion','Ciencias de la Computacion')),
 Impedimento varchar(20),
 -- especificacion de claves
 primary key (CodDocente)
@@ -246,7 +247,7 @@ go
 ---------------------------------------
 -- INSERTAMOS DATOS A LAS TABLAS --
 ---------------------------------------
-insert into TDocente values('D00001','Valdez Fernandez','Antonio','antonio.fernandez@unsaac.edu.pe','984562347','74589636','Nombrado','Ninguno')
+insert into TDocente values('D00001','Valdez Fernandez','Antonio','antonio.fernandez@unsaac.edu.pe','984562347','74589636','Nombrado','Auditoria en Redes','Ninguno')
 
 insert into TTesista values ('162531','Zarate Garcia','Alfredo','162531@unsaac.edu.pe','965789025','72634545')
 

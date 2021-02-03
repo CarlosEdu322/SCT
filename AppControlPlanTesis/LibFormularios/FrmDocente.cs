@@ -42,6 +42,7 @@ namespace LibFormularios
         //-- Iniciar los atributos clave y no clave en blanco 
         public override void InicializarAtributoClave()
         {
+            TxtCodDocente.Enabled = true;
             TxtCodDocente.Text = "";
 
         }
@@ -69,6 +70,22 @@ namespace LibFormularios
                 return true;
             else
                 return false;
+        }
+        public override void ProcesarClave()
+        {
+            //-- Recuperar atributos, el primer atributo es la clave 
+            string[] Atributos = AsignarValoresAtributos();
+            // ----- Verificar si existe clave primaria 
+            if (aEntidad.ExisteClavePrimaria(Atributos))
+            {   //-- Registro existente, Recuperar Atributos y mostrarlos 
+                MostrarDatos();
+                aEntidad.Nuevo = false;
+                TxtCodDocente.Enabled = false;
+            }
+            else
+            {   //-- Registro nuevo, inicializar atributos no clave 
+                InicializarAtributosNoClave();
+            }
         }
         private void TxtCodDocente_Leave(object sender, EventArgs e)
         {

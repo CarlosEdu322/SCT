@@ -45,6 +45,8 @@
             this.TxtCodDocente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CboCategoria = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CboEspecialidad = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,7 +77,7 @@
             // panel1
             // 
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel1.Size = new System.Drawing.Size(1100, 105);
+            this.panel1.Size = new System.Drawing.Size(1108, 105);
             // 
             // LblTitulo
             // 
@@ -84,12 +86,14 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 711);
+            this.panel2.Location = new System.Drawing.Point(0, 771);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel2.Size = new System.Drawing.Size(1100, 100);
+            this.panel2.Size = new System.Drawing.Size(1108, 100);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.CboEspecialidad);
+            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.CboCategoria);
             this.panel3.Controls.Add(this.DgvDocentes);
             this.panel3.Controls.Add(this.label7);
@@ -108,7 +112,7 @@
             this.panel3.Controls.Add(this.TxtCodDocente);
             this.panel3.Controls.Add(this.TxtNombres);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel3.Size = new System.Drawing.Size(1100, 811);
+            this.panel3.Size = new System.Drawing.Size(1108, 871);
             // 
             // DgvDocentes
             // 
@@ -116,7 +120,7 @@
             this.DgvDocentes.AllowUserToDeleteRows = false;
             this.DgvDocentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvDocentes.Location = new System.Drawing.Point(15, 448);
+            this.DgvDocentes.Location = new System.Drawing.Point(16, 488);
             this.DgvDocentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvDocentes.Name = "DgvDocentes";
             this.DgvDocentes.ReadOnly = true;
@@ -128,7 +132,7 @@
             // TxtImpedimento
             // 
             this.TxtImpedimento.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtImpedimento.Location = new System.Drawing.Point(235, 393);
+            this.TxtImpedimento.Location = new System.Drawing.Point(235, 438);
             this.TxtImpedimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtImpedimento.Name = "TxtImpedimento";
             this.TxtImpedimento.Size = new System.Drawing.Size(730, 30);
@@ -139,7 +143,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(73, 396);
+            this.label7.Location = new System.Drawing.Point(73, 441);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 22);
             this.label7.TabIndex = 100;
@@ -290,11 +294,37 @@
             this.CboCategoria.Size = new System.Drawing.Size(730, 30);
             this.CboCategoria.TabIndex = 103;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label9.Location = new System.Drawing.Point(73, 394);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 22);
+            this.label9.TabIndex = 104;
+            this.label9.Text = "Especialidad:";
+            // 
+            // CboEspecialidad
+            // 
+            this.CboEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboEspecialidad.FormattingEnabled = true;
+            this.CboEspecialidad.Items.AddRange(new object[] {
+            "Auditoria en Redes",
+            "Ingenieria de Software",
+            "Gestion de Tecnologias de la Informacion",
+            "Ciencias de la Computacion"});
+            this.CboEspecialidad.Location = new System.Drawing.Point(235, 394);
+            this.CboEspecialidad.Name = "CboEspecialidad";
+            this.CboEspecialidad.Size = new System.Drawing.Size(730, 30);
+            this.CboEspecialidad.TabIndex = 105;
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 811);
+            this.ClientSize = new System.Drawing.Size(1108, 871);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FrmDocente";
@@ -329,5 +359,7 @@
         private System.Windows.Forms.TextBox TxtCodDocente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CboCategoria;
+        private System.Windows.Forms.ComboBox CboEspecialidad;
+        private System.Windows.Forms.Label label9;
     }
 }
