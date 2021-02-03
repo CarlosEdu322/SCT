@@ -34,7 +34,7 @@ Nombres varchar(20),
 Correo varchar(40),
 Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Cargo varchar(20),
+Categoria varchar(20) (Categoria like in('Contratado','Nombrado')),
 Impedimento varchar(20),
 -- especificacion de claves
 primary key (CodDocente)
@@ -71,6 +71,23 @@ primary key (CodTramite),
 foreign key (CodTesista) references TTesista
 )
 go
+
+
+
+
+
+create table TRequisitos
+( -- lista de atributos
+CodRequisitos varchar(6),
+TipoTramite varchar(10),
+
+-- especificacion de claves
+primary key (CodTramite),
+foreign key (CodTesista) references TTesista
+)
+go
+
+
 --------------------------------------------------
 --------------------------------------------------
 
@@ -196,25 +213,45 @@ foreign key (CodDocente) references TDocente,
 )
 
 
+create table TTesista
+( -- lista de atributos
+CodTesista varchar(6) check (CodTesista like '[0-9][0-9][0-9][0-9][0-9][0-9]'),
+Apellidos varchar(20),
+Nombres varchar(20),
+Correo varchar(20),
+Telefono varchar(20),
+DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+-- especificacion de claves
+primary key (CodTesista)
+)
+go
+
+
+
+create table TTesis
+( -- lista de atributos
+CodTesis varchar(6),
+CodTesista varchar(6),
+CodDocente varchar(6),
+Titulo varchar(40),
+Estado varchar(20),
+Observaciones varchar(20),
+-- especificacion de claves
+primary key (CodTesis),
+foreign key (CodTesista) references TTesista,
+foreign key (CodDocente) references TDocente
+)
+go
+
 ---------------------------------------
 -- INSERTAMOS DATOS A LAS TABLAS --
 ---------------------------------------
-insert into TDocente values('D00001','Valdez Fernandez','Antonio','antonio.fernandez@unsaac.edu.pe','984562347','74589636','Docente','Ninguno')
-insert into TDocente values('D00002','Aguilar Perez','Roberto','aguilar.roberto@unsaac.edu.pe','984562349','74589636','Docente','Ninguno')
-insert into TDocente values('D00003','Ramirez Fernandez','Juan','ramirez.juan@unsaac.edu.pe','984522347','74589636','Docente','Ninguno')
-insert into TDocente values('D00004','Alvarez Callo','Maria','alvarez.maria@unsaac.edu.pe','984562343','74589636','Docente','Ninguno')
+insert into TDocente values('D00001','Valdez Fernandez','Antonio','antonio.fernandez@unsaac.edu.pe','984562347','74589636','Nombrado','Ninguno')
 
-insert into TTesista values ('162531','Zarate Garcia','Alfredo','Av. La Cultura 456','965789025','72634545','Masculino','162531@unsaac.edu.pe')
-insert into TTesista values ('156231','Farfan Huaman','Pedro','Av. Ejercito 457','962222025','72555545','Masculino','156231@unsaac.edu.pe')
-insert into TTesista values ('162565','Obregon Garcia','Wilfredo','Av. Ejercito 458','965733325','72644445','Masculino','162565@unsaac.edu.pe')
-insert into TTesista values ('162456','Jara Zarate','Maria','Av. La Cultura 459','965555025','72633215','Femenino','162456@unsaac.edu.pe')
-insert into TTesista values ('142531','Huaman Paz','Ana','Av. Ejercito 460','965733325','72612345','Femenino','142531@unsaac.edu.pe')
-insert into TTesista values ('142322','Duran Zarate','Rosa','Av. La Cultura 461','965777725','72111545','Femenino','142322@unsaac.edu.pe')
+insert into TTesista values ('162531','Zarate Garcia','Alfredo','162531@unsaac.edu.pe','965789025','72634545')
 
 
 
 insert into TTesis values('T00001','162531','D00001','Infraestructura Tecnologica 1','Dictamen','Ninguno')
-insert into TTesis values('T00002','142322','D00002','Infraestructura Tecnologica 2','Dictamen','Ninguno')
-insert into TTesis values('T00003','162565','D00003','Infraestructura Tecnologica 3','Dictamen','Ninguno')
-insert into TTesis values('T00004','156231','D00004','Infraestructura Tecnologica 4','Dictamen','Ninguno')
+
 select * from TTesis
