@@ -75,10 +75,7 @@
             // 
             // LblTitulo
             // 
-            this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LblTitulo.Location = new System.Drawing.Point(361, 34);
-            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTitulo.Size = new System.Drawing.Size(294, 28);
+            this.LblTitulo.Size = new System.Drawing.Size(436, 38);
             this.LblTitulo.Text = "MANTENIMIENTO TESISTA";
             // 
             // panel2

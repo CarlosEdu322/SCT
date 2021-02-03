@@ -79,9 +79,7 @@
             // 
             // LblTitulo
             // 
-            this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTitulo.Size = new System.Drawing.Size(321, 28);
+            this.LblTitulo.Size = new System.Drawing.Size(462, 38);
             this.LblTitulo.Text = "MANTENIMIENTO DOCENTE";
             // 
             // panel2
