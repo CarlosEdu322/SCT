@@ -58,17 +58,17 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(964, 78);
+            this.panel1.Size = new System.Drawing.Size(1114, 78);
             // 
             // LblTitulo
             // 
-            this.LblTitulo.Size = new System.Drawing.Size(320, 38);
+            this.LblTitulo.Size = new System.Drawing.Size(1114, 78);
             this.LblTitulo.Text = "Requisitos X Tramite";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 556);
-            this.panel2.Size = new System.Drawing.Size(964, 84);
+            this.panel2.Location = new System.Drawing.Point(0, 608);
+            this.panel2.Size = new System.Drawing.Size(1114, 84);
             // 
             // panel3
             // 
@@ -78,12 +78,12 @@
             this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.TxtCodTramite);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Size = new System.Drawing.Size(964, 640);
+            this.panel3.Size = new System.Drawing.Size(1114, 692);
             // 
             // TxtCodTramite
             // 
             this.TxtCodTramite.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTramite.Location = new System.Drawing.Point(229, 148);
+            this.TxtCodTramite.Location = new System.Drawing.Point(441, 156);
             this.TxtCodTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTramite.Name = "TxtCodTramite";
             this.TxtCodTramite.Size = new System.Drawing.Size(279, 30);
@@ -94,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(48, 151);
+            this.label4.Location = new System.Drawing.Point(260, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 127;
@@ -106,7 +106,7 @@
             this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.Location = new System.Drawing.Point(528, 148);
+            this.BtnBuscar.Location = new System.Drawing.Point(740, 156);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(49, 41);
             this.BtnBuscar.TabIndex = 140;
@@ -125,13 +125,13 @@
             this.DgvTramiteXRequisito.ReadOnly = true;
             this.DgvTramiteXRequisito.RowHeadersWidth = 51;
             this.DgvTramiteXRequisito.RowTemplate.Height = 24;
-            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(870, 163);
+            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(1026, 163);
             this.DgvTramiteXRequisito.TabIndex = 141;
             // 
             // TxtCodRequisito
             // 
             this.TxtCodRequisito.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodRequisito.Location = new System.Drawing.Point(229, 208);
+            this.TxtCodRequisito.Location = new System.Drawing.Point(441, 216);
             this.TxtCodRequisito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodRequisito.Name = "TxtCodRequisito";
             this.TxtCodRequisito.Size = new System.Drawing.Size(279, 30);
@@ -142,22 +142,21 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(48, 211);
+            this.label2.Location = new System.Drawing.Point(260, 219);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 22);
+            this.label2.Size = new System.Drawing.Size(155, 22);
             this.label2.TabIndex = 143;
-            this.label2.Text = "CodRequisito:";
+            this.label2.Text = "NombreTramite:";
             // 
             // FrmRequisitosXTramite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 640);
+            this.ClientSize = new System.Drawing.Size(1114, 692);
             this.Name = "FrmRequisitosXTramite";
             this.Text = "FrmRequisitosXTramite";
             this.Load += new System.EventHandler(this.FrmRequisitosXTramite_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

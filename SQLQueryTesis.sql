@@ -334,7 +334,9 @@ insert into TRequisitoXTramite values('TR0004' ,'REQ010')
 insert into TRequisitoXTramite values('TR0004' ,'REQ011')
 insert into TRequisitoXTramite values('TR0004' ,'REQ009')
 
-select CodTramite,a.CodRequisito,TipoRequisito from TRequisitoXTramite a,TRequisito b where a.CodRequisito=b.CodRequisito and CodTramite='TR0002' 
+select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito 
+from TRequisitoXTramite a,TRequisito b,TTramite c 
+where a.CodRequisito=b.CodRequisito and c.CodTramite='TR0002' and c.CodTramite=a.CodTramite 
 
 
 --Nombramiento de Asesor e Inscripcion de Plan de Tesis

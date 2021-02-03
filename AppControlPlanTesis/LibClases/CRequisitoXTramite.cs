@@ -26,7 +26,17 @@ namespace LibClases
         }
         public DataTable ListaPorTramite(string pCodTramite)
         {   //-- retorna una tabla con la lista completa de libros 
-            string Consulta = "select CodTramite,a.CodRequisito,TipoRequisito from " + aNombreTabla+ "  a,TRequisito b where a.CodRequisito=b.CodRequisito and CodTramite='" + pCodTramite+"' ";
+            /*
+             select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito 
+from TRequisitoXTramite a,TRequisito b,TTramite c 
+where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTramite='TR0002' 
+ 
+             
+             */
+
+            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " + 
+                aNombreTabla+ "  a,TRequisito b,TTramite c "+
+"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite+"' ";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }

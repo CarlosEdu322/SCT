@@ -62,7 +62,7 @@
             // 
             // LblTitulo
             // 
-            this.LblTitulo.Size = new System.Drawing.Size(502, 38);
+            this.LblTitulo.Size = new System.Drawing.Size(981, 78);
             this.LblTitulo.Text = "MANTENIMIENTO REQUISITOS";
             // 
             // panel2
@@ -154,11 +154,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 590);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRequisito";
             this.Text = "FrmRequisito";
             this.Load += new System.EventHandler(this.FrmRequisito_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
