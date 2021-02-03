@@ -34,8 +34,8 @@ Nombres varchar(20),
 Correo varchar(40),
 Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Categoria varchar(20) (Categoria like in ('Contratado','Nombrado')),
-Especialidad varchar(50) (Especialidad like in('Auditoria en Redes','Ingenieria de Software','Gestion de Tecnologias de la Informacion','Ciencias de la Computacion')),
+Categoria varchar(20) check (Categoria like in ('Contratado','Nombrado')),
+Especialidad varchar(60) check (Especialidad like in('Auditoria en Redes','Ingenieria de Software','Gestion de Tecnologias de la Informacion','Ciencias de la Computacion')),
 Impedimento varchar(20),
 -- especificacion de claves
 primary key (CodDocente)
