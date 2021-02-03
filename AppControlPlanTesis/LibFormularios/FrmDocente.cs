@@ -22,8 +22,15 @@ namespace LibFormularios
         //-- Establecer los valores que iran a la tabla 
         public override string[] AsignarValoresAtributos()
         {
-            return new string[] { TxtCodDocente.Text, TxtApellidos.Text, TxtNombres.Text, TxtCorreo.Text,
-                TxtTelefono.Text,TxtDNI.Text,CboCategoria.Text,TxtImpedimento.Text };
+            return new string[] { TxtCodDocente.Text, 
+                TxtApellidos.Text, 
+                TxtNombres.Text, 
+                TxtCorreo.Text,
+                TxtTelefono.Text,
+                TxtDNI.Text,
+                CboCategoria.Text,
+                CboEspecialidad.Text,
+                TxtImpedimento.Text };
         }
         // 	
         //-- Mostrar los datos de un registro 
@@ -36,6 +43,7 @@ namespace LibFormularios
             TxtTelefono.Text = aEntidad.ValorAtributo("Telefono");
             TxtDNI.Text = aEntidad.ValorAtributo("DNI");
             CboCategoria.Text = aEntidad.ValorAtributo("Categoria");
+            CboEspecialidad.Text = aEntidad.ValorAtributo("Especialidad");
             TxtImpedimento.Text = aEntidad.ValorAtributo("Impedimento");
         }
         // 	
@@ -48,8 +56,14 @@ namespace LibFormularios
         }
         public override void InicializarAtributosNoClave()
         {
-            TxtApellidos.Text = ""; TxtNombres.Text = ""; TxtCorreo.Text = "";
-            TxtTelefono.Text = ""; TxtDNI.Text = ""; CboCategoria.SelectedIndex = -1; ; TxtImpedimento.Text = "";
+            TxtApellidos.Text = ""; 
+            TxtNombres.Text = ""; 
+            TxtCorreo.Text = "";
+            TxtTelefono.Text = ""; 
+            TxtDNI.Text = ""; 
+            CboCategoria.SelectedIndex = -1; ;
+            CboEspecialidad.SelectedIndex = -1;
+            TxtImpedimento.Text = "";
         }
         // 	
         //-- Listar los registros y mostrarlos en el datagrid 
@@ -66,7 +80,9 @@ namespace LibFormularios
             if ((TxtCodDocente.Text.Trim() != "") && (TxtApellidos.Text.Trim() != "") && (TxtNombres.Text.Trim() != "") &&
                 (TxtCorreo.Text.Trim() != "") &&
                 (TxtTelefono.Text.Trim() != "") && (TxtDNI.Text.Trim() != "") &&
-                (CboCategoria.Text.Trim() != "") && (TxtImpedimento.Text.Trim() != ""))
+                (CboCategoria.Text.Trim() != "") &&
+                (CboEspecialidad.Text.Trim() != "") &&
+                (TxtImpedimento.Text.Trim() != ""))
                 return true;
             else
                 return false;
