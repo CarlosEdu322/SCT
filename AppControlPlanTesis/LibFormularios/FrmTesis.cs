@@ -83,10 +83,26 @@ namespace LibFormularios
             else
                 return false;
         }
+        public override void ProcesarClave()
+        {
+            //-- Recuperar atributos, el primer atributo es la clave 
+            string[] Atributos = AsignarValoresAtributos();
+            // ----- Verificar si existe clave primaria 
+            if (aEntidad.ExisteClavePrimaria(Atributos))
+            {   //-- Registro existente, Recuperar Atributos y mostrarlos 
+                MostrarDatos();
+                aEntidad.Nuevo = false;
+                TxtCodTesis.Enabled = false;
+            }
+            else
+            {   //-- Registro nuevo, inicializar atributos no clave 
+                InicializarAtributosNoClave();
+            }
+        }
         private void TxtCodTesis_Leave(object sender, EventArgs e)
         {
-            ProcesarClave();
-            TxtCodTesis.Enabled = false;
+            //ProcesarClave();
+            //TxtCodTesis.Enabled = false;
         }
 
 
@@ -112,6 +128,11 @@ namespace LibFormularios
             ListarRegistros();
             LlenarListaDocentes();
             LlenarListaTesistas();
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            ProcesarClave();
         }
     }
 }

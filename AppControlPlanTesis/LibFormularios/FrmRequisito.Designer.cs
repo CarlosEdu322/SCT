@@ -35,6 +35,7 @@
             this.DgvDocentes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.DgvDocentes);
@@ -87,7 +89,7 @@
             this.TxtCodTesista.Location = new System.Drawing.Point(233, 154);
             this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesista.Name = "TxtCodTesista";
-            this.TxtCodTesista.Size = new System.Drawing.Size(693, 30);
+            this.TxtCodTesista.Size = new System.Drawing.Size(279, 30);
             this.TxtCodTesista.TabIndex = 106;
             // 
             // label2
@@ -156,6 +158,16 @@
             this.textBox1.Size = new System.Drawing.Size(693, 30);
             this.textBox1.TabIndex = 111;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(536, 154);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(92, 32);
+            this.BtnBuscar.TabIndex = 113;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // FrmRequisito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView DgvDocentes;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }

@@ -105,7 +105,7 @@ namespace LibFormularios
         }
         private void TxtCodDocente_Leave(object sender, EventArgs e)
         {
-            ProcesarClave();
+            //ProcesarClave();
         }
 
         private void FrmDocente_Load(object sender, EventArgs e)
@@ -113,5 +113,9 @@ namespace LibFormularios
             ListarRegistros();
         }
 
+        private void BtnCargar_Click(object sender, EventArgs e)
+        {
+            ProcesarClave();
+        }
     }
 }

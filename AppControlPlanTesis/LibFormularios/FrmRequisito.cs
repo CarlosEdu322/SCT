@@ -16,5 +16,15 @@ namespace LibFormularios
         {
             InitializeComponent();
         }
+
+
+
+
+
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

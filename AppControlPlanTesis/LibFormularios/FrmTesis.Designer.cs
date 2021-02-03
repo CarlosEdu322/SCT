@@ -41,6 +41,7 @@
             this.DgvTesis = new System.Windows.Forms.DataGridView();
             this.CboCodTesista = new System.Windows.Forms.ComboBox();
             this.CboCodDocente = new System.Windows.Forms.ComboBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.CboCodDocente);
             this.panel3.Controls.Add(this.CboCodTesista);
             this.panel3.Controls.Add(this.DgvTesis);
@@ -99,7 +101,7 @@
             this.TxtCodTesis.Location = new System.Drawing.Point(279, 95);
             this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesis.Name = "TxtCodTesis";
-            this.TxtCodTesis.Size = new System.Drawing.Size(500, 30);
+            this.TxtCodTesis.Size = new System.Drawing.Size(209, 30);
             this.TxtCodTesis.TabIndex = 118;
             this.TxtCodTesis.Leave += new System.EventHandler(this.TxtCodTesis_Leave);
             // 
@@ -233,6 +235,16 @@
             this.CboCodDocente.Size = new System.Drawing.Size(500, 30);
             this.CboCodDocente.TabIndex = 136;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(510, 93);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(92, 32);
+            this.BtnBuscar.TabIndex = 137;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // FrmTesis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -267,5 +279,6 @@
         private System.Windows.Forms.DataGridView DgvTesis;
         private System.Windows.Forms.ComboBox CboCodDocente;
         private System.Windows.Forms.ComboBox CboCodTesista;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }

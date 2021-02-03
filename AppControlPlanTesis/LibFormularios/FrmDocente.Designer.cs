@@ -47,6 +47,7 @@
             this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.CboEspecialidad = new System.Windows.Forms.ComboBox();
+            this.BtnCargar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnCargar);
             this.panel3.Controls.Add(this.CboEspecialidad);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.CboCategoria);
@@ -266,7 +268,7 @@
             this.TxtCodDocente.Location = new System.Drawing.Point(265, 130);
             this.TxtCodDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodDocente.Name = "TxtCodDocente";
-            this.TxtCodDocente.Size = new System.Drawing.Size(730, 30);
+            this.TxtCodDocente.Size = new System.Drawing.Size(395, 30);
             this.TxtCodDocente.TabIndex = 86;
             this.TxtCodDocente.Leave += new System.EventHandler(this.TxtCodDocente_Leave);
             // 
@@ -320,6 +322,16 @@
             this.CboEspecialidad.Size = new System.Drawing.Size(730, 30);
             this.CboEspecialidad.TabIndex = 105;
             // 
+            // BtnCargar
+            // 
+            this.BtnCargar.Location = new System.Drawing.Point(682, 130);
+            this.BtnCargar.Name = "BtnCargar";
+            this.BtnCargar.Size = new System.Drawing.Size(87, 29);
+            this.BtnCargar.TabIndex = 106;
+            this.BtnCargar.Text = "Buscar";
+            this.BtnCargar.UseVisualStyleBackColor = true;
+            this.BtnCargar.Click += new System.EventHandler(this.BtnCargar_Click);
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,5 +373,6 @@
         private System.Windows.Forms.ComboBox CboCategoria;
         private System.Windows.Forms.ComboBox CboEspecialidad;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button BtnCargar;
     }
 }
