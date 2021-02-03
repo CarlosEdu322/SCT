@@ -88,12 +88,17 @@ namespace LibFormularios
 
         private void TxtCodTesista_Leave(object sender, EventArgs e)
         {
-            ProcesarClave();
+            //ProcesarClave();
         }
 
         private void FrmTesista_Load(object sender, EventArgs e)
         {
             ListarRegistros();
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            ProcesarClave();
         }
     }
 }

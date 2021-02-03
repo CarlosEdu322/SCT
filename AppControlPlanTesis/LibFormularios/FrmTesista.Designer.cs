@@ -41,6 +41,7 @@
             this.TxtCodTesista = new System.Windows.Forms.TextBox();
             this.TxtNombres = new System.Windows.Forms.TextBox();
             this.DgvTesista = new System.Windows.Forms.DataGridView();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,6 +87,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.DgvTesista);
             this.panel3.Controls.Add(this.TxtCodTesista);
             this.panel3.Controls.Add(this.label1);
@@ -210,7 +212,7 @@
             this.TxtCodTesista.Location = new System.Drawing.Point(213, 127);
             this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesista.Name = "TxtCodTesista";
-            this.TxtCodTesista.Size = new System.Drawing.Size(828, 30);
+            this.TxtCodTesista.Size = new System.Drawing.Size(400, 30);
             this.TxtCodTesista.TabIndex = 102;
             this.TxtCodTesista.Leave += new System.EventHandler(this.TxtCodTesista_Leave);
             // 
@@ -237,6 +239,16 @@
             this.DgvTesista.RowTemplate.Height = 24;
             this.DgvTesista.Size = new System.Drawing.Size(1069, 260);
             this.DgvTesista.TabIndex = 118;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(643, 125);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(92, 32);
+            this.BtnBuscar.TabIndex = 138;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // FrmTesista
             // 
@@ -272,5 +284,6 @@
         private System.Windows.Forms.TextBox TxtCodTesista;
         private System.Windows.Forms.TextBox TxtNombres;
         private System.Windows.Forms.DataGridView DgvTesista;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }
