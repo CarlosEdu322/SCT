@@ -64,9 +64,19 @@ go
 create table TTramite
 ( -- lista de atributos
 CodTramite varchar(6),
-Tipo varchar(40),
+Tipo varchar(100),
 -- especificacion de claves
 primary key (CodTramite),
+)
+go
+
+create table TRequisito
+( -- lista de atributos
+CodRequisito varchar(6),
+TipoRequisito varchar(100),
+
+-- especificacion de claves
+primary key (CodRequisito),
 )
 go
 
@@ -81,15 +91,6 @@ foreign key (CodRequisito) references TRequisito
 
 
 
-create table TRequisito
-( -- lista de atributos
-CodRequisito varchar(6),
-TipoRequisito varchar(10),
-
--- especificacion de claves
-primary key (CodTramite),
-)
-go
 
 
 --------------------------------------------------
@@ -217,35 +218,6 @@ foreign key (CodDocente) references TDocente,
 )
 
 
-create table TTesista
-( -- lista de atributos
-CodTesista varchar(6) check (CodTesista like '[0-9][0-9][0-9][0-9][0-9][0-9]'),
-Apellidos varchar(20),
-Nombres varchar(20),
-Correo varchar(20),
-Telefono varchar(20),
-DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
--- especificacion de claves
-primary key (CodTesista)
-)
-go
-
-
-
-create table TTesis
-( -- lista de atributos
-CodTesis varchar(6),
-CodTesista varchar(6),
-CodDocente varchar(6),
-Titulo varchar(40),
-Estado varchar(20),
-Observaciones varchar(20),
--- especificacion de claves
-primary key (CodTesis),
-foreign key (CodTesista) references TTesista,
-foreign key (CodDocente) references TDocente
-)
-go
 
 ---------------------------------------
 -- INSERTAMOS DATOS A LAS TABLAS --
@@ -267,6 +239,18 @@ insert into TTramite values ('TR0002','Solicitar Nombramiento de la Comision Rev
 insert into TTramite values ('TR0003','Solicitar Nombramiento de dictaminadores de Tesis y su posterior Revision')
 insert into TTramite values ('TR0004','Determinacion de Fecha, Hora y Lugar para Sustentacion de Tesis')
 
+
+insert into TRequisito values ('REQ001','Solicitud Dirigida al Rector')
+insert into TRequisito values ('REQ002','Dos Ejemplares de Plan de Tesis refrendado por el Asesor')
+insert into TRequisito values ('REQ003','Carta de Aceptacion del Asesor')
+insert into TRequisito values ('REQ004','Ficha de Seguimiento Academico')
+insert into TRequisito values ('REQ005','Informe del Asesor')
+insert into TRequisito values ('REQ006','Resolucion de Aprobacion de Expediente de Titulo')
+insert into TRequisito values ('REQ007','Dos Ejemplares de Tesis Anillado')
+insert into TRequisito values ('REQ008','Certificado de Originalidad de la Tesis, firmado por el Asesor')
+insert into TRequisito values ('REQ009','Pago Por Derechos De Tramite')
+insert into TRequisito values ('REQ010','Copia de Resolucion de Aprobacion de Dictamen de Tesis')
+insert into TRequisito values ('REQ011','05 ejemplares de tesis ')
 
 insert into TRequisitoXTramite values('TR0001' ,'REQ001')
 insert into TRequisitoXTramite values('TR0001' ,'REQ002')
@@ -316,14 +300,3 @@ insert into TRequisitoXTramite values('TR0004' ,'REQ009')
 --insert into TRequisito values ('REQ009','Pago por Derechos de Tramite')
 
 
-insert into TRequisito values ('REQ001','Solicitud Dirigida al Rector')
-insert into TRequisito values ('REQ002','Dos Ejemplares de Plan de Tesis refrendado por el Asesor')
-insert into TRequisito values ('REQ003','Carta de Aceptacion del Asesor')
-insert into TRequisito values ('REQ004','Ficha de Seguimiento Academico')
-insert into TRequisito values ('REQ005','Informe del Asesor')
-insert into TRequisito values ('REQ006','Resolucion de Aprobacion de Expediente de Titulo')
-insert into TRequisito values ('REQ007','Dos Ejemplares de Tesis Anillado')
-insert into TRequisito values ('REQ008','Certificado de Originalidad de la Tesis, firmado por el Asesor')
-insert into TRequisito values ('REQ009','Pago Por Derechos De Tramite')
-insert into TRequisito values ('REQ010','Copia de Resolucion de Aprobacion de Dictamen de Tesis')
-insert into TRequisito values ('REQ011','05 ejemplares de tesis ')
