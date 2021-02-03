@@ -83,5 +83,20 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmTesis());
         }
+
+        private void BtnManRequisitos_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmRequisito());
+        }
+
+        private void BtnManTramite_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmTramite());
+        }
+
+        private void BtnManRequisitosXTramite_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmRequisitosXTramite());
+        }
     }
 }

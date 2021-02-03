@@ -10,45 +10,45 @@ using System.Windows.Forms;
 using LibClases;
 namespace LibFormularios
 {
-    public partial class FrmRequisito : FrmPadre
+    public partial class FrmTramite : FrmPadre
     {
-        public FrmRequisito()
+        public FrmTramite()
         {
             InitializeComponent();
-            IniciarEntidad(new CRequisito());
+            IniciarEntidad(new CTramite());
         }
         //============= REDEFINICION DE LOS METODOS VIRTUALES ====================
 
         //-- Establecer los valores que iran a la tabla 
         public override string[] AsignarValoresAtributos()
         {
-            return new string[] { TxtCodRequisito.Text,
-                TxtTipoRequisito.Text};
+            return new string[] { TxtCodTramite.Text,
+                TxtTipo.Text};
         }
         // 	
         //-- Mostrar los datos de un registro 
         public override void MostrarDatos()
         {	//-- muestra la informacion contenida en el dataset de CDocente
-            TxtCodRequisito.Text = aEntidad.ValorAtributo("CodRequisito");
-            TxtTipoRequisito.Text = aEntidad.ValorAtributo("TipoRequisito");
+            TxtCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
+            TxtTipo.Text = aEntidad.ValorAtributo("Tipo");
         }
         // 	
         //-- Iniciar los atributos clave y no clave en blanco 
         public override void InicializarAtributoClave()
         {
-            TxtCodRequisito.Enabled = true;
-            TxtCodRequisito.Text = "";
+            TxtCodTramite.Enabled = true;
+            TxtCodTramite.Text = "";
 
         }
         public override void InicializarAtributosNoClave()
         {
-            TxtTipoRequisito.Text = "";
+            TxtTipo.Text = "";
         }
         // 	
         //-- Listar los registros y mostrarlos en el datagrid 
         public override void ListarRegistros()
         {	//-- Mostrar todos los libros de la tabla en el grid 
-            DgvDocentes.DataSource = aEntidad.ListaGeneral();
+            DgvTramite.DataSource = aEntidad.ListaGeneral();
 
         }
         //-- verificar los campos obligatorios(codigo y titulo) estén llenos 
@@ -56,8 +56,8 @@ namespace LibFormularios
         //-- verificar los campos obligatorios(codigo y titulo) estén llenos 
         public override bool EsRegistroValido()
         {
-            if ((TxtCodRequisito.Text.Trim() != "") && 
-                (TxtTipoRequisito.Text.Trim() != "") )
+            if ((TxtCodTramite.Text.Trim() != "") &&
+                (TxtTipo.Text.Trim() != ""))
                 return true;
             else
                 return false;
@@ -71,27 +71,19 @@ namespace LibFormularios
             {   //-- Registro existente, Recuperar Atributos y mostrarlos 
                 MostrarDatos();
                 aEntidad.Nuevo = false;
-                TxtCodRequisito.Enabled = false;
+                TxtCodTramite.Enabled = false;
             }
             else
             {   //-- Registro nuevo, inicializar atributos no clave 
                 InicializarAtributosNoClave();
             }
         }
-
-
-
-        private void FrmRequisito_Load(object sender, EventArgs e)
+        private void FrmTramite_Load(object sender, EventArgs e)
         {
             ListarRegistros();
         }
 
-        private void TxtCodRequisito_Leave(object sender, EventArgs e)
-        {
-            //ProcesarClave();
-        }
-
-        private void BtnBuscar_Click_1(object sender, EventArgs e)
+        private void BtnBuscar_Click(object sender, EventArgs e)
         {
             ProcesarClave();
         }

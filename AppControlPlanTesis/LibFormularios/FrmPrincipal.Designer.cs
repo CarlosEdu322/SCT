@@ -29,49 +29,50 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            this.label1 = new System.Windows.Forms.Label();
             this.Panel_Contenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelSubMenuMantenimiento = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnManTramite = new System.Windows.Forms.Button();
+            this.BtnManRequisitos = new System.Windows.Forms.Button();
             this.btnManTesis = new System.Windows.Forms.Button();
             this.btnManDocente = new System.Windows.Forms.Button();
             this.btnManTesista = new System.Windows.Forms.Button();
             this.btnMantenimiento = new System.Windows.Forms.Button();
             this.panelLogos = new System.Windows.Forms.Panel();
             this.Panel_Contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubMenuOperaciones.SuspendLayout();
             this.panelSubMenuMantenimiento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(206, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(644, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido al sistema de seguimiento de plan de tesis";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Panel_Contenedor
             // 
-            this.Panel_Contenedor.Controls.Add(this.label1);
+            this.Panel_Contenedor.Controls.Add(this.pictureBox1);
             this.Panel_Contenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.Panel_Contenedor.Location = new System.Drawing.Point(342, 0);
             this.Panel_Contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_Contenedor.Name = "Panel_Contenedor";
             this.Panel_Contenedor.Size = new System.Drawing.Size(1097, 846);
             this.Panel_Contenedor.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(206, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // panelMenuLateral
             // 
@@ -115,9 +116,9 @@
             this.panelSubMenuOperaciones.Controls.Add(this.button8);
             this.panelSubMenuOperaciones.Controls.Add(this.button9);
             this.panelSubMenuOperaciones.Controls.Add(this.button10);
-            this.panelSubMenuOperaciones.Controls.Add(this.button11);
+            this.panelSubMenuOperaciones.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 430);
+            this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 485);
             this.panelSubMenuOperaciones.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuOperaciones.Name = "panelSubMenuOperaciones";
             this.panelSubMenuOperaciones.Size = new System.Drawing.Size(333, 197);
@@ -174,22 +175,23 @@
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // BtnManRequisitosXTramite
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.button11.ForeColor = System.Drawing.SystemColors.Control;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(333, 49);
-            this.button11.TabIndex = 0;
-            this.button11.Text = "button11";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
+            this.BtnManRequisitosXTramite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnManRequisitosXTramite.FlatAppearance.BorderSize = 0;
+            this.BtnManRequisitosXTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManRequisitosXTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnManRequisitosXTramite.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 0);
+            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnManRequisitosXTramite.Name = "BtnManRequisitosXTramite";
+            this.BtnManRequisitosXTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(333, 49);
+            this.BtnManRequisitosXTramite.TabIndex = 0;
+            this.BtnManRequisitosXTramite.Text = "RequisitosXTramite";
+            this.BtnManRequisitosXTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManRequisitosXTramite.UseVisualStyleBackColor = true;
+            this.BtnManRequisitosXTramite.Click += new System.EventHandler(this.BtnManRequisitosXTramite_Click);
             // 
             // button1
             // 
@@ -201,7 +203,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 375);
+            this.button1.Location = new System.Drawing.Point(0, 430);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -216,7 +218,8 @@
             // panelSubMenuMantenimiento
             // 
             this.panelSubMenuMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panelSubMenuMantenimiento.Controls.Add(this.button7);
+            this.panelSubMenuMantenimiento.Controls.Add(this.BtnManTramite);
+            this.panelSubMenuMantenimiento.Controls.Add(this.BtnManRequisitos);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesis);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManDocente);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesista);
@@ -224,28 +227,50 @@
             this.panelSubMenuMantenimiento.Location = new System.Drawing.Point(0, 178);
             this.panelSubMenuMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuMantenimiento.Name = "panelSubMenuMantenimiento";
-            this.panelSubMenuMantenimiento.Size = new System.Drawing.Size(333, 197);
+            this.panelSubMenuMantenimiento.Size = new System.Drawing.Size(333, 252);
             this.panelSubMenuMantenimiento.TabIndex = 7;
             // 
-            // button7
+            // BtnManTramite
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 147);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(333, 49);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Mantenimiento Requisitos";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnManTramite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnManTramite.FlatAppearance.BorderSize = 0;
+            this.BtnManTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManTramite.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnManTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnManTramite.Image")));
+            this.BtnManTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManTramite.Location = new System.Drawing.Point(0, 196);
+            this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnManTramite.Name = "BtnManTramite";
+            this.BtnManTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnManTramite.Size = new System.Drawing.Size(333, 49);
+            this.BtnManTramite.TabIndex = 4;
+            this.BtnManTramite.Text = "Mantenimiento Tramite ";
+            this.BtnManTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManTramite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnManTramite.UseVisualStyleBackColor = true;
+            this.BtnManTramite.Click += new System.EventHandler(this.BtnManTramite_Click);
+            // 
+            // BtnManRequisitos
+            // 
+            this.BtnManRequisitos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnManRequisitos.FlatAppearance.BorderSize = 0;
+            this.BtnManRequisitos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManRequisitos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManRequisitos.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnManRequisitos.Image = ((System.Drawing.Image)(resources.GetObject("BtnManRequisitos.Image")));
+            this.BtnManRequisitos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManRequisitos.Location = new System.Drawing.Point(0, 147);
+            this.BtnManRequisitos.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnManRequisitos.Name = "BtnManRequisitos";
+            this.BtnManRequisitos.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnManRequisitos.Size = new System.Drawing.Size(333, 49);
+            this.BtnManRequisitos.TabIndex = 3;
+            this.BtnManRequisitos.Text = "Mantenimiento Requisitos";
+            this.BtnManRequisitos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManRequisitos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnManRequisitos.UseVisualStyleBackColor = true;
+            this.BtnManRequisitos.Click += new System.EventHandler(this.BtnManRequisitos_Click);
             // 
             // btnManTesis
             // 
@@ -356,6 +381,7 @@
             this.Text = "Sistema de seguimiento de plan de tesis";
             this.Panel_Contenedor.ResumeLayout(false);
             this.Panel_Contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenuLateral.ResumeLayout(false);
             this.panelSubMenuOperaciones.ResumeLayout(false);
             this.panelSubMenuMantenimiento.ResumeLayout(false);
@@ -364,12 +390,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel Panel_Contenedor;
         private System.Windows.Forms.Panel panelMenuLateral;
         private System.Windows.Forms.Panel panelLogos;
         private System.Windows.Forms.Panel panelSubMenuMantenimiento;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnManRequisitos;
         private System.Windows.Forms.Button btnManTesis;
         private System.Windows.Forms.Button btnManDocente;
         private System.Windows.Forms.Button btnManTesista;
@@ -379,7 +404,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button BtnManRequisitosXTramite;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button BtnManTramite;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

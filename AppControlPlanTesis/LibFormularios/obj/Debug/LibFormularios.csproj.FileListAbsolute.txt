@@ -59,3 +59,7 @@ C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFo
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesis.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisito.resources
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisito.resources
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesis.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTramite.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisitosXTramite.resources

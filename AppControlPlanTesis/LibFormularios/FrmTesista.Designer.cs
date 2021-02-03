@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTesista));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -242,12 +243,15 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(643, 125);
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(629, 110);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(92, 32);
+            this.BtnBuscar.Size = new System.Drawing.Size(43, 47);
             this.BtnBuscar.TabIndex = 138;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // FrmTesista

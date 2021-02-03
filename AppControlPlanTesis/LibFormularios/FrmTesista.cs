@@ -51,6 +51,7 @@ namespace LibFormularios
         public override void InicializarAtributoClave()
         {
             TxtCodTesista.Text = "";
+            TxtCodTesista.Enabled = true;
 
         }
         public override void InicializarAtributosNoClave()
@@ -84,6 +85,22 @@ namespace LibFormularios
                 return true;
             else
                 return false;
+        }
+        public override void ProcesarClave()
+        {
+            //-- Recuperar atributos, el primer atributo es la clave 
+            string[] Atributos = AsignarValoresAtributos();
+            // ----- Verificar si existe clave primaria 
+            if (aEntidad.ExisteClavePrimaria(Atributos))
+            {   //-- Registro existente, Recuperar Atributos y mostrarlos 
+                MostrarDatos();
+                aEntidad.Nuevo = false;
+                TxtCodTesista.Enabled = false;
+            }
+            else
+            {   //-- Registro nuevo, inicializar atributos no clave 
+                InicializarAtributosNoClave();
+            }
         }
 
         private void TxtCodTesista_Leave(object sender, EventArgs e)

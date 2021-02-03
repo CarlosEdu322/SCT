@@ -113,7 +113,8 @@ namespace LibFormularios
             ListarRegistros();
         }
 
-        private void BtnCargar_Click(object sender, EventArgs e)
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
         {
             ProcesarClave();
         }

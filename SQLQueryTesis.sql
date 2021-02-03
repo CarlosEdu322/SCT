@@ -90,9 +90,7 @@ foreign key (CodRequisito) references TRequisito
 )
 
 
-
-
-
+select * from TRequisitoXTramite
 --------------------------------------------------
 --------------------------------------------------
 
@@ -248,6 +246,21 @@ insert into TDocente values('D00022','FLORES PACHECO','LINO PRISCILIANO','lino.p
 insert into TDocente values('D00023','PALMA TITO','LUIS BELTRAN','luis.palma@unsaac.edu.pe','984562347','70589056','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
 insert into TDocente values('D00024','ACURIO USCA','NILA SONIA','nila.acurio@unsaac.edu.pe','996523479','72529622','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
 
+
+insert into TTesis values('TES001','124813','D00001','TITULO DE TESIS 1','REVISION','NINGUNO')
+insert into TTesis values('TES002','124219','D00002','TITULO DE TESIS 2','REVISION','NINGUNO')
+insert into TTesis values('TES003','150409','D00003','TITULO DE TESIS 3','REVISION','NINGUNO')
+insert into TTesis values('TES004','134544','D00004','TITULO DE TESIS 4','REVISION','NINGUNO')
+insert into TTesis values('TES005','113553','D00005','TITULO DE TESIS 5','REVISION','NINGUNO')
+insert into TTesis values('TES006','141670','D00006','TITULO DE TESIS 6','REVISION','NINGUNO')
+insert into TTesis values('TES007','151827','D00007','TITULO DE TESIS 7','REVISION','NINGUNO')
+insert into TTesis values('TES008','110125','D00008','TITULO DE TESIS 8','REVISION','NINGUNO')
+insert into TTesis values('TES009','155184','D00009','TITULO DE TESIS 9','REVISION','NINGUNO')
+insert into TTesis values('TES010','154637','D00010','TITULO DE TESIS 10','REVISION','NINGUNO')
+insert into TTesis values('TES011','141674','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
+insert into TTesis values('TES011','133959','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
+
+SELECT  * FROM TTesis
 ----------------------------------------
 -- INSERTAMOS DATOS A LAS TABLA TESISTA --
 ---------------------------------------
@@ -285,6 +298,7 @@ insert into TTramite values ('TR0003','Solicitar Nombramiento de dictaminadores 
 insert into TTramite values ('TR0004','Determinacion de Fecha, Hora y Lugar para Sustentacion de Tesis')
 
 
+
 insert into TRequisito values ('REQ001','Solicitud Dirigida al Rector')
 insert into TRequisito values ('REQ002','Dos Ejemplares de Plan de Tesis refrendado por el Asesor')
 insert into TRequisito values ('REQ003','Carta de Aceptacion del Asesor')
@@ -306,6 +320,8 @@ insert into TRequisitoXTramite values('TR0002' ,'REQ001')
 insert into TRequisitoXTramite values('TR0002' ,'REQ002')
 insert into TRequisitoXTramite values('TR0002' ,'REQ003')
 
+select * from TRequisitoXTramite where CodTramite='TR0002'
+
 insert into TRequisitoXTramite values('TR0003' ,'REQ001')
 insert into TRequisitoXTramite values('TR0003' ,'REQ005')
 insert into TRequisitoXTramite values('TR0003' ,'REQ006')
@@ -317,6 +333,8 @@ insert into TRequisitoXTramite values('TR0004' ,'REQ001')
 insert into TRequisitoXTramite values('TR0004' ,'REQ010')
 insert into TRequisitoXTramite values('TR0004' ,'REQ011')
 insert into TRequisitoXTramite values('TR0004' ,'REQ009')
+
+select CodTramite,a.CodRequisito,TipoRequisito from TRequisitoXTramite a,TRequisito b where a.CodRequisito=b.CodRequisito and CodTramite='TR0002' 
 
 
 --Nombramiento de Asesor e Inscripcion de Plan de Tesis

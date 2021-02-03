@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocente));
             this.DgvDocentes = new System.Windows.Forms.DataGridView();
             this.TxtImpedimento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.CboEspecialidad = new System.Windows.Forms.ComboBox();
-            this.BtnCargar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,7 +94,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.BtnCargar);
+            this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.CboEspecialidad);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.CboCategoria);
@@ -133,6 +134,7 @@
             // 
             // TxtImpedimento
             // 
+            this.TxtImpedimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtImpedimento.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtImpedimento.Location = new System.Drawing.Point(265, 447);
             this.TxtImpedimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -175,6 +177,7 @@
             // 
             // TxtTelefono
             // 
+            this.TxtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtTelefono.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtTelefono.Location = new System.Drawing.Point(265, 273);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,6 +187,7 @@
             // 
             // TxtDNI
             // 
+            this.TxtDNI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtDNI.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtDNI.Location = new System.Drawing.Point(265, 308);
             this.TxtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,6 +239,7 @@
             // 
             // TxtApellidos
             // 
+            this.TxtApellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtApellidos.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtApellidos.Location = new System.Drawing.Point(265, 165);
             this.TxtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -244,6 +249,7 @@
             // 
             // TxtNombres
             // 
+            this.TxtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNombres.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtNombres.Location = new System.Drawing.Point(265, 201);
             this.TxtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -264,6 +270,7 @@
             // 
             // TxtCodDocente
             // 
+            this.TxtCodDocente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCodDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtCodDocente.Location = new System.Drawing.Point(265, 130);
             this.TxtCodDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -289,8 +296,8 @@
             this.CboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCategoria.FormattingEnabled = true;
             this.CboCategoria.Items.AddRange(new object[] {
-            "Contratado",
-            "Nombrado"});
+            "CONTRATADO",
+            "NOMBRADO"});
             this.CboCategoria.Location = new System.Drawing.Point(265, 355);
             this.CboCategoria.Name = "CboCategoria";
             this.CboCategoria.Size = new System.Drawing.Size(730, 30);
@@ -313,24 +320,27 @@
             this.CboEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboEspecialidad.FormattingEnabled = true;
             this.CboEspecialidad.Items.AddRange(new object[] {
-            "Auditoria en Redes",
-            "Ingenieria de Software",
-            "Gestion de Tecnologias de la Informacion",
-            "Ciencias de la Computacion"});
+            "AUDITORIA EN REDES",
+            "INGENIERIA DE SOFTWARE",
+            "TECNOLOGIAS DE INFORMACION Y COMUNICACION",
+            "CIENCIAS DE LA COMPUTACION"});
             this.CboEspecialidad.Location = new System.Drawing.Point(265, 400);
             this.CboEspecialidad.Name = "CboEspecialidad";
             this.CboEspecialidad.Size = new System.Drawing.Size(730, 30);
             this.CboEspecialidad.TabIndex = 105;
             // 
-            // BtnCargar
+            // BtnBuscar
             // 
-            this.BtnCargar.Location = new System.Drawing.Point(682, 130);
-            this.BtnCargar.Name = "BtnCargar";
-            this.BtnCargar.Size = new System.Drawing.Size(87, 29);
-            this.BtnCargar.TabIndex = 106;
-            this.BtnCargar.Text = "Buscar";
-            this.BtnCargar.UseVisualStyleBackColor = true;
-            this.BtnCargar.Click += new System.EventHandler(this.BtnCargar_Click);
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(676, 119);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(45, 41);
+            this.BtnBuscar.TabIndex = 139;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // FrmDocente
             // 
@@ -373,6 +383,6 @@
         private System.Windows.Forms.ComboBox CboCategoria;
         private System.Windows.Forms.ComboBox CboEspecialidad;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button BtnCargar;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }

@@ -13,7 +13,7 @@ namespace LibClases
     {
         // ============================ Atributos ==============================
         protected CConexion aConexion;
-        private string aNombreTabla;
+        protected string aNombreTabla;
         string[] aNombres = null; //-- nombres de los campos de la tabla 
         string[] aValores = null; //-- valores de los campos de la tabla 
         private bool aNuevo;
@@ -153,5 +153,7 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
+
+
     }
 }

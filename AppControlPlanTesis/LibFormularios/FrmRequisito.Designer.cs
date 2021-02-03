@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtCodTesista = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRequisito));
+            this.TxtCodRequisito = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
+            this.TxtTipoRequisito = new System.Windows.Forms.TextBox();
             this.DgvDocentes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,23 +73,22 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.BtnBuscar);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.DgvDocentes);
-            this.panel3.Controls.Add(this.TxtCodTesista);
+            this.panel3.Controls.Add(this.TxtCodRequisito);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.TxtApellidos);
+            this.panel3.Controls.Add(this.TxtTipoRequisito);
             this.panel3.Size = new System.Drawing.Size(981, 590);
             // 
-            // TxtCodTesista
+            // TxtCodRequisito
             // 
-            this.TxtCodTesista.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista.Location = new System.Drawing.Point(233, 154);
-            this.TxtCodTesista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCodTesista.Name = "TxtCodTesista";
-            this.TxtCodTesista.Size = new System.Drawing.Size(279, 30);
-            this.TxtCodTesista.TabIndex = 106;
+            this.TxtCodRequisito.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtCodRequisito.Location = new System.Drawing.Point(233, 154);
+            this.TxtCodRequisito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodRequisito.Name = "TxtCodRequisito";
+            this.TxtCodRequisito.Size = new System.Drawing.Size(279, 30);
+            this.TxtCodRequisito.TabIndex = 106;
+            this.TxtCodRequisito.Leave += new System.EventHandler(this.TxtCodRequisito_Leave);
             // 
             // label2
             // 
@@ -114,14 +112,14 @@
             this.label3.TabIndex = 109;
             this.label3.Text = "Nombre Requisito:";
             // 
-            // TxtApellidos
+            // TxtTipoRequisito
             // 
-            this.TxtApellidos.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidos.Location = new System.Drawing.Point(233, 205);
-            this.TxtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(693, 30);
-            this.TxtApellidos.TabIndex = 107;
+            this.TxtTipoRequisito.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtTipoRequisito.Location = new System.Drawing.Point(233, 205);
+            this.TxtTipoRequisito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTipoRequisito.Name = "TxtTipoRequisito";
+            this.TxtTipoRequisito.Size = new System.Drawing.Size(693, 30);
+            this.TxtTipoRequisito.TabIndex = 107;
             // 
             // DgvDocentes
             // 
@@ -138,35 +136,18 @@
             this.DgvDocentes.Size = new System.Drawing.Size(870, 163);
             this.DgvDocentes.TabIndex = 110;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(52, 256);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 22);
-            this.label1.TabIndex = 112;
-            this.label1.Text = "Descripcion:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.textBox1.Location = new System.Drawing.Point(233, 253);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(693, 30);
-            this.textBox1.TabIndex = 111;
-            // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(536, 154);
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(533, 143);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(92, 32);
-            this.BtnBuscar.TabIndex = 113;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            this.BtnBuscar.Size = new System.Drawing.Size(50, 44);
+            this.BtnBuscar.TabIndex = 140;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
             // 
             // FrmRequisito
             // 
@@ -175,6 +156,7 @@
             this.ClientSize = new System.Drawing.Size(981, 590);
             this.Name = "FrmRequisito";
             this.Text = "FrmRequisito";
+            this.Load += new System.EventHandler(this.FrmRequisito_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -187,12 +169,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtCodTesista;
+        private System.Windows.Forms.TextBox TxtCodRequisito;
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtApellidos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtTipoRequisito;
         private System.Windows.Forms.DataGridView DgvDocentes;
         private System.Windows.Forms.Button BtnBuscar;
     }

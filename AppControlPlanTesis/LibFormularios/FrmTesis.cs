@@ -130,7 +130,8 @@ namespace LibFormularios
             LlenarListaTesistas();
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+
+        private void BtnBuscar_Click_1(object sender, EventArgs e)
         {
             ProcesarClave();
         }
