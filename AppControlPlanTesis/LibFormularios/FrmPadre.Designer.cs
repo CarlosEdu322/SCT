@@ -52,15 +52,15 @@
             // 
             // LblTitulo
             // 
-            this.LblTitulo.AutoSize = true;
             this.LblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.SystemColors.Control;
             this.LblTitulo.Location = new System.Drawing.Point(0, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(96, 38);
+            this.LblTitulo.Size = new System.Drawing.Size(960, 78);
             this.LblTitulo.TabIndex = 0;
             this.LblTitulo.Text = "Titulo";
+            this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -149,7 +149,6 @@
             this.Name = "FrmPadre";
             this.Text = "FrmPadre";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 

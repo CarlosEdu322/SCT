@@ -10,3 +10,9 @@ C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibCl
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.dll
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.pdb
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibClases\obj\Debug\LibClases.pdb
