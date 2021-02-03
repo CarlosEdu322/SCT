@@ -35,7 +35,7 @@ Correo varchar(40),
 Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 Categoria varchar(20) check (Categoria  in ('Contratado','Nombrado')),
-Especialidad varchar(60) check (Especialidad in ('Auditoria en Redes','Ingenieria de Software','Gestion de Tecnologias de la Informacion','Ciencias de la Computacion')),
+Especialidad varchar(60) check (Especialidad in ('AUDITORIA EN REDES','INGENIERIA DE SOFTWARE','TECNOLOGIAS DE INFORMACION Y COMUNICACION','CIENCIAS DE LA COMPUTACION')),
 Impedimento varchar(20),
 -- especificacion de claves
 primary key (CodDocente)
@@ -219,18 +219,63 @@ foreign key (CodDocente) references TDocente,
 
 
 
+
+----------------------------------------
+-- INSERTAMOS DATOS A LAS TABLA DOCENTE --
 ---------------------------------------
--- INSERTAMOS DATOS A LAS TABLAS --
+insert into TDocente values('D00001','ALZAMORA PAREDES','ROBERT WILBERT','robert.alzamora@unsaac.edu.pe','984632900','24589812','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00002','VILLAFUERTE SERNA','RONY','rony.villafuerte@unsaac.edu.pe','998562389','24589689','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00003','CHOQUE SOTO','VANESA MARIBEL','maribel.choque@unsaac.edu.pe','989862347','70349636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00004','IBARRA ZAMBRANO','WALDO ELIO','waldo.ibarra@unsaac.edu.pe','984596398','24586688','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00005','ZAMALLOA PARO','WILLIAM','william.zamalloa@unsaac.edu.pe','994562385','70589696','CONTRATADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00006','CARRASCO POBLETE','EDWIN','edwin.carrasco@unsaac.edu.pe','984562347','74589636','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00007','CUTIPA ARAPA','EFRAINA GLADYS','efraina.cutipa@unsaac.edu.pe','999525389','24559933','CONTRATADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00008','RIVAS PUGA','ABDON','abdon.rivas@unsaac.edu.pe','984562347','74589636','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00009','CARDENAS MAYTA','ANA ROCIO','ana.cardenas@unsaac.edu.pe','937562347','74590636','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00010','CANDIA OVIEDO','DENIS IVAN','denis.candia@unsaac.edu.pe','912562947','24589622','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00011','PALOMINO OLIVERA','EMILIO','emilio.palomino@unsaac.edu.pe','984562347','74969633','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00012','GAMARRA SALDIVAR','ENRIQUE','enrique.gamarra@unsaac.edu.pe','988588345','70589636','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00013','PACHECO VASQUEZ','ESTER CRISTINA','ester.pacheco@unsaac.edu.pe','914562396','74582635','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00014','TICON PARI','GUZMAN','guzman.ticona@unsaac.edu.pe','912562348','24989636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00015','DUEÑAS DE LA CRUZ','HENRY SAMUEL','henry.dueñas@unsaac.edu.pe','916282325','24589631','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00016','MEDRANO VALENCIA','IVAN CESAR','ivan.medrano@unsaac.edu.pe','918562342','70589521','NOMBRADO','INGENIERIA DE SOTWARE','Ninguno')
+insert into TDocente values('D00017','ROZAS HUACHO','JAVIER ARTURO','javir.rozas@unsaac.edu.pe','919562347','74589696','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00018','CHAVEZ CENTENO','JAVIER DAVID','javier.chavez@unsaac.edu.pe','984562347','70589634','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00019','PILLCO QUISPE','JOSE MAURO','jose.pillco@unsaac.edu.pe','976562347','24589666','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00020','MEDINA MIRANDA','KARELIA','karelia.medina@unsaac.edu.pe','984562325','74589961','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00021','ENCISO RODAS','LAURO','lauro.enciso@unsaac.edu.pe','994562398','74589656','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00022','FLORES PACHECO','LINO PRISCILIANO','lino.pacheco@unsaac.edu.pe','984662007','74589200','NOMBRADO','CIENCIAS DE LA COMPUTACION','Ninguno')
+insert into TDocente values('D00023','PALMA TITO','LUIS BELTRAN','luis.palma@unsaac.edu.pe','984562347','70589056','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
+insert into TDocente values('D00024','ACURIO USCA','NILA SONIA','nila.acurio@unsaac.edu.pe','996523479','72529622','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+
+----------------------------------------
+-- INSERTAMOS DATOS A LAS TABLA TESISTA --
 ---------------------------------------
-insert into TDocente values('D00001','Valdez Fernandez','Antonio','antonio.fernandez@unsaac.edu.pe','984562347','74589636','Nombrado','Auditoria en Redes','Ninguno')
+insert into TTesista values ('124813','DE LA CRUZ QUISPE','ALEX ALBERTO','124813@unsaac.edu.pe','996789497','24632532')
+insert into TTesista values ('124219','VALLE HUAMAN','MARIA ANGELA','124219@unsaac.edu.pe','973789025','72634545')
+insert into TTesista values ('150409','TTITO RAMOS','MANUEL DARIO','150409@unsaac.edu.pe','965783029','74234575')
+insert into TTesista values ('134544','ZUNIGA HUAMAN','EDI FRAI','134544@unsaac.edu.pe','937159085','24632515')
+insert into TTesista values ('113553','FLORES YUCRA','IGNACIO','113553@unsaac.edu.pe','928089096','74362845')
+insert into TTesista values ('141670','HALIRE HUAMAN','JAIME ANDRE','141670@unsaac.edu.pe','915786032','24634198')
+insert into TTesista values ('151827','LEVA SALAS ','RENAN FERDINANDN','151827@unsaac.edu.pe','918781227','70621528')
+insert into TTesista values ('110125','LOPINTA HUAMAN','CRISTIAN RODRIGO','110125@unsaac.edu.pe','989289025','24769542')
+insert into TTesista values ('155184','MAMANI CCANAHUIREL','LALO LEONEL','155184@unsaac.edu.pe','981789018','70625583')
+insert into TTesista values ('154637','NINA PONCE','JOSUE JOSE','154637@unsaac.edu.pe','992789035','70689502')
+insert into TTesista values ('141674','VILCA PANTIGOSO','KAROL BERLIZN','141674@unsaac.edu.pe','921793025','24689572')
+insert into TTesista values ('133959','ANCCO PERALTA','JUAN ABEL','133959@unsaac.edu.pe','924398918','72964555')
+insert into TTesista values ('151833','CONDE CHURA','YURI FERNANDO','151833@unsaac.edu.pe','925789088','24689354')
+insert into TTesista values ('160893','OLAZABAL CALLER','LETICIA GIULIANA','160893@unsaac.edu.pe','919078902','70344501')
+insert into TTesista values ('164240','ESCOBEDO DURAN','ROBERTO CARLOS','164240@unsaac.edu.pe','985783621','24615545')
+insert into TTesista values ('155185','PEZUA CERNADES','ARACELY','155185@unsaac.edu.pe','912689087','70384588')
+insert into TTesista values ('144993','IBARRA HUAMAN','ALEXANDER PAVEL','144993@unsaac.edu.pe','918709095','79625845')
+insert into TTesista values ('160545','NAOLA PEREYRA','ALEXANDER YERIM','160545@unsaac.edu.pe','973989025','70656582')
+insert into TTesista values ('150389','CONDE SALLO','JHACK STEVEN','150389@unsaac.edu.pe','923789089','24684582')
+insert into TTesista values ('150543','DONGO ESQUIVEL','DIEGO YOSHIRO','150543@unsaac.edu.pe','912589025','72634565')
 
-insert into TTesista values ('162531','Zarate Garcia','Alfredo','162531@unsaac.edu.pe','965789025','72634545')
 
 
 
-insert into TTesis values('T00001','162531','D00001','Infraestructura Tecnologica 1','Dictamen','Ninguno')
-
-select * from TTesis
+select * from TTesista
 
 
 
