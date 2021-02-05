@@ -24,6 +24,7 @@ namespace LibClases
         {
             return new string[] { "CodTramite", "CodRequisito" };
         }
+        
         public DataTable ListaPorTramite(string pCodTramite)
         {   //-- retorna una tabla con la lista completa de libros 
             /*
@@ -34,11 +35,20 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
              
              */
 
-            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " + 
-                aNombreTabla+ "  a,TRequisito b,TTramite c "+
-"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite+"' ";
+            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " +
+                aNombreTabla + "  a,TRequisito b,TTramite c " +
+"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite + "' ";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
+
+
+        public DataTable ListarRequisitoXTramite(string pCodTramite)
+        {   //-- retorna una tabla con la lista completa de libros 
+            string Consulta = "select distinct * from " + aNombreTabla+ " where CodTramite= '"+pCodTramite+"' ";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
+
     }
 }

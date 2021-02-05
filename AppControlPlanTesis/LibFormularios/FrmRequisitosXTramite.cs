@@ -12,10 +12,14 @@ namespace LibFormularios
 {
     public partial class FrmRequisitosXTramite : FrmPadre
     {
+        private CRequisitoXTramite oRequisitoXTramite;
+        private CTramite oTramite;
         public FrmRequisitosXTramite()
         {
             InitializeComponent();
             IniciarEntidad(new CRequisitoXTramite());
+            oRequisitoXTramite = new CRequisitoXTramite();
+            oTramite = new CTramite();
         }
         //============= REDEFINICION DE LOS METODOS VIRTUALES ====================
 
@@ -28,7 +32,7 @@ namespace LibFormularios
         //-- Mostrar los datos de un registro 
         public override void MostrarDatos()
         {	//-- muestra la informacion contenida en el dataset de CDocente
-            TxtCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
+            CboCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
             TxtCodRequisito.Text = aEntidad.ValorAtributo("CodRequisito");
         }
         // 	
@@ -47,7 +51,7 @@ namespace LibFormularios
         //-- Listar los registros y mostrarlos en el datagrid 
         public override void ListarRegistros()
         {	//-- Mostrar todos los libros de la tabla en el grid 
-            DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(TxtCodTramite.Text);
+            DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
 
         }
 
@@ -83,9 +87,55 @@ namespace LibFormularios
             ProcesarClave();
             ListarRegistros();
         }
+        public void LlenarListaRequisitos()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                ChlRequisitosXTramite.DataSource = oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
+                ChlRequisitosXTramite.DisplayMember = "CodRequisito";
+                ChlRequisitosXTramite.ValueMember = "CodTramite";
+                //-- dejar el combo sin libro seleccionado
+                ChlRequisitosXTramite.SelectedIndex = -1;
+            }
+            catch
+            {
 
+            }
+        }
+        public void LlenarCboTramites()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                CboCodTramite.DataSource = oTramite.ListaGeneral();
+                //CboCodDocente.DisplayMember = "Correo";
+                CboCodTramite.ValueMember = "CodTramite";
+                //-- dejar el combo sin libro seleccionado
+                CboCodTramite.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
+        }
         private void FrmRequisitosXTramite_Load(object sender, EventArgs e)
         {
+            //ListarRequisitosXTramite();
+            ListarRegistros();
+            LlenarListaRequisitos();
+            LlenarCboTramites();
+        }
+
+        private void CboCodTramite_TextChanged(object sender, EventArgs e)
+        {
+            LlenarListaRequisitos();
+            ListarRegistros();
+        }
+
+        private void CboCodTramite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarListaRequisitos();
             ListarRegistros();
         }
     }

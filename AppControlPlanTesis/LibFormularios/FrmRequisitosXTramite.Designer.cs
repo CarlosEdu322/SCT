@@ -32,9 +32,11 @@
             this.TxtCodTramite = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.DgvTramiteXRequisito = new System.Windows.Forms.DataGridView();
             this.TxtCodRequisito = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.ChlRequisitosXTramite = new System.Windows.Forms.CheckedListBox();
+            this.CboCodTramite = new System.Windows.Forms.ComboBox();
+            this.DgvTramiteXRequisito = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,9 +76,11 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.DgvTramiteXRequisito);
+            this.panel3.Controls.Add(this.CboCodTramite);
+            this.panel3.Controls.Add(this.ChlRequisitosXTramite);
             this.panel3.Controls.Add(this.TxtCodRequisito);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.DgvTramiteXRequisito);
             this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.TxtCodTramite);
             this.panel3.Controls.Add(this.label4);
@@ -85,7 +89,7 @@
             // TxtCodTramite
             // 
             this.TxtCodTramite.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTramite.Location = new System.Drawing.Point(441, 156);
+            this.TxtCodTramite.Location = new System.Drawing.Point(16, 94);
             this.TxtCodTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTramite.Name = "TxtCodTramite";
             this.TxtCodTramite.Size = new System.Drawing.Size(279, 30);
@@ -108,27 +112,12 @@
             this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.Location = new System.Drawing.Point(740, 156);
+            this.BtnBuscar.Location = new System.Drawing.Point(312, 94);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(49, 41);
             this.BtnBuscar.TabIndex = 140;
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // DgvTramiteXRequisito
-            // 
-            this.DgvTramiteXRequisito.AllowUserToAddRows = false;
-            this.DgvTramiteXRequisito.AllowUserToDeleteRows = false;
-            this.DgvTramiteXRequisito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvTramiteXRequisito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(52, 321);
-            this.DgvTramiteXRequisito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DgvTramiteXRequisito.Name = "DgvTramiteXRequisito";
-            this.DgvTramiteXRequisito.ReadOnly = true;
-            this.DgvTramiteXRequisito.RowHeadersWidth = 51;
-            this.DgvTramiteXRequisito.RowTemplate.Height = 24;
-            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(1026, 163);
-            this.DgvTramiteXRequisito.TabIndex = 141;
             // 
             // TxtCodRequisito
             // 
@@ -149,6 +138,40 @@
             this.label2.Size = new System.Drawing.Size(155, 22);
             this.label2.TabIndex = 143;
             this.label2.Text = "NombreTramite:";
+            // 
+            // ChlRequisitosXTramite
+            // 
+            this.ChlRequisitosXTramite.FormattingEnabled = true;
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(264, 268);
+            this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(486, 276);
+            this.ChlRequisitosXTramite.TabIndex = 144;
+            // 
+            // CboCodTramite
+            // 
+            this.CboCodTramite.BackColor = System.Drawing.SystemColors.Control;
+            this.CboCodTramite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboCodTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboCodTramite.FormattingEnabled = true;
+            this.CboCodTramite.Location = new System.Drawing.Point(387, 155);
+            this.CboCodTramite.Name = "CboCodTramite";
+            this.CboCodTramite.Size = new System.Drawing.Size(333, 30);
+            this.CboCodTramite.TabIndex = 145;
+            this.CboCodTramite.SelectedIndexChanged += new System.EventHandler(this.CboCodTramite_SelectedIndexChanged);
+            this.CboCodTramite.TextChanged += new System.EventHandler(this.CboCodTramite_TextChanged);
+            // 
+            // DgvTramiteXRequisito
+            // 
+            this.DgvTramiteXRequisito.AllowUserToAddRows = false;
+            this.DgvTramiteXRequisito.AllowUserToDeleteRows = false;
+            this.DgvTramiteXRequisito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(0, 196);
+            this.DgvTramiteXRequisito.Name = "DgvTramiteXRequisito";
+            this.DgvTramiteXRequisito.ReadOnly = true;
+            this.DgvTramiteXRequisito.RowHeadersWidth = 51;
+            this.DgvTramiteXRequisito.RowTemplate.Height = 24;
+            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(231, 181);
+            this.DgvTramiteXRequisito.TabIndex = 146;
             // 
             // FrmRequisitosXTramite
             // 
@@ -171,8 +194,10 @@
         private System.Windows.Forms.TextBox TxtCodTramite;
         protected System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.DataGridView DgvTramiteXRequisito;
         private System.Windows.Forms.TextBox TxtCodRequisito;
         protected System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckedListBox ChlRequisitosXTramite;
+        private System.Windows.Forms.ComboBox CboCodTramite;
+        private System.Windows.Forms.DataGridView DgvTramiteXRequisito;
     }
 }

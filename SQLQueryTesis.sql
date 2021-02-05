@@ -365,3 +365,4 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite='TR0002' and c.CodTramite=a
 --insert into TRequisito values ('REQ009','Pago por Derechos de Tramite')
 
 
+select distinct * from TRequisitoXTramite where CodTramite='TR0001'
