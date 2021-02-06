@@ -22,7 +22,7 @@ namespace LibClases
         //------ Implementación de metodos abstractos -----
         public override string[] NombresAtributos()
         {
-            return new string[] { "CodTramite", "CodRequisito" };
+            return new string[] { "NroTramite", "NroRequisito" };
         }
         
         public DataTable ListaPorTramite(string pCodTramite)
@@ -35,9 +35,9 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
              
              */
 
-            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " +
+            string Consulta = "select TipoRequisito from " +
                 aNombreTabla + "  a,TRequisito b,TTramite c " +
-"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite + "' ";
+"where a.NroRequisito = b.NroRequisito and c.NroTramite = a.NroTramite and c.NroTramite = '" + pCodTramite + "' ";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
@@ -45,7 +45,7 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
 
         public DataTable ListarRequisitoXTramite(string pCodTramite)
         {   //-- retorna una tabla con la lista completa de libros 
-            string Consulta = "select distinct * from " + aNombreTabla+ " where CodTramite= '"+pCodTramite+"' ";
+            string Consulta = "select distinct * from " + aNombreTabla+ " where NroTramite= '" + pCodTramite+"' ";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }

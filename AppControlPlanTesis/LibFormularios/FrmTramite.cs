@@ -29,7 +29,7 @@ namespace LibFormularios
         //-- Mostrar los datos de un registro 
         public override void MostrarDatos()
         {	//-- muestra la informacion contenida en el dataset de CDocente
-            TxtCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
+            TxtCodTramite.Text = aEntidad.ValorAtributo("NroTramite");
             TxtTipo.Text = aEntidad.ValorAtributo("Tipo");
         }
         // 	
