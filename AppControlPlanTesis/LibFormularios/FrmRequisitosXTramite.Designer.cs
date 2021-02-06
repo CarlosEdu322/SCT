@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRequisitosXTramite));
+            this.TxtCodTramite = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.TxtCodRequisito = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ChlRequisitosXTramite = new System.Windows.Forms.CheckedListBox();
             this.CboCodTramite = new System.Windows.Forms.ComboBox();
             this.DgvTramiteXRequisito = new System.Windows.Forms.DataGridView();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,11 +76,24 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.BtnEditar);
             this.panel3.Controls.Add(this.DgvTramiteXRequisito);
             this.panel3.Controls.Add(this.CboCodTramite);
+            this.panel3.Controls.Add(this.ChlRequisitosXTramite);
+            this.panel3.Controls.Add(this.TxtCodRequisito);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.BtnBuscar);
+            this.panel3.Controls.Add(this.TxtCodTramite);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Size = new System.Drawing.Size(1114, 692);
+            // 
+            // TxtCodTramite
+            // 
+            this.TxtCodTramite.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtCodTramite.Location = new System.Drawing.Point(16, 94);
+            this.TxtCodTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodTramite.Name = "TxtCodTramite";
+            this.TxtCodTramite.Size = new System.Drawing.Size(279, 30);
+            this.TxtCodTramite.TabIndex = 125;
             // 
             // label4
             // 
@@ -87,6 +105,47 @@
             this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 127;
             this.label4.Text = "CodTramite:";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(312, 94);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(49, 41);
+            this.BtnBuscar.TabIndex = 140;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // TxtCodRequisito
+            // 
+            this.TxtCodRequisito.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtCodRequisito.Location = new System.Drawing.Point(441, 216);
+            this.TxtCodRequisito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodRequisito.Name = "TxtCodRequisito";
+            this.TxtCodRequisito.Size = new System.Drawing.Size(279, 30);
+            this.TxtCodRequisito.TabIndex = 142;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(260, 219);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 22);
+            this.label2.TabIndex = 143;
+            this.label2.Text = "NombreTramite:";
+            // 
+            // ChlRequisitosXTramite
+            // 
+            this.ChlRequisitosXTramite.FormattingEnabled = true;
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(264, 268);
+            this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(486, 276);
+            this.ChlRequisitosXTramite.TabIndex = 144;
             // 
             // CboCodTramite
             // 
@@ -106,23 +165,13 @@
             this.DgvTramiteXRequisito.AllowUserToAddRows = false;
             this.DgvTramiteXRequisito.AllowUserToDeleteRows = false;
             this.DgvTramiteXRequisito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(70, 300);
+            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(0, 196);
             this.DgvTramiteXRequisito.Name = "DgvTramiteXRequisito";
             this.DgvTramiteXRequisito.ReadOnly = true;
             this.DgvTramiteXRequisito.RowHeadersWidth = 51;
             this.DgvTramiteXRequisito.RowTemplate.Height = 24;
-            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(797, 281);
+            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(231, 181);
             this.DgvTramiteXRequisito.TabIndex = 146;
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Location = new System.Drawing.Point(843, 254);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(170, 50);
-            this.BtnEditar.TabIndex = 147;
-            this.BtnEditar.Text = "button1";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // FrmRequisitosXTramite
             // 
@@ -142,9 +191,13 @@
         }
 
         #endregion
+        private System.Windows.Forms.TextBox TxtCodTramite;
         protected System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox TxtCodRequisito;
+        protected System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckedListBox ChlRequisitosXTramite;
         private System.Windows.Forms.ComboBox CboCodTramite;
         private System.Windows.Forms.DataGridView DgvTramiteXRequisito;
-        private System.Windows.Forms.Button BtnEditar;
     }
 }
