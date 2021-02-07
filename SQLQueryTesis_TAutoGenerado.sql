@@ -330,7 +330,7 @@ insert into TRequisitoXTramite values('4' ,'10')
 insert into TRequisitoXTramite values('4' ,'11')
 
 
-select c.NroTramite,c.Tipo,a.NroRequisito,TipoRequisito 
+select TipoRequisito 
 from TRequisitoXTramite a,TRequisito b,TTramite c 
 where a.NroRequisito=b.NroRequisito and c.NroTramite='2' and c.NroTramite=a.NroTramite 
 
@@ -359,3 +359,6 @@ where a.NroRequisito=b.NroRequisito and c.NroTramite='2' and c.NroTramite=a.NroT
 --insert into TRequisito values ('REQ010','Copia de Resolucion de Aprobacion de Dictamen de Tesis')
 --insert into TRequisito values ('REQ011','05 ejemplares de tesis ')
 --insert into TRequisito values ('REQ009','Pago por Derechos de Tramite')
+
+
+select distinct * from TRequisitoXTramite where NroTramite='1'

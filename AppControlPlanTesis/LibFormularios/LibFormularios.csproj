@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +49,12 @@
     </Compile>
     <Compile Include="FrmDocente.Designer.cs">
       <DependentUpon>FrmDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarRegistrosXTramite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarRegistrosXTramite.Designer.cs">
+      <DependentUpon>FrmEditarRegistrosXTramite.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
@@ -101,6 +108,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarRegistrosXTramite.resx">
+      <DependentUpon>FrmEditarRegistrosXTramite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>

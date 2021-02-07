@@ -36,7 +36,7 @@
             this.panelSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelSubMenuMantenimiento = new System.Windows.Forms.Panel();
@@ -47,17 +47,17 @@
             this.btnManTesista = new System.Windows.Forms.Button();
             this.btnMantenimiento = new System.Windows.Forms.Button();
             this.panelLogos = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel_Contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenuLateral.SuspendLayout();
             this.panelSubMenuOperaciones.SuspendLayout();
             this.panelSubMenuMantenimiento.SuspendLayout();
             this.panelLogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Contenedor
@@ -121,7 +121,7 @@
             this.panelSubMenuOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelSubMenuOperaciones.Controls.Add(this.button8);
             this.panelSubMenuOperaciones.Controls.Add(this.button9);
-            this.panelSubMenuOperaciones.Controls.Add(this.button10);
+            this.panelSubMenuOperaciones.Controls.Add(this.BtnEditar);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 485);
@@ -164,22 +164,23 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // BtnEditar
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.button10.ForeColor = System.Drawing.SystemColors.Control;
-            this.button10.Location = new System.Drawing.Point(0, 49);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(333, 49);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "button10";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
+            this.BtnEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEditar.FlatAppearance.BorderSize = 0;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnEditar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnEditar.Location = new System.Drawing.Point(0, 49);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnEditar.Size = new System.Drawing.Size(333, 49);
+            this.BtnEditar.TabIndex = 1;
+            this.BtnEditar.Text = "EditarRXT";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnManRequisitosXTramite
             // 
@@ -376,16 +377,16 @@
             this.panelLogos.Size = new System.Drawing.Size(333, 123);
             this.panelLogos.TabIndex = 4;
             // 
-            // pictureBox2
+            // label1
             // 
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(225, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "UNSAAC";
             // 
             // pictureBox3
             // 
@@ -398,16 +399,16 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // label1
+            // pictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(225, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "UNSAAC";
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(116, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -429,8 +430,8 @@
             this.panelSubMenuMantenimiento.ResumeLayout(false);
             this.panelLogos.ResumeLayout(false);
             this.panelLogos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,7 +450,7 @@
         private System.Windows.Forms.Panel panelSubMenuOperaciones;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnManRequisitosXTramite;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button BtnManTramite;
