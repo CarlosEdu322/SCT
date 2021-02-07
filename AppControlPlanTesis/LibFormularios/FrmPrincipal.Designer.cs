@@ -35,7 +35,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.BtnIniciarTramite = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -120,7 +120,7 @@
             // 
             this.panelSubMenuOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelSubMenuOperaciones.Controls.Add(this.button8);
-            this.panelSubMenuOperaciones.Controls.Add(this.button9);
+            this.panelSubMenuOperaciones.Controls.Add(this.BtnIniciarTramite);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnEditar);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -147,22 +147,23 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // BtnIniciarTramite
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.button9.ForeColor = System.Drawing.SystemColors.Control;
-            this.button9.Location = new System.Drawing.Point(0, 98);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(333, 49);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "button9";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.BtnIniciarTramite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnIniciarTramite.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnIniciarTramite.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(0, 98);
+            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnIniciarTramite.Name = "BtnIniciarTramite";
+            this.BtnIniciarTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnIniciarTramite.Size = new System.Drawing.Size(333, 49);
+            this.BtnIniciarTramite.TabIndex = 2;
+            this.BtnIniciarTramite.Text = "Iniciar Tramite";
+            this.BtnIniciarTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnIniciarTramite.UseVisualStyleBackColor = true;
+            this.BtnIniciarTramite.Click += new System.EventHandler(this.BtnIniciarTramite_Click);
             // 
             // BtnEditar
             // 
@@ -449,7 +450,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelSubMenuOperaciones;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button BtnIniciarTramite;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnManRequisitosXTramite;
         private System.Windows.Forms.Button btnSalir;

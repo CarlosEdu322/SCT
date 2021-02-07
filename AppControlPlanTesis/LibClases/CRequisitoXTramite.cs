@@ -49,6 +49,27 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
+        public void GuardarCambiosRequisitosXTramite(string pCodTramite, List<string> listaderequisitos)
+        {
+            string Consulta = "delete from " + aNombreTabla + " where CodTramite= '" + pCodTramite + "' ";
+            aConexion.EjecutarSelect(Consulta);
+            for (int i = 0; i < listaderequisitos.Count; i++)
+            {
+                Consulta = " insert into TRequisitoXTramite values('"+pCodTramite+"', '"+ listaderequisitos[i]+"') ";
+                aConexion.EjecutarSelect(Consulta);
+                
+            }
+            //aConexion.EjecutarSelect(Consulta);
+        }
+        public DataTable ListarRequisitoXTramiteNombres(string pCodTramite)
+        {
+            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " +
+                aNombreTabla + "  a,TRequisito b,TTramite c " +
+"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite + "' ";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
+
 
     }
 }

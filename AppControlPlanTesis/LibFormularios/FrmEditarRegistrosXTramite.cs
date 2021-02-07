@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using LibClases;
 namespace LibFormularios
 {
@@ -14,12 +15,13 @@ namespace LibFormularios
     {
         private CRequisitoXTramite oRequisitoXTramite;
         private CTramite oTramite;
-        private CRequisito cRequisito;
+        private CRequisito oRequisito;
         public FrmEditarRegistrosXTramite()
         {
             InitializeComponent();
             oRequisitoXTramite = new CRequisitoXTramite();
             oTramite = new CTramite();
+            oRequisito = new CRequisito();
         }
         public void LlenarListaRequisitos()
         {
@@ -27,8 +29,8 @@ namespace LibFormularios
             {
                 //-- muestra la lista de libros en el combo
                 ChlRequisitosXTramite.DataSource = oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
-                ChlRequisitosXTramite.DisplayMember = "CodRequisito";
-                ChlRequisitosXTramite.ValueMember = "CodTramite";
+                ChlRequisitosXTramite.DisplayMember = "TipoRequisito";
+                ChlRequisitosXTramite.ValueMember = "TipoRequisito";
                 //-- dejar el combo sin libro seleccionado
                 ChlRequisitosXTramite.SelectedIndex = -1;
             }
@@ -37,13 +39,74 @@ namespace LibFormularios
 
             }
         }
+        private void SeleccionarTodo()
+        {
+            for (int j = 0; j < ChlRequisitosXTramite.Items.Count; j++)
+            {
+                ChlRequisitosXTramite.SetItemChecked(j, false);
+            }
+            DataTable dt= oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                //MessageBox.Show("dora"+dt.Rows[i]["CodRequisito"].ToString());
+                //MessageBox.Show("hola" + drv["CodRequisito"].ToString());
+                for (int j = 0; j < ChlRequisitosXTramite.Items.Count; j++)
+                {
+                    DataRowView drv = ChlRequisitosXTramite.Items[j] as DataRowView;
+
+                    //MessageBox.Show("hola" + drv["CodRequisito"].ToString());
+                    if (dt.Rows[i]["CodRequisito"].ToString().CompareTo(drv["CodRequisito"].ToString())==0)
+                    {
+                        ChlRequisitosXTramite.SetItemChecked(j, true);
+                    }
+
+                }
+
+            }
+
+            /*
+            //DataTable dt2 = oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
+            for (int i = 0; i < ChlRequisitosXTramite.Items.Count; i++)
+            {
+                DataRowView drv = ChlRequisitosXTramite.Items[i] as DataRowView;
+
+                MessageBox.Show("hola"+drv["CodRequisito"].ToString());
+            }
+
+
+            for (int k = 0; k < ChlRequisitosXTramite.Items.Count; k++)
+            {
+                
+                ChlRequisitosXTramite.SetItemChecked(k, true);
+            }
+            */
+
+        }
+        public void LlenarTodosLosRequisitos()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                ChlRequisitosXTramite.DataSource = oRequisito.ListarTodosLosRequisitos();
+                ChlRequisitosXTramite.DisplayMember = "TipoRequisito";
+                ChlRequisitosXTramite.ValueMember = "TipoRequisito";
+                //-- dejar el combo sin libro seleccionado
+                ChlRequisitosXTramite.SelectedIndex = -1;
+                SeleccionarTodo();
+            }
+            catch
+            {
+
+            }
+        }
+
         public void LlenarCboTramites()
         {
             try
             {
                 //-- muestra la lista de libros en el combo
                 CboCodTramite.DataSource = oTramite.ListaGeneral();
-                //CboCodDocente.DisplayMember = "Correo";
+                //CboCodTramite.DisplayMember = "CodTramite";
                 CboCodTramite.ValueMember = "CodTramite";
                 //-- dejar el combo sin libro seleccionado
                 CboCodTramite.SelectedIndex = -1;
@@ -53,15 +116,51 @@ namespace LibFormularios
 
             }
         }
+        public void CambioDeRequisitoXTramite()
+        {
+            try
+            {
+                List<string> CadenaRequisitos = new List<string>();
+                for (int j = 0; j < ChlRequisitosXTramite.Items.Count; j++)
+                {
+                    DataRowView drv = ChlRequisitosXTramite.Items[j] as DataRowView;
+                    if (ChlRequisitosXTramite.GetItemChecked(j))
+                    {
+                        //MessageBox.Show("hola" + drv["CodRequisito"].ToString());
+                        CadenaRequisitos.Add(drv["CodRequisito"].ToString());
+                    }
+
+                }
+                /*for (int k=0;k< ChlRequisitosXTramite.Items.Count;k++)
+                {
+                    //MessageBox.Show(ChlRequisitosXTramite.Items[k].ToString());
+                }
+                */
+
+
+                oRequisitoXTramite.GuardarCambiosRequisitosXTramite(CboCodTramite.Text, CadenaRequisitos);
+                MessageBox.Show("Cambios guardados");
+            }
+            catch
+            {
+
+            }
+        }
         private void CboCodTramite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LlenarListaRequisitos();
+
+            LlenarTodosLosRequisitos();
         }
 
         private void FrmEditarRegistrosXTramite_Load(object sender, EventArgs e)
         {
             LlenarListaRequisitos();
             LlenarCboTramites();
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            CambioDeRequisitoXTramite();
         }
     }
 }

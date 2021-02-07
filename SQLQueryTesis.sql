@@ -366,3 +366,10 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite='TR0002' and c.CodTramite=a
 
 
 select distinct * from TRequisitoXTramite where CodTramite='TR0001'
+
+
+select * from TRequisitoXTramite
+
+delete from TRequisitoXTramite where CodTramite ='TR0001'
+---for i in clb.checked
+insert into TRequisitoXTramite values('TR0001' ,'REQ001')

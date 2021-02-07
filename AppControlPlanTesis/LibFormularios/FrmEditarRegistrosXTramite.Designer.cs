@@ -31,6 +31,7 @@
             this.ChlRequisitosXTramite = new System.Windows.Forms.CheckedListBox();
             this.CboCodTramite = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ChlRequisitosXTramite
@@ -64,16 +65,27 @@
             this.label4.TabIndex = 146;
             this.label4.Text = "CodTramite:";
             // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Location = new System.Drawing.Point(347, 405);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(90, 46);
+            this.BtnGuardar.TabIndex = 148;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
             // FrmEditarRegistrosXTramite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 514);
+            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.CboCodTramite);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ChlRequisitosXTramite);
             this.Name = "FrmEditarRegistrosXTramite";
-            this.Text = "FrmEditarRegistrosXTramite";
+            this.Text = "d";
             this.Load += new System.EventHandler(this.FrmEditarRegistrosXTramite_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -85,5 +97,6 @@
         private System.Windows.Forms.CheckedListBox ChlRequisitosXTramite;
         private System.Windows.Forms.ComboBox CboCodTramite;
         protected System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BtnGuardar;
     }
 }

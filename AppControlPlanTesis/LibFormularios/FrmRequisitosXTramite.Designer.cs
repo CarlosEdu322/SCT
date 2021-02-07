@@ -165,12 +165,12 @@
             this.DgvTramiteXRequisito.AllowUserToAddRows = false;
             this.DgvTramiteXRequisito.AllowUserToDeleteRows = false;
             this.DgvTramiteXRequisito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(0, 196);
+            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(111, 361);
             this.DgvTramiteXRequisito.Name = "DgvTramiteXRequisito";
             this.DgvTramiteXRequisito.ReadOnly = true;
             this.DgvTramiteXRequisito.RowHeadersWidth = 51;
             this.DgvTramiteXRequisito.RowTemplate.Height = 24;
-            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(231, 181);
+            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(822, 207);
             this.DgvTramiteXRequisito.TabIndex = 146;
             // 
             // FrmRequisitosXTramite

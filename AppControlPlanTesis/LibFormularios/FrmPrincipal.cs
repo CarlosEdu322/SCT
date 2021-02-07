@@ -103,5 +103,10 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmEditarRegistrosXTramite());
         }
+
+        private void BtnIniciarTramite_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmIniciarTramiteEstudiante());
+        }
     }
 }

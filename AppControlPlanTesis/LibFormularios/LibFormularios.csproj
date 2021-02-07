@@ -56,6 +56,12 @@
     <Compile Include="FrmEditarRegistrosXTramite.Designer.cs">
       <DependentUpon>FrmEditarRegistrosXTramite.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIniciarTramiteEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIniciarTramiteEstudiante.Designer.cs">
+      <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarRegistrosXTramite.resx">
       <DependentUpon>FrmEditarRegistrosXTramite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
+      <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>
