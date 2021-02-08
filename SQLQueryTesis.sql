@@ -86,9 +86,9 @@ create table TIniciarTramiteInscripcionPlanDeTesis
 	CodTesista3 varchar(6),
 	CodTesis int,
 	Observaciones varchar(100)
-	foreign key (CodTesista1) references TTesista,
-	foreign key (CodTesista2) references TTesista,
-	foreign key (CodTesista3) references TTesista,
+	--foreign key (CodTesista1) references TTesista,
+	--foreign key (CodTesista2) references TTesista,
+	--foreign key (CodTesista3) references TTesista,
 	foreign key (CodTesis) references TTesis,
 	foreign key (CodTramite) references TTramite,
 )
@@ -163,21 +163,26 @@ go
 
 create table TExpediente
 ( -- lista de atributos
-NroExpediente int,
---CodTesis varchar(6) not null,
+NroExpediente int IDENTITY(1,1) PRIMARY KEY,
+CodTesis int,
 --CodTramite varchar(6),
 CodEvaluacionPlanDeTesis varchar(6) ,
 CodDictamenDeTesis varchar(6) ,
 CodSustentacionOral varchar(6) ,
-Observacion varchar(40) not null,
+Observacion varchar(40),
 -- especificacion de claves
-primary key (NroExpediente),
---foreign key (CodTesis) references TTesis,
-foreign key (CodEvaluacionPlanDeTesis) references TComisionRevisora,
-foreign key (CodDictamenDeTesis) references TDictaminantesDeTesis,
-foreign key (CodSustentacionOral) references TJuradoEvaluador
+--primary key (NroExpediente),
+foreign key (CodTesis) references TTesis,
+--foreign key (CodEvaluacionPlanDeTesis) references TComisionRevisora,
+--foreign key (CodDictamenDeTesis) references TDictaminantesDeTesis,
+--foreign key (CodSustentacionOral) references TJuradoEvaluador
 )
 go
+
+SELECT * FROM TExpediente
+insert into TExpediente values('100001','','','','NINGUNO')
+
+
 
 create table TramiteXEstudiante(
 	CodTramite varchar(6),
@@ -334,7 +339,7 @@ insert into TTesista values ('150543','DONGO ESQUIVEL','DIEGO YOSHIRO','150543@u
 
 select * from TTesista
 
-
+select * from TIniciarTramiteInscripcionPlanDeTesis
 
 insert into TTramite values ('TR0001','Nombramiento de Asesor e Inscripcion de Plan de Tesis')
 insert into TTramite values ('TR0002','Solicitar Nombramiento de la Comision Revisora y su posterior Revision')

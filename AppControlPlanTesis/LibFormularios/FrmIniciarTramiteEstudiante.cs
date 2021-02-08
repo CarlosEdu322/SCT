@@ -233,42 +233,61 @@ namespace LibFormularios
         {
             this.Close();
         }
+        public bool VerificarRequisitos()
+        {
+            bool cumpletodoslosrequisitos = true;
+            for (int j = 0; j < ChlRequisitosXTramite.Items.Count; j++)
+            {
+                DataRowView drv = ChlRequisitosXTramite.Items[j] as DataRowView;
+                if (!ChlRequisitosXTramite.GetItemChecked(j))
+                {
+                    cumpletodoslosrequisitos = false;
+                }
 
+            }
+            return cumpletodoslosrequisitos;
+        }
         private void BtnIniciarTramite_Click(object sender, EventArgs e)
         {
             try
             {
-                //insert into TTesis values ('tema','coddocente','titulo','','')
-                List<string> CadenaTesis = new List<string>();
 
-                CadenaTesis.Add(TxtTema.Text);
-                CadenaTesis.Add(CboCodDocente.Text);
-                CadenaTesis.Add(TxtTitulo.Text);
-                oTesis.AgregarTesisAutovalores(CadenaTesis);
-                MessageBox.Show("Tesis Ingresada");
-                string codigo = oTesis.ObtenerDatos(CadenaTesis, "CodTesis");
-                MessageBox.Show("Nro de Tesis "+codigo+" ESTADO: POR REVISAR");
-
-                List<string> IniciarTramiteInscripcionPlanDeTesis = new List<string>();
-                DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
-                string codTramite = string.Empty;
-
-                if (oDataRowView != null)
+                if (VerificarRequisitos())
                 {
-                    codTramite = oDataRowView.Row["CodTramite"] as string;
+                    //insert into TTesis values ('tema','coddocente','titulo','','')
+                    List<string> CadenaTesis = new List<string>();
+
+                    CadenaTesis.Add(TxtTema.Text);
+                    CadenaTesis.Add(CboCodDocente.Text);
+                    CadenaTesis.Add(TxtTitulo.Text);
+                    oTesis.AgregarTesisAutovalores(CadenaTesis);
+                    MessageBox.Show("Tesis Ingresada");
+                    string codigo = oTesis.ObtenerDatos(CadenaTesis, "CodTesis");
+                    MessageBox.Show("Nro de Tesis " + codigo + " ESTADO: POR REVISAR");
+
+                    List<string> IniciarTramiteInscripcionPlanDeTesis = new List<string>();
+                    DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
+                    string codTramite = string.Empty;
+
+                    if (oDataRowView != null)
+                    {
+                        codTramite = oDataRowView.Row["CodTramite"] as string;
+                    }
+
+                    IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
+                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista1.Text);
+                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista2.Text);
+                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista3.Text);
+                    IniciarTramiteInscripcionPlanDeTesis.Add(codigo);
+                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
+                    //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
+                    oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
+                    MessageBox.Show("TRAMITE " + codTramite + " AGREGADO");
                 }
-
-                IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
-                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista1.Text);
-                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista2.Text);
-                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista3.Text);
-                IniciarTramiteInscripcionPlanDeTesis.Add(codigo);
-                IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
-                //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
-                oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
-                MessageBox.Show("TRAMITE"+codTramite+" AGREGADO");
-
-
+                else
+                {
+                    MessageBox.Show("Tiene que cumplir todos los requisitos");
+                }
 
 
             }
