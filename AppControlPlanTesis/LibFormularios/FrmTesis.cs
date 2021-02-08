@@ -27,7 +27,7 @@ namespace LibFormularios
         public override string[] AsignarValoresAtributos()
         {
             return new string[] { TxtCodTesis.Text,
-                CboCodTesista.Text,
+                TxtTema.Text,
                 CboCodDocente.Text,
                 TxtTitulo.Text,
                 TxtEstado.Text,
@@ -38,7 +38,7 @@ namespace LibFormularios
         public override void MostrarDatos()
         {	//-- muestra la informacion contenida en el dataset de CDocente
             TxtCodTesis.Text = aEntidad.ValorAtributo("CodTesis");
-            CboCodTesista.Text = aEntidad.ValorAtributo("CodTesista");
+            TxtTema.Text = aEntidad.ValorAtributo("Tema");
             CboCodDocente.Text = aEntidad.ValorAtributo("CodDocente");
             TxtTitulo.Text = aEntidad.ValorAtributo("Titulo");
             TxtEstado.Text = aEntidad.ValorAtributo("Estado");
@@ -55,7 +55,7 @@ namespace LibFormularios
         public override void InicializarAtributosNoClave()
         {
             TxtCodTesis.Text = "";
-            CboCodTesista.SelectedIndex = -1;
+            TxtTema.Text = "";
             CboCodDocente.SelectedIndex = -1;
             TxtTitulo.Text = "";
             TxtEstado.Text = "";
@@ -74,11 +74,11 @@ namespace LibFormularios
         public override bool EsRegistroValido()
         {
             if ((TxtCodTesis.Text.Trim() != "") &&
-                (CboCodTesista.Text.Trim() != "") && 
+                (TxtTema.Text.Trim() != "") &&
                 (CboCodDocente.Text.Trim() != "") &&
                 (TxtTitulo.Text.Trim() != "") &&
-                (TxtEstado.Text.Trim() != "") && 
-                (TxtObservaciones.Text.Trim() != "") )
+                (TxtEstado.Text.Trim() != "") &&
+                (TxtObservaciones.Text.Trim() != ""))
                 return true;
             else
                 return false;
@@ -114,21 +114,14 @@ namespace LibFormularios
             //-- dejar el combo sin libro seleccionado
             CboCodDocente.SelectedIndex = -1;
         }
-        public void LlenarListaTesistas()
-        { //-- muestra la lista de libros en el combo
-            CboCodTesista.DataSource = oTesista.ListaGeneral();
-            //CboCodTesista.DisplayMember = "Correo";
-            CboCodTesista.ValueMember = "CodTesista";
-            //-- dejar el combo sin libro seleccionado
-            CboCodTesista.SelectedIndex = -1;
-        }
+    
 
         private void FrmTesis_Load_1(object sender, EventArgs e)
         {
             ListarRegistros();
             LlenarListaDocentes();
-            LlenarListaTesistas();
         }
+        
 
 
         private void BtnBuscar_Click_1(object sender, EventArgs e)

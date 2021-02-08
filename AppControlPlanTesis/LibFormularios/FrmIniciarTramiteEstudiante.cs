@@ -17,6 +17,7 @@ namespace LibFormularios
     public partial class FrmIniciarTramiteEstudiante : Form
     {
         private CTramite oTramite;
+        private CDocente oDocente;
         private CRequisitoXTramite oRequsitosXTramite;
         public FrmIniciarTramiteEstudiante()
         {
@@ -24,37 +25,56 @@ namespace LibFormularios
             InicializarCamposCboNroEstudiantes();
             oTramite = new CTramite();
             oRequsitosXTramite = new CRequisitoXTramite();
+            oDocente = new CDocente();
             LlenarCboTramites();
-            
+            LlenarCboDocentes();
+
         }
         public void InicializarCamposCboNroEstudiantes()
         {
-            LblCodTesista2.Visible = false;
-            LblCodTesista3.Visible = false;
-            TxtCodTesista2.Visible = false;
-            TxtCodTesista3.Visible = false;
+            TxtCodTesista2.Enabled = false;
+            TxtCodTesista3.Enabled = false;
+            BtnBuscarT2.Enabled = false;
+            BtnBuscarT3.Enabled = false;
+            //Tesista1
+            TxtCodTesista1.Clear(); TxtNombreTesista1.Clear(); TxtApeTesista1.Clear(); TxtDniTesista1.Clear();
+            //Tesista2
+            TxtCodTesista2.Clear(); TxtNombreTesista2.Clear(); TxtApeTesista2.Clear(); TxtDniTesista2.Clear();
+            //Tesista3 
+            TxtCodTesista3.Clear(); TxtNombreTesista3.Clear(); TxtApeTesista3.Clear(); TxtDniTesista3.Clear();
         }
 
         private void CboNroEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             InicializarCamposCboNroEstudiantes();
+            if (CboNroEstudiantes.Text == "1")
+            {
+                
+                BtnBuscarT2.Enabled = false;
+                BtnBuscarT3.Enabled = false;
+            }
+
             if (CboNroEstudiantes.Text == "2")
             {
-                LblCodTesista2.Visible = true;
-                TxtCodTesista2.Visible = true;
+                //LblCodTesista2.Enabled = true;
+                TxtCodTesista2.Enabled = true;
+                TxtCodTesista3.Enabled = false;
+                BtnBuscarT2.Enabled = true;
+                BtnBuscarT3.Enabled = false;
+                TxtCodTesista3.Clear(); TxtNombreTesista3.Clear(); TxtApeTesista3.Clear(); TxtDniTesista3.Clear();
             }
             if (CboNroEstudiantes.Text == "3")
             {
-                LblCodTesista2.Visible = true;
-                TxtCodTesista2.Visible = true;
-                LblCodTesista3.Visible = true;
-                TxtCodTesista3.Visible = true;
+                TxtCodTesista2.Enabled = true;
+                TxtCodTesista3.Enabled = true;
+                BtnBuscarT2.Enabled = true;
+                BtnBuscarT3.Enabled = true;
             }
 
 
 
         }
+
         public void LlenarCboTramites()
         {
             try
@@ -71,7 +91,28 @@ namespace LibFormularios
 
             }
         }
-        
+        public void LlenarCboDocentes()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                CboCodDocente.DataSource = oDocente.ListaGeneral();
+                //CboCodDocente.DisplayMember = "Correo";
+                CboCodDocente.ValueMember = "CodDocente";
+                //-- dejar el combo sin libro seleccionado
+                CboCodDocente.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void ProcesarClave()
+        {
+
+        }
+
         public void RellenarRequisitosXTramite()
         {
             try
@@ -99,16 +140,70 @@ namespace LibFormularios
                 ChlRequisitosXTramite.ValueMember = "TipoRequisito";
                 //-- dejar el combo sin libro seleccionado
                 ChlRequisitosXTramite.SelectedIndex = -1;
-                
+
             }
             catch
             {
                 //MessageBox.Show("error");
             }
         }
+
         private void CboCodTramite_SelectedIndexChanged(object sender, EventArgs e)
         {
             RellenarRequisitosXTramite();
         }
+        public void ConsultarEstudiante(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
+        {
+            CTesista tesista = new CTesista();
+            if (tesista.ExisteClavePrimaria(codigotesista))
+            {
+                MessageBox.Show("Codigo encontrado", "Se actualizaron los datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //-- Recuperar atributos, el primer atributo es la clave 
+                tbox1.Text = tesista.ValorAtributo("Nombres");
+                tbox2.Text = tesista.ValorAtributo("Apellidos");
+                tbox3.Text = tesista.ValorAtributo("Dni");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo encontrar el codigo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbox1.Clear(); tbox2.Clear(); tbox3.Clear();
+            }
+        }
+
+        public bool ComprobarDuplicidad(TextBox txb1, TextBox txb2)
+        {
+            if ((txb1.Text == txb2.Text))
+            {
+                MessageBox.Show("El codigo ya ha sido insertado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void BtnBuscarT1_Click(object sender, EventArgs e)
+        {
+            ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
+        }
+
+        private void BtnBuscarT2_Click(object sender, EventArgs e)
+        {
+            if (ComprobarDuplicidad(TxtCodTesista1, TxtCodTesista2) == false)
+            {
+                ConsultarEstudiante(TxtNombreTesista2, TxtApeTesista2, TxtDniTesista2, TxtCodTesista2.Text);
+            }
+        }
+
+        private void BtnBuscarT3_Click(object sender, EventArgs e)
+        {
+            if ((ComprobarDuplicidad(TxtCodTesista1, TxtCodTesista2) == false) && (ComprobarDuplicidad(TxtCodTesista1, TxtCodTesista3) == false) && (ComprobarDuplicidad(TxtCodTesista2, TxtCodTesista3) == false))
+            {
+                ConsultarEstudiante(TxtNombreTesista3, TxtApeTesista3, TxtDniTesista3, TxtCodTesista3.Text);
+            }
+        }
+
+
     }
 }

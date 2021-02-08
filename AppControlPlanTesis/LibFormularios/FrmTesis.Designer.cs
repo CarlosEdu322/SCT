@@ -34,15 +34,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtTitulo = new System.Windows.Forms.TextBox();
             this.TxtEstado = new System.Windows.Forms.TextBox();
             this.TxtObservaciones = new System.Windows.Forms.TextBox();
             this.DgvTesis = new System.Windows.Forms.DataGridView();
-            this.CboCodTesista = new System.Windows.Forms.ComboBox();
             this.CboCodDocente = new System.Windows.Forms.ComboBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtTema = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,16 +80,16 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.TxtTema);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.BtnBuscar);
             this.panel3.Controls.Add(this.CboCodDocente);
-            this.panel3.Controls.Add(this.CboCodTesista);
             this.panel3.Controls.Add(this.DgvTesis);
             this.panel3.Controls.Add(this.TxtCodTesis);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.TxtTitulo);
             this.panel3.Controls.Add(this.TxtEstado);
@@ -150,17 +150,6 @@
             this.label6.TabIndex = 127;
             this.label6.Text = "Estado:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(137, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 22);
-            this.label3.TabIndex = 121;
-            this.label3.Text = "CodTesista:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -214,17 +203,6 @@
             this.DgvTesis.Size = new System.Drawing.Size(861, 277);
             this.DgvTesis.TabIndex = 134;
             // 
-            // CboCodTesista
-            // 
-            this.CboCodTesista.BackColor = System.Drawing.SystemColors.Control;
-            this.CboCodTesista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboCodTesista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboCodTesista.FormattingEnabled = true;
-            this.CboCodTesista.Location = new System.Drawing.Point(327, 127);
-            this.CboCodTesista.Name = "CboCodTesista";
-            this.CboCodTesista.Size = new System.Drawing.Size(500, 30);
-            this.CboCodTesista.TabIndex = 135;
-            // 
             // CboCodDocente
             // 
             this.CboCodDocente.BackColor = System.Drawing.SystemColors.Control;
@@ -248,6 +226,26 @@
             this.BtnBuscar.TabIndex = 140;
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(137, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 22);
+            this.label1.TabIndex = 141;
+            this.label1.Text = "Tema:";
+            // 
+            // TxtTema
+            // 
+            this.TxtTema.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtTema.Location = new System.Drawing.Point(327, 126);
+            this.TxtTema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTema.Name = "TxtTema";
+            this.TxtTema.Size = new System.Drawing.Size(500, 30);
+            this.TxtTema.TabIndex = 142;
             // 
             // FrmTesis
             // 
@@ -274,14 +272,14 @@
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtTitulo;
         private System.Windows.Forms.TextBox TxtEstado;
         private System.Windows.Forms.TextBox TxtObservaciones;
         private System.Windows.Forms.DataGridView DgvTesis;
         private System.Windows.Forms.ComboBox CboCodDocente;
-        private System.Windows.Forms.ComboBox CboCodTesista;
         private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtTema;
     }
 }

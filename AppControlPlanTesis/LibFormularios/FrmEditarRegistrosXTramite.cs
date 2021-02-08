@@ -16,12 +16,14 @@ namespace LibFormularios
         private CRequisitoXTramite oRequisitoXTramite;
         private CTramite oTramite;
         private CRequisito oRequisito;
+        private CDocente oDocente;
         public FrmEditarRegistrosXTramite()
         {
             InitializeComponent();
             oRequisitoXTramite = new CRequisitoXTramite();
             oTramite = new CTramite();
             oRequisito = new CRequisito();
+            oDocente = new CDocente();
         }
         public void LlenarListaRequisitos()
         {
@@ -116,6 +118,23 @@ namespace LibFormularios
 
             }
         }
+
+        public void LlenarCboDocente()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                CboCodTramite.DataSource = oDocente.ListaGeneral();
+                //CboCodTramite.DisplayMember = "CodTramite";
+                CboCodTramite.ValueMember = "CodDocente";
+                //-- dejar el combo sin libro seleccionado
+                CboCodTramite.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
+        }
         public void CambioDeRequisitoXTramite()
         {
             try
@@ -156,6 +175,7 @@ namespace LibFormularios
         {
             LlenarListaRequisitos();
             LlenarCboTramites();
+            LlenarCboDocente();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)

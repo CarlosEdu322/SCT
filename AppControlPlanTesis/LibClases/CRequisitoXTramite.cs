@@ -35,9 +35,7 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
              
              */
 
-            string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " +
-                aNombreTabla + "  a,TRequisito b,TTramite c " +
-"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite + "' ";
+            string Consulta = "select c.CodTramite,c.Tipo,b.CodRequisito,TipoRequisito from TRequisitoXTramite a,TRequisito b,TTramite c where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite+"'";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
@@ -52,11 +50,11 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
         public void GuardarCambiosRequisitosXTramite(string pCodTramite, List<string> listaderequisitos)
         {
             string Consulta = "delete from " + aNombreTabla + " where CodTramite= '" + pCodTramite + "' ";
-            aConexion.EjecutarSelect(Consulta);
+            aConexion.EjecutarComando(Consulta);
             for (int i = 0; i < listaderequisitos.Count; i++)
             {
                 Consulta = " insert into TRequisitoXTramite values('"+pCodTramite+"', '"+ listaderequisitos[i]+"') ";
-                aConexion.EjecutarSelect(Consulta);
+                aConexion.EjecutarComando(Consulta);
                 
             }
             //aConexion.EjecutarSelect(Consulta);
@@ -65,7 +63,7 @@ where a.CodRequisito=b.CodRequisito and c.CodTramite=a.CodTramite and c.CodTrami
         {
             string Consulta = "select c.CodTramite,c.Tipo,a.CodRequisito,TipoRequisito from " +
                 aNombreTabla + "  a,TRequisito b,TTramite c " +
-"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite = '" + pCodTramite + "' ";
+"where a.CodRequisito = b.CodRequisito and c.CodTramite = a.CodTramite and c.CodTramite ='"+pCodTramite+"'";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }

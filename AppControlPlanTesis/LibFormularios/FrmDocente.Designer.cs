@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocente));
             this.DgvDocentes = new System.Windows.Forms.DataGridView();
-            this.TxtImpedimento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.CboEspecialidad = new System.Windows.Forms.ComboBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtImpedimento = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -115,16 +115,6 @@
             this.DgvDocentes.RowTemplate.Height = 24;
             this.DgvDocentes.Size = new System.Drawing.Size(1071, 258);
             this.DgvDocentes.TabIndex = 102;
-            // 
-            // TxtImpedimento
-            // 
-            this.TxtImpedimento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtImpedimento.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtImpedimento.Location = new System.Drawing.Point(198, 337);
-            this.TxtImpedimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtImpedimento.Name = "TxtImpedimento";
-            this.TxtImpedimento.Size = new System.Drawing.Size(456, 30);
-            this.TxtImpedimento.TabIndex = 101;
             // 
             // label7
             // 
@@ -328,6 +318,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtImpedimento);
             this.groupBox1.Controls.Add(this.TxtDNI);
             this.groupBox1.Controls.Add(this.CboEspecialidad);
             this.groupBox1.Controls.Add(this.BtnBuscar);
@@ -340,7 +331,6 @@
             this.groupBox1.Controls.Add(this.TxtCorreo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.TxtTelefono);
-            this.groupBox1.Controls.Add(this.TxtImpedimento);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
@@ -353,6 +343,19 @@
             this.groupBox1.TabIndex = 140;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Docente";
+            // 
+            // TxtImpedimento
+            // 
+            this.TxtImpedimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TxtImpedimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtImpedimento.FormattingEnabled = true;
+            this.TxtImpedimento.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.TxtImpedimento.Location = new System.Drawing.Point(198, 340);
+            this.TxtImpedimento.Name = "TxtImpedimento";
+            this.TxtImpedimento.Size = new System.Drawing.Size(456, 30);
+            this.TxtImpedimento.TabIndex = 140;
             // 
             // FrmDocente
             // 
@@ -377,7 +380,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvDocentes;
-        private System.Windows.Forms.TextBox TxtImpedimento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
@@ -397,5 +399,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox TxtImpedimento;
     }
 }

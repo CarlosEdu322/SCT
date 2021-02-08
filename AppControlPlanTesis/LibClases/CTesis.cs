@@ -20,7 +20,7 @@ namespace LibClases
         public override string[] NombresAtributos()
         {
             return new string[] { "CodTesis",
-                "CodTesista",
+                "Tema",
                 "CodDocente",
                 "Titulo",
                 "Estado",

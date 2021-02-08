@@ -26,45 +26,46 @@ namespace LibFormularios
         //-- Establecer los valores que iran a la tabla 
         public override string[] AsignarValoresAtributos()
         {
-            return new string[] { TxtCodTramite.Text,TxtCodRequisito.Text};
+            return new string[] { CboCodTramite.Text,TxtNombreTramite.Text};
         }
         // 	
         //-- Mostrar los datos de un registro 
         public override void MostrarDatos()
         {	//-- muestra la informacion contenida en el dataset de CDocente
-            CboCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
-            TxtCodRequisito.Text = aEntidad.ValorAtributo("CodRequisito");
+            //CboCodTramite.Text = aEntidad.ValorAtributo("CodTramite");
+            //TxtCodRequisito.Text = aEntidad.ValorAtributo("CodRequisito");
+            //TxtNombreTramite.Text = oRequisitoXTramite.ValorAtributoTipo("TipoRequisito");
         }
         // 	
         //-- Iniciar los atributos clave y no clave en blanco 
         public override void InicializarAtributoClave()
         {
-            TxtCodTramite.Enabled = true;
-            TxtCodTramite.Text = "";
+            CboCodTramite.Enabled = true;
+
 
         }
         public override void InicializarAtributosNoClave()
         {
-            TxtCodRequisito.Text = "";
+            TxtNombreTramite.Text = "";
         }
         // 	
         //-- Listar los registros y mostrarlos en el datagrid 
         public override void ListarRegistros()
         {	//-- Mostrar todos los libros de la tabla en el grid 
-            DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
+            try
+            {
+                DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
+            }
+            catch
+            {
 
+            }
         }
 
         //-- verificar los campos obligatorios(codigo y titulo) estén llenos 
         // 	
         //-- verificar los campos obligatorios(codigo y titulo) estén llenos 
-        public override bool EsRegistroValido()
-        {
-            if ((TxtCodTramite.Text.Trim() != "") )
-                return true;
-            else
-                return false;
-        }
+
         public override void ProcesarClave()
         {
             //-- Recuperar atributos, el primer atributo es la clave 
@@ -74,7 +75,6 @@ namespace LibFormularios
             {   //-- Registro existente, Recuperar Atributos y mostrarlos 
                 MostrarDatos();
                 aEntidad.Nuevo = false;
-                TxtCodTramite.Enabled = false;
             }
             else
             {   //-- Registro nuevo, inicializar atributos no clave 
@@ -87,22 +87,7 @@ namespace LibFormularios
             ProcesarClave();
             ListarRegistros();
         }
-        public void LlenarListaRequisitos()
-        {
-            try
-            {
-                //-- muestra la lista de libros en el combo
-                ChlRequisitosXTramite.DataSource = oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
-                ChlRequisitosXTramite.DisplayMember = "CodRequisito";
-                ChlRequisitosXTramite.ValueMember = "CodTramite";
-                //-- dejar el combo sin libro seleccionado
-                ChlRequisitosXTramite.SelectedIndex = -1;
-            }
-            catch
-            {
 
-            }
-        }
         public void LlenarCboTramites()
         {
             try
@@ -123,20 +108,20 @@ namespace LibFormularios
         {
             //ListarRequisitosXTramite();
             ListarRegistros();
-            LlenarListaRequisitos();
             LlenarCboTramites();
         }
 
         private void CboCodTramite_TextChanged(object sender, EventArgs e)
         {
-            LlenarListaRequisitos();
-            ListarRegistros();
+            //LlenarListaRequisitos();
+            //ListarRegistros();
         }
 
         private void CboCodTramite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LlenarListaRequisitos();
+            //LlenarListaRequisitos();
             ListarRegistros();
+            MostrarDatos();
         }
     }
 }

@@ -36,7 +36,7 @@ Telefono varchar(20),
 DNI varchar(8) check (DNI like '[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 Categoria varchar(20) check (Categoria  in ('Contratado','Nombrado')),
 Especialidad varchar(60) check (Especialidad in ('AUDITORIA EN REDES','INGENIERIA DE SOFTWARE','TECNOLOGIAS DE INFORMACION Y COMUNICACION','CIENCIAS DE LA COMPUTACION')),
-Impedimento varchar(20),
+Impedimento varchar(20) check (Impedimento in ('Si','No')),
 -- especificacion de claves
 primary key (CodDocente)
 )
@@ -46,14 +46,13 @@ go
 create table TTesis
 ( -- lista de atributos
 CodTesis varchar(6),
-CodTesista varchar(6),
+Tema varchar(30),
 CodDocente varchar(6),
 Titulo varchar(40),
 Estado varchar(20),
 Observaciones varchar(20),
 -- especificacion de claves
 primary key (CodTesis),
-foreign key (CodTesista) references TTesista,
 foreign key (CodDocente) references TDocente
 )
 go
@@ -79,7 +78,21 @@ TipoRequisito varchar(100),
 primary key (CodRequisito),
 )
 go
-
+	create table TIniciarTramite
+	(
+		CodTramite varchar(6),
+		CodTesista1 varchar(6),
+		CodTesista2 varchar(6),
+		CodTesista3 varchar(6),
+		CodTesis varchar(6),
+		Observaciones varchar(100)
+		foreign key (CodTesista1) references TTesista,
+		foreign key (CodTesista2) references TTesista,
+		foreign key (CodTesista3) references TTesista,
+		foreign key (CodTesis) references TTesis,
+		foreign key (CodTramite) references TTramite,
+	)
+select * from IniciarTramite
 
 create table TRequisitoXTramite
 (
@@ -127,22 +140,29 @@ go
 
 create table TExpediente
 ( -- lista de atributos
-CodExpediente varchar(6),
-CodTesista varchar(6) not null,
-CodTesis varchar(6) not null,
+NroExpediente int,
+--CodTesis varchar(6) not null,
+--CodTramite varchar(6),
 CodEvaluacionPlanDeTesis varchar(6) ,
 CodDictamenDeTesis varchar(6) ,
 CodSustentacionOral varchar(6) ,
 Observacion varchar(40) not null,
 -- especificacion de claves
 primary key (CodExpediente),
-foreign key (CodTesista) references TTesista,
 foreign key (CodTesis) references TTesis,
 foreign key (CodEvaluacionPlanDeTesis) references TComisionRevisora,
 foreign key (CodDictamenDeTesis) references TDictaminantesDeTesis,
 foreign key (CodSustentacionOral) references TJuradoEvaluador
 )
 go
+
+create table TramiteXEstudiante(
+	CodTramite varchar(6),
+	CodTesista varchar(6),
+	foreign key (CodTramite) references TTramite,
+	foreign key (CodTesista) references TTesista,
+)
+
 
 create table TActaDePlanDeTesis
 ( -- lista de atributos
@@ -217,49 +237,49 @@ foreign key (CodDocente) references TDocente,
 
 
 
-
 ----------------------------------------
 -- INSERTAMOS DATOS A LAS TABLA DOCENTE --
 ---------------------------------------
-insert into TDocente values('D00001','ALZAMORA PAREDES','ROBERT WILBERT','robert.alzamora@unsaac.edu.pe','984632900','24589812','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00002','VILLAFUERTE SERNA','RONY','rony.villafuerte@unsaac.edu.pe','998562389','24589689','NOMBRADO','AUDITORIA EN REDES','Ninguno')
-insert into TDocente values('D00003','CHOQUE SOTO','VANESA MARIBEL','maribel.choque@unsaac.edu.pe','989862347','70349636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00004','IBARRA ZAMBRANO','WALDO ELIO','waldo.ibarra@unsaac.edu.pe','984596398','24586688','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00005','ZAMALLOA PARO','WILLIAM','william.zamalloa@unsaac.edu.pe','994562385','70589696','CONTRATADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00006','CARRASCO POBLETE','EDWIN','edwin.carrasco@unsaac.edu.pe','984562347','74589636','NOMBRADO','AUDITORIA EN REDES','Ninguno')
-insert into TDocente values('D00007','CUTIPA ARAPA','EFRAINA GLADYS','efraina.cutipa@unsaac.edu.pe','999525389','24559933','CONTRATADO','AUDITORIA EN REDES','Ninguno')
-insert into TDocente values('D00008','RIVAS PUGA','ABDON','abdon.rivas@unsaac.edu.pe','984562347','74589636','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00009','CARDENAS MAYTA','ANA ROCIO','ana.cardenas@unsaac.edu.pe','937562347','74590636','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00010','CANDIA OVIEDO','DENIS IVAN','denis.candia@unsaac.edu.pe','912562947','24589622','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00011','PALOMINO OLIVERA','EMILIO','emilio.palomino@unsaac.edu.pe','984562347','74969633','NOMBRADO','AUDITORIA EN REDES','Ninguno')
+insert into TDocente values('D00001','ALZAMORA PAREDES','ROBERT WILBERT','robert.alzamora@unsaac.edu.pe','984632900','24589812','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00002','VILLAFUERTE SERNA','RONY','rony.villafuerte@unsaac.edu.pe','998562389','24589689','NOMBRADO','AUDITORIA EN REDES','No')
+insert into TDocente values('D00003','CHOQUE SOTO','VANESA MARIBEL','maribel.choque@unsaac.edu.pe','989862347','70349636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00004','IBARRA ZAMBRANO','WALDO ELIO','waldo.ibarra@unsaac.edu.pe','984596398','24586688','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00005','ZAMALLOA PARO','WILLIAM','william.zamalloa@unsaac.edu.pe','994562385','70589696','CONTRATADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00006','CARRASCO POBLETE','EDWIN','edwin.carrasco@unsaac.edu.pe','984562347','74589636','NOMBRADO','AUDITORIA EN REDES','No')
+insert into TDocente values('D00007','CUTIPA ARAPA','EFRAINA GLADYS','efraina.cutipa@unsaac.edu.pe','999525389','24559933','CONTRATADO','AUDITORIA EN REDES','No')
+insert into TDocente values('D00008','RIVAS PUGA','ABDON','abdon.rivas@unsaac.edu.pe','984562347','74589636','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00009','CARDENAS MAYTA','ANA ROCIO','ana.cardenas@unsaac.edu.pe','937562347','74590636','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00010','CANDIA OVIEDO','DENIS IVAN','denis.candia@unsaac.edu.pe','912562947','24589622','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00011','PALOMINO OLIVERA','EMILIO','emilio.palomino@unsaac.edu.pe','984562347','74969633','NOMBRADO','AUDITORIA EN REDES','No')
 insert into TDocente values('D00012','GAMARRA SALDIVAR','ENRIQUE','enrique.gamarra@unsaac.edu.pe','988588345','70589636','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00013','PACHECO VASQUEZ','ESTER CRISTINA','ester.pacheco@unsaac.edu.pe','914562396','74582635','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00014','TICON PARI','GUZMAN','guzman.ticona@unsaac.edu.pe','912562348','24989636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00015','DUEÑAS DE LA CRUZ','HENRY SAMUEL','henry.dueñas@unsaac.edu.pe','916282325','24589631','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
-insert into TDocente values('D00016','MEDRANO VALENCIA','IVAN CESAR','ivan.medrano@unsaac.edu.pe','918562342','70589521','NOMBRADO','INGENIERIA DE SOTWARE','Ninguno')
-insert into TDocente values('D00017','ROZAS HUACHO','JAVIER ARTURO','javir.rozas@unsaac.edu.pe','919562347','74589696','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00018','CHAVEZ CENTENO','JAVIER DAVID','javier.chavez@unsaac.edu.pe','984562347','70589634','NOMBRADO','AUDITORIA EN REDES','Ninguno')
-insert into TDocente values('D00019','PILLCO QUISPE','JOSE MAURO','jose.pillco@unsaac.edu.pe','976562347','24589666','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00020','MEDINA MIRANDA','KARELIA','karelia.medina@unsaac.edu.pe','984562325','74589961','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00021','ENCISO RODAS','LAURO','lauro.enciso@unsaac.edu.pe','994562398','74589656','NOMBRADO','AUDITORIA EN REDES','Ninguno')
-insert into TDocente values('D00022','FLORES PACHECO','LINO PRISCILIANO','lino.pacheco@unsaac.edu.pe','984662007','74589200','NOMBRADO','CIENCIAS DE LA COMPUTACION','Ninguno')
-insert into TDocente values('D00023','PALMA TITO','LUIS BELTRAN','luis.palma@unsaac.edu.pe','984562347','70589056','NOMBRADO','INGENIERIA DE SOFTWARE','Ninguno')
-insert into TDocente values('D00024','ACURIO USCA','NILA SONIA','nila.acurio@unsaac.edu.pe','996523479','72529622','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','Ninguno')
+insert into TDocente values('D00013','PACHECO VASQUEZ','ESTER CRISTINA','ester.pacheco@unsaac.edu.pe','914562396','74582635','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00014','TICON PARI','GUZMAN','guzman.ticona@unsaac.edu.pe','912562348','24989636','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00015','DUEÑAS DE LA CRUZ','HENRY SAMUEL','henry.dueñas@unsaac.edu.pe','916282325','24589631','CONTRATADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
+insert into TDocente values('D00016','MEDRANO VALENCIA','IVAN CESAR','ivan.medrano@unsaac.edu.pe','918562342','70589521','NOMBRADO','INGENIERIA DE SOTWARE','No')
+insert into TDocente values('D00017','ROZAS HUACHO','JAVIER ARTURO','javir.rozas@unsaac.edu.pe','919562347','74589696','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00018','CHAVEZ CENTENO','JAVIER DAVID','javier.chavez@unsaac.edu.pe','984562347','70589634','NOMBRADO','AUDITORIA EN REDES','No')
+insert into TDocente values('D00019','PILLCO QUISPE','JOSE MAURO','jose.pillco@unsaac.edu.pe','976562347','24589666','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00020','MEDINA MIRANDA','KARELIA','karelia.medina@unsaac.edu.pe','984562325','74589961','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00021','ENCISO RODAS','LAURO','lauro.enciso@unsaac.edu.pe','994562398','74589656','NOMBRADO','AUDITORIA EN REDES','No')
+insert into TDocente values('D00022','FLORES PACHECO','LINO PRISCILIANO','lino.pacheco@unsaac.edu.pe','984662007','74589200','NOMBRADO','CIENCIAS DE LA COMPUTACION','No')
+insert into TDocente values('D00023','PALMA TITO','LUIS BELTRAN','luis.palma@unsaac.edu.pe','984562347','70589056','NOMBRADO','INGENIERIA DE SOFTWARE','No')
+insert into TDocente values('D00024','ACURIO USCA','NILA SONIA','nila.acurio@unsaac.edu.pe','996523479','72529622','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
 
+select* from TDocente
+insert into TTesis values('TES001','IA','D00001','TITULO DE TESIS 1','REVISION','NINGUNO')
+insert into TTesis values('TES002','IA','D00002','TITULO DE TESIS 2','REVISION','NINGUNO')
+insert into TTesis values('TES003','IA','D00003','TITULO DE TESIS 3','REVISION','NINGUNO')
+insert into TTesis values('TES004','IA','D00004','TITULO DE TESIS 4','REVISION','NINGUNO')
+insert into TTesis values('TES005','IA','D00005','TITULO DE TESIS 5','REVISION','NINGUNO')
+insert into TTesis values('TES006','IA','D00006','TITULO DE TESIS 6','REVISION','NINGUNO')
+insert into TTesis values('TES007','IA','D00007','TITULO DE TESIS 7','REVISION','NINGUNO')
+insert into TTesis values('TES008','IA','D00008','TITULO DE TESIS 8','REVISION','NINGUNO')
+insert into TTesis values('TES009','IA','D00009','TITULO DE TESIS 9','REVISION','NINGUNO')
+insert into TTesis values('TES010','IA','D00010','TITULO DE TESIS 10','REVISION','NINGUNO')
+insert into TTesis values('TES011','IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
+insert into TTesis values('TES011','IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
 
-insert into TTesis values('TES001','124813','D00001','TITULO DE TESIS 1','REVISION','NINGUNO')
-insert into TTesis values('TES002','124219','D00002','TITULO DE TESIS 2','REVISION','NINGUNO')
-insert into TTesis values('TES003','150409','D00003','TITULO DE TESIS 3','REVISION','NINGUNO')
-insert into TTesis values('TES004','134544','D00004','TITULO DE TESIS 4','REVISION','NINGUNO')
-insert into TTesis values('TES005','113553','D00005','TITULO DE TESIS 5','REVISION','NINGUNO')
-insert into TTesis values('TES006','141670','D00006','TITULO DE TESIS 6','REVISION','NINGUNO')
-insert into TTesis values('TES007','151827','D00007','TITULO DE TESIS 7','REVISION','NINGUNO')
-insert into TTesis values('TES008','110125','D00008','TITULO DE TESIS 8','REVISION','NINGUNO')
-insert into TTesis values('TES009','155184','D00009','TITULO DE TESIS 9','REVISION','NINGUNO')
-insert into TTesis values('TES010','154637','D00010','TITULO DE TESIS 10','REVISION','NINGUNO')
-insert into TTesis values('TES011','141674','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
-insert into TTesis values('TES011','133959','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
-
+delete from TTesis
 SELECT  * FROM TTesis
 ----------------------------------------
 -- INSERTAMOS DATOS A LAS TABLA TESISTA --
@@ -320,8 +340,10 @@ insert into TRequisitoXTramite values('TR0002' ,'REQ001')
 insert into TRequisitoXTramite values('TR0002' ,'REQ002')
 insert into TRequisitoXTramite values('TR0002' ,'REQ003')
 
-select * from TRequisitoXTramite where CodTramite='TR0002'
+select * from TTramite where CodTramite='TR0002'
 
+
+delete from TTramite where CodTramite='TR0005'
 insert into TRequisitoXTramite values('TR0003' ,'REQ001')
 insert into TRequisitoXTramite values('TR0003' ,'REQ005')
 insert into TRequisitoXTramite values('TR0003' ,'REQ006')
@@ -370,6 +392,11 @@ select distinct * from TRequisitoXTramite where CodTramite='TR0001'
 
 select * from TRequisitoXTramite
 
-delete from TRequisitoXTramite where CodTramite ='TR0001'
+delete from TRequisitoXTramite where CodTramite ='TR0001' insert into TRequisitoXTramite values('TR0001' ,'REQ001')
 ---for i in clb.checked
 insert into TRequisitoXTramite values('TR0001' ,'REQ001')
+
+
+DELETE FROM TRequisito WHERE CodRequisito='REQ099'
+
+SELECT * FROM TRequisito
