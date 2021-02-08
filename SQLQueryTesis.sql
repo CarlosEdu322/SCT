@@ -45,14 +45,14 @@ go
 --------------------------------------------------
 create table TTesis
 ( -- lista de atributos
-CodTesis varchar(6),
+CodTesis int IDENTITY(100000,1) PRIMARY KEY,
+--
 Tema varchar(30),
 CodDocente varchar(6),
 Titulo varchar(40),
 Estado varchar(20),
 Observaciones varchar(20),
 -- especificacion de claves
-primary key (CodTesis),
 foreign key (CodDocente) references TDocente
 )
 go
@@ -78,21 +78,44 @@ TipoRequisito varchar(100),
 primary key (CodRequisito),
 )
 go
-	create table TIniciarTramite
-	(
-		CodTramite varchar(6),
-		CodTesista1 varchar(6),
-		CodTesista2 varchar(6),
-		CodTesista3 varchar(6),
-		CodTesis varchar(6),
-		Observaciones varchar(100)
-		foreign key (CodTesista1) references TTesista,
-		foreign key (CodTesista2) references TTesista,
-		foreign key (CodTesista3) references TTesista,
-		foreign key (CodTesis) references TTesis,
-		foreign key (CodTramite) references TTramite,
-	)
-select * from IniciarTramite
+create table TIniciarTramiteInscripcionPlanDeTesis
+(
+	CodTramite varchar(6),
+	CodTesista1 varchar(6),
+	CodTesista2 varchar(6),
+	CodTesista3 varchar(6),
+	CodTesis int,
+	Observaciones varchar(100)
+	foreign key (CodTesista1) references TTesista,
+	foreign key (CodTesista2) references TTesista,
+	foreign key (CodTesista3) references TTesista,
+	foreign key (CodTesis) references TTesis,
+	foreign key (CodTramite) references TTramite,
+)
+
+insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
+SELECT * FROM TIniciarTramiteInscripcionPlanDeTesis
+
+select * from TIniciarTramiteInscripcionPlanDeTesis
+where CodTramite='TR0001' and CodTesista1='124813' and CodTesista2='124219'
+and CodTesista3='150409' and Observaciones='NINGUNA'
+
+select CodTesis from TTesis 
+where Tema=@tema and CodDocente=@coddocente and Titulo=@titulo and Estado=@estado and
+Observaciones=@ninguno
+
+select CodTesis from TTesis 
+where Tema='ffffffffffffff'and CodDocente='D00006' and Titulo='ffffffffffff' and Estado='Tesis PreInscrita' and
+Observaciones=''
+
+
+select * from TIniciarTramiteInscripcionPlanDeTesis
+
+
+
+
+select * from TTesis
+insert into TTesis values()
 
 create table TRequisitoXTramite
 (
@@ -148,8 +171,8 @@ CodDictamenDeTesis varchar(6) ,
 CodSustentacionOral varchar(6) ,
 Observacion varchar(40) not null,
 -- especificacion de claves
-primary key (CodExpediente),
-foreign key (CodTesis) references TTesis,
+primary key (NroExpediente),
+--foreign key (CodTesis) references TTesis,
 foreign key (CodEvaluacionPlanDeTesis) references TComisionRevisora,
 foreign key (CodDictamenDeTesis) references TDictaminantesDeTesis,
 foreign key (CodSustentacionOral) references TJuradoEvaluador
@@ -168,7 +191,7 @@ create table TActaDePlanDeTesis
 ( -- lista de atributos
 CodEvaluacionPlanDeTesis varchar(6),
 CodDocente varchar(6),
-CodTesis varchar(6),
+CodTesis int,
 CodTesista varchar(6),
 NotaIdentificacionProblema int,
 NotaHipotesis int,
@@ -182,8 +205,8 @@ NotaPresentacionGenDocTesis int,
 -- especificacion de claves
 primary key (CodEvaluacionPlanDeTesis),
 foreign key (CodDocente) references TDocente,
-foreign key (CodTesis) references TTesista,
-foreign key (CodTesista) references TTesis,
+foreign key (CodTesis) references TTesis,
+foreign key (CodTesista) references TTesista,
 )
 go
 
@@ -193,14 +216,14 @@ create table TActaDictamenDeTesis
 ( -- lista de atributos
 CodDictamenDeTesis varchar(6),
 CodDocente varchar(6),
-CodTesis varchar(6),
+CodTesis int,
 CodTesista varchar(6),
 NotaSuficienciaJuicio int,
 -- especificacion de claves
 primary key (CodDictamenDeTesis),
 foreign key (CodDocente) references TDocente,
-foreign key (CodTesis) references TTesista,
-foreign key (CodTesista) references TTesis,
+foreign key (CodTesis) references TTesis,
+foreign key (CodTesista) references TTesista,
 )
 go
 
@@ -209,7 +232,7 @@ create table TActaSustentacionOral
 ( -- lista de atributos
 CodSustentacionOral varchar(6),
 CodDocente varchar(6),
-CodTesis varchar(6),
+CodTesis int,
 CodTesista varchar(6),
 NotaPresentacion int,
 NotaDominio int,
@@ -221,8 +244,8 @@ NotaCapacidadExposicion int,
 NotaDesenvolvimientoAbsolucionPreguntas int,
 -- especificacion de claves
 primary key (CodSustentacionOral),
-foreign key (CodTesis) references TTesista,
-foreign key (CodTesista) references TTesis,
+foreign key (CodTesis) references TTesis,
+foreign key (CodTesista) references TTesista,
 )
 go
 
@@ -265,19 +288,20 @@ insert into TDocente values('D00022','FLORES PACHECO','LINO PRISCILIANO','lino.p
 insert into TDocente values('D00023','PALMA TITO','LUIS BELTRAN','luis.palma@unsaac.edu.pe','984562347','70589056','NOMBRADO','INGENIERIA DE SOFTWARE','No')
 insert into TDocente values('D00024','ACURIO USCA','NILA SONIA','nila.acurio@unsaac.edu.pe','996523479','72529622','NOMBRADO','TECNOLOGIAS DE INFORMACION Y COMUNICACION','No')
 
-select* from TDocente
-insert into TTesis values('TES001','IA','D00001','TITULO DE TESIS 1','REVISION','NINGUNO')
-insert into TTesis values('TES002','IA','D00002','TITULO DE TESIS 2','REVISION','NINGUNO')
-insert into TTesis values('TES003','IA','D00003','TITULO DE TESIS 3','REVISION','NINGUNO')
-insert into TTesis values('TES004','IA','D00004','TITULO DE TESIS 4','REVISION','NINGUNO')
-insert into TTesis values('TES005','IA','D00005','TITULO DE TESIS 5','REVISION','NINGUNO')
-insert into TTesis values('TES006','IA','D00006','TITULO DE TESIS 6','REVISION','NINGUNO')
-insert into TTesis values('TES007','IA','D00007','TITULO DE TESIS 7','REVISION','NINGUNO')
-insert into TTesis values('TES008','IA','D00008','TITULO DE TESIS 8','REVISION','NINGUNO')
-insert into TTesis values('TES009','IA','D00009','TITULO DE TESIS 9','REVISION','NINGUNO')
-insert into TTesis values('TES010','IA','D00010','TITULO DE TESIS 10','REVISION','NINGUNO')
-insert into TTesis values('TES011','IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
-insert into TTesis values('TES011','IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
+select* from TTesis
+--insert into TTesis values ('tema','coddocente','titulo','','')
+insert into TTesis values('IA','D00001','TITULO DE TESIS 1','REVISION','NINGUNO')
+insert into TTesis values('IA','D00002','TITULO DE TESIS 2','REVISION','NINGUNO')
+insert into TTesis values('IA','D00003','TITULO DE TESIS 3','REVISION','NINGUNO')
+insert into TTesis values('IA','D00004','TITULO DE TESIS 4','REVISION','NINGUNO')
+insert into TTesis values('IA','D00005','TITULO DE TESIS 5','REVISION','NINGUNO')
+insert into TTesis values('IA','D00006','TITULO DE TESIS 6','REVISION','NINGUNO')
+insert into TTesis values('IA','D00007','TITULO DE TESIS 7','REVISION','NINGUNO')
+insert into TTesis values('IA','D00008','TITULO DE TESIS 8','REVISION','NINGUNO')
+insert into TTesis values('IA','D00009','TITULO DE TESIS 9','REVISION','NINGUNO')
+insert into TTesis values('IA','D00010','TITULO DE TESIS 10','REVISION','NINGUNO')
+insert into TTesis values('IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
+insert into TTesis values('IA','D00011','TITULO DE TESIS 11','REVISION','NINGUNO')
 
 delete from TTesis
 SELECT  * FROM TTesis

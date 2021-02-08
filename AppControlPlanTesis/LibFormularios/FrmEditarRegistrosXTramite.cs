@@ -47,7 +47,19 @@ namespace LibFormularios
             {
                 ChlRequisitosXTramite.SetItemChecked(j, false);
             }
-            DataTable dt= oRequisitoXTramite.ListarRequisitoXTramite(CboCodTramite.Text);
+
+
+            DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
+            string sValue = string.Empty;
+
+            if (oDataRowView != null)
+            {
+                sValue = oDataRowView.Row["CodTramite"] as string;
+            }
+
+
+
+            DataTable dt= oRequisitoXTramite.ListarRequisitoXTramite(sValue);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 //MessageBox.Show("dora"+dt.Rows[i]["CodRequisito"].ToString());
@@ -108,8 +120,8 @@ namespace LibFormularios
             {
                 //-- muestra la lista de libros en el combo
                 CboCodTramite.DataSource = oTramite.ListaGeneral();
-                //CboCodTramite.DisplayMember = "CodTramite";
-                CboCodTramite.ValueMember = "CodTramite";
+                CboCodTramite.DisplayMember = "Tipo";
+                CboCodTramite.ValueMember = "Tipo";
                 //-- dejar el combo sin libro seleccionado
                 CboCodTramite.SelectedIndex = -1;
             }
@@ -119,22 +131,7 @@ namespace LibFormularios
             }
         }
 
-        public void LlenarCboDocente()
-        {
-            try
-            {
-                //-- muestra la lista de libros en el combo
-                CboCodTramite.DataSource = oDocente.ListaGeneral();
-                //CboCodTramite.DisplayMember = "CodTramite";
-                CboCodTramite.ValueMember = "CodDocente";
-                //-- dejar el combo sin libro seleccionado
-                CboCodTramite.SelectedIndex = -1;
-            }
-            catch
-            {
 
-            }
-        }
         public void CambioDeRequisitoXTramite()
         {
             try
@@ -175,7 +172,6 @@ namespace LibFormularios
         {
             LlenarListaRequisitos();
             LlenarCboTramites();
-            LlenarCboDocente();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)

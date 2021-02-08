@@ -19,6 +19,7 @@ namespace LibFormularios
         private CTramite oTramite;
         private CDocente oDocente;
         private CRequisitoXTramite oRequsitosXTramite;
+        private CTesis oTesis;
         public FrmIniciarTramiteEstudiante()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace LibFormularios
             oTramite = new CTramite();
             oRequsitosXTramite = new CRequisitoXTramite();
             oDocente = new CDocente();
+            oTesis = new CTesis();
             LlenarCboTramites();
             LlenarCboDocentes();
 
@@ -230,6 +232,50 @@ namespace LibFormularios
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnIniciarTramite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //insert into TTesis values ('tema','coddocente','titulo','','')
+                List<string> CadenaTesis = new List<string>();
+
+                CadenaTesis.Add(TxtTema.Text);
+                CadenaTesis.Add(CboCodDocente.Text);
+                CadenaTesis.Add(TxtTitulo.Text);
+                oTesis.AgregarTesisAutovalores(CadenaTesis);
+                MessageBox.Show("Tesis Ingresada");
+                string codigo = oTesis.ObtenerDatos(CadenaTesis, "CodTesis");
+                MessageBox.Show("Nro de Tesis "+codigo+" ESTADO: POR REVISAR");
+
+                List<string> IniciarTramiteInscripcionPlanDeTesis = new List<string>();
+                DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
+                string codTramite = string.Empty;
+
+                if (oDataRowView != null)
+                {
+                    codTramite = oDataRowView.Row["CodTramite"] as string;
+                }
+
+                IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
+                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista1.Text);
+                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista2.Text);
+                IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesista3.Text);
+                IniciarTramiteInscripcionPlanDeTesis.Add(codigo);
+                IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
+                //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
+                oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
+                MessageBox.Show("TRAMITE"+codTramite+" AGREGADO");
+
+
+
+
+            }
+            catch (Exception eRROR)
+            {
+                MessageBox.Show(eRROR.ToString(), "ERROR AL REALIZAR LA OPERACION");
+            }
         }
     }
 }
