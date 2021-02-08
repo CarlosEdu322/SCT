@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIniciarTramiteEstudiante));
             this.ChlRequisitosXTramite = new System.Windows.Forms.CheckedListBox();
-            this.BtnIniciarTramite = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblNroEstudiantes = new System.Windows.Forms.Label();
@@ -69,41 +68,40 @@
             this.TxtApellidosDocente = new System.Windows.Forms.TextBox();
             this.TxtNombresDocente = new System.Windows.Forms.TextBox();
             this.TxtDNIDocente = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnIniciarTramite = new System.Windows.Forms.Button();
+            this.BtnCerrar = new System.Windows.Forms.Button();
             this.CodTesista2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChlRequisitosXTramite
             // 
             this.ChlRequisitosXTramite.FormattingEnabled = true;
-            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(176, 316);
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(256, 58);
+            this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
-            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(402, 123);
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(326, 104);
             this.ChlRequisitosXTramite.TabIndex = 145;
-            // 
-            // BtnIniciarTramite
-            // 
-            this.BtnIniciarTramite.Location = new System.Drawing.Point(236, 875);
-            this.BtnIniciarTramite.Name = "BtnIniciarTramite";
-            this.BtnIniciarTramite.Size = new System.Drawing.Size(135, 23);
-            this.BtnIniciarTramite.TabIndex = 146;
-            this.BtnIniciarTramite.Text = "In";
-            this.BtnIniciarTramite.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(233, 804);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label3.Location = new System.Drawing.Point(118, 356);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 17);
+            this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 156;
-            this.label3.Text = "Observaciones";
+            this.label3.Text = "Observaciones:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(360, 804);
+            this.textBox1.Location = new System.Drawing.Point(256, 356);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 48);
+            this.textBox1.Size = new System.Drawing.Size(326, 62);
             this.textBox1.TabIndex = 157;
             // 
             // LblNroEstudiantes
@@ -111,9 +109,10 @@
             this.LblNroEstudiantes.AutoSize = true;
             this.LblNroEstudiantes.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblNroEstudiantes.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.LblNroEstudiantes.Location = new System.Drawing.Point(225, 9);
+            this.LblNroEstudiantes.Location = new System.Drawing.Point(169, 7);
+            this.LblNroEstudiantes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblNroEstudiantes.Name = "LblNroEstudiantes";
-            this.LblNroEstudiantes.Size = new System.Drawing.Size(150, 22);
+            this.LblNroEstudiantes.Size = new System.Drawing.Size(120, 20);
             this.LblNroEstudiantes.TabIndex = 162;
             this.LblNroEstudiantes.Text = "NroEstudiantes:";
             // 
@@ -127,10 +126,10 @@
             "1",
             "2",
             "3"});
-            this.CboNroEstudiantes.Location = new System.Drawing.Point(391, 5);
-            this.CboNroEstudiantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CboNroEstudiantes.Location = new System.Drawing.Point(293, 4);
+            this.CboNroEstudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CboNroEstudiantes.Name = "CboNroEstudiantes";
-            this.CboNroEstudiantes.Size = new System.Drawing.Size(335, 30);
+            this.CboNroEstudiantes.Size = new System.Drawing.Size(252, 25);
             this.CboNroEstudiantes.TabIndex = 161;
             this.CboNroEstudiantes.SelectedIndexChanged += new System.EventHandler(this.CboNroEstudiantes_SelectedIndexChanged);
             // 
@@ -140,10 +139,10 @@
             this.CboCodTramite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCodTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodTramite.FormattingEnabled = true;
-            this.CboCodTramite.Location = new System.Drawing.Point(341, 264);
-            this.CboCodTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CboCodTramite.Location = new System.Drawing.Point(187, 30);
+            this.CboCodTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CboCodTramite.Name = "CboCodTramite";
-            this.CboCodTramite.Size = new System.Drawing.Size(411, 30);
+            this.CboCodTramite.Size = new System.Drawing.Size(483, 25);
             this.CboCodTramite.TabIndex = 160;
             this.CboCodTramite.SelectedIndexChanged += new System.EventHandler(this.CboCodTramite_SelectedIndexChanged);
             // 
@@ -152,9 +151,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(172, 272);
+            this.label8.Location = new System.Drawing.Point(24, 33);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
+            this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 159;
             this.label8.Text = "Tramite:";
             // 
@@ -180,69 +180,71 @@
             this.CodTesista2.Controls.Add(this.TxtCodTesista1);
             this.CodTesista2.Controls.Add(this.LblCodTesista1);
             this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.CodTesista2.Location = new System.Drawing.Point(28, 41);
-            this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CodTesista2.Location = new System.Drawing.Point(21, 33);
+            this.CodTesista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CodTesista2.Name = "CodTesista2";
-            this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Size = new System.Drawing.Size(1046, 219);
+            this.CodTesista2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CodTesista2.Size = new System.Drawing.Size(784, 178);
             this.CodTesista2.TabIndex = 158;
             this.CodTesista2.TabStop = false;
-            this.CodTesista2.Text = "Codigo de Estudiante";
+            this.CodTesista2.Text = "Interesado(s):";
             // 
             // TxtDniTesista3
             // 
             this.TxtDniTesista3.Enabled = false;
             this.TxtDniTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista3.Location = new System.Drawing.Point(838, 166);
-            this.TxtDniTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtDniTesista3.Location = new System.Drawing.Point(628, 135);
+            this.TxtDniTesista3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDniTesista3.Name = "TxtDniTesista3";
-            this.TxtDniTesista3.Size = new System.Drawing.Size(195, 30);
+            this.TxtDniTesista3.Size = new System.Drawing.Size(147, 25);
             this.TxtDniTesista3.TabIndex = 179;
             // 
             // TxtApeTesista3
             // 
             this.TxtApeTesista3.Enabled = false;
             this.TxtApeTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista3.Location = new System.Drawing.Point(616, 160);
-            this.TxtApeTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtApeTesista3.Location = new System.Drawing.Point(462, 130);
+            this.TxtApeTesista3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtApeTesista3.Name = "TxtApeTesista3";
-            this.TxtApeTesista3.Size = new System.Drawing.Size(195, 30);
+            this.TxtApeTesista3.Size = new System.Drawing.Size(147, 25);
             this.TxtApeTesista3.TabIndex = 177;
             // 
             // TxtNombreTesista3
             // 
             this.TxtNombreTesista3.Enabled = false;
             this.TxtNombreTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista3.Location = new System.Drawing.Point(399, 159);
-            this.TxtNombreTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtNombreTesista3.Location = new System.Drawing.Point(299, 129);
+            this.TxtNombreTesista3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtNombreTesista3.Name = "TxtNombreTesista3";
-            this.TxtNombreTesista3.Size = new System.Drawing.Size(195, 30);
+            this.TxtNombreTesista3.Size = new System.Drawing.Size(147, 25);
             this.TxtNombreTesista3.TabIndex = 174;
             // 
             // BtnBuscarT3
             // 
-            this.BtnBuscarT3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscarT3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarT3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
             this.BtnBuscarT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarT3.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarT3.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarT3.Image")));
-            this.BtnBuscarT3.Location = new System.Drawing.Point(342, 149);
-            this.BtnBuscarT3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarT3.Location = new System.Drawing.Point(256, 121);
+            this.BtnBuscarT3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBuscarT3.Name = "BtnBuscarT3";
-            this.BtnBuscarT3.Size = new System.Drawing.Size(43, 47);
+            this.BtnBuscarT3.Size = new System.Drawing.Size(32, 38);
             this.BtnBuscarT3.TabIndex = 173;
             this.BtnBuscarT3.UseVisualStyleBackColor = false;
             this.BtnBuscarT3.Click += new System.EventHandler(this.BtnBuscarT3_Click);
             // 
             // BtnBuscarT2
             // 
-            this.BtnBuscarT2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscarT2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarT2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
             this.BtnBuscarT2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarT2.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarT2.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarT2.Image")));
-            this.BtnBuscarT2.Location = new System.Drawing.Point(342, 98);
-            this.BtnBuscarT2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarT2.Location = new System.Drawing.Point(256, 80);
+            this.BtnBuscarT2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBuscarT2.Name = "BtnBuscarT2";
-            this.BtnBuscarT2.Size = new System.Drawing.Size(43, 47);
+            this.BtnBuscarT2.Size = new System.Drawing.Size(32, 38);
             this.BtnBuscarT2.TabIndex = 172;
             this.BtnBuscarT2.UseVisualStyleBackColor = false;
             this.BtnBuscarT2.Click += new System.EventHandler(this.BtnBuscarT2_Click);
@@ -251,40 +253,40 @@
             // 
             this.TxtDniTesista2.Enabled = false;
             this.TxtDniTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista2.Location = new System.Drawing.Point(838, 109);
-            this.TxtDniTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtDniTesista2.Location = new System.Drawing.Point(628, 89);
+            this.TxtDniTesista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDniTesista2.Name = "TxtDniTesista2";
-            this.TxtDniTesista2.Size = new System.Drawing.Size(195, 30);
+            this.TxtDniTesista2.Size = new System.Drawing.Size(147, 25);
             this.TxtDniTesista2.TabIndex = 171;
             // 
             // TxtApeTesista2
             // 
             this.TxtApeTesista2.Enabled = false;
             this.TxtApeTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista2.Location = new System.Drawing.Point(616, 109);
-            this.TxtApeTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtApeTesista2.Location = new System.Drawing.Point(462, 89);
+            this.TxtApeTesista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtApeTesista2.Name = "TxtApeTesista2";
-            this.TxtApeTesista2.Size = new System.Drawing.Size(195, 30);
+            this.TxtApeTesista2.Size = new System.Drawing.Size(147, 25);
             this.TxtApeTesista2.TabIndex = 169;
             // 
             // TxtNombreTesista2
             // 
             this.TxtNombreTesista2.Enabled = false;
             this.TxtNombreTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista2.Location = new System.Drawing.Point(399, 103);
-            this.TxtNombreTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtNombreTesista2.Location = new System.Drawing.Point(299, 84);
+            this.TxtNombreTesista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtNombreTesista2.Name = "TxtNombreTesista2";
-            this.TxtNombreTesista2.Size = new System.Drawing.Size(193, 30);
+            this.TxtNombreTesista2.Size = new System.Drawing.Size(147, 25);
             this.TxtNombreTesista2.TabIndex = 166;
             // 
             // TxtDniTesista1
             // 
             this.TxtDniTesista1.Enabled = false;
             this.TxtDniTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista1.Location = new System.Drawing.Point(838, 58);
-            this.TxtDniTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtDniTesista1.Location = new System.Drawing.Point(628, 47);
+            this.TxtDniTesista1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDniTesista1.Name = "TxtDniTesista1";
-            this.TxtDniTesista1.Size = new System.Drawing.Size(195, 30);
+            this.TxtDniTesista1.Size = new System.Drawing.Size(147, 25);
             this.TxtDniTesista1.TabIndex = 165;
             // 
             // label5
@@ -292,9 +294,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(844, 23);
+            this.label5.Location = new System.Drawing.Point(633, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 22);
+            this.label5.Size = new System.Drawing.Size(40, 20);
             this.label5.TabIndex = 164;
             this.label5.Text = "DNI:";
             // 
@@ -302,10 +305,10 @@
             // 
             this.TxtApeTesista1.Enabled = false;
             this.TxtApeTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista1.Location = new System.Drawing.Point(616, 58);
-            this.TxtApeTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtApeTesista1.Location = new System.Drawing.Point(462, 47);
+            this.TxtApeTesista1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtApeTesista1.Name = "TxtApeTesista1";
-            this.TxtApeTesista1.Size = new System.Drawing.Size(195, 30);
+            this.TxtApeTesista1.Size = new System.Drawing.Size(147, 25);
             this.TxtApeTesista1.TabIndex = 163;
             // 
             // label4
@@ -313,9 +316,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(612, 23);
+            this.label4.Location = new System.Drawing.Point(459, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 22);
+            this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 162;
             this.label4.Text = "Apellidos:";
             // 
@@ -324,9 +328,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(385, 23);
+            this.label1.Location = new System.Drawing.Point(289, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 22);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 161;
             this.label1.Text = "Nombres:";
             // 
@@ -334,22 +339,23 @@
             // 
             this.TxtNombreTesista1.Enabled = false;
             this.TxtNombreTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista1.Location = new System.Drawing.Point(399, 57);
-            this.TxtNombreTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtNombreTesista1.Location = new System.Drawing.Point(299, 46);
+            this.TxtNombreTesista1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtNombreTesista1.Name = "TxtNombreTesista1";
-            this.TxtNombreTesista1.Size = new System.Drawing.Size(195, 30);
+            this.TxtNombreTesista1.Size = new System.Drawing.Size(147, 25);
             this.TxtNombreTesista1.TabIndex = 160;
             // 
             // BtnBuscarT1
             // 
-            this.BtnBuscarT1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnBuscarT1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarT1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
             this.BtnBuscarT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarT1.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarT1.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarT1.Image")));
-            this.BtnBuscarT1.Location = new System.Drawing.Point(342, 47);
-            this.BtnBuscarT1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarT1.Location = new System.Drawing.Point(256, 38);
+            this.BtnBuscarT1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBuscarT1.Name = "BtnBuscarT1";
-            this.BtnBuscarT1.Size = new System.Drawing.Size(43, 47);
+            this.BtnBuscarT1.Size = new System.Drawing.Size(32, 38);
             this.BtnBuscarT1.TabIndex = 156;
             this.BtnBuscarT1.UseVisualStyleBackColor = false;
             this.BtnBuscarT1.Click += new System.EventHandler(this.BtnBuscarT1_Click);
@@ -357,28 +363,28 @@
             // TxtCodTesista3
             // 
             this.TxtCodTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista3.Location = new System.Drawing.Point(140, 152);
-            this.TxtCodTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodTesista3.Location = new System.Drawing.Point(105, 124);
+            this.TxtCodTesista3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtCodTesista3.Name = "TxtCodTesista3";
-            this.TxtCodTesista3.Size = new System.Drawing.Size(196, 30);
+            this.TxtCodTesista3.Size = new System.Drawing.Size(148, 25);
             this.TxtCodTesista3.TabIndex = 155;
             // 
             // TxtCodTesista2
             // 
             this.TxtCodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista2.Location = new System.Drawing.Point(147, 103);
-            this.TxtCodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodTesista2.Location = new System.Drawing.Point(105, 84);
+            this.TxtCodTesista2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtCodTesista2.Name = "TxtCodTesista2";
-            this.TxtCodTesista2.Size = new System.Drawing.Size(193, 30);
+            this.TxtCodTesista2.Size = new System.Drawing.Size(148, 25);
             this.TxtCodTesista2.TabIndex = 152;
             // 
             // TxtCodTesista1
             // 
             this.TxtCodTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista1.Location = new System.Drawing.Point(141, 56);
-            this.TxtCodTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtCodTesista1.Location = new System.Drawing.Point(106, 46);
+            this.TxtCodTesista1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtCodTesista1.Name = "TxtCodTesista1";
-            this.TxtCodTesista1.Size = new System.Drawing.Size(195, 30);
+            this.TxtCodTesista1.Size = new System.Drawing.Size(147, 25);
             this.TxtCodTesista1.TabIndex = 139;
             // 
             // LblCodTesista1
@@ -386,19 +392,20 @@
             this.LblCodTesista1.AutoSize = true;
             this.LblCodTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblCodTesista1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.LblCodTesista1.Location = new System.Drawing.Point(137, 25);
+            this.LblCodTesista1.Location = new System.Drawing.Point(103, 20);
+            this.LblCodTesista1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCodTesista1.Name = "LblCodTesista1";
-            this.LblCodTesista1.Size = new System.Drawing.Size(178, 22);
+            this.LblCodTesista1.Size = new System.Drawing.Size(144, 20);
             this.LblCodTesista1.TabIndex = 141;
             this.LblCodTesista1.Text = "Codigo del Tesista:";
             // 
             // TxtTema
             // 
             this.TxtTema.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtTema.Location = new System.Drawing.Point(370, 506);
-            this.TxtTema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTema.Location = new System.Drawing.Point(256, 215);
+            this.TxtTema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTema.Name = "TxtTema";
-            this.TxtTema.Size = new System.Drawing.Size(433, 30);
+            this.TxtTema.Size = new System.Drawing.Size(326, 25);
             this.TxtTema.TabIndex = 168;
             // 
             // label2
@@ -406,9 +413,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(180, 509);
+            this.label2.Location = new System.Drawing.Point(118, 215);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 167;
             this.label2.Text = "Tema:";
             // 
@@ -418,9 +426,10 @@
             this.CboCodDocente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCodDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodDocente.FormattingEnabled = true;
-            this.CboCodDocente.Location = new System.Drawing.Point(370, 556);
+            this.CboCodDocente.Location = new System.Drawing.Point(256, 244);
+            this.CboCodDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CboCodDocente.Name = "CboCodDocente";
-            this.CboCodDocente.Size = new System.Drawing.Size(433, 30);
+            this.CboCodDocente.Size = new System.Drawing.Size(326, 25);
             this.CboCodDocente.TabIndex = 166;
             this.CboCodDocente.SelectedIndexChanged += new System.EventHandler(this.CboCodDocente_SelectedIndexChanged);
             // 
@@ -429,9 +438,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(185, 458);
+            this.label10.Location = new System.Drawing.Point(118, 190);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 22);
+            this.label10.Size = new System.Drawing.Size(48, 20);
             this.label10.TabIndex = 164;
             this.label10.Text = "Titulo:";
             // 
@@ -440,19 +450,20 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(180, 557);
+            this.label6.Location = new System.Drawing.Point(118, 247);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 22);
+            this.label6.Size = new System.Drawing.Size(110, 20);
             this.label6.TabIndex = 163;
             this.label6.Text = "CodDocente:";
             // 
             // TxtTitulo
             // 
             this.TxtTitulo.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtTitulo.Location = new System.Drawing.Point(370, 455);
-            this.TxtTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTitulo.Location = new System.Drawing.Point(256, 188);
+            this.TxtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(433, 30);
+            this.TxtTitulo.Size = new System.Drawing.Size(326, 25);
             this.TxtTitulo.TabIndex = 165;
             // 
             // label7
@@ -460,9 +471,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(185, 628);
+            this.label7.Location = new System.Drawing.Point(118, 302);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 22);
+            this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 169;
             this.label7.Text = "Apellidos:";
             // 
@@ -471,9 +483,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(185, 594);
+            this.label9.Location = new System.Drawing.Point(118, 275);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 22);
+            this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 170;
             this.label9.Text = "Nombres";
             // 
@@ -482,69 +495,124 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(185, 662);
+            this.label11.Location = new System.Drawing.Point(118, 330);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 22);
+            this.label11.Size = new System.Drawing.Size(40, 20);
             this.label11.TabIndex = 171;
             this.label11.Text = "DNI:";
             // 
             // TxtApellidosDocente
             // 
             this.TxtApellidosDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDocente.Location = new System.Drawing.Point(370, 625);
-            this.TxtApellidosDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtApellidosDocente.Location = new System.Drawing.Point(256, 300);
+            this.TxtApellidosDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtApellidosDocente.Name = "TxtApellidosDocente";
-            this.TxtApellidosDocente.Size = new System.Drawing.Size(433, 30);
+            this.TxtApellidosDocente.Size = new System.Drawing.Size(326, 25);
             this.TxtApellidosDocente.TabIndex = 172;
             // 
             // TxtNombresDocente
             // 
             this.TxtNombresDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDocente.Location = new System.Drawing.Point(370, 591);
-            this.TxtNombresDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtNombresDocente.Location = new System.Drawing.Point(256, 272);
+            this.TxtNombresDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtNombresDocente.Name = "TxtNombresDocente";
-            this.TxtNombresDocente.Size = new System.Drawing.Size(433, 30);
+            this.TxtNombresDocente.Size = new System.Drawing.Size(326, 25);
             this.TxtNombresDocente.TabIndex = 173;
             // 
             // TxtDNIDocente
             // 
             this.TxtDNIDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNIDocente.Location = new System.Drawing.Point(370, 659);
-            this.TxtDNIDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtDNIDocente.Location = new System.Drawing.Point(256, 327);
+            this.TxtDNIDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtDNIDocente.Name = "TxtDNIDocente";
-            this.TxtDNIDocente.Size = new System.Drawing.Size(433, 30);
+            this.TxtDNIDocente.Size = new System.Drawing.Size(326, 25);
             this.TxtDNIDocente.TabIndex = 174;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.TxtDNIDocente);
+            this.groupBox1.Controls.Add(this.ChlRequisitosXTramite);
+            this.groupBox1.Controls.Add(this.TxtNombresDocente);
+            this.groupBox1.Controls.Add(this.CboCodTramite);
+            this.groupBox1.Controls.Add(this.TxtApellidosDocente);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.TxtTitulo);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtTema);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.CboCodDocente);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.groupBox1.Location = new System.Drawing.Point(21, 221);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(781, 433);
+            this.groupBox1.TabIndex = 175;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tramites";
+            // 
+            // BtnIniciarTramite
+            // 
+            this.BtnIniciarTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnIniciarTramite.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarTramite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnIniciarTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(638, 658);
+            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnIniciarTramite.Name = "BtnIniciarTramite";
+            this.BtnIniciarTramite.Size = new System.Drawing.Size(164, 48);
+            this.BtnIniciarTramite.TabIndex = 176;
+            this.BtnIniciarTramite.Text = "Solicitar";
+            this.BtnIniciarTramite.UseVisualStyleBackColor = false;
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnCerrar.FlatAppearance.BorderSize = 0;
+            this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCerrar.Location = new System.Drawing.Point(21, 658);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
+            this.BtnCerrar.TabIndex = 177;
+            this.BtnCerrar.Text = "Cerrar Ventana";
+            this.BtnCerrar.UseVisualStyleBackColor = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // FrmIniciarTramiteEstudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 912);
-            this.Controls.Add(this.TxtDNIDocente);
-            this.Controls.Add(this.TxtNombresDocente);
-            this.Controls.Add(this.TxtApellidosDocente);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.TxtTema);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CboCodDocente);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.TxtTitulo);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(828, 722);
+            this.Controls.Add(this.BtnCerrar);
+            this.Controls.Add(this.BtnIniciarTramite);
             this.Controls.Add(this.LblNroEstudiantes);
             this.Controls.Add(this.CboNroEstudiantes);
-            this.Controls.Add(this.CboCodTramite);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.CodTesista2);
-            this.Controls.Add(this.ChlRequisitosXTramite);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.BtnIniciarTramite);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmIniciarTramiteEstudiante";
             this.Text = "FrmIniciarTramiteEstudiante";
             this.CodTesista2.ResumeLayout(false);
             this.CodTesista2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,7 +620,6 @@
 
         #endregion
         private System.Windows.Forms.CheckedListBox ChlRequisitosXTramite;
-        private System.Windows.Forms.Button BtnIniciarTramite;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         protected System.Windows.Forms.Label LblNroEstudiantes;
@@ -591,5 +658,8 @@
         private System.Windows.Forms.TextBox TxtApellidosDocente;
         private System.Windows.Forms.TextBox TxtNombresDocente;
         private System.Windows.Forms.TextBox TxtDNIDocente;
+        private System.Windows.Forms.GroupBox groupBox1;
+        protected System.Windows.Forms.Button BtnIniciarTramite;
+        protected System.Windows.Forms.Button BtnCerrar;
     }
 }
