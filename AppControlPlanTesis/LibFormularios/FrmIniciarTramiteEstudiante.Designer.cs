@@ -422,6 +422,7 @@
             this.CboCodDocente.Name = "CboCodDocente";
             this.CboCodDocente.Size = new System.Drawing.Size(433, 30);
             this.CboCodDocente.TabIndex = 166;
+            this.CboCodDocente.SelectedIndexChanged += new System.EventHandler(this.CboCodDocente_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -459,7 +460,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(185, 622);
+            this.label7.Location = new System.Drawing.Point(185, 628);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 22);
             this.label7.TabIndex = 169;
@@ -470,7 +471,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(185, 674);
+            this.label9.Location = new System.Drawing.Point(185, 594);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 22);
             this.label9.TabIndex = 170;
@@ -481,7 +482,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(185, 716);
+            this.label11.Location = new System.Drawing.Point(185, 662);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 22);
             this.label11.TabIndex = 171;
@@ -490,7 +491,7 @@
             // TxtApellidosDocente
             // 
             this.TxtApellidosDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDocente.Location = new System.Drawing.Point(370, 614);
+            this.TxtApellidosDocente.Location = new System.Drawing.Point(370, 625);
             this.TxtApellidosDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDocente.Name = "TxtApellidosDocente";
             this.TxtApellidosDocente.Size = new System.Drawing.Size(433, 30);
@@ -499,7 +500,7 @@
             // TxtNombresDocente
             // 
             this.TxtNombresDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDocente.Location = new System.Drawing.Point(370, 666);
+            this.TxtNombresDocente.Location = new System.Drawing.Point(370, 591);
             this.TxtNombresDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDocente.Name = "TxtNombresDocente";
             this.TxtNombresDocente.Size = new System.Drawing.Size(433, 30);
@@ -508,7 +509,7 @@
             // TxtDNIDocente
             // 
             this.TxtDNIDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNIDocente.Location = new System.Drawing.Point(370, 713);
+            this.TxtDNIDocente.Location = new System.Drawing.Point(370, 659);
             this.TxtDNIDocente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNIDocente.Name = "TxtDNIDocente";
             this.TxtDNIDocente.Size = new System.Drawing.Size(433, 30);

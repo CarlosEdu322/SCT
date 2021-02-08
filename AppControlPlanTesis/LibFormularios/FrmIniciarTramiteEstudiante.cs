@@ -204,6 +204,27 @@ namespace LibFormularios
             }
         }
 
-
+        public void ConsultarDocente(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
+        {
+            CDocente docente = new CDocente();
+            if (codigotesista != "")
+            {
+                if (docente.ExisteClavePrimaria(codigotesista))
+                {
+                    //-- Recuperar atributos, el primer atributo es la clave 
+                    tbox1.Text = docente.ValorAtributo("Nombres");
+                    tbox2.Text = docente.ValorAtributo("Apellidos");
+                    tbox3.Text = docente.ValorAtributo("Dni");
+                }
+                else
+                {                 
+                    tbox1.Clear(); tbox2.Clear(); tbox3.Clear();
+                }
+            }
+        }
+        private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
+        }
     }
 }
