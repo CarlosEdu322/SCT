@@ -69,23 +69,23 @@
             this.TxtNombresDocente = new System.Windows.Forms.TextBox();
             this.TxtDNIDocente = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnIniciarTramite = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnIniciarTramite = new System.Windows.Forms.Button();
             this.CodTesista2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChlRequisitosXTramite
             // 
             this.ChlRequisitosXTramite.FormattingEnabled = true;
-            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(249, 61);
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(232, 57);
             this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
-            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(643, 154);
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(643, 140);
             this.ChlRequisitosXTramite.TabIndex = 145;
             // 
             // label3
@@ -113,7 +113,7 @@
             this.LblNroEstudiantes.AutoSize = true;
             this.LblNroEstudiantes.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblNroEstudiantes.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.LblNroEstudiantes.Location = new System.Drawing.Point(225, 9);
+            this.LblNroEstudiantes.Location = new System.Drawing.Point(107, 25);
             this.LblNroEstudiantes.Name = "LblNroEstudiantes";
             this.LblNroEstudiantes.Size = new System.Drawing.Size(150, 22);
             this.LblNroEstudiantes.TabIndex = 162;
@@ -129,7 +129,7 @@
             "1",
             "2",
             "3"});
-            this.CboNroEstudiantes.Location = new System.Drawing.Point(391, 5);
+            this.CboNroEstudiantes.Location = new System.Drawing.Point(334, 27);
             this.CboNroEstudiantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CboNroEstudiantes.Name = "CboNroEstudiantes";
             this.CboNroEstudiantes.Size = new System.Drawing.Size(335, 30);
@@ -142,7 +142,7 @@
             this.CboCodTramite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCodTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodTramite.FormattingEnabled = true;
-            this.CboCodTramite.Location = new System.Drawing.Point(249, 27);
+            this.CboCodTramite.Location = new System.Drawing.Point(232, 14);
             this.CboCodTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CboCodTramite.Name = "CboCodTramite";
             this.CboCodTramite.Size = new System.Drawing.Size(643, 30);
@@ -154,7 +154,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(32, 31);
+            this.label8.Location = new System.Drawing.Point(104, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 22);
             this.label8.TabIndex = 159;
@@ -182,11 +182,11 @@
             this.CodTesista2.Controls.Add(this.TxtCodTesista1);
             this.CodTesista2.Controls.Add(this.LblCodTesista1);
             this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.CodTesista2.Location = new System.Drawing.Point(28, 41);
+            this.CodTesista2.Location = new System.Drawing.Point(36, 61);
             this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CodTesista2.Name = "CodTesista2";
             this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Size = new System.Drawing.Size(1053, 202);
+            this.CodTesista2.Size = new System.Drawing.Size(968, 202);
             this.CodTesista2.TabIndex = 158;
             this.CodTesista2.TabStop = false;
             this.CodTesista2.Text = "Interesado(s):";
@@ -526,39 +526,21 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.CboNroEstudiantes);
+            this.groupBox1.Controls.Add(this.LblNroEstudiantes);
             this.groupBox1.Controls.Add(this.BtnCerrar);
             this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.CodTesista2);
             this.groupBox1.Controls.Add(this.BtnIniciarTramite);
-            this.groupBox1.Controls.Add(this.ChlRequisitosXTramite);
-            this.groupBox1.Controls.Add(this.CboCodTramite);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox1.Location = new System.Drawing.Point(28, 258);
+            this.groupBox1.Location = new System.Drawing.Point(31, 211);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1041, 618);
+            this.groupBox1.Size = new System.Drawing.Size(1041, 665);
             this.groupBox1.TabIndex = 175;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tramites";
-            // 
-            // BtnIniciarTramite
-            // 
-            this.BtnIniciarTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnIniciarTramite.FlatAppearance.BorderSize = 0;
-            this.BtnIniciarTramite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.BtnIniciarTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIniciarTramite.Location = new System.Drawing.Point(816, 241);
-            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnIniciarTramite.Name = "BtnIniciarTramite";
-            this.BtnIniciarTramite.Size = new System.Drawing.Size(219, 59);
-            this.BtnIniciarTramite.TabIndex = 176;
-            this.BtnIniciarTramite.Text = "Solicitar";
-            this.BtnIniciarTramite.UseVisualStyleBackColor = false;
-            this.BtnIniciarTramite.Click += new System.EventHandler(this.BtnIniciarTramite_Click);
             // 
             // BtnCerrar
             // 
@@ -578,6 +560,22 @@
             this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.TxtTitulo);
+            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.TxtTema);
+            this.groupBox3.Controls.Add(this.TxtObservaciones);
+            this.groupBox3.Location = new System.Drawing.Point(36, 284);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(757, 429);
+            this.groupBox3.TabIndex = 176;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos De La Tesis";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
@@ -595,21 +593,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DatosDelAsesor";
             // 
-            // groupBox3
+            // BtnIniciarTramite
             // 
-            this.groupBox3.Controls.Add(this.TxtTitulo);
-            this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.TxtTema);
-            this.groupBox3.Controls.Add(this.TxtObservaciones);
-            this.groupBox3.Location = new System.Drawing.Point(36, 220);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(757, 429);
-            this.groupBox3.TabIndex = 176;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos De La Tesis";
+            this.BtnIniciarTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnIniciarTramite.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarTramite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnIniciarTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(816, 295);
+            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnIniciarTramite.Name = "BtnIniciarTramite";
+            this.BtnIniciarTramite.Size = new System.Drawing.Size(219, 59);
+            this.BtnIniciarTramite.TabIndex = 176;
+            this.BtnIniciarTramite.Text = "Solicitar";
+            this.BtnIniciarTramite.UseVisualStyleBackColor = false;
+            this.BtnIniciarTramite.Click += new System.EventHandler(this.BtnIniciarTramite_Click);
             // 
             // FrmIniciarTramiteEstudiante
             // 
@@ -617,10 +617,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1137, 936);
-            this.Controls.Add(this.LblNroEstudiantes);
-            this.Controls.Add(this.CboNroEstudiantes);
-            this.Controls.Add(this.CodTesista2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.ChlRequisitosXTramite);
+            this.Controls.Add(this.CboCodTramite);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmIniciarTramiteEstudiante";
             this.Text = "FrmIniciarTramiteEstudiante";
@@ -628,10 +628,10 @@
             this.CodTesista2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

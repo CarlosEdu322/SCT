@@ -54,13 +54,33 @@ namespace LibFormularios
         {	//-- Mostrar todos los libros de la tabla en el grid 
             try
             {
-                DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
+                //DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
             }
             catch
             {
 
             }
         }
+        public void LlenarLbxRequisitosXTramite()
+        {	//-- Mostrar todos los libros de la tabla en el grid 
+            try
+            {
+                //DgvTramiteXRequisito.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
+                //DgvTramiteXRequisito.Hide = true;
+                //-- muestra la lista de libros en el combo
+                LbxRequisitosXTramite.DataSource = (aEntidad as CRequisitoXTramite).ListaPorTramite(CboCodTramite.Text);
+                LbxRequisitosXTramite.DisplayMember = "TipoRequisito";
+                LbxRequisitosXTramite.ValueMember = "TipoRequisito";
+                //-- dejar el combo sin libro seleccionado
+                LbxRequisitosXTramite.SelectedIndex = -1;
+
+            }
+            catch
+            {
+
+            }
+        }
+
 
         //-- verificar los campos obligatorios(codigo y titulo) estén llenos 
         // 	
@@ -121,6 +141,7 @@ namespace LibFormularios
         {
             //LlenarListaRequisitos();
             ListarRegistros();
+            LlenarLbxRequisitosXTramite();
             MostrarDatos();
         }
     }

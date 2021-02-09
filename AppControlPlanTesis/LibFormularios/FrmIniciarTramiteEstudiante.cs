@@ -30,6 +30,7 @@ namespace LibFormularios
             oTesis = new CTesis();
             LlenarCboTramites();
             LlenarCboDocentes();
+            CboNroEstudiantes.SelectedIndex = 0;
 
         }
         public void InicializarCamposCboNroEstudiantes()
