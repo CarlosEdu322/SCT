@@ -42,9 +42,8 @@ namespace LibFormularios
         }
 
         private void BtnSeleccionar_Click(object sender, EventArgs e)
-        {        
+        {
             FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
-            TextBox a = new TextBox();
             frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
             this.Close();
         }

@@ -13,11 +13,29 @@ namespace LibFormularios
     public partial class FrmGenerarExpediente : Form
     {
         private CTramite oTramite;
+        CDocente oDocente = new CDocente();
         public FrmGenerarExpediente()
         {
             InitializeComponent();
             oTramite = new CTramite();
+            // Create new Checkbox Column
+            DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
+            CBColumn.HeaderText = "";
+            CBColumn.FalseValue = "0";
+            CBColumn.TrueValue = "1";
+            dataGridView1.Columns.Insert(0, CBColumn);
+            InicializarGrid();
         }
+
+        public void InicializarGrid()
+        {
+            dataGridView1.DataSource = oDocente.ListaGeneral();
+            dataGridView1.Columns["CodDocente"].Visible = false;
+            dataGridView1.Columns["Correo"].Visible = false;
+            dataGridView1.Columns["Telefono"].Visible = false;
+            dataGridView1.Columns["Dni"].Visible = false;
+        }
+
 
         private void FrmGenerarExpediente_Load(object sender, EventArgs e)
         {
