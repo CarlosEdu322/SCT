@@ -36,11 +36,11 @@
             this.panelSubMenuOperaciones = new System.Windows.Forms.Panel();
             this.BtnGenerarExpediente = new System.Windows.Forms.Button();
             this.BtnIniciarTramite = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelSubMenuMantenimiento = new System.Windows.Forms.Panel();
             this.BtnManTramite = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.BtnManRequisitos = new System.Windows.Forms.Button();
             this.btnManTesis = new System.Windows.Forms.Button();
             this.btnManDocente = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnTesisXTesista = new System.Windows.Forms.Button();
             this.Panel_Contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenuLateral.SuspendLayout();
@@ -121,6 +122,7 @@
             // panelSubMenuOperaciones
             // 
             this.panelSubMenuOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panelSubMenuOperaciones.Controls.Add(this.BtnTesisXTesista);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnGenerarExpediente);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnIniciarTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -167,45 +169,6 @@
             this.BtnIniciarTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnIniciarTramite.UseVisualStyleBackColor = false;
             this.BtnIniciarTramite.Click += new System.EventHandler(this.BtnIniciarTramite_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEditar.FlatAppearance.BorderSize = 0;
-            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnEditar.Location = new System.Drawing.Point(0, 247);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.BtnEditar.Size = new System.Drawing.Size(333, 44);
-            this.BtnEditar.TabIndex = 6;
-            this.BtnEditar.Text = "EditarRXT";
-            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnManRequisitosXTramite
-            // 
-            this.BtnManRequisitosXTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnManRequisitosXTramite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnManRequisitosXTramite.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnManRequisitosXTramite.FlatAppearance.BorderSize = 0;
-            this.BtnManRequisitosXTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnManRequisitosXTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnManRequisitosXTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 196);
-            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnManRequisitosXTramite.Name = "BtnManRequisitosXTramite";
-            this.BtnManRequisitosXTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(333, 51);
-            this.BtnManRequisitosXTramite.TabIndex = 5;
-            this.BtnManRequisitosXTramite.Text = "Requisitos por Tramite";
-            this.BtnManRequisitosXTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnManRequisitosXTramite.UseVisualStyleBackColor = false;
-            this.BtnManRequisitosXTramite.Click += new System.EventHandler(this.BtnManRequisitosXTramite_Click);
             // 
             // button1
             // 
@@ -267,6 +230,45 @@
             this.BtnManTramite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnManTramite.UseVisualStyleBackColor = false;
             this.BtnManTramite.Click += new System.EventHandler(this.BtnManTramite_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEditar.FlatAppearance.BorderSize = 0;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnEditar.Location = new System.Drawing.Point(0, 247);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnEditar.Size = new System.Drawing.Size(333, 44);
+            this.BtnEditar.TabIndex = 6;
+            this.BtnEditar.Text = "EditarRXT";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnManRequisitosXTramite
+            // 
+            this.BtnManRequisitosXTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnManRequisitosXTramite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnManRequisitosXTramite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnManRequisitosXTramite.FlatAppearance.BorderSize = 0;
+            this.BtnManRequisitosXTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnManRequisitosXTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManRequisitosXTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 196);
+            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnManRequisitosXTramite.Name = "BtnManRequisitosXTramite";
+            this.BtnManRequisitosXTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(333, 51);
+            this.BtnManRequisitosXTramite.TabIndex = 5;
+            this.BtnManRequisitosXTramite.Text = "Requisitos por Tramite";
+            this.BtnManRequisitosXTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnManRequisitosXTramite.UseVisualStyleBackColor = false;
+            this.BtnManRequisitosXTramite.Click += new System.EventHandler(this.BtnManRequisitosXTramite_Click);
             // 
             // BtnManRequisitos
             // 
@@ -426,6 +428,27 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // BtnTesisXTesista
+            // 
+            this.BtnTesisXTesista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnTesisXTesista.FlatAppearance.BorderSize = 0;
+            this.BtnTesisXTesista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTesisXTesista.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTesisXTesista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnTesisXTesista.Image = ((System.Drawing.Image)(resources.GetObject("BtnTesisXTesista.Image")));
+            this.BtnTesisXTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnTesisXTesista.Location = new System.Drawing.Point(0, 96);
+            this.BtnTesisXTesista.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnTesisXTesista.Name = "BtnTesisXTesista";
+            this.BtnTesisXTesista.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnTesisXTesista.Size = new System.Drawing.Size(333, 49);
+            this.BtnTesisXTesista.TabIndex = 7;
+            this.BtnTesisXTesista.Text = "TesisXTesista";
+            this.BtnTesisXTesista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnTesisXTesista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnTesisXTesista.UseVisualStyleBackColor = false;
+            this.BtnTesisXTesista.Click += new System.EventHandler(this.BtnTesisXTesista_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -474,5 +497,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnTesisXTesista;
     }
 }

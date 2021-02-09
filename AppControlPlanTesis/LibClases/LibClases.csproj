@@ -44,6 +44,7 @@
     <Compile Include="CConexion.cs" />
     <Compile Include="CDocente.cs" />
     <Compile Include="CEntidad.cs" />
+    <Compile Include="CPlanDeTesis.cs" />
     <Compile Include="CRequisito.cs" />
     <Compile Include="CRequisitoXTramite.cs" />
     <Compile Include="CTesis.cs" />

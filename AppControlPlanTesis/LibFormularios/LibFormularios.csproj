@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBuscarTesista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarTesista.Designer.cs">
+      <DependentUpon>FrmBuscarTesista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDesignarRevisores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +80,23 @@
     <Compile Include="FrmBuscarDocente.Designer.cs">
       <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInformeComisionRevisora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformeComisionRevisora.Designer.cs">
+      <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.Designer.cs">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNombrarComisionRevisoracs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNombrarComisionRevisoracs.Designer.cs">
+      <DependentUpon>FrmNombrarComisionRevisoracs.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
@@ -116,6 +134,12 @@
     <Compile Include="FrmTesista.Designer.cs">
       <DependentUpon>FrmTesista.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTesisXTesista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTesisXTesista.Designer.cs">
+      <DependentUpon>FrmTesisXTesista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTramite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +154,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBuscarTesista.resx">
+      <DependentUpon>FrmBuscarTesista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDesignarRevisores.resx">
       <DependentUpon>FrmDesignarRevisores.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,8 +172,14 @@
     <EmbeddedResource Include="FrmBuscarDocente.resx">
       <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformeComisionRevisora.resx">
+      <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNombrarComisionRevisoracs.resx">
+      <DependentUpon>FrmNombrarComisionRevisoracs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>
@@ -165,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTesista.resx">
       <DependentUpon>FrmTesista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTesisXTesista.resx">
+      <DependentUpon>FrmTesisXTesista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTramite.resx">
       <DependentUpon>FrmTramite.cs</DependentUpon>

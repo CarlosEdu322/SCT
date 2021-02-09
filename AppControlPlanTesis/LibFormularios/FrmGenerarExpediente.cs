@@ -14,6 +14,7 @@ namespace LibFormularios
     {
         private CTramite oTramite;
         CDocente oDocente = new CDocente();
+        CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
         public FrmGenerarExpediente()
         {
             InitializeComponent();
@@ -47,6 +48,19 @@ namespace LibFormularios
             List<string> lista = new List<string>();
 
             //oTramite.GenerarExpediente(lista);
+        }
+
+        private void BtnGenerar_Click(object sender, EventArgs e)
+        {
+            TxtNroExpediente.Text = oPlanDeTesis.GenerarCodigoTesis();
+        }
+
+        private void BtnGenerarExpediente_Click(object sender, EventArgs e)
+        {
+            List<string> listaExpediente = new List<string>();
+            listaExpediente.Add(TxtNroExpediente.Text);
+            listaExpediente.Add(TxtCodTesis.Text);
+            oPlanDeTesis.GenerarExpediente(listaExpediente);
         }
     }
 }

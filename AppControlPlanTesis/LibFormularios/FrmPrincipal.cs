@@ -113,5 +113,10 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmGenerarExpediente());
         }
+
+        private void BtnTesisXTesista_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmTesisXTesista());
+        }
     }
 }

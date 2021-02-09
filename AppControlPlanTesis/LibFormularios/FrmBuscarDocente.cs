@@ -16,6 +16,7 @@ namespace LibFormularios
 {
     public partial class FrmBuscarDocente : Form
     {
+        public TextBox CajadeTexto;
         private CDocente oDocente = new CDocente();
         public FrmBuscarDocente()
         {
@@ -44,7 +45,8 @@ namespace LibFormularios
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
             FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
-            frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
+            //frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
+            CajadeTexto.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
             this.Close();
         }
     }
