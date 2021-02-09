@@ -124,9 +124,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(137, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.Size = new System.Drawing.Size(125, 22);
             this.label2.TabIndex = 120;
-            this.label2.Text = "CodTesis:";
+            this.label2.Text = "Codigo Tesis:";
             // 
             // label5
             // 
@@ -157,9 +157,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label4.Location = new System.Drawing.Point(137, 164);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 22);
+            this.label4.Size = new System.Drawing.Size(147, 22);
             this.label4.TabIndex = 122;
-            this.label4.Text = "CodDocente:";
+            this.label4.Text = "Codigo Asesor:";
             // 
             // TxtTitulo
             // 

@@ -66,7 +66,7 @@
             this.Panel_Contenedor.Controls.Add(this.pictureBox1);
             this.Panel_Contenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.Panel_Contenedor.Location = new System.Drawing.Point(342, 0);
-            this.Panel_Contenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_Contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_Contenedor.Name = "Panel_Contenedor";
             this.Panel_Contenedor.Size = new System.Drawing.Size(1097, 887);
             this.Panel_Contenedor.TabIndex = 1;
@@ -108,7 +108,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnSalir.Location = new System.Drawing.Point(0, 832);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(333, 55);
@@ -123,11 +123,9 @@
             this.panelSubMenuOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelSubMenuOperaciones.Controls.Add(this.BtnGenerarExpediente);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnIniciarTramite);
-            this.panelSubMenuOperaciones.Controls.Add(this.BtnEditar);
-            this.panelSubMenuOperaciones.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 485);
-            this.panelSubMenuOperaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 578);
+            this.panelSubMenuOperaciones.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuOperaciones.Name = "panelSubMenuOperaciones";
             this.panelSubMenuOperaciones.Size = new System.Drawing.Size(333, 197);
             this.panelSubMenuOperaciones.TabIndex = 9;
@@ -140,8 +138,8 @@
             this.BtnGenerarExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenerarExpediente.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.BtnGenerarExpediente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnGenerarExpediente.Location = new System.Drawing.Point(0, 147);
-            this.BtnGenerarExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGenerarExpediente.Location = new System.Drawing.Point(0, 49);
+            this.BtnGenerarExpediente.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGenerarExpediente.Name = "BtnGenerarExpediente";
             this.BtnGenerarExpediente.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnGenerarExpediente.Size = new System.Drawing.Size(333, 49);
@@ -159,8 +157,8 @@
             this.BtnIniciarTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnIniciarTramite.Location = new System.Drawing.Point(0, 98);
-            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(0, 0);
+            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIniciarTramite.Name = "BtnIniciarTramite";
             this.BtnIniciarTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnIniciarTramite.Size = new System.Drawing.Size(333, 49);
@@ -176,14 +174,14 @@
             this.BtnEditar.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnEditar.FlatAppearance.BorderSize = 0;
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnEditar.Location = new System.Drawing.Point(0, 49);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEditar.Location = new System.Drawing.Point(0, 247);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.BtnEditar.Size = new System.Drawing.Size(333, 49);
-            this.BtnEditar.TabIndex = 1;
+            this.BtnEditar.Size = new System.Drawing.Size(333, 44);
+            this.BtnEditar.TabIndex = 6;
             this.BtnEditar.Text = "EditarRXT";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEditar.UseVisualStyleBackColor = false;
@@ -192,17 +190,18 @@
             // BtnManRequisitosXTramite
             // 
             this.BtnManRequisitosXTramite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnManRequisitosXTramite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnManRequisitosXTramite.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnManRequisitosXTramite.FlatAppearance.BorderSize = 0;
             this.BtnManRequisitosXTramite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnManRequisitosXTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnManRequisitosXTramite.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnManRequisitosXTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 0);
-            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 196);
+            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManRequisitosXTramite.Name = "BtnManRequisitosXTramite";
             this.BtnManRequisitosXTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(333, 49);
-            this.BtnManRequisitosXTramite.TabIndex = 0;
+            this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(333, 51);
+            this.BtnManRequisitosXTramite.TabIndex = 5;
             this.BtnManRequisitosXTramite.Text = "Requisitos por Tramite";
             this.BtnManRequisitosXTramite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManRequisitosXTramite.UseVisualStyleBackColor = false;
@@ -218,8 +217,8 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(0, 523);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(333, 55);
@@ -234,15 +233,17 @@
             // 
             this.panelSubMenuMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnManTramite);
+            this.panelSubMenuMantenimiento.Controls.Add(this.BtnEditar);
+            this.panelSubMenuMantenimiento.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnManRequisitos);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesis);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManDocente);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesista);
             this.panelSubMenuMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuMantenimiento.Location = new System.Drawing.Point(0, 178);
-            this.panelSubMenuMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuMantenimiento.Name = "panelSubMenuMantenimiento";
-            this.panelSubMenuMantenimiento.Size = new System.Drawing.Size(333, 252);
+            this.panelSubMenuMantenimiento.Size = new System.Drawing.Size(333, 345);
             this.panelSubMenuMantenimiento.TabIndex = 7;
             // 
             // BtnManTramite
@@ -255,8 +256,8 @@
             this.BtnManTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnManTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnManTramite.Image")));
             this.BtnManTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnManTramite.Location = new System.Drawing.Point(0, 196);
-            this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManTramite.Location = new System.Drawing.Point(0, 291);
+            this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManTramite.Name = "BtnManTramite";
             this.BtnManTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnManTramite.Size = new System.Drawing.Size(333, 49);
@@ -278,7 +279,7 @@
             this.BtnManRequisitos.Image = ((System.Drawing.Image)(resources.GetObject("BtnManRequisitos.Image")));
             this.BtnManRequisitos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManRequisitos.Location = new System.Drawing.Point(0, 147);
-            this.BtnManRequisitos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManRequisitos.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManRequisitos.Name = "BtnManRequisitos";
             this.BtnManRequisitos.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnManRequisitos.Size = new System.Drawing.Size(333, 49);
@@ -300,7 +301,7 @@
             this.btnManTesis.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesis.Image")));
             this.btnManTesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManTesis.Location = new System.Drawing.Point(0, 98);
-            this.btnManTesis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManTesis.Margin = new System.Windows.Forms.Padding(4);
             this.btnManTesis.Name = "btnManTesis";
             this.btnManTesis.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManTesis.Size = new System.Drawing.Size(333, 49);
@@ -322,7 +323,7 @@
             this.btnManDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnManDocente.Image")));
             this.btnManDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManDocente.Location = new System.Drawing.Point(0, 49);
-            this.btnManDocente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManDocente.Margin = new System.Windows.Forms.Padding(4);
             this.btnManDocente.Name = "btnManDocente";
             this.btnManDocente.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManDocente.Size = new System.Drawing.Size(333, 49);
@@ -344,7 +345,7 @@
             this.btnManTesista.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesista.Image")));
             this.btnManTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManTesista.Location = new System.Drawing.Point(0, 0);
-            this.btnManTesista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManTesista.Margin = new System.Windows.Forms.Padding(4);
             this.btnManTesista.Name = "btnManTesista";
             this.btnManTesista.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManTesista.Size = new System.Drawing.Size(333, 49);
@@ -366,7 +367,7 @@
             this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimiento.Location = new System.Drawing.Point(0, 123);
-            this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnMantenimiento.Size = new System.Drawing.Size(333, 55);
@@ -385,7 +386,7 @@
             this.panelLogos.Controls.Add(this.pictureBox2);
             this.panelLogos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogos.Location = new System.Drawing.Point(0, 0);
-            this.panelLogos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogos.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogos.Name = "panelLogos";
             this.panelLogos.Size = new System.Drawing.Size(333, 123);
             this.panelLogos.TabIndex = 4;

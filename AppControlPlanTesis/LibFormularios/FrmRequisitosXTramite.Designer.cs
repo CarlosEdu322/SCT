@@ -32,11 +32,10 @@
             this.TxtNombreTramite = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CboCodTramite = new System.Windows.Forms.ComboBox();
-            this.DgvTramiteXRequisito = new System.Windows.Forms.DataGridView();
+            this.LbxRequisitosXTramite = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTramiteXRequisito)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGuardar
@@ -72,7 +71,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.DgvTramiteXRequisito);
+            this.panel3.Controls.Add(this.LbxRequisitosXTramite);
             this.panel3.Controls.Add(this.CboCodTramite);
             this.panel3.Controls.Add(this.TxtNombreTramite);
             this.panel3.Controls.Add(this.label2);
@@ -86,9 +85,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label4.Location = new System.Drawing.Point(260, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 22);
+            this.label4.Size = new System.Drawing.Size(154, 22);
             this.label4.TabIndex = 127;
-            this.label4.Text = "CodTramite:";
+            this.label4.Text = "Codigo Tramite:";
             // 
             // TxtNombreTramite
             // 
@@ -106,9 +105,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(260, 219);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 22);
+            this.label2.Size = new System.Drawing.Size(160, 22);
             this.label2.TabIndex = 143;
-            this.label2.Text = "NombreTramite:";
+            this.label2.Text = "Nombre Tramite:";
             // 
             // CboCodTramite
             // 
@@ -123,18 +122,15 @@
             this.CboCodTramite.SelectedIndexChanged += new System.EventHandler(this.CboCodTramite_SelectedIndexChanged);
             this.CboCodTramite.TextChanged += new System.EventHandler(this.CboCodTramite_TextChanged);
             // 
-            // DgvTramiteXRequisito
+            // LbxRequisitosXTramite
             // 
-            this.DgvTramiteXRequisito.AllowUserToAddRows = false;
-            this.DgvTramiteXRequisito.AllowUserToDeleteRows = false;
-            this.DgvTramiteXRequisito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTramiteXRequisito.Location = new System.Drawing.Point(111, 361);
-            this.DgvTramiteXRequisito.Name = "DgvTramiteXRequisito";
-            this.DgvTramiteXRequisito.ReadOnly = true;
-            this.DgvTramiteXRequisito.RowHeadersWidth = 51;
-            this.DgvTramiteXRequisito.RowTemplate.Height = 24;
-            this.DgvTramiteXRequisito.Size = new System.Drawing.Size(822, 207);
-            this.DgvTramiteXRequisito.TabIndex = 146;
+            this.LbxRequisitosXTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbxRequisitosXTramite.FormattingEnabled = true;
+            this.LbxRequisitosXTramite.ItemHeight = 29;
+            this.LbxRequisitosXTramite.Location = new System.Drawing.Point(221, 286);
+            this.LbxRequisitosXTramite.Name = "LbxRequisitosXTramite";
+            this.LbxRequisitosXTramite.Size = new System.Drawing.Size(663, 207);
+            this.LbxRequisitosXTramite.TabIndex = 147;
             // 
             // FrmRequisitosXTramite
             // 
@@ -148,7 +144,6 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTramiteXRequisito)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,6 +153,6 @@
         private System.Windows.Forms.TextBox TxtNombreTramite;
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CboCodTramite;
-        private System.Windows.Forms.DataGridView DgvTramiteXRequisito;
+        private System.Windows.Forms.ListBox LbxRequisitosXTramite;
     }
 }
