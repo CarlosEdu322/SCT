@@ -20,6 +20,10 @@ namespace LibFormularios
         private CDocente oDocente;
         private CRequisitoXTramite oRequsitosXTramite;
         private CTesis oTesis;
+        private TextBox codigoBusqueda;
+        
+        public TextBox CodigoBusqueda { get => codigoBusqueda; set => codigoBusqueda = value; }
+
         public FrmIniciarTramiteEstudiante()
         {
             InitializeComponent();
@@ -29,7 +33,7 @@ namespace LibFormularios
             oDocente = new CDocente();
             oTesis = new CTesis();
             LlenarCboTramites();
-            LlenarCboDocentes();
+            CboNroEstudiantes.SelectedIndex = 0;
 
         }
         public void InicializarCamposCboNroEstudiantes()
@@ -92,27 +96,6 @@ namespace LibFormularios
             {
 
             }
-        }
-        public void LlenarCboDocentes()
-        {
-            try
-            {
-                //-- muestra la lista de libros en el combo
-                CboCodDocente.DataSource = oDocente.ListaGeneral();
-                //CboCodDocente.DisplayMember = "Correo";
-                CboCodDocente.ValueMember = "CodDocente";
-                //-- dejar el combo sin libro seleccionado
-                CboCodDocente.SelectedIndex = -1;
-            }
-            catch
-            {
-
-            }
-        }
-
-        public void ProcesarClave()
-        {
-
         }
 
         public void RellenarRequisitosXTramite()
@@ -224,10 +207,6 @@ namespace LibFormularios
                 }
             }
         }
-        private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
-        }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
@@ -258,7 +237,7 @@ namespace LibFormularios
                     List<string> CadenaTesis = new List<string>();
 
                     CadenaTesis.Add(TxtTema.Text);
-                    CadenaTesis.Add(CboCodDocente.Text);
+                    CadenaTesis.Add(txtCodDocente.Text);
                     CadenaTesis.Add(TxtTitulo.Text);
                     oTesis.AgregarTesisAutovalores(CadenaTesis);
                     MessageBox.Show("Tesis Ingresada");
@@ -295,6 +274,24 @@ namespace LibFormularios
             {
                 MessageBox.Show(eRROR.ToString(), "ERROR AL REALIZAR LA OPERACION");
             }
+        }
+
+        private void btnBuscarDocente_Click(object sender, EventArgs e)
+        {
+            FrmBuscarDocente A = new FrmBuscarDocente();
+            AddOwnedForm(A);
+            A.Show();
+        }
+
+        private void FrmIniciarTramiteEstudiante_Load(object sender, EventArgs e)
+        {
+            //Inicializar variable global para transferir dato del form hijo
+             codigoBusqueda = txtCodDocente;
+        }
+
+        private void txtCodDocente_TextChanged(object sender, EventArgs e)
+        {
+            ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, txtCodDocente.Text);
         }
     }
 }

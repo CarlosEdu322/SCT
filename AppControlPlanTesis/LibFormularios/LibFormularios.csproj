@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDesignarRevisores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDesignarRevisores.Designer.cs">
+      <DependentUpon>FrmDesignarRevisores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="FrmGenerarExpediente.Designer.cs">
       <DependentUpon>FrmGenerarExpediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarDocente.Designer.cs">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmDesignarRevisores.resx">
+      <DependentUpon>FrmDesignarRevisores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGenerarExpediente.resx">
       <DependentUpon>FrmGenerarExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarDocente.resx">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
