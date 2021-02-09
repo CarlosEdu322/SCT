@@ -34,36 +34,23 @@
             this.TxtNroExpediente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.CodTesista2 = new System.Windows.Forms.GroupBox();
+            this.ccf = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.BtnCargar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.TxtDniTesista3 = new System.Windows.Forms.TextBox();
-            this.TxtApeTesista3 = new System.Windows.Forms.TextBox();
-            this.TxtNombreTesista3 = new System.Windows.Forms.TextBox();
-            this.TxtDniTesista2 = new System.Windows.Forms.TextBox();
-            this.TxtApeTesista2 = new System.Windows.Forms.TextBox();
-            this.TxtNombreTesista2 = new System.Windows.Forms.TextBox();
-            this.TxtDniTesista1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtApeTesista1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtNombreTesista1 = new System.Windows.Forms.TextBox();
-            this.TxtCodTesista3 = new System.Windows.Forms.TextBox();
-            this.TxtCodTesista2 = new System.Windows.Forms.TextBox();
-            this.TxtCodTesista1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.BtnGenerar = new System.Windows.Forms.Button();
             this.TxtCodTesis = new System.Windows.Forms.TextBox();
             this.BtnGenerarExpediente = new System.Windows.Forms.Button();
+            this.TxtCodTramite = new System.Windows.Forms.TextBox();
+            this.DgvDocentes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTramitesDeInscripcion)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.CodTesista2.SuspendLayout();
+            this.ccf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDocentes)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvTramitesDeInscripcion
@@ -93,7 +80,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1058, 103);
+            this.groupBox1.Size = new System.Drawing.Size(1056, 77);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Expediente";
@@ -139,18 +126,18 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 30);
             this.dateTimePicker1.TabIndex = 178;
             // 
-            // CodTesista2
+            // ccf
             // 
-            this.CodTesista2.Controls.Add(this.dataGridView1);
-            this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.CodTesista2.Location = new System.Drawing.Point(119, 698);
-            this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Name = "CodTesista2";
-            this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Size = new System.Drawing.Size(957, 167);
-            this.CodTesista2.TabIndex = 159;
-            this.CodTesista2.TabStop = false;
-            this.CodTesista2.Text = "Comision Revisora:";
+            this.ccf.Controls.Add(this.dataGridView1);
+            this.ccf.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ccf.Location = new System.Drawing.Point(119, 698);
+            this.ccf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ccf.Name = "ccf";
+            this.ccf.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ccf.Size = new System.Drawing.Size(957, 167);
+            this.ccf.TabIndex = 159;
+            this.ccf.TabStop = false;
+            this.ccf.Text = "Comision Revisora:";
             // 
             // dataGridView1
             // 
@@ -192,196 +179,20 @@
             this.BtnCargar.TabIndex = 179;
             this.BtnCargar.Text = "Cargar";
             this.BtnCargar.UseVisualStyleBackColor = false;
+            this.BtnCargar.Click += new System.EventHandler(this.BtnCargar_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.TxtCodTesis);
-            this.groupBox4.Controls.Add(this.TxtDniTesista3);
-            this.groupBox4.Controls.Add(this.TxtApeTesista3);
-            this.groupBox4.Controls.Add(this.TxtNombreTesista3);
-            this.groupBox4.Controls.Add(this.TxtDniTesista2);
-            this.groupBox4.Controls.Add(this.TxtApeTesista2);
-            this.groupBox4.Controls.Add(this.TxtNombreTesista2);
-            this.groupBox4.Controls.Add(this.TxtDniTesista1);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.TxtApeTesista1);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.TxtNombreTesista1);
-            this.groupBox4.Controls.Add(this.TxtCodTesista3);
-            this.groupBox4.Controls.Add(this.TxtCodTesista2);
-            this.groupBox4.Controls.Add(this.TxtCodTesista1);
-            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.DgvDocentes);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.groupBox4.Location = new System.Drawing.Point(56, 250);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(1044, 258);
+            this.groupBox4.Size = new System.Drawing.Size(1044, 249);
             this.groupBox4.TabIndex = 179;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Interesado(s):";
-            // 
-            // TxtDniTesista3
-            // 
-            this.TxtDniTesista3.Enabled = false;
-            this.TxtDniTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista3.Location = new System.Drawing.Point(748, 185);
-            this.TxtDniTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDniTesista3.Name = "TxtDniTesista3";
-            this.TxtDniTesista3.Size = new System.Drawing.Size(195, 30);
-            this.TxtDniTesista3.TabIndex = 179;
-            // 
-            // TxtApeTesista3
-            // 
-            this.TxtApeTesista3.Enabled = false;
-            this.TxtApeTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista3.Location = new System.Drawing.Point(518, 185);
-            this.TxtApeTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtApeTesista3.Name = "TxtApeTesista3";
-            this.TxtApeTesista3.Size = new System.Drawing.Size(195, 30);
-            this.TxtApeTesista3.TabIndex = 177;
-            // 
-            // TxtNombreTesista3
-            // 
-            this.TxtNombreTesista3.Enabled = false;
-            this.TxtNombreTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista3.Location = new System.Drawing.Point(290, 185);
-            this.TxtNombreTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtNombreTesista3.Name = "TxtNombreTesista3";
-            this.TxtNombreTesista3.Size = new System.Drawing.Size(195, 30);
-            this.TxtNombreTesista3.TabIndex = 174;
-            // 
-            // TxtDniTesista2
-            // 
-            this.TxtDniTesista2.Enabled = false;
-            this.TxtDniTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista2.Location = new System.Drawing.Point(748, 135);
-            this.TxtDniTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDniTesista2.Name = "TxtDniTesista2";
-            this.TxtDniTesista2.Size = new System.Drawing.Size(195, 30);
-            this.TxtDniTesista2.TabIndex = 171;
-            // 
-            // TxtApeTesista2
-            // 
-            this.TxtApeTesista2.Enabled = false;
-            this.TxtApeTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista2.Location = new System.Drawing.Point(518, 135);
-            this.TxtApeTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtApeTesista2.Name = "TxtApeTesista2";
-            this.TxtApeTesista2.Size = new System.Drawing.Size(195, 30);
-            this.TxtApeTesista2.TabIndex = 169;
-            // 
-            // TxtNombreTesista2
-            // 
-            this.TxtNombreTesista2.Enabled = false;
-            this.TxtNombreTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista2.Location = new System.Drawing.Point(290, 129);
-            this.TxtNombreTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtNombreTesista2.Name = "TxtNombreTesista2";
-            this.TxtNombreTesista2.Size = new System.Drawing.Size(195, 30);
-            this.TxtNombreTesista2.TabIndex = 166;
-            // 
-            // TxtDniTesista1
-            // 
-            this.TxtDniTesista1.Enabled = false;
-            this.TxtDniTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDniTesista1.Location = new System.Drawing.Point(748, 83);
-            this.TxtDniTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDniTesista1.Name = "TxtDniTesista1";
-            this.TxtDniTesista1.Size = new System.Drawing.Size(195, 30);
-            this.TxtDniTesista1.TabIndex = 165;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(755, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 22);
-            this.label5.TabIndex = 164;
-            this.label5.Text = "DNI:";
-            // 
-            // TxtApeTesista1
-            // 
-            this.TxtApeTesista1.Enabled = false;
-            this.TxtApeTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApeTesista1.Location = new System.Drawing.Point(518, 83);
-            this.TxtApeTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtApeTesista1.Name = "TxtApeTesista1";
-            this.TxtApeTesista1.Size = new System.Drawing.Size(195, 30);
-            this.TxtApeTesista1.TabIndex = 163;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(514, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 22);
-            this.label4.TabIndex = 162;
-            this.label4.Text = "Apellidos:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(276, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 22);
-            this.label3.TabIndex = 161;
-            this.label3.Text = "Nombres:";
-            // 
-            // TxtNombreTesista1
-            // 
-            this.TxtNombreTesista1.Enabled = false;
-            this.TxtNombreTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTesista1.Location = new System.Drawing.Point(290, 83);
-            this.TxtNombreTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtNombreTesista1.Name = "TxtNombreTesista1";
-            this.TxtNombreTesista1.Size = new System.Drawing.Size(195, 30);
-            this.TxtNombreTesista1.TabIndex = 160;
-            // 
-            // TxtCodTesista3
-            // 
-            this.TxtCodTesista3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista3.Location = new System.Drawing.Point(63, 185);
-            this.TxtCodTesista3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCodTesista3.Name = "TxtCodTesista3";
-            this.TxtCodTesista3.Size = new System.Drawing.Size(196, 30);
-            this.TxtCodTesista3.TabIndex = 155;
-            // 
-            // TxtCodTesista2
-            // 
-            this.TxtCodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista2.Location = new System.Drawing.Point(63, 135);
-            this.TxtCodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCodTesista2.Name = "TxtCodTesista2";
-            this.TxtCodTesista2.Size = new System.Drawing.Size(196, 30);
-            this.TxtCodTesista2.TabIndex = 152;
-            // 
-            // TxtCodTesista1
-            // 
-            this.TxtCodTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodTesista1.Location = new System.Drawing.Point(64, 89);
-            this.TxtCodTesista1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtCodTesista1.Name = "TxtCodTesista1";
-            this.TxtCodTesista1.Size = new System.Drawing.Size(195, 30);
-            this.TxtCodTesista1.TabIndex = 139;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(60, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 22);
-            this.label6.TabIndex = 141;
-            this.label6.Text = "Codigo del Tesista:";
             // 
             // BtnGenerar
             // 
@@ -403,9 +214,9 @@
             // 
             // TxtCodTesis
             // 
-            this.TxtCodTesis.Location = new System.Drawing.Point(193, 15);
+            this.TxtCodTesis.Location = new System.Drawing.Point(825, 223);
             this.TxtCodTesis.Name = "TxtCodTesis";
-            this.TxtCodTesis.Size = new System.Drawing.Size(179, 30);
+            this.TxtCodTesis.Size = new System.Drawing.Size(179, 22);
             this.TxtCodTesis.TabIndex = 180;
             // 
             // BtnGenerarExpediente
@@ -417,7 +228,7 @@
             this.BtnGenerarExpediente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGenerarExpediente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGenerarExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenerarExpediente.Location = new System.Drawing.Point(377, 614);
+            this.BtnGenerarExpediente.Location = new System.Drawing.Point(443, 599);
             this.BtnGenerarExpediente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGenerarExpediente.Name = "BtnGenerarExpediente";
             this.BtnGenerarExpediente.Size = new System.Drawing.Size(229, 59);
@@ -426,16 +237,40 @@
             this.BtnGenerarExpediente.UseVisualStyleBackColor = false;
             this.BtnGenerarExpediente.Click += new System.EventHandler(this.BtnGenerarExpediente_Click);
             // 
+            // TxtCodTramite
+            // 
+            this.TxtCodTramite.Location = new System.Drawing.Point(825, 63);
+            this.TxtCodTramite.Name = "TxtCodTramite";
+            this.TxtCodTramite.Size = new System.Drawing.Size(179, 22);
+            this.TxtCodTramite.TabIndex = 181;
+            // 
+            // DgvDocentes
+            // 
+            this.DgvDocentes.AllowUserToAddRows = false;
+            this.DgvDocentes.AllowUserToDeleteRows = false;
+            this.DgvDocentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvDocentes.Location = new System.Drawing.Point(34, 37);
+            this.DgvDocentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DgvDocentes.Name = "DgvDocentes";
+            this.DgvDocentes.ReadOnly = true;
+            this.DgvDocentes.RowHeadersWidth = 51;
+            this.DgvDocentes.RowTemplate.Height = 24;
+            this.DgvDocentes.Size = new System.Drawing.Size(939, 178);
+            this.DgvDocentes.TabIndex = 103;
+            // 
             // FrmGenerarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 930);
+            this.ClientSize = new System.Drawing.Size(1115, 669);
             this.Controls.Add(this.BtnGenerarExpediente);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.TxtCodTesis);
+            this.Controls.Add(this.TxtCodTramite);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.CodTesista2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ccf);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmGenerarExpediente";
             this.Text = "FrmGenerarExpediente";
@@ -443,19 +278,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvTramitesDeInscripcion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.CodTesista2.ResumeLayout(false);
+            this.ccf.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDocentes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView DgvTramitesDeInscripcion;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox CodTesista2;
+        private System.Windows.Forms.GroupBox ccf;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         protected System.Windows.Forms.Label label1;
@@ -464,24 +300,10 @@
         private System.Windows.Forms.GroupBox groupBox3;
         protected System.Windows.Forms.Button BtnCargar;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox TxtDniTesista3;
-        private System.Windows.Forms.TextBox TxtApeTesista3;
-        private System.Windows.Forms.TextBox TxtNombreTesista3;
-        private System.Windows.Forms.TextBox TxtDniTesista2;
-        private System.Windows.Forms.TextBox TxtApeTesista2;
-        private System.Windows.Forms.TextBox TxtNombreTesista2;
-        private System.Windows.Forms.TextBox TxtDniTesista1;
-        protected System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtApeTesista1;
-        protected System.Windows.Forms.Label label4;
-        protected System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtNombreTesista1;
-        private System.Windows.Forms.TextBox TxtCodTesista3;
-        private System.Windows.Forms.TextBox TxtCodTesista2;
-        private System.Windows.Forms.TextBox TxtCodTesista1;
-        protected System.Windows.Forms.Label label6;
         protected System.Windows.Forms.Button BtnGenerar;
         private System.Windows.Forms.TextBox TxtCodTesis;
         protected System.Windows.Forms.Button BtnGenerarExpediente;
+        private System.Windows.Forms.TextBox TxtCodTramite;
+        private System.Windows.Forms.DataGridView DgvDocentes;
     }
 }

@@ -33,10 +33,20 @@ namespace LibClases
         }
         public void GenerarExpediente(List<string> listaTesistas)
         {
-            string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "')";
+            string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "','','','')";
             aConexion.EjecutarComando(Consulta);
-
-            //aConexion.EjecutarSelect(Consulta);
+            
+        }
+        public void ActualizarEstadoDelTramite(string pCodTramITTesis,string pCodTesis)
+        {
+            string update = "update TIniciarTramiteInscripcionPlanDeTesis set Estado='RESUELTO' where CodTramITTesis='" + pCodTramITTesis + "' and CodTesis='" + pCodTesis + "'";
+            aConexion.EjecutarComando(update);
+        }
+        public DataTable ListarTesistasXTesis()
+        {
+            string consulta = "select CodTesis,a.CodTesista,Apellidos,Nombres,DNI from TTesisXTesista a inner join TTesista b on a.CodTesista=b.CodTesista where CodTesis='700014'";
+            aConexion.EjecutarComando(consulta);
+            return aConexion.Datos.Tables[0];
         }
     }
 }

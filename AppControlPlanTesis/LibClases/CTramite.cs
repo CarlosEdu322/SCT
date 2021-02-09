@@ -27,7 +27,7 @@ namespace LibClases
         public DataTable ListaTramitesDeInscripcionDeTesis()
         {
 
-            string consulta = "select * from TIniciarTramiteInscripcionPlanDeTesis";
+            string consulta = "select * from TIniciarTramiteInscripcionPlanDeTesis where Estado='RECIBIDO'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }

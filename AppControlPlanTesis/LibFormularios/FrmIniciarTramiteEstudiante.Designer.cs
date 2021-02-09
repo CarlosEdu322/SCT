@@ -66,7 +66,7 @@
             this.TxtApellidosDocente = new System.Windows.Forms.TextBox();
             this.TxtNombresDocente = new System.Windows.Forms.TextBox();
             this.TxtDNIDocente = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GbxTramiteDeInscripcion = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.BtnGenerar = new System.Windows.Forms.Button();
             this.TxtCodTesis = new System.Windows.Forms.TextBox();
@@ -78,7 +78,7 @@
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.BtnIniciarTramite = new System.Windows.Forms.Button();
             this.CodTesista2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.GbxTramiteDeInscripcion.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +91,7 @@
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
             this.ChlRequisitosXTramite.Size = new System.Drawing.Size(649, 140);
             this.ChlRequisitosXTramite.TabIndex = 145;
+            this.ChlRequisitosXTramite.SelectedIndexChanged += new System.EventHandler(this.ChlRequisitosXTramite_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -508,20 +509,20 @@
             this.TxtDNIDocente.Size = new System.Drawing.Size(180, 30);
             this.TxtDNIDocente.TabIndex = 174;
             // 
-            // groupBox1
+            // GbxTramiteDeInscripcion
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.CodTesista2);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 210);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1064, 661);
-            this.groupBox1.TabIndex = 175;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tramite Inscripcion de Plan de Tesis";
+            this.GbxTramiteDeInscripcion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GbxTramiteDeInscripcion.Controls.Add(this.groupBox3);
+            this.GbxTramiteDeInscripcion.Controls.Add(this.CodTesista2);
+            this.GbxTramiteDeInscripcion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.GbxTramiteDeInscripcion.Location = new System.Drawing.Point(12, 210);
+            this.GbxTramiteDeInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GbxTramiteDeInscripcion.Name = "GbxTramiteDeInscripcion";
+            this.GbxTramiteDeInscripcion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GbxTramiteDeInscripcion.Size = new System.Drawing.Size(1064, 661);
+            this.GbxTramiteDeInscripcion.TabIndex = 175;
+            this.GbxTramiteDeInscripcion.TabStop = false;
+            this.GbxTramiteDeInscripcion.Text = "Tramite Inscripcion de Plan de Tesis";
             // 
             // groupBox3
             // 
@@ -686,14 +687,14 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ChlRequisitosXTramite);
             this.Controls.Add(this.CboCodTramite);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GbxTramiteDeInscripcion);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmIniciarTramiteEstudiante";
             this.Text = "FrmIniciarTramiteEstudiante";
             this.Load += new System.EventHandler(this.FrmIniciarTramiteEstudiante_Load);
             this.CodTesista2.ResumeLayout(false);
             this.CodTesista2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.GbxTramiteDeInscripcion.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -741,7 +742,7 @@
         private System.Windows.Forms.TextBox TxtApellidosDocente;
         private System.Windows.Forms.TextBox TxtNombresDocente;
         private System.Windows.Forms.TextBox TxtDNIDocente;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox GbxTramiteDeInscripcion;
         protected System.Windows.Forms.Button BtnIniciarTramite;
         protected System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.GroupBox groupBox3;

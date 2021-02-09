@@ -135,6 +135,7 @@
             this.btnBuscarDocente.Size = new System.Drawing.Size(43, 47);
             this.btnBuscarDocente.TabIndex = 189;
             this.btnBuscarDocente.UseVisualStyleBackColor = false;
+            this.btnBuscarDocente.Click += new System.EventHandler(this.btnBuscarDocente_Click);
             // 
             // TxtDNIDocente
             // 

@@ -54,3 +54,17 @@ C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppCo
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb

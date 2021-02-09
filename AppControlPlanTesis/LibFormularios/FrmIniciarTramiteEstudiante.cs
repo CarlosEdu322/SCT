@@ -39,7 +39,8 @@ namespace LibFormularios
             oTesis = new CTesis();
             LlenarCboTramites();
             CboNroEstudiantes.SelectedIndex = 0;
-
+            CboCodTramite.SelectedIndex = 0;
+            //GbxTramiteDeInscripcion.Visible = false;
         }
         public void InicializarCamposCboNroEstudiantes()
         {
@@ -96,7 +97,7 @@ namespace LibFormularios
             {
                 //-- muestra la lista de libros en el combo
                 CboCodTramite.DataSource = oTramite.ListaGeneral();
-                //CboCodDocente.DisplayMember = "Correo";
+                //CboCodDocente.DisplayMember = "Tipo";
                 CboCodTramite.ValueMember = "Tipo";
                 //-- dejar el combo sin libro seleccionado
                 CboCodTramite.SelectedIndex = -1;
@@ -368,6 +369,20 @@ namespace LibFormularios
         private void TxtCodTesista3_TextChanged(object sender, EventArgs e)
         {
             ConsultarEstudiante(TxtNombreTesista3, TxtApeTesista3, TxtDniTesista3, TxtCodTesista3.Text);
+        }
+
+        private void ChlRequisitosXTramite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*
+            if(VerificarRequisitos())
+            {
+                GbxTramiteDeInscripcion.Visible = true;
+            }
+            else
+            {
+                GbxTramiteDeInscripcion.Visible = false;
+            }
+            */
         }
     }
 }
