@@ -50,6 +50,7 @@ Impedimento varchar(20) check (Impedimento in ('Si','No')),
 primary key (CodDocente)
 )
 go
+select * from TExpediente
 --------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
@@ -113,6 +114,7 @@ CodTramite varchar(6),
 --CodTesista2 varchar(6),
 --CodTesista3 varchar(6),
 CodTesis varchar(6),
+Estado varchar(30),--Recibido--Resuelto
 Observaciones varchar(100),
 	--foreign key (CodTesista1) references TTesista
 	--foreign key (CodTesista2) references TTesista
@@ -121,7 +123,13 @@ primary key (CodTramITTesis),
 foreign key (CodTesis) references TTesis,
 foreign key (CodTramite) references TTramite,
 )
+
+update TIniciarTramiteInscripcionPlanDeTesis set Estado='RESUELTO' where CodTramITTesis='800004' and CodTesis='700016'
+
+
+select * from 
 select * from TIniciarTramiteInscripcionPlanDeTesis
+SELECT * FROM TExpediente
 select TOP 1 CodTramITTesis from TIniciarTramiteInscripcionPlanDeTesis ORDER BY CodTramITTesis DESC
 
 insert into TIniciarTramiteInscripcionPlanDeTesis values ('800000','TR0001','124813','124219','150409','700000','NINGUNA')
@@ -151,21 +159,24 @@ CodEvaluacionPlanDeTesis varchar(6) ,
 CodDictamenDeTesis varchar(6),
 CodSustentacionOral varchar(6),
 -- especificacion de claves
---primary key (NroExpediente),
+primary key (NroExpediente),
 foreign key (CodTesis) references TTesis,
 --foreign key (CodEvaluacionPlanDeTesis) references TComisionRevisora,
 --foreign key (CodDictamenDeTesis) references TDictaminantesDeTesis,
 --foreign key (CodSustentacionOral) references TJuradoEvaluador
 )
 go
+
+select top 1 CodEvaluacionPlanDeTesis from TExpediente order by CodEvaluacionPlanDeTesis desc
+
 select top 1 NroExpediente from TExpediente
 select * from TExpediente
 
-select NroExpediente from TExpediente
+select * from TExpediente where CodDictamenDeTesis=''
 print('hola')
+select * from TExpediente where CodDictamenDeTesis=''
 
 select * from TTesis
-
 
 --------------------------------------------------
 --------------------------------------------------
@@ -192,13 +203,23 @@ select * from TRequisitoXTramite
 
 create table TComisionRevisora
 ( -- lista de atributos
-CodEvaluacionPlanDeTesis varchar(6),
+CodEvaluacionPlanDeTesis varchar(6),--300000
 CodDocente varchar(6),
 -- especificacion de claves
-primary key (CodEvaluacionPlanDeTesis),
-foreign key (CodDocente) references TDocente
+foreign key (CodDocente) references TDocente,
 )
 go
+select * from TComisionRevisora
+insert into TComisionRevisora values ('30000','D00001')
+
+SELECT * FROM TExpediente 
+SELECT * FROM TComisionRevisora
+select * from TExpediente where CodEvaluacionPlanDeTesis=''
+
+UPDATE TExpediente set CodEvaluacionPlanDeTesis='' WHERE NroExpediente=''
+
+select top 1 CodEvaluacionPlanDeTesis from TComisionRevisora order by CodEvaluacionPlanDeTesis desc
+select * from TComisionRevisora
 
 create table TDictaminantesDeTesis
 ( -- lista de atributos
@@ -219,7 +240,7 @@ primary key (CodDictamenDeTesis),
 foreign key (CodDocente) references TDocente
 )
 go
-
+select * from TExpediente
 
 
 SELECT * FROM TExpediente
@@ -242,6 +263,8 @@ create table TTesisXTesista(
 	foreign key (CodTesista) references TTesista,
 )
 
+select CodTesis,a.CodTesista,Apellidos,Nombres,DNI from TTesisXTesista a inner join TTesista b on a.CodTesista=b.CodTesista where CodTesis='700014'
+select * from t
 
 create table TActaDePlanDeTesis
 ( -- lista de atributos
