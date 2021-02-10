@@ -52,12 +52,6 @@
     <Compile Include="FrmBuscarTesista.Designer.cs">
       <DependentUpon>FrmBuscarTesista.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDesignarRevisores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDesignarRevisores.Designer.cs">
-      <DependentUpon>FrmDesignarRevisores.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmBuscarTesista.resx">
       <DependentUpon>FrmBuscarTesista.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDesignarRevisores.resx">
-      <DependentUpon>FrmDesignarRevisores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>

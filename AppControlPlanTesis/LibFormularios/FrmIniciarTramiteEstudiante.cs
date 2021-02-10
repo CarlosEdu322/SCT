@@ -48,12 +48,7 @@ namespace LibFormularios
             TxtCodTesista3.Enabled = false;
             BtnBuscarT2.Enabled = false;
             BtnBuscarT3.Enabled = false;
-            //Tesista1
-            //TxtCodTesista1.Clear(); TxtNombreTesista1.Clear(); TxtApeTesista1.Clear(); TxtDniTesista1.Clear();
-            //Tesista2
-            //TxtCodTesista2.Clear(); TxtNombreTesista2.Clear(); TxtApeTesista2.Clear(); TxtDniTesista2.Clear();
-            //Tesista3 
-            //TxtCodTesista3.Clear(); TxtNombreTesista3.Clear(); TxtApeTesista3.Clear(); TxtDniTesista3.Clear();
+            
         }
 
         private void CboNroEstudiantes_SelectedIndexChanged(object sender, EventArgs e)

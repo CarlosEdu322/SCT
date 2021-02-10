@@ -48,5 +48,46 @@ namespace LibClases
             aConexion.EjecutarComando(consulta);
             return aConexion.Datos.Tables[0];
         }
+        public DataTable TesisPendientesDeDCR()
+        {
+            string consulta = " select * from TExpediente where CodEvaluacionPlanDeTesis=''";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public string GenerarCodigoNombrarComisionRevisora()
+        {
+            try
+            {
+
+
+                string codigo;
+                string consulta = " select top 1 CodEvaluacionPlanDeTesis from TExpediente order by CodEvaluacionPlanDeTesis desc";
+                aConexion.EjecutarSelect(consulta);
+                codigo = aConexion.Datos.Tables[0].Rows[0]["CodEvaluacionPlanDeTesis"].ToString();
+                int valorcodigo = int.Parse(codigo) + 1;
+                return valorcodigo.ToString();
+            }
+            catch
+            {
+                return "300000";
+            }
+        }
+        public void AgregarDocentesCR(List<string>NombrarCR,string pCodEvaluacionPlanDeTesis)
+        {
+            string consulta;
+
+            for (int i = 0; i < NombrarCR.Count; i++)
+            {
+                consulta = " insert into TComisionRevisora values ('"+ pCodEvaluacionPlanDeTesis + "','"+ NombrarCR [i]+ "')";
+                aConexion.EjecutarComando(consulta);
+            }
+        }
+        public void UpdateExpediente(string pCodExpediente,string pCodCR)
+        {
+            string consulta;
+            consulta = "UPDATE TExpediente set CodEvaluacionPlanDeTesis='"+ pCodCR + "' WHERE NroExpediente='"+ pCodExpediente + "'";
+            aConexion.EjecutarComando(consulta);
+        }
+
     }
 }
