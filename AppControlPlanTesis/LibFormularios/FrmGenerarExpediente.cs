@@ -37,11 +37,17 @@ namespace LibFormularios
             dataGridView1.Columns["Telefono"].Visible = false;
             dataGridView1.Columns["Dni"].Visible = false;
         }
-
         private void RellenarTablaTramites()
         {
             DgvTramitesDeInscripcion.DataSource = oTramite.ListaTramitesDeInscripcionDeTesis();
+            DgvTramitesDeInscripcion.Columns["CodTesis"].Visible = false;
         }
+
+
+        /*private void RellenarTablaTramites()
+        {
+            DgvTramitesDeInscripcion.DataSource = oTramite.ListaTramitesDeInscripcionDeTesis();
+        }*/
         private void FrmGenerarExpediente_Load(object sender, EventArgs e)
         {
             RellenarTablaTramites();
@@ -63,15 +69,24 @@ namespace LibFormularios
         {
             try
             {
-                //generar expediente
-                List<string> listaExpediente = new List<string>();
-                listaExpediente.Add(TxtNroExpediente.Text);
-                listaExpediente.Add(TxtCodTesis.Text);
-                oPlanDeTesis.GenerarExpediente(listaExpediente);
-                //actualizar el estado del tramite a atendido
-                oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text,TxtCodTesis.Text);
-                MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
-                RellenarTablaTramites();
+                if (TxtNroExpediente.Text != "")
+                {
+
+
+                    //generar expediente
+                    List<string> listaExpediente = new List<string>();
+                    listaExpediente.Add(TxtNroExpediente.Text);
+                    listaExpediente.Add(TxtCodTesis.Text);
+                    oPlanDeTesis.GenerarExpediente(listaExpediente);
+                    //actualizar el estado del tramite a atendido
+                    oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
+                    MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+                    RellenarTablaTramites();
+                }
+                else
+                {
+                    MessageBox.Show("INGRESE UN NUMERO DE EXPEDIENTE", "ALERTA");
+                }
             }
             catch
             {
@@ -87,11 +102,17 @@ namespace LibFormularios
                 TxtCodTesis.Text = DgvTramitesDeInscripcion.CurrentRow.Cells["CodTesis"].Value.ToString();
                 TxtCodTramite.Text = DgvTramitesDeInscripcion.CurrentRow.Cells["CodTramITTesis"].Value.ToString();
                 //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+                DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
             }
             catch
             {
                 MessageBox.Show("NO HA SELECCIONADO", "ERROR");
             }
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

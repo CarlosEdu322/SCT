@@ -20,6 +20,7 @@ namespace LibFormularios
             InitializeComponent();
             oPlanDeTesis = new CPlanDeTesis();
             LlenarDatosCboCodRevisionDeTesis();
+
         }
         public void LlenarDatosCboCodRevisionDeTesis()
         {
@@ -40,18 +41,26 @@ namespace LibFormularios
 
         private void CboCodComisionRevisora_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
-            string sValue = string.Empty;
-
-            if (oDataRowView != null)
+            try
             {
-                sValue = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
+                TxtCodTesis.Text = oPlanDeTesis.MostrarCodTesis(CboCodComisionRevisora.Text);
+                DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
+                string sValue = string.Empty;
+
+                if (oDataRowView != null)
+                {
+                    sValue = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
+                }
+                CboCodDocente.DataSource = oPlanDeTesis.ListarDocenteComisionRevisora(sValue);
+                CboCodDocente.DisplayMember = "CodDocente";
+                CboCodDocente.ValueMember = "CodDocente";
+                //-- dejar el combo sin libro seleccionado
+                CboCodDocente.SelectedIndex = -1;
             }
-            CboCodDocente.DataSource = oPlanDeTesis.ListarDocenteComisionRevisora(sValue);
-            CboCodDocente.DisplayMember = "CodDocente";
-            CboCodDocente.ValueMember = "CodDocente";
-            //-- dejar el combo sin libro seleccionado
-            CboCodDocente.SelectedIndex = 0;
+            catch
+            {
+
+            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -91,6 +100,68 @@ namespace LibFormularios
             {
                 MessageBox.Show(eRR.ToString(), "ERROR AL REALIZAR LA OPERACION");
             }
+        }
+        public void ConsultarDocente(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
+        {
+            CDocente docente = new CDocente();
+            if (codigotesista != "")
+            {
+                if (docente.ExisteClavePrimaria(codigotesista))
+                {
+                    //-- Recuperar atributos, el primer atributo es la clave 
+                    tbox1.Text = docente.ValorAtributo("Nombres");
+                    tbox2.Text = docente.ValorAtributo("Apellidos");
+                    tbox3.Text = docente.ValorAtributo("Dni");
+                }
+                else
+                {
+                    tbox1.Clear(); tbox2.Clear(); tbox3.Clear();
+                }
+            }
+
+        }
+        public void RefrescarTxt()
+        {
+            TxtApellidosDocente.Text = "";
+            TxtNombresDocente.Text = "";
+            TxtDNIDocente.Text = "";
+        }
+        private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
+                if (oPlanDeTesis.VerificarSiEmitioEvaluacion(CboCodComisionRevisora.Text, CboCodDocente.Text))
+                {
+                    GbxRubrica.Enabled = false;
+                    LblNotificacion.Visible = true;
+                    LblNotificacion.Text = "Usted ya reviso este plan de tesis";
+                }
+                else
+                {
+                    GbxRubrica.Enabled = true;
+                    LblNotificacion.Visible = false;
+                }
+                if (CboCodDocente.Text == "")
+                    RefrescarTxt();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TxtCodTesis_TextChanged(object sender, EventArgs e)
+        {
+            DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
+            DgvTesis.DataSource = oPlanDeTesis.ListarDatosTesis(TxtCodTesis.Text);
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

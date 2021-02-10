@@ -220,5 +220,10 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmResultadoEvaluacionPlanTesis());
         }
+
+        private void BtnResultadoComisionRevisora_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmInformeComisionRevisora());
+        }
     }
 }

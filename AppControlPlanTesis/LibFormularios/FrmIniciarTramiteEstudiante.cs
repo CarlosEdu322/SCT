@@ -253,66 +253,72 @@ namespace LibFormularios
         {
             try
             {
-
-                if (VerificarRequisitos())
+                if (TxtCodTesis.Text != "")
                 {
-                    //Agregar a la tbla tesis
-                    //insert into TTesis values ('tema','coddocente','titulo','','')
-                    List<string> CadenaTesis = new List<string>();
-                    CadenaTesis.Add(TxtCodTesis.Text);
-                    CadenaTesis.Add(TxtTema.Text);
-                    CadenaTesis.Add(txtCodDocente.Text);
-                    CadenaTesis.Add(TxtTitulo.Text);
-                    oTesis.AgregarTesis(CadenaTesis);
-
-                    MessageBox.Show("Nro de Tesis " + TxtCodTesis.Text + " ESTADO: POR REVISAR");
-
-                    //Agregar a la tabla TesisXTesista
-                    List<string> CadenaTesisXTesista = new List<string>();
-                    if (CboNroEstudiantes.Text=="1")
+                    if (VerificarRequisitos())
                     {
-                        CadenaTesisXTesista.Add(TxtCodTesista1.Text);
+                        //Agregar a la tbla tesis
+                        //insert into TTesis values ('tema','coddocente','titulo','','')
+                        List<string> CadenaTesis = new List<string>();
+                        CadenaTesis.Add(TxtCodTesis.Text);
+                        CadenaTesis.Add(TxtTema.Text);
+                        CadenaTesis.Add(txtCodDocente.Text);
+                        CadenaTesis.Add(TxtTitulo.Text);
+                        oTesis.AgregarTesis(CadenaTesis);
+
+                        
+
+                        //Agregar a la tabla TesisXTesista
+                        List<string> CadenaTesisXTesista = new List<string>();
+                        if (CboNroEstudiantes.Text == "1")
+                        {
+                            CadenaTesisXTesista.Add(TxtCodTesista1.Text);
+                        }
+                        if (CboNroEstudiantes.Text == "2")
+                        {
+                            CadenaTesisXTesista.Add(TxtCodTesista1.Text);
+                            CadenaTesisXTesista.Add(TxtCodTesista2.Text);
+                        }
+                        if (CboNroEstudiantes.Text == "3")
+                        {
+                            CadenaTesisXTesista.Add(TxtCodTesista1.Text);
+                            CadenaTesisXTesista.Add(TxtCodTesista2.Text);
+                            CadenaTesisXTesista.Add(TxtCodTesista3.Text);
+                        }
+                        oTesis.GuardarCambiosTesisXTesista(TxtCodTesis.Text, CadenaTesisXTesista);
+
+
+                        List<string> IniciarTramiteInscripcionPlanDeTesis = new List<string>();
+                        DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
+                        string codTramite = string.Empty;
+
+                        if (oDataRowView != null)
+                        {
+                            codTramite = oDataRowView.Row["CodTramite"] as string;
+                        }
+                        string CodTrInscripcionDeTemaDeTesis;
+
+                        CodTrInscripcionDeTemaDeTesis = oTesis.GenerarCodigoTrInscripcionDeTemaDeTesis();
+                        MessageBox.Show("Nro de Tesis " + TxtCodTesis.Text + " ESTADO: POR REVISAR");
+                        IniciarTramiteInscripcionPlanDeTesis.Add(CodTrInscripcionDeTemaDeTesis);
+                        IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
+                        IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesis.Text);
+                        IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
+                        //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
+                        oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
+                        MessageBox.Show("HA REGISTRADO EL TRAMITE","CONFIRMACION");
+                        InitializeComponent();
                     }
-                    if (CboNroEstudiantes.Text == "2")
+                    else
                     {
-                        CadenaTesisXTesista.Add(TxtCodTesista1.Text);
-                        CadenaTesisXTesista.Add(TxtCodTesista2.Text);
+                        MessageBox.Show("Tiene que cumplir todos los requisitos");
                     }
-                    if (CboNroEstudiantes.Text == "3")
-                    {
-                        CadenaTesisXTesista.Add(TxtCodTesista1.Text);
-                        CadenaTesisXTesista.Add(TxtCodTesista2.Text);
-                        CadenaTesisXTesista.Add(TxtCodTesista3.Text);
-                    }
-                    oTesis.GuardarCambiosTesisXTesista(TxtCodTesis.Text, CadenaTesisXTesista);
 
-
-                    List<string> IniciarTramiteInscripcionPlanDeTesis = new List<string>();
-                    DataRowView oDataRowView = CboCodTramite.SelectedItem as DataRowView;
-                    string codTramite = string.Empty;
-
-                    if (oDataRowView != null)
-                    {
-                        codTramite = oDataRowView.Row["CodTramite"] as string;
-                    }
-                    string CodTrInscripcionDeTemaDeTesis;
-
-                    CodTrInscripcionDeTemaDeTesis = oTesis.GenerarCodigoTrInscripcionDeTemaDeTesis();
-                    MessageBox.Show("Nro TramiteIncripcionDeTemaDeTesis: "+ CodTrInscripcionDeTemaDeTesis);
-                    IniciarTramiteInscripcionPlanDeTesis.Add(CodTrInscripcionDeTemaDeTesis);
-                    IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
-                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesis.Text);
-                    IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
-                    //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
-                    oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
-                    MessageBox.Show("TRAMITE " + codTramite + " AGREGADO");
                 }
                 else
                 {
-                    MessageBox.Show("Tiene que cumplir todos los requisitos");
+                    MessageBox.Show("GENERE VALOR PARA CODIGO DE TESIS","ALERTA");
                 }
-
-
             }
             catch (Exception eRROR)
             {
