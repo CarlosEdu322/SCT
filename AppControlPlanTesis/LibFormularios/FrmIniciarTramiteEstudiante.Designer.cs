@@ -86,10 +86,10 @@
             // ChlRequisitosXTramite
             // 
             this.ChlRequisitosXTramite.FormattingEnabled = true;
-            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(249, 50);
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(255, 39);
             this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
-            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(649, 140);
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(643, 140);
             this.ChlRequisitosXTramite.TabIndex = 145;
             this.ChlRequisitosXTramite.SelectedIndexChanged += new System.EventHandler(this.ChlRequisitosXTramite_SelectedIndexChanged);
             // 
@@ -189,7 +189,7 @@
             this.CodTesista2.Controls.Add(this.TxtCodTesista1);
             this.CodTesista2.Controls.Add(this.LblCodTesista1);
             this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.CodTesista2.Location = new System.Drawing.Point(23, 45);
+            this.CodTesista2.Location = new System.Drawing.Point(23, 27);
             this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CodTesista2.Name = "CodTesista2";
             this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -515,11 +515,11 @@
             this.GbxTramiteDeInscripcion.Controls.Add(this.groupBox3);
             this.GbxTramiteDeInscripcion.Controls.Add(this.CodTesista2);
             this.GbxTramiteDeInscripcion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.GbxTramiteDeInscripcion.Location = new System.Drawing.Point(12, 210);
+            this.GbxTramiteDeInscripcion.Location = new System.Drawing.Point(1, 183);
             this.GbxTramiteDeInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxTramiteDeInscripcion.Name = "GbxTramiteDeInscripcion";
             this.GbxTramiteDeInscripcion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.GbxTramiteDeInscripcion.Size = new System.Drawing.Size(1064, 661);
+            this.GbxTramiteDeInscripcion.Size = new System.Drawing.Size(1064, 607);
             this.GbxTramiteDeInscripcion.TabIndex = 175;
             this.GbxTramiteDeInscripcion.TabStop = false;
             this.GbxTramiteDeInscripcion.Text = "Tramite Inscripcion de Plan de Tesis";
@@ -534,11 +534,11 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.TxtTema);
-            this.groupBox3.Location = new System.Drawing.Point(23, 301);
+            this.groupBox3.Location = new System.Drawing.Point(23, 283);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1041, 356);
+            this.groupBox3.Size = new System.Drawing.Size(1041, 311);
             this.groupBox3.TabIndex = 176;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos De La Tesis";
@@ -587,11 +587,9 @@
             this.groupBox2.Controls.Add(this.txtCodDocente);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.btnBuscarDocente);
-            this.groupBox2.Controls.Add(this.BtnCerrar);
             this.groupBox2.Controls.Add(this.TxtDNIDocente);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.BtnIniciarTramite);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.TxtObservaciones);
             this.groupBox2.Controls.Add(this.TxtNombresDocente);
@@ -601,7 +599,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(947, 226);
+            this.groupBox2.Size = new System.Drawing.Size(947, 173);
             this.groupBox2.TabIndex = 175;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DatosDelAsesor";
@@ -651,7 +649,7 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(627, 166);
+            this.BtnCerrar.Location = new System.Drawing.Point(582, 794);
             this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
@@ -669,7 +667,7 @@
             this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIniciarTramite.Location = new System.Drawing.Point(48, 167);
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(217, 794);
             this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnIniciarTramite.Name = "BtnIniciarTramite";
             this.BtnIniciarTramite.Size = new System.Drawing.Size(219, 59);
@@ -683,11 +681,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1094, 882);
+            this.ClientSize = new System.Drawing.Size(1094, 869);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ChlRequisitosXTramite);
+            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.CboCodTramite);
             this.Controls.Add(this.GbxTramiteDeInscripcion);
+            this.Controls.Add(this.BtnIniciarTramite);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmIniciarTramiteEstudiante";
             this.Text = "FrmIniciarTramiteEstudiante";

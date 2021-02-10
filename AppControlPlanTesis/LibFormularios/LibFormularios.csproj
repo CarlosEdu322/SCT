@@ -76,12 +76,6 @@
     <Compile Include="FrmBuscarDocente.Designer.cs">
       <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInformeComisionRevisora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInformeComisionRevisora.Designer.cs">
-      <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +111,12 @@
     </Compile>
     <Compile Include="FrmRequisitosXTramite.Designer.cs">
       <DependentUpon>FrmRequisitosXTramite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultadoEvaluacionPlanTesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultadoEvaluacionPlanTesis.Designer.cs">
+      <DependentUpon>FrmResultadoEvaluacionPlanTesis.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTesis.cs">
       <SubType>Form</SubType>
@@ -165,9 +165,6 @@
     <EmbeddedResource Include="FrmBuscarDocente.resx">
       <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInformeComisionRevisora.resx">
-      <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRequisitosXTramite.resx">
       <DependentUpon>FrmRequisitosXTramite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultadoEvaluacionPlanTesis.resx">
+      <DependentUpon>FrmResultadoEvaluacionPlanTesis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTesis.resx">
       <DependentUpon>FrmTesis.cs</DependentUpon>

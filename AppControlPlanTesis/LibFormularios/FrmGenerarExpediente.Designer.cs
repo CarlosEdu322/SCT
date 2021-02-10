@@ -30,20 +30,22 @@
         {
             this.DgvTramitesDeInscripcion = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnGenerar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNroExpediente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ccf = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.BtnCargar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BtnGenerar = new System.Windows.Forms.Button();
+            this.DgvDocentes = new System.Windows.Forms.DataGridView();
             this.TxtCodTesis = new System.Windows.Forms.TextBox();
             this.BtnGenerarExpediente = new System.Windows.Forms.Button();
             this.TxtCodTramite = new System.Windows.Forms.TextBox();
-            this.DgvDocentes = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTramitesDeInscripcion)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.ccf.SuspendLayout();
@@ -85,6 +87,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Expediente";
             // 
+            // BtnGenerar
+            // 
+            this.BtnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnGenerar.FlatAppearance.BorderSize = 0;
+            this.BtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGenerar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGenerar.Location = new System.Drawing.Point(354, 22);
+            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnGenerar.Name = "BtnGenerar";
+            this.BtnGenerar.Size = new System.Drawing.Size(114, 37);
+            this.BtnGenerar.TabIndex = 181;
+            this.BtnGenerar.Text = "Generar";
+            this.BtnGenerar.UseVisualStyleBackColor = false;
+            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(684, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 22);
+            this.label2.TabIndex = 146;
+            this.label2.Text = "Fecha:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -104,17 +135,6 @@
             this.TxtNroExpediente.Name = "TxtNroExpediente";
             this.TxtNroExpediente.Size = new System.Drawing.Size(168, 30);
             this.TxtNroExpediente.TabIndex = 144;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(684, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 22);
-            this.label2.TabIndex = 146;
-            this.label2.Text = "Fecha:";
             // 
             // dateTimePicker1
             // 
@@ -194,27 +214,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Interesado(s):";
             // 
-            // BtnGenerar
+            // DgvDocentes
             // 
-            this.BtnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnGenerar.FlatAppearance.BorderSize = 0;
-            this.BtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGenerar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenerar.Location = new System.Drawing.Point(354, 22);
-            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnGenerar.Name = "BtnGenerar";
-            this.BtnGenerar.Size = new System.Drawing.Size(114, 37);
-            this.BtnGenerar.TabIndex = 181;
-            this.BtnGenerar.Text = "Generar";
-            this.BtnGenerar.UseVisualStyleBackColor = false;
-            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
+            this.DgvDocentes.AllowUserToAddRows = false;
+            this.DgvDocentes.AllowUserToDeleteRows = false;
+            this.DgvDocentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvDocentes.Location = new System.Drawing.Point(34, 37);
+            this.DgvDocentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DgvDocentes.Name = "DgvDocentes";
+            this.DgvDocentes.ReadOnly = true;
+            this.DgvDocentes.RowHeadersWidth = 51;
+            this.DgvDocentes.RowTemplate.Height = 24;
+            this.DgvDocentes.Size = new System.Drawing.Size(939, 178);
+            this.DgvDocentes.TabIndex = 103;
             // 
             // TxtCodTesis
             // 
-            this.TxtCodTesis.Location = new System.Drawing.Point(825, 223);
+            this.TxtCodTesis.Location = new System.Drawing.Point(825, 202);
             this.TxtCodTesis.Name = "TxtCodTesis";
             this.TxtCodTesis.Size = new System.Drawing.Size(179, 22);
             this.TxtCodTesis.TabIndex = 180;
@@ -244,26 +261,31 @@
             this.TxtCodTramite.Size = new System.Drawing.Size(179, 22);
             this.TxtCodTramite.TabIndex = 181;
             // 
-            // DgvDocentes
+            // label3
             // 
-            this.DgvDocentes.AllowUserToAddRows = false;
-            this.DgvDocentes.AllowUserToDeleteRows = false;
-            this.DgvDocentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvDocentes.Location = new System.Drawing.Point(34, 37);
-            this.DgvDocentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DgvDocentes.Name = "DgvDocentes";
-            this.DgvDocentes.ReadOnly = true;
-            this.DgvDocentes.RowHeadersWidth = 51;
-            this.DgvDocentes.RowTemplate.Height = 24;
-            this.DgvDocentes.Size = new System.Drawing.Size(939, 178);
-            this.DgvDocentes.TabIndex = 103;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(825, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 182;
+            this.label3.Text = "CodTramite";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(837, 174);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.TabIndex = 183;
+            this.label4.Text = "Codigo de Tesis";
             // 
             // FrmGenerarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 669);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnGenerarExpediente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TxtCodTesis);
@@ -305,5 +327,7 @@
         protected System.Windows.Forms.Button BtnGenerarExpediente;
         private System.Windows.Forms.TextBox TxtCodTramite;
         private System.Windows.Forms.DataGridView DgvDocentes;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

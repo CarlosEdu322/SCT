@@ -270,8 +270,8 @@ create table TActaDePlanDeTesis
 ( -- lista de atributos
 CodEvaluacionPlanDeTesis varchar(6),
 CodDocente varchar(6),
-CodTesis varchar(6),
-CodTesista varchar(6),
+--CodTesis varchar(6),
+--CodTesista varchar(6),
 NotaIdentificacionProblema int,
 NotaHipotesis int,
 NotaAlcanceResultados int,
@@ -280,14 +280,19 @@ NotaRevisionBibliografica int,
 NotaRecursosPresupuesto int,
 NotaImpacto int,
 NotaOrganizacionDocTesis int,
-NotaPresentacionGenDocTesis int,
+--NotaPresentacionGenDocTesis int,
 -- especificacion de claves
-primary key (CodEvaluacionPlanDeTesis),
+--primary key (CodEvaluacionPlanDeTesis),
 foreign key (CodDocente) references TDocente,
-foreign key (CodTesis) references TTesis,
-foreign key (CodTesista) references TTesista,
+--foreign key (CodTesis) references TTesis,
+--foreign key (CodTesista) references TTesista,
 )
 go
+select * from TActaDePlanDeTesis 
+SELECT * FROM TActaDePlanDeTesis WHERE CodEvaluacionPlanDeTesis='300003' AND CodDocente='D00004'
+insert into TActaDePlanDeTesis values('300003','D00004',0,0,0,0,0,0,0,0)
+
+select * from TExpediente
 
 
 
@@ -337,8 +342,9 @@ Estado varchar(6),
 foreign key (CodDocente) references TDocente,
 )
 
+select * from TExpediente where CodEvaluacionPlanDeTesis!=''
 
-
+select * from TComisionRevisora where CodEvaluacionPlanDeTesis='300003'
 ----------------------------------------
 -- INSERTAMOS DATOS A LAS TABLA DOCENTE --
 ---------------------------------------

@@ -43,7 +43,7 @@
             this.BtnConsultas = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelSubMenuOperaciones = new System.Windows.Forms.Panel();
-            this.btnInformeComisionRevisora = new System.Windows.Forms.Button();
+            this.btnActaComisionRevisora = new System.Windows.Forms.Button();
             this.btnNombrarCRevisora = new System.Windows.Forms.Button();
             this.BtnGenerarExpediente = new System.Windows.Forms.Button();
             this.BtnIniciarTramite = new System.Windows.Forms.Button();
@@ -320,7 +320,7 @@
             // panelSubMenuOperaciones
             // 
             this.panelSubMenuOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.panelSubMenuOperaciones.Controls.Add(this.btnInformeComisionRevisora);
+            this.panelSubMenuOperaciones.Controls.Add(this.btnActaComisionRevisora);
             this.panelSubMenuOperaciones.Controls.Add(this.btnNombrarCRevisora);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnGenerarExpediente);
             this.panelSubMenuOperaciones.Controls.Add(this.BtnIniciarTramite);
@@ -331,23 +331,24 @@
             this.panelSubMenuOperaciones.Size = new System.Drawing.Size(312, 217);
             this.panelSubMenuOperaciones.TabIndex = 9;
             // 
-            // btnInformeComisionRevisora
+            // btnActaComisionRevisora
             // 
-            this.btnInformeComisionRevisora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.btnInformeComisionRevisora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInformeComisionRevisora.FlatAppearance.BorderSize = 0;
-            this.btnInformeComisionRevisora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformeComisionRevisora.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.btnInformeComisionRevisora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.btnInformeComisionRevisora.Location = new System.Drawing.Point(0, 147);
-            this.btnInformeComisionRevisora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnInformeComisionRevisora.Name = "btnInformeComisionRevisora";
-            this.btnInformeComisionRevisora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnInformeComisionRevisora.Size = new System.Drawing.Size(312, 49);
-            this.btnInformeComisionRevisora.TabIndex = 10;
-            this.btnInformeComisionRevisora.Text = "Informe Comision Revisora";
-            this.btnInformeComisionRevisora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformeComisionRevisora.UseVisualStyleBackColor = false;
+            this.btnActaComisionRevisora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.btnActaComisionRevisora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnActaComisionRevisora.FlatAppearance.BorderSize = 0;
+            this.btnActaComisionRevisora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActaComisionRevisora.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.btnActaComisionRevisora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.btnActaComisionRevisora.Location = new System.Drawing.Point(0, 147);
+            this.btnActaComisionRevisora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActaComisionRevisora.Name = "btnActaComisionRevisora";
+            this.btnActaComisionRevisora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnActaComisionRevisora.Size = new System.Drawing.Size(312, 49);
+            this.btnActaComisionRevisora.TabIndex = 10;
+            this.btnActaComisionRevisora.Text = "Acta Comision Revisora";
+            this.btnActaComisionRevisora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActaComisionRevisora.UseVisualStyleBackColor = false;
+            this.btnActaComisionRevisora.Click += new System.EventHandler(this.btnActaComisionRevisora_Click);
             // 
             // btnNombrarCRevisora
             // 
@@ -869,7 +870,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button BtnManTramite;
         private System.Windows.Forms.Button BtnTesisXTesista;
-        private System.Windows.Forms.Button btnInformeComisionRevisora;
+        private System.Windows.Forms.Button btnActaComisionRevisora;
         private System.Windows.Forms.Button btnNombrarCRevisora;
     }
 }

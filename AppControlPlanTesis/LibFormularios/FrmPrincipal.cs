@@ -198,7 +198,7 @@ namespace LibFormularios
 
         private void btnInformeComisionRevisora_Click(object sender, EventArgs e)
         {
-            abrirFormHijoEnPanel(new FrmInformeComisionRevisora());
+            abrirFormHijoEnPanel(new FrmResultadoEvaluacionPlanTesis());
         }
 
         private void BtnTesisXTesista_Click_1(object sender, EventArgs e)
@@ -214,6 +214,11 @@ namespace LibFormularios
         private void btnNombrarCRevisora_Click(object sender, EventArgs e)
         {
             abrirFormHijoEnPanel(new FrmNombrarComisionRevisoracs());
+        }
+
+        private void btnActaComisionRevisora_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmResultadoEvaluacionPlanTesis());
         }
     }
 }

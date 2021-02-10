@@ -106,6 +106,7 @@ namespace LibFormularios
                 ComisionRevisora.Add(txtCodDocente3.Text);
                 oPlanDeTesis.AgregarDocentesCR(ComisionRevisora, TxtCodEvaluacionPlanDeTesis.Text);
                 MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+                LlenarTesisPendientes();
             }
             catch
             {

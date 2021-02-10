@@ -74,7 +74,6 @@ C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibF
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarDocente.resources
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDesignarRevisores.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarDocente.resources
-C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeComisionRevisora.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarTesista.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesisXTesista.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarComisionRevisoracs.resources
@@ -110,3 +109,4 @@ C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFo
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFormularios\obj\Debug\LibFormularios.dll
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources

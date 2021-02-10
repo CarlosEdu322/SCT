@@ -88,6 +88,22 @@ namespace LibClases
             consulta = "UPDATE TExpediente set CodEvaluacionPlanDeTesis='"+ pCodCR + "' WHERE NroExpediente='"+ pCodExpediente + "'";
             aConexion.EjecutarComando(consulta);
         }
-
+        public DataTable ListarCodComisionRevisora()
+        {
+            string consulta = "select * from TExpediente where CodEvaluacionPlanDeTesis!=''";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable ListarDocenteComisionRevisora(string pCodComisionRevisora)
+        {
+            string consulta = "select * from TComisionRevisora where CodEvaluacionPlanDeTesis='"+ pCodComisionRevisora + "'";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public void AgregarEvaluacionPlanDeTesis(List<string> Cadena)
+        {
+            string consulta= "insert into TActaDePlanDeTesis values('"+ Cadena [0]+ "','" + Cadena[1] + "'," + Cadena[2] + "," + Cadena[3] + "," + Cadena[4] + "," + Cadena[5] + "," + Cadena[6] + "," + Cadena[7] + "," + Cadena[8] + "," + Cadena[9] + ")";
+            aConexion.EjecutarComando(consulta);
+        }
     }
 }
