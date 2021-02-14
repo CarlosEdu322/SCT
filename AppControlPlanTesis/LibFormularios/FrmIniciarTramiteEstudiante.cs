@@ -266,7 +266,7 @@ namespace LibFormularios
                         CadenaTesis.Add(TxtTitulo.Text);
                         oTesis.AgregarTesis(CadenaTesis);
 
-                        
+
 
                         //Agregar a la tabla TesisXTesista
                         List<string> CadenaTesisXTesista = new List<string>();
@@ -306,8 +306,9 @@ namespace LibFormularios
                         IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
                         //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
                         oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
-                        MessageBox.Show("HA REGISTRADO EL TRAMITE","CONFIRMACION");
-                        InitializeComponent();
+                        MessageBox.Show("HA REGISTRADO EL TRAMITE", "CONFIRMACION");
+                        //FrmPrincipal f = new FrmPrincipal();
+                        //f.abrirFormHijoEnPanel(new FrmIniciarTramiteEstudiante());
                     }
                     else
                     {

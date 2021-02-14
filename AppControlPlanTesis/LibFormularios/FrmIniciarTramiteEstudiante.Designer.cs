@@ -77,10 +77,59 @@
             this.btnBuscarDocente = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.BtnIniciarTramite = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.NroExpediente = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.CodTesista2.SuspendLayout();
             this.GbxTramiteDeInscripcion.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChlRequisitosXTramite
@@ -194,7 +243,7 @@
             this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CodTesista2.Name = "CodTesista2";
             this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Size = new System.Drawing.Size(1041, 224);
+            this.CodTesista2.Size = new System.Drawing.Size(966, 224);
             this.CodTesista2.TabIndex = 158;
             this.CodTesista2.TabStop = false;
             this.CodTesista2.Text = "Interesado(s):";
@@ -516,11 +565,11 @@
             this.GbxTramiteDeInscripcion.Controls.Add(this.groupBox3);
             this.GbxTramiteDeInscripcion.Controls.Add(this.CodTesista2);
             this.GbxTramiteDeInscripcion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.GbxTramiteDeInscripcion.Location = new System.Drawing.Point(1, 183);
+            this.GbxTramiteDeInscripcion.Location = new System.Drawing.Point(26, 13);
             this.GbxTramiteDeInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxTramiteDeInscripcion.Name = "GbxTramiteDeInscripcion";
             this.GbxTramiteDeInscripcion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.GbxTramiteDeInscripcion.Size = new System.Drawing.Size(1064, 578);
+            this.GbxTramiteDeInscripcion.Size = new System.Drawing.Size(1007, 578);
             this.GbxTramiteDeInscripcion.TabIndex = 175;
             this.GbxTramiteDeInscripcion.TabStop = false;
             this.GbxTramiteDeInscripcion.Text = "Tramite Inscripcion de Plan de Tesis";
@@ -539,7 +588,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1041, 311);
+            this.groupBox3.Size = new System.Drawing.Size(966, 311);
             this.groupBox3.TabIndex = 176;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos De La Tesis";
@@ -650,7 +699,7 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(570, 775);
+            this.BtnCerrar.Location = new System.Drawing.Point(644, 818);
             this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
@@ -668,7 +717,7 @@
             this.BtnIniciarTramite.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIniciarTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIniciarTramite.Location = new System.Drawing.Point(236, 775);
+            this.BtnIniciarTramite.Location = new System.Drawing.Point(246, 818);
             this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnIniciarTramite.Name = "BtnIniciarTramite";
             this.BtnIniciarTramite.Size = new System.Drawing.Size(219, 59);
@@ -677,17 +726,484 @@
             this.BtnIniciarTramite.UseVisualStyleBackColor = false;
             this.BtnIniciarTramite.Click += new System.EventHandler(this.BtnIniciarTramite_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.NroExpediente);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(15, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1009, 580);
+            this.groupBox1.TabIndex = 178;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tramite de Dictamen de Tesis";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(75, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 17);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Buscar Expediente";
+            // 
+            // NroExpediente
+            // 
+            this.NroExpediente.Location = new System.Drawing.Point(224, 42);
+            this.NroExpediente.Name = "NroExpediente";
+            this.NroExpediente.Size = new System.Drawing.Size(314, 22);
+            this.NroExpediente.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(544, 31);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 46);
+            this.button1.TabIndex = 157;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.textBox11);
+            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.textBox13);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.groupBox4.Location = new System.Drawing.Point(23, 81);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(967, 164);
+            this.groupBox4.TabIndex = 159;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Interesado(s):";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox2.Location = new System.Drawing.Point(733, 125);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(217, 30);
+            this.textBox2.TabIndex = 179;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox3.Location = new System.Drawing.Point(512, 125);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(195, 30);
+            this.textBox3.TabIndex = 177;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox4.Location = new System.Drawing.Point(295, 125);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(195, 30);
+            this.textBox4.TabIndex = 174;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Enabled = false;
+            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox5.Location = new System.Drawing.Point(733, 83);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(217, 30);
+            this.textBox5.TabIndex = 171;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Enabled = false;
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox6.Location = new System.Drawing.Point(512, 83);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(195, 30);
+            this.textBox6.TabIndex = 169;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox7.Location = new System.Drawing.Point(295, 83);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(195, 30);
+            this.textBox7.TabIndex = 166;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Enabled = false;
+            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox8.Location = new System.Drawing.Point(733, 46);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(217, 30);
+            this.textBox8.TabIndex = 165;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label14.Location = new System.Drawing.Point(740, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 22);
+            this.label14.TabIndex = 164;
+            this.label14.Text = "DNI:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Enabled = false;
+            this.textBox9.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox9.Location = new System.Drawing.Point(512, 46);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(195, 30);
+            this.textBox9.TabIndex = 163;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label15.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label15.Location = new System.Drawing.Point(508, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 22);
+            this.label15.TabIndex = 162;
+            this.label15.Text = "Apellidos:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label16.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label16.Location = new System.Drawing.Point(281, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 22);
+            this.label16.TabIndex = 161;
+            this.label16.Text = "Nombres:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Enabled = false;
+            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox10.Location = new System.Drawing.Point(295, 46);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(195, 30);
+            this.textBox10.TabIndex = 160;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox11.Location = new System.Drawing.Point(36, 125);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(196, 30);
+            this.textBox11.TabIndex = 155;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox12.Location = new System.Drawing.Point(36, 83);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(196, 30);
+            this.textBox12.TabIndex = 152;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox13.Location = new System.Drawing.Point(37, 46);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(195, 30);
+            this.textBox13.TabIndex = 139;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label17.Location = new System.Drawing.Point(33, 23);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(178, 22);
+            this.label17.TabIndex = 141;
+            this.label17.Text = "Codigo del Tesista:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox14);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.textBox15);
+            this.groupBox5.Controls.Add(this.groupBox6);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.textBox21);
+            this.groupBox5.Location = new System.Drawing.Point(23, 264);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(967, 301);
+            this.groupBox5.TabIndex = 177;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Datos De La Tesis";
+            // 
+            // textBox14
+            // 
+            this.textBox14.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox14.Location = new System.Drawing.Point(228, 17);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(499, 30);
+            this.textBox14.TabIndex = 179;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label18.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label18.Location = new System.Drawing.Point(19, 25);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(160, 22);
+            this.label18.TabIndex = 178;
+            this.label18.Text = "Codigo de  Tesis:";
+            // 
+            // textBox15
+            // 
+            this.textBox15.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox15.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox15.Location = new System.Drawing.Point(228, 51);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(661, 30);
+            this.textBox15.TabIndex = 165;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox16);
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.textBox17);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.label21);
+            this.groupBox6.Controls.Add(this.label22);
+            this.groupBox6.Controls.Add(this.textBox18);
+            this.groupBox6.Controls.Add(this.textBox19);
+            this.groupBox6.Controls.Add(this.textBox20);
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Location = new System.Drawing.Point(9, 120);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(947, 173);
+            this.groupBox6.TabIndex = 175;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "DatosDelAsesor";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox16.Location = new System.Drawing.Point(14, 60);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(150, 30);
+            this.textBox16.TabIndex = 182;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label19.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label19.Location = new System.Drawing.Point(10, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 22);
+            this.label19.TabIndex = 181;
+            this.label19.Text = "Docente:";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox17.Location = new System.Drawing.Point(724, 60);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(180, 30);
+            this.textBox17.TabIndex = 174;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label20.Location = new System.Drawing.Point(18, 119);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(154, 22);
+            this.label20.TabIndex = 156;
+            this.label20.Text = "Observaciones:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label21.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label21.Location = new System.Drawing.Point(223, 25);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(91, 22);
+            this.label21.TabIndex = 170;
+            this.label21.Text = "Nombres";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label22.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label22.Location = new System.Drawing.Point(720, 25);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(48, 22);
+            this.label22.TabIndex = 171;
+            this.label22.Text = "DNI:";
+            // 
+            // textBox18
+            // 
+            this.textBox18.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox18.Location = new System.Drawing.Point(219, 102);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox18.Multiline = true;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(722, 60);
+            this.textBox18.TabIndex = 157;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox19.Location = new System.Drawing.Point(227, 60);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(232, 30);
+            this.textBox19.TabIndex = 173;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox20.Location = new System.Drawing.Point(482, 60);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(224, 30);
+            this.textBox20.TabIndex = 172;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label23.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label23.Location = new System.Drawing.Point(478, 25);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(96, 22);
+            this.label23.TabIndex = 169;
+            this.label23.Text = "Apellidos:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label24.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label24.Location = new System.Drawing.Point(20, 54);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(60, 22);
+            this.label24.TabIndex = 164;
+            this.label24.Text = "Titulo:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label25.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label25.Location = new System.Drawing.Point(20, 86);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 22);
+            this.label25.TabIndex = 167;
+            this.label25.Text = "Area:";
+            // 
+            // textBox21
+            // 
+            this.textBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox21.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.textBox21.Location = new System.Drawing.Point(228, 86);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(661, 30);
+            this.textBox21.TabIndex = 168;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 178);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1079, 635);
+            this.tabControl1.TabIndex = 179;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.GbxTramiteDeInscripcion);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1071, 606);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Iniciar Tramite de Inscripcion de Tesis";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1071, 606);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Iniciar Tramite de Dictamen";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // FrmIniciarTramiteEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1094, 869);
+            this.ClientSize = new System.Drawing.Size(1924, 1032);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ChlRequisitosXTramite);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.CboCodTramite);
-            this.Controls.Add(this.GbxTramiteDeInscripcion);
             this.Controls.Add(this.BtnIniciarTramite);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmIniciarTramiteEstudiante";
@@ -700,6 +1216,17 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,5 +1281,47 @@
         protected System.Windows.Forms.Button BtnGenerar;
         private System.Windows.Forms.TextBox TxtCodTesis;
         private System.Windows.Forms.Label LblCodTesis;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        protected System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox9;
+        protected System.Windows.Forms.Label label15;
+        protected System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        protected System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox NroExpediente;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

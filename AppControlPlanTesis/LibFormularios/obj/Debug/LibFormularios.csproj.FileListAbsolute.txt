@@ -111,3 +111,7 @@ C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFo
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\LibFormularios\obj\Debug\LibFormularios.pdb
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeComisionRevisora.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarExpediente.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeDictaminantesDeTesis.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarDictaminantescs.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionDictamen.resources

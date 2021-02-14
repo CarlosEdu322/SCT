@@ -49,7 +49,7 @@ namespace LibFormularios
 
         #region AbrirFormHijo
         private Form activeForm = null;
-        private void abrirFormHijoEnPanel(Form formHijo)
+        public void abrirFormHijoEnPanel(Form formHijo)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -224,6 +224,27 @@ namespace LibFormularios
         private void BtnResultadoComisionRevisora_Click(object sender, EventArgs e)
         {
             abrirFormHijoEnPanel(new FrmInformeComisionRevisora());
+        }
+
+        private void BtnNombrarDictaminantes_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmNombrarDictaminantescs());
+        }
+
+        private void BtnAceptarCargoDictaminantes_Click(object sender, EventArgs e)
+        {
+            //abrirFormHijoEnPanel(new)
+        }
+
+        private void BtnEvaluacionDictaminantes_Click(object sender, EventArgs e)
+        {
+            
+            abrirFormHijoEnPanel(new FrmResultadoEvaluacionDictamen());
+        }
+
+        private void BtnActaDictamen_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmInformeDictaminantesDeTesis());
         }
     }
 }

@@ -13,9 +13,9 @@ namespace LibClases
     public class CConexion
     {
         //============== ATRIBUTOS =============================
-        private SqlConnection aConexion;
-        private SqlDataAdapter aAdaptador;
-        private DataSet aDatos;
+        public SqlConnection aConexion;
+        public SqlDataAdapter aAdaptador;
+        public DataSet aDatos;
         //============== METODOS ===============================
         //	Constructor	 
         public CConexion()

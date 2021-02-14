@@ -101,6 +101,10 @@ TipoRequisito varchar(100),
 primary key (CodRequisito),
 )
 go
+select * from TExpediente
+UPDATE TExpediente set CodDictamenDeTesis='" + pCodCR + "' WHERE NroExpediente='" + pCodExpediente + "'
+insert into TDictaminantesDeTesis
+select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,b.Estado,b.Observaciones  from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis=''
 --------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
@@ -123,6 +127,25 @@ primary key (CodTramITTesis),
 foreign key (CodTesis) references TTesis,
 foreign key (CodTramite) references TTramite,
 )
+select * from TDocente
+create table TIniciarTramiteDictamen
+(
+CodTramDictamen varchar(6),--desde 800000
+CodTramite varchar(6),
+--CodTesista1 varchar(6),
+--CodTesista2 varchar(6),
+--CodTesista3 varchar(6),
+CodTesis varchar(6),
+Estado varchar(30),--Recibido--Resuelto
+Observaciones varchar(100),
+	--foreign key (CodTesista1) references TTesista
+	--foreign key (CodTesista2) references TTesista
+	--foreign key (CodTesista3) references TTesista
+primary key (CodTramDictamen),
+foreign key (CodTesis) references TTesis,
+foreign key (CodTramite) references TTramite,
+)--
+
 /*
 update TIniciarTramiteInscripcionPlanDeTesis set Estado='RESUELTO' where CodTramITTesis='800004' and CodTesis='700016'
 */
@@ -228,11 +251,11 @@ create table TDictaminantesDeTesis
 CodDictamenDeTesis varchar(6),
 CodDocente varchar(6),
 -- especificacion de claves
-primary key (CodDictamenDeTesis),
+--primary key (CodDictamenDeTesis),
 foreign key (CodDocente) references TDocente
 )
 go
-
+select * from TActaDictamenDeTesis
 create table TJuradoEvaluador
 ( -- lista de atributos
 CodDictamenDeTesis varchar(6),
@@ -305,14 +328,11 @@ create table TActaDictamenDeTesis
 ( -- lista de atributos
 CodDictamenDeTesis varchar(6),
 CodDocente varchar(6),
-CodTesis varchar(6),
-CodTesista varchar(6),
-NotaSuficienciaJuicio int,
+--CodTesis varchar(6),
+SuficienciaJuicio bit,
 -- especificacion de claves
-primary key (CodDictamenDeTesis),
+--primary key (CodDictamenDeTesis),
 foreign key (CodDocente) references TDocente,
-foreign key (CodTesis) references TTesis,
-foreign key (CodTesista) references TTesista,
 )
 go
 --select * from TComisionRevisora
@@ -533,3 +553,35 @@ where a.CodEvaluacionPlanDeTesis=b.CodEvaluacionPlanDeTesis
 and b.CodEvaluacionPlanDeTesis='300004'
 
 select * from TTesis where CodTesis='700002'
+
+create Table Resolucion(
+	
+
+)
+
+	
+CREATE PROCEDURE ObtenerCodigoMayorExpediente 
+ 
+AS
+select top 1 NroExpediente from TExpediente ORDER BY NroExpediente DESC
+
+GO 
+
+exec ObtenerCodigoMayorExpediente
+
+
+
+
+CREATE PROCEDURE GenerarExpediente 
+	@NroExpediente varchar(6),   
+    @CodTesis nvarchar(6)  
+AS
+insert into TExpediente values(@NroExpediente,@CodTesis,'','','')
+GO 
+
+exec GenerarExpediente
+
+select * from TExpediente
+select  * from TExpediente a , TDictaminantesDeTesis b where a.CodDictamenDeTesis = b.CodDictamenDeTesis and b.CodDictamenDeTesis = '" + pCodDictamen + "'";
+select * from TDictaminantesDeTesis
+select CodDictamenDeTesis from TDictaminantesDeTesis where CodDictamenDeTesis='" + pCodComisionRevisora + "'

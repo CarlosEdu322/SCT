@@ -20,7 +20,7 @@ namespace LibClases
             try
             {
                 string codigo;
-                string consulta = "select top 1 NroExpediente from TExpediente ORDER BY NroExpediente DESC";
+                string consulta = "exec ObtenerCodigoMayorExpediente";
                 aConexion.EjecutarSelect(consulta);
                 codigo = aConexion.Datos.Tables[0].Rows[0]["NroExpediente"].ToString();
                 int valorcodigo = int.Parse(codigo) + 1;
@@ -33,7 +33,8 @@ namespace LibClases
         }
         public void GenerarExpediente(List<string> listaTesistas)
         {
-            string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "','','','')";
+            //string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "','','','')";
+            string Consulta = "exec GenerarExpediente @NroExpediente='" + listaTesistas[0] + "' , @CodTesis='" + listaTesistas[1] + "'";
             aConexion.EjecutarComando(Consulta);
             
         }

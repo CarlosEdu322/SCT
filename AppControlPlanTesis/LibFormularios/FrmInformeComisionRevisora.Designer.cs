@@ -60,6 +60,7 @@
             this.DgvInteresados = new System.Windows.Forms.DataGridView();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.GbxRubricaDeEvaluacion.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -433,6 +434,10 @@
             this.button1.Text = "Emitir Resolucion";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // FrmInformeComisionRevisora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -495,5 +500,6 @@
         private System.Windows.Forms.DataGridView DgvInteresados;
         protected System.Windows.Forms.Button BtnCerrar;
         protected System.Windows.Forms.Button button1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

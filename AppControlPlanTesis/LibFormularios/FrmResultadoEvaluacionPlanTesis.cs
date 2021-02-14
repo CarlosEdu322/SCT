@@ -20,6 +20,7 @@ namespace LibFormularios
             InitializeComponent();
             oPlanDeTesis = new CPlanDeTesis();
             LlenarDatosCboCodRevisionDeTesis();
+            
 
         }
         public void LlenarDatosCboCodRevisionDeTesis()
@@ -31,31 +32,34 @@ namespace LibFormularios
                 CboCodComisionRevisora.DisplayMember = "CodEvaluacionPlanDeTesis";
                 CboCodComisionRevisora.ValueMember = "CodEvaluacionPlanDeTesis";
                 //-- dejar el combo sin libro seleccionado
-                CboCodComisionRevisora.SelectedIndex = 0;
+                CboCodComisionRevisora.SelectedIndex = -1;
             }
             catch
             {
 
             }
         }
+        public void LlemarDatosDocente()
+        {
+            TxtCodTesis.Text = oPlanDeTesis.MostrarCodTesis(CboCodComisionRevisora.Text);
+            DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
+            string sValue = string.Empty;
 
+            if (oDataRowView != null)
+            {
+                sValue = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
+            }
+            CboCodDocente.DataSource = oPlanDeTesis.ListarDocenteComisionRevisora(sValue);
+            CboCodDocente.DisplayMember = "CodDocente";
+            CboCodDocente.ValueMember = "CodDocente";
+            //-- dejar el combo sin libro seleccionado
+            CboCodDocente.SelectedIndex = -1;
+        }
         private void CboCodComisionRevisora_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                TxtCodTesis.Text = oPlanDeTesis.MostrarCodTesis(CboCodComisionRevisora.Text);
-                DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
-                string sValue = string.Empty;
-
-                if (oDataRowView != null)
-                {
-                    sValue = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
-                }
-                CboCodDocente.DataSource = oPlanDeTesis.ListarDocenteComisionRevisora(sValue);
-                CboCodDocente.DisplayMember = "CodDocente";
-                CboCodDocente.ValueMember = "CodDocente";
-                //-- dejar el combo sin libro seleccionado
-                CboCodDocente.SelectedIndex = -1;
+                LlemarDatosDocente();
             }
             catch
             {

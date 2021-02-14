@@ -1,6 +1,6 @@
 ﻿namespace LibFormularios
 {
-    partial class FrmBuscarDocente
+    partial class FrmBuscarExpediente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.CodTesista2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.CboCategoria = new System.Windows.Forms.ComboBox();
             this.BtnSeleccionar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.LblCodTesista1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvDocentes = new System.Windows.Forms.DataGridView();
+            this.DgvExpediente = new System.Windows.Forms.DataGridView();
             this.CodTesista2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvExpediente)).BeginInit();
             this.SuspendLayout();
+            // 
+            // CodTesista2
+            // 
+            this.CodTesista2.Controls.Add(this.label1);
+            this.CodTesista2.Controls.Add(this.CboCategoria);
+            this.CodTesista2.Controls.Add(this.BtnSeleccionar);
+            this.CodTesista2.Controls.Add(this.TxtBuscar);
+            this.CodTesista2.Controls.Add(this.LblCodTesista1);
+            this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.CodTesista2.Location = new System.Drawing.Point(12, 11);
+            this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CodTesista2.Name = "CodTesista2";
+            this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CodTesista2.Size = new System.Drawing.Size(1153, 92);
+            this.CodTesista2.TabIndex = 159;
+            this.CodTesista2.TabStop = false;
+            this.CodTesista2.Text = "Buscar Expediente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(489, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 22);
+            this.label1.TabIndex = 162;
+            this.label1.Text = "por:";
             // 
             // CboCategoria
             // 
@@ -59,34 +85,6 @@
             this.CboCategoria.Size = new System.Drawing.Size(373, 30);
             this.CboCategoria.TabIndex = 161;
             // 
-            // CodTesista2
-            // 
-            this.CodTesista2.Controls.Add(this.label1);
-            this.CodTesista2.Controls.Add(this.CboCategoria);
-            this.CodTesista2.Controls.Add(this.BtnSeleccionar);
-            this.CodTesista2.Controls.Add(this.TxtBuscar);
-            this.CodTesista2.Controls.Add(this.LblCodTesista1);
-            this.CodTesista2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.CodTesista2.Location = new System.Drawing.Point(147, 14);
-            this.CodTesista2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Name = "CodTesista2";
-            this.CodTesista2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CodTesista2.Size = new System.Drawing.Size(1153, 92);
-            this.CodTesista2.TabIndex = 158;
-            this.CodTesista2.TabStop = false;
-            this.CodTesista2.Text = "Buscar Docente";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(489, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 22);
-            this.label1.TabIndex = 162;
-            this.label1.Text = "por:";
-            // 
             // BtnSeleccionar
             // 
             this.BtnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
@@ -103,7 +101,6 @@
             this.BtnSeleccionar.TabIndex = 176;
             this.BtnSeleccionar.Text = "Seleccionar";
             this.BtnSeleccionar.UseVisualStyleBackColor = false;
-            this.BtnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
             // 
             // TxtBuscar
             // 
@@ -113,7 +110,6 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(384, 30);
             this.TxtBuscar.TabIndex = 139;
-            this.TxtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyUp);
             // 
             // LblCodTesista1
             // 
@@ -126,61 +122,41 @@
             this.LblCodTesista1.TabIndex = 141;
             this.LblCodTesista1.Text = " Buscar:";
             // 
-            // groupBox1
+            // DgvExpediente
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.dgvDocentes);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox1.Location = new System.Drawing.Point(27, 111);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1344, 313);
-            this.groupBox1.TabIndex = 175;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Docentes";
+            this.DgvExpediente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvExpediente.Location = new System.Drawing.Point(21, 163);
+            this.DgvExpediente.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvExpediente.Name = "DgvExpediente";
+            this.DgvExpediente.RowHeadersWidth = 51;
+            this.DgvExpediente.Size = new System.Drawing.Size(1135, 267);
+            this.DgvExpediente.TabIndex = 160;
             // 
-            // dgvDocentes
-            // 
-            this.dgvDocentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDocentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocentes.Location = new System.Drawing.Point(11, 28);
-            this.dgvDocentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvDocentes.Name = "dgvDocentes";
-            this.dgvDocentes.RowHeadersWidth = 51;
-            this.dgvDocentes.Size = new System.Drawing.Size(1327, 278);
-            this.dgvDocentes.TabIndex = 0;
-            // 
-            // FrmBuscarDocente
+            // FrmBuscarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1387, 434);
+            this.ClientSize = new System.Drawing.Size(1184, 515);
+            this.Controls.Add(this.DgvExpediente);
             this.Controls.Add(this.CodTesista2);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximizeBox = false;
-            this.Name = "FrmBuscarDocente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Docente";
+            this.Name = "FrmBuscarExpediente";
+            this.Text = "Buscar Expediente";
             this.CodTesista2.ResumeLayout(false);
             this.CodTesista2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvExpediente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox CboCategoria;
+
         private System.Windows.Forms.GroupBox CodTesista2;
+        protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CboCategoria;
+        protected System.Windows.Forms.Button BtnSeleccionar;
         private System.Windows.Forms.TextBox TxtBuscar;
         protected System.Windows.Forms.Label LblCodTesista1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        protected System.Windows.Forms.Button BtnSeleccionar;
-        protected System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvDocentes;
+        private System.Windows.Forms.DataGridView DgvExpediente;
     }
 }

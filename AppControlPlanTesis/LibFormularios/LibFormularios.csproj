@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBuscarExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarExpediente.Designer.cs">
+      <DependentUpon>FrmBuscarExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarTesista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="FrmInformeComisionRevisora.Designer.cs">
       <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInformeDictaminantesDeTesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformeDictaminantesDeTesis.Designer.cs">
+      <DependentUpon>FrmInformeDictaminantesDeTesis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="FrmNombrarComisionRevisoracs.Designer.cs">
       <DependentUpon>FrmNombrarComisionRevisoracs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNombrarDictaminantescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNombrarDictaminantescs.Designer.cs">
+      <DependentUpon>FrmNombrarDictaminantescs.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
@@ -117,6 +135,12 @@
     </Compile>
     <Compile Include="FrmRequisitosXTramite.Designer.cs">
       <DependentUpon>FrmRequisitosXTramite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultadoEvaluacionDictamen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultadoEvaluacionDictamen.Designer.cs">
+      <DependentUpon>FrmResultadoEvaluacionDictamen.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmResultadoEvaluacionPlanTesis.cs">
       <SubType>Form</SubType>
@@ -156,6 +180,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBuscarExpediente.resx">
+      <DependentUpon>FrmBuscarExpediente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarTesista.resx">
       <DependentUpon>FrmBuscarTesista.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,11 +201,17 @@
     <EmbeddedResource Include="FrmInformeComisionRevisora.resx">
       <DependentUpon>FrmInformeComisionRevisora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformeDictaminantesDeTesis.resx">
+      <DependentUpon>FrmInformeDictaminantesDeTesis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNombrarComisionRevisoracs.resx">
       <DependentUpon>FrmNombrarComisionRevisoracs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNombrarDictaminantescs.resx">
+      <DependentUpon>FrmNombrarDictaminantescs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>
@@ -191,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRequisitosXTramite.resx">
       <DependentUpon>FrmRequisitosXTramite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultadoEvaluacionDictamen.resx">
+      <DependentUpon>FrmResultadoEvaluacionDictamen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmResultadoEvaluacionPlanTesis.resx">
       <DependentUpon>FrmResultadoEvaluacionPlanTesis.cs</DependentUpon>

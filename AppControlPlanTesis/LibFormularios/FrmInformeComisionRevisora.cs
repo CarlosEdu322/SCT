@@ -81,5 +81,10 @@ namespace LibFormularios
         {
             this.Close();
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
     }
 }
