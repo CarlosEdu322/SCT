@@ -44,12 +44,12 @@ namespace LibFormularios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResoluciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dgvResoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResoluciones.Location = new System.Drawing.Point(16, 30);
-            this.dgvResoluciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvResoluciones.Location = new System.Drawing.Point(12, 24);
+            this.dgvResoluciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvResoluciones.Name = "dgvResoluciones";
             this.dgvResoluciones.RowHeadersWidth = 51;
             this.dgvResoluciones.RowTemplate.Height = 24;
-            this.dgvResoluciones.Size = new System.Drawing.Size(1072, 256);
+            this.dgvResoluciones.Size = new System.Drawing.Size(891, 208);
             this.dgvResoluciones.TabIndex = 0;
             // 
             // groupBox1
@@ -59,11 +59,11 @@ namespace LibFormularios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dgvResoluciones);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1094, 290);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(907, 236);
             this.groupBox1.TabIndex = 180;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resoluciones Emitidas";
@@ -78,10 +78,10 @@ namespace LibFormularios
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(659, 306);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(581, 249);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(219, 59);
+            this.btnActualizar.Size = new System.Drawing.Size(164, 48);
             this.btnActualizar.TabIndex = 179;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -97,10 +97,10 @@ namespace LibFormularios
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(887, 306);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnCerrar.Location = new System.Drawing.Point(752, 249);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
+            this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
             this.BtnCerrar.TabIndex = 178;
             this.BtnCerrar.Text = "Cerrar Ventana";
             this.BtnCerrar.UseVisualStyleBackColor = false;
@@ -108,13 +108,13 @@ namespace LibFormularios
             // 
             // FrmMostrarResolucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 376);
+            this.ClientSize = new System.Drawing.Size(925, 306);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmMostrarResolucion";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;

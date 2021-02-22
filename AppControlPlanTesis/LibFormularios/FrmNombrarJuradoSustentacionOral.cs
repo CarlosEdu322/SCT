@@ -13,19 +13,34 @@ namespace LibFormularios
 {
     public partial class FrmNombrarJuradoSustentacionOral : Form
     {
+        private CEvaluacionTesis oEvaluacionTesis;
         public FrmNombrarJuradoSustentacionOral()
         {
             InitializeComponent();
+            CboNroReplicantes.SelectedIndex = 0;
+            oEvaluacionTesis = new CEvaluacionTesis();
+            LlenarTesisPendientes();
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        public void LlenarTesisPendientes()
         {
+            DgvTesisPendientesDeSustentacion.DataSource = oEvaluacionTesis.TesisPendientesDeDictamen();
+            DgvTesisPendientesDeSustentacion.Columns["CodTesis"].Visible = false;
+            DgvTesisPendientesDeSustentacion.Columns["CodDictamenDeTesis"].Visible = false;
+            //checks
+            //DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
+            //CBColumn.HeaderText = "";
+            //CBColumn.FalseValue = "0";
+            //CBColumn.TrueValue = "1";
+            //DgvTesisPendientesDeSustentacion.Columns.Insert(0, CBColumn);
 
-        }
 
-        private void label23_Click(object sender, EventArgs e)
-        {
-
+            string codigo = oEvaluacionTesis.GenerarCodigoNombrarComisionRevisora();
+            TxtCodJuradoEvaluador.Text = codigo;
+            /*
+            DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
+            DgvTesisPendientesDeCR.Columns["CodSustentacionOral"].Visible = false;
+            */
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -114,17 +129,17 @@ namespace LibFormularios
 
         private void txtCodDictaminante1_TextChanged(object sender, EventArgs e)
         {
-            ConsultarDocente(txtCodDictaminante1, TxtApellidosDictaminante1, TxtDNIDictaminante1, txtCodDictaminante1.Text);
+            ConsultarDocente(TxtNombresDictaminante1, TxtApellidosDictaminante1, TxtDNIDictaminante1, txtCodDictaminante1.Text);
         }
 
         private void txtCodDictaminante2_TextChanged(object sender, EventArgs e)
         {
-            ConsultarDocente(txtCodDictaminante2, TxtApellidosDictaminante2, TxtDNIDictaminante2, txtCodDictaminante2.Text);
+            ConsultarDocente(TxtNombresDictaminante2, TxtApellidosDictaminante2, TxtDNIDictaminante2, txtCodDictaminante2.Text);
         }
 
         private void txtCodDictaminante3_TextChanged(object sender, EventArgs e)
         {
-            ConsultarDocente(txtCodDictaminante3, TxtApellidosDictaminante3, TxtDNIDictaminante3, txtCodDictaminante3.Text);
+            ConsultarDocente(TxtNombresDictaminante3, TxtApellidosDictaminante3, TxtDNIDictaminante3, txtCodDictaminante3.Text);
         }
 
         private void txtCodReplicante1_TextChanged(object sender, EventArgs e)
@@ -140,6 +155,88 @@ namespace LibFormularios
         private void txtCodReplicante3_TextChanged(object sender, EventArgs e)
         {
             ConsultarDocente(txtNombresReplicante3, txtApellidosReplicante3, txtDNIReplicante3, txtCodReplicante3.Text);
+        }
+
+        private void CboNroReplicantes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CboNroReplicantes.SelectedIndex==0)
+            {
+                //replicante2
+                //replicante3
+                txtCodReplicante3.Enabled = false;
+                txtNombresReplicante3.Enabled = false;
+                txtApellidosReplicante3.Enabled = false;
+                txtDNIReplicante3.Enabled = false;
+                BtnBuscarReplicante3.Enabled = false;
+                txtCodReplicante3.Text = "";
+            }
+            if (CboNroReplicantes.SelectedIndex == 1)
+            {
+                txtCodReplicante3.Enabled = true;
+                txtNombresReplicante3.Enabled = true;
+                txtApellidosReplicante3.Enabled = true;
+                txtDNIReplicante3.Enabled = true;
+                BtnBuscarReplicante3.Enabled = true;
+            }
+        }
+
+        private void BtnCargar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //int filat= DgvTramitesDeInscripcion.CurrentRow.Index;
+                TxtCodTesis.Text = DgvTesisPendientesDeSustentacion.CurrentRow.Cells["CodTesis"].Value.ToString();
+                TxtExpediente.Text = DgvTesisPendientesDeSustentacion.CurrentRow.Cells["NroExpediente"].Value.ToString();
+                //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+                DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
+                dgvDictaminantes.DataSource = oEvaluacionTesis.ListarDictaminantes(DgvTesisPendientesDeSustentacion.CurrentRow.Cells["CodDictamenDeTesis"].Value.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("NO HA SELECCIONADO", "ERROR");
+            }
+
+            //
+            //TxtCodTesis.Text = oPlanDeTesis.GenerarCodigoNombrarComisionRevisora();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGenerarNroResolucion_Click(object sender, EventArgs e)
+        {
+            String NResolucion = "D-" + oEvaluacionTesis.GenerarCodigoResolucionJuradoEvaluacion() + "-2021-FIEEIM-UNSAAC";
+            TxtResolucion.Text = NResolucion;
+        }
+
+        private void btnMostrarResoluciones_Click(object sender, EventArgs e)
+        {
+            FrmMostrarResolucion A = new FrmMostrarResolucion();
+            A.Show();
+        }
+
+        private void dgvDictaminantes_DoubleClick(object sender, EventArgs e)
+        {
+            if (txtCodDictaminante1.Text == "")
+            {
+                txtCodDictaminante1.Text = dgvDictaminantes.CurrentRow.Cells["CodDocente"].Value.ToString();
+            }
+            else
+            {
+                if (txtCodDictaminante2.Text == "")
+                {
+                    txtCodDictaminante2.Text = dgvDictaminantes.CurrentRow.Cells["CodDocente"].Value.ToString();
+                }
+                else
+                {
+                    if (txtCodDictaminante3.Text == "")
+                    {
+                        txtCodDictaminante3.Text = dgvDictaminantes.CurrentRow.Cells["CodDocente"].Value.ToString();
+                    }
+                }
+            }
         }
     }
 }

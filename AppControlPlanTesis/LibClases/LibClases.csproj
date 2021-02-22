@@ -45,6 +45,7 @@
     <Compile Include="CDictaminanteDeTesis.cs" />
     <Compile Include="CDocente.cs" />
     <Compile Include="CEntidad.cs" />
+    <Compile Include="CEvaluacionTesis.cs" />
     <Compile Include="CPlanDeTesis.cs" />
     <Compile Include="CRequisito.cs" />
     <Compile Include="CRequisitoXTramite.cs" />
