@@ -38,6 +38,9 @@ namespace LibFormularios
             this.label4 = new System.Windows.Forms.Label();
             this.DgvTesisPendientesDeDictaminantes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnBuscarDictaminante3 = new System.Windows.Forms.Button();
+            this.BtnBuscarDictaminante2 = new System.Windows.Forms.Button();
+            this.BtnBuscarDictaminante1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.txtLugarSustentacion = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -50,31 +53,20 @@ namespace LibFormularios
             this.BtnNombrarCR = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtApellidosSecretario = new System.Windows.Forms.TextBox();
-            this.txtNombresSecretario = new System.Windows.Forms.TextBox();
-            this.txtDNISecretario = new System.Windows.Forms.TextBox();
-            this.txtCodSecretario = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtApellidosAsesor = new System.Windows.Forms.TextBox();
-            this.txtNombreAsesor = new System.Windows.Forms.TextBox();
-            this.txtDNIAsesor = new System.Windows.Forms.TextBox();
-            this.txtCodAsesor = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtApellidosReplicante1 = new System.Windows.Forms.TextBox();
             this.txtNombresReplicante1 = new System.Windows.Forms.TextBox();
             this.txtDNIReplicante1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnBuscarReplicante1 = new System.Windows.Forms.Button();
             this.txtCodReplicante1 = new System.Windows.Forms.TextBox();
             this.txtApellidosReplicante2 = new System.Windows.Forms.TextBox();
             this.txtNombresReplicante2 = new System.Windows.Forms.TextBox();
             this.txtDNIReplicante2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnBuscarReplicante2 = new System.Windows.Forms.Button();
             this.txtCodReplicante2 = new System.Windows.Forms.TextBox();
             this.txtCodReplicante3 = new System.Windows.Forms.TextBox();
             this.txtApellidosReplicante3 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnBuscarReplicante3 = new System.Windows.Forms.Button();
             this.txtNombresReplicante3 = new System.Windows.Forms.TextBox();
             this.txtDNIReplicante3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -84,7 +76,7 @@ namespace LibFormularios
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.TxtPresidenteDNI = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnBuscarPresidente = new System.Windows.Forms.Button();
             this.TxtPresidente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CboNroReplicantes = new System.Windows.Forms.ComboBox();
@@ -203,37 +195,29 @@ namespace LibFormularios
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnBuscarDictaminante3);
+            this.groupBox1.Controls.Add(this.BtnBuscarDictaminante2);
+            this.groupBox1.Controls.Add(this.BtnBuscarDictaminante1);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txtLugarSustentacion);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.txtApellidosSecretario);
-            this.groupBox1.Controls.Add(this.txtNombresSecretario);
-            this.groupBox1.Controls.Add(this.txtDNISecretario);
-            this.groupBox1.Controls.Add(this.txtCodSecretario);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.txtApellidosAsesor);
-            this.groupBox1.Controls.Add(this.txtNombreAsesor);
-            this.groupBox1.Controls.Add(this.txtDNIAsesor);
-            this.groupBox1.Controls.Add(this.txtCodAsesor);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtApellidosReplicante1);
             this.groupBox1.Controls.Add(this.txtNombresReplicante1);
             this.groupBox1.Controls.Add(this.txtDNIReplicante1);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.BtnBuscarReplicante1);
             this.groupBox1.Controls.Add(this.txtCodReplicante1);
             this.groupBox1.Controls.Add(this.txtApellidosReplicante2);
             this.groupBox1.Controls.Add(this.txtNombresReplicante2);
             this.groupBox1.Controls.Add(this.txtDNIReplicante2);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.BtnBuscarReplicante2);
             this.groupBox1.Controls.Add(this.txtCodReplicante2);
             this.groupBox1.Controls.Add(this.txtCodReplicante3);
             this.groupBox1.Controls.Add(this.txtApellidosReplicante3);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.BtnBuscarReplicante3);
             this.groupBox1.Controls.Add(this.txtNombresReplicante3);
             this.groupBox1.Controls.Add(this.txtDNIReplicante3);
             this.groupBox1.Controls.Add(this.label5);
@@ -243,7 +227,7 @@ namespace LibFormularios
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.TxtPresidenteDNI);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.BtnBuscarPresidente);
             this.groupBox1.Controls.Add(this.TxtPresidente);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.CboNroReplicantes);
@@ -273,12 +257,63 @@ namespace LibFormularios
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nombrar Jurado ";
             // 
+            // BtnBuscarDictaminante3
+            // 
+            this.BtnBuscarDictaminante3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarDictaminante3.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarDictaminante3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarDictaminante3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarDictaminante3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarDictaminante3.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarDictaminante3.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante3.Image")));
+            this.BtnBuscarDictaminante3.Location = new System.Drawing.Point(253, 184);
+            this.BtnBuscarDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarDictaminante3.Name = "BtnBuscarDictaminante3";
+            this.BtnBuscarDictaminante3.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarDictaminante3.TabIndex = 285;
+            this.BtnBuscarDictaminante3.UseVisualStyleBackColor = false;
+            this.BtnBuscarDictaminante3.Click += new System.EventHandler(this.BtnBuscarDictaminante3_Click);
+            // 
+            // BtnBuscarDictaminante2
+            // 
+            this.BtnBuscarDictaminante2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarDictaminante2.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarDictaminante2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarDictaminante2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarDictaminante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarDictaminante2.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarDictaminante2.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante2.Image")));
+            this.BtnBuscarDictaminante2.Location = new System.Drawing.Point(253, 150);
+            this.BtnBuscarDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarDictaminante2.Name = "BtnBuscarDictaminante2";
+            this.BtnBuscarDictaminante2.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarDictaminante2.TabIndex = 284;
+            this.BtnBuscarDictaminante2.UseVisualStyleBackColor = false;
+            this.BtnBuscarDictaminante2.Click += new System.EventHandler(this.BtnBuscarDictaminante2_Click);
+            // 
+            // BtnBuscarDictaminante1
+            // 
+            this.BtnBuscarDictaminante1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarDictaminante1.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarDictaminante1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarDictaminante1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarDictaminante1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarDictaminante1.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarDictaminante1.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante1.Image")));
+            this.BtnBuscarDictaminante1.Location = new System.Drawing.Point(253, 116);
+            this.BtnBuscarDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarDictaminante1.Name = "BtnBuscarDictaminante1";
+            this.BtnBuscarDictaminante1.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarDictaminante1.TabIndex = 283;
+            this.BtnBuscarDictaminante1.UseVisualStyleBackColor = false;
+            this.BtnBuscarDictaminante1.Click += new System.EventHandler(this.BtnBuscarDictaminante1_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(17, 497);
+            this.label14.Location = new System.Drawing.Point(15, 409);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 22);
             this.label14.TabIndex = 282;
@@ -286,8 +321,8 @@ namespace LibFormularios
             // 
             // txtLugarSustentacion
             // 
-            this.txtLugarSustentacion.Location = new System.Drawing.Point(91, 491);
-            this.txtLugarSustentacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLugarSustentacion.Location = new System.Drawing.Point(92, 404);
+            this.txtLugarSustentacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtLugarSustentacion.Multiline = true;
             this.txtLugarSustentacion.Name = "txtLugarSustentacion";
             this.txtLugarSustentacion.Size = new System.Drawing.Size(963, 68);
@@ -298,7 +333,7 @@ namespace LibFormularios
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label27.Location = new System.Drawing.Point(13, 191);
+            this.label27.Location = new System.Drawing.Point(12, 186);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(44, 22);
             this.label27.TabIndex = 280;
@@ -313,10 +348,10 @@ namespace LibFormularios
             this.groupBox4.Controls.Add(this.LblCodEvaluacionPlanDeTesis);
             this.groupBox4.Controls.Add(this.BtnNombrarCR);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox4.Location = new System.Drawing.Point(9, 551);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(0, 490);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1057, 95);
             this.groupBox4.TabIndex = 230;
             this.groupBox4.TabStop = false;
@@ -327,7 +362,7 @@ namespace LibFormularios
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(157, 16);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(403, 30);
             this.dateTimePicker1.TabIndex = 228;
@@ -420,116 +455,6 @@ namespace LibFormularios
             this.label25.TabIndex = 278;
             this.label25.Text = "1er:";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(222, 454);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 30);
-            this.button5.TabIndex = 277;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label21.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label21.Location = new System.Drawing.Point(4, 426);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(221, 22);
-            this.label21.TabIndex = 275;
-            this.label21.Text = "Secretario Academico:";
-            // 
-            // txtApellidosSecretario
-            // 
-            this.txtApellidosSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosSecretario.Location = new System.Drawing.Point(516, 454);
-            this.txtApellidosSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtApellidosSecretario.Name = "txtApellidosSecretario";
-            this.txtApellidosSecretario.Size = new System.Drawing.Size(351, 30);
-            this.txtApellidosSecretario.TabIndex = 272;
-            // 
-            // txtNombresSecretario
-            // 
-            this.txtNombresSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombresSecretario.Location = new System.Drawing.Point(272, 454);
-            this.txtNombresSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombresSecretario.Name = "txtNombresSecretario";
-            this.txtNombresSecretario.Size = new System.Drawing.Size(238, 30);
-            this.txtNombresSecretario.TabIndex = 273;
-            // 
-            // txtDNISecretario
-            // 
-            this.txtDNISecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNISecretario.Location = new System.Drawing.Point(873, 454);
-            this.txtDNISecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDNISecretario.Name = "txtDNISecretario";
-            this.txtDNISecretario.Size = new System.Drawing.Size(180, 30);
-            this.txtDNISecretario.TabIndex = 274;
-            // 
-            // txtCodSecretario
-            // 
-            this.txtCodSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodSecretario.Location = new System.Drawing.Point(91, 454);
-            this.txtCodSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCodSecretario.Name = "txtCodSecretario";
-            this.txtCodSecretario.Size = new System.Drawing.Size(133, 30);
-            this.txtCodSecretario.TabIndex = 276;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label17.Location = new System.Drawing.Point(4, 394);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 22);
-            this.label17.TabIndex = 267;
-            this.label17.Text = "Asesor:";
-            // 
-            // txtApellidosAsesor
-            // 
-            this.txtApellidosAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosAsesor.Location = new System.Drawing.Point(516, 394);
-            this.txtApellidosAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtApellidosAsesor.Name = "txtApellidosAsesor";
-            this.txtApellidosAsesor.Size = new System.Drawing.Size(351, 30);
-            this.txtApellidosAsesor.TabIndex = 264;
-            // 
-            // txtNombreAsesor
-            // 
-            this.txtNombreAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombreAsesor.Location = new System.Drawing.Point(272, 394);
-            this.txtNombreAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreAsesor.Name = "txtNombreAsesor";
-            this.txtNombreAsesor.Size = new System.Drawing.Size(238, 30);
-            this.txtNombreAsesor.TabIndex = 265;
-            // 
-            // txtDNIAsesor
-            // 
-            this.txtDNIAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNIAsesor.Location = new System.Drawing.Point(873, 394);
-            this.txtDNIAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDNIAsesor.Name = "txtDNIAsesor";
-            this.txtDNIAsesor.Size = new System.Drawing.Size(180, 30);
-            this.txtDNIAsesor.TabIndex = 266;
-            // 
-            // txtCodAsesor
-            // 
-            this.txtCodAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodAsesor.Location = new System.Drawing.Point(91, 394);
-            this.txtCodAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCodAsesor.Name = "txtCodAsesor";
-            this.txtCodAsesor.Size = new System.Drawing.Size(133, 30);
-            this.txtCodAsesor.TabIndex = 268;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -553,6 +478,7 @@ namespace LibFormularios
             // txtNombresReplicante1
             // 
             this.txtNombresReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtNombresReplicante1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNombresReplicante1.Location = new System.Drawing.Point(232, 287);
             this.txtNombresReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante1.Name = "txtNombresReplicante1";
@@ -568,30 +494,33 @@ namespace LibFormularios
             this.txtDNIReplicante1.Size = new System.Drawing.Size(180, 30);
             this.txtDNIReplicante1.TabIndex = 247;
             // 
-            // button2
+            // BtnBuscarReplicante1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(175, 287);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 30);
-            this.button2.TabIndex = 248;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarReplicante1.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarReplicante1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarReplicante1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarReplicante1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarReplicante1.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarReplicante1.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante1.Image")));
+            this.BtnBuscarReplicante1.Location = new System.Drawing.Point(175, 287);
+            this.BtnBuscarReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarReplicante1.Name = "BtnBuscarReplicante1";
+            this.BtnBuscarReplicante1.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarReplicante1.TabIndex = 248;
+            this.BtnBuscarReplicante1.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante1.Click += new System.EventHandler(this.BtnBuscarReplicante1_Click);
             // 
             // txtCodReplicante1
             // 
             this.txtCodReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtCodReplicante1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCodReplicante1.Location = new System.Drawing.Point(17, 287);
             this.txtCodReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante1.Name = "txtCodReplicante1";
             this.txtCodReplicante1.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante1.TabIndex = 250;
+            this.txtCodReplicante1.TextChanged += new System.EventHandler(this.txtCodReplicante1_TextChanged);
             // 
             // txtApellidosReplicante2
             // 
@@ -605,6 +534,7 @@ namespace LibFormularios
             // txtNombresReplicante2
             // 
             this.txtNombresReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtNombresReplicante2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNombresReplicante2.Location = new System.Drawing.Point(232, 324);
             this.txtNombresReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante2.Name = "txtNombresReplicante2";
@@ -620,39 +550,44 @@ namespace LibFormularios
             this.txtDNIReplicante2.Size = new System.Drawing.Size(180, 30);
             this.txtDNIReplicante2.TabIndex = 253;
             // 
-            // button3
+            // BtnBuscarReplicante2
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(176, 321);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 30);
-            this.button3.TabIndex = 254;
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarReplicante2.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarReplicante2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarReplicante2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarReplicante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarReplicante2.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarReplicante2.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante2.Image")));
+            this.BtnBuscarReplicante2.Location = new System.Drawing.Point(176, 321);
+            this.BtnBuscarReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarReplicante2.Name = "BtnBuscarReplicante2";
+            this.BtnBuscarReplicante2.Size = new System.Drawing.Size(43, 30);
+            this.BtnBuscarReplicante2.TabIndex = 254;
+            this.BtnBuscarReplicante2.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante2.Click += new System.EventHandler(this.BtnBuscarReplicante2_Click);
             // 
             // txtCodReplicante2
             // 
             this.txtCodReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtCodReplicante2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCodReplicante2.Location = new System.Drawing.Point(17, 321);
             this.txtCodReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante2.Name = "txtCodReplicante2";
             this.txtCodReplicante2.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante2.TabIndex = 255;
+            this.txtCodReplicante2.TextChanged += new System.EventHandler(this.txtCodReplicante2_TextChanged);
             // 
             // txtCodReplicante3
             // 
             this.txtCodReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtCodReplicante3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCodReplicante3.Location = new System.Drawing.Point(17, 354);
             this.txtCodReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante3.Name = "txtCodReplicante3";
             this.txtCodReplicante3.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante3.TabIndex = 260;
+            this.txtCodReplicante3.TextChanged += new System.EventHandler(this.txtCodReplicante3_TextChanged);
             // 
             // txtApellidosReplicante3
             // 
@@ -663,25 +598,27 @@ namespace LibFormularios
             this.txtApellidosReplicante3.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosReplicante3.TabIndex = 256;
             // 
-            // button4
+            // BtnBuscarReplicante3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(175, 354);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 30);
-            this.button4.TabIndex = 259;
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarReplicante3.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarReplicante3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarReplicante3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarReplicante3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarReplicante3.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarReplicante3.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante3.Image")));
+            this.BtnBuscarReplicante3.Location = new System.Drawing.Point(175, 354);
+            this.BtnBuscarReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarReplicante3.Name = "BtnBuscarReplicante3";
+            this.BtnBuscarReplicante3.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarReplicante3.TabIndex = 259;
+            this.BtnBuscarReplicante3.UseVisualStyleBackColor = false;
+            this.BtnBuscarReplicante3.Click += new System.EventHandler(this.BtnBuscarReplicante3_Click);
             // 
             // txtNombresReplicante3
             // 
             this.txtNombresReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.txtNombresReplicante3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNombresReplicante3.Location = new System.Drawing.Point(232, 358);
             this.txtNombresReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante3.Name = "txtNombresReplicante3";
@@ -768,21 +705,22 @@ namespace LibFormularios
             this.TxtPresidenteDNI.Size = new System.Drawing.Size(180, 30);
             this.TxtPresidenteDNI.TabIndex = 238;
             // 
-            // button1
+            // BtnBuscarPresidente
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(175, 55);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 30);
-            this.button1.TabIndex = 239;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnBuscarPresidente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnBuscarPresidente.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarPresidente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnBuscarPresidente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarPresidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarPresidente.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnBuscarPresidente.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarPresidente.Image")));
+            this.BtnBuscarPresidente.Location = new System.Drawing.Point(175, 55);
+            this.BtnBuscarPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscarPresidente.Name = "BtnBuscarPresidente";
+            this.BtnBuscarPresidente.Size = new System.Drawing.Size(44, 30);
+            this.BtnBuscarPresidente.TabIndex = 239;
+            this.BtnBuscarPresidente.UseVisualStyleBackColor = false;
+            this.BtnBuscarPresidente.Click += new System.EventHandler(this.BtnBuscarPresidente_Click);
             // 
             // TxtPresidente
             // 
@@ -792,6 +730,7 @@ namespace LibFormularios
             this.TxtPresidente.Name = "TxtPresidente";
             this.TxtPresidente.Size = new System.Drawing.Size(151, 30);
             this.TxtPresidente.TabIndex = 241;
+            this.TxtPresidente.TextChanged += new System.EventHandler(this.TxtPresidente_TextChanged);
             // 
             // label2
             // 
@@ -812,7 +751,7 @@ namespace LibFormularios
             "2",
             "3"});
             this.CboNroReplicantes.Location = new System.Drawing.Point(260, 223);
-            this.CboNroReplicantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CboNroReplicantes.Margin = new System.Windows.Forms.Padding(4);
             this.CboNroReplicantes.Name = "CboNroReplicantes";
             this.CboNroReplicantes.Size = new System.Drawing.Size(111, 29);
             this.CboNroReplicantes.TabIndex = 232;
@@ -851,10 +790,10 @@ namespace LibFormularios
             // TxtNombresDictaminante1
             // 
             this.TxtNombresDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(232, 116);
+            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(303, 113);
             this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante1.Name = "TxtNombresDictaminante1";
-            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(279, 30);
+            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(208, 30);
             this.TxtNombresDictaminante1.TabIndex = 187;
             // 
             // label11
@@ -891,11 +830,12 @@ namespace LibFormularios
             // txtCodDictaminante1
             // 
             this.txtCodDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante1.Location = new System.Drawing.Point(75, 116);
+            this.txtCodDictaminante1.Location = new System.Drawing.Point(63, 116);
             this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante1.Name = "txtCodDictaminante1";
-            this.txtCodDictaminante1.Size = new System.Drawing.Size(151, 30);
+            this.txtCodDictaminante1.Size = new System.Drawing.Size(184, 30);
             this.txtCodDictaminante1.TabIndex = 191;
+            this.txtCodDictaminante1.TextChanged += new System.EventHandler(this.txtCodDictaminante1_TextChanged);
             // 
             // TxtApellidosDictaminante2
             // 
@@ -909,10 +849,10 @@ namespace LibFormularios
             // TxtNombresDictaminante2
             // 
             this.TxtNombresDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(232, 150);
+            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(303, 150);
             this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante2.Name = "TxtNombresDictaminante2";
-            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(279, 30);
+            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(208, 30);
             this.TxtNombresDictaminante2.TabIndex = 193;
             // 
             // TxtDNIDictaminante2
@@ -927,20 +867,22 @@ namespace LibFormularios
             // txtCodDictaminante2
             // 
             this.txtCodDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante2.Location = new System.Drawing.Point(75, 150);
+            this.txtCodDictaminante2.Location = new System.Drawing.Point(63, 150);
             this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante2.Name = "txtCodDictaminante2";
-            this.txtCodDictaminante2.Size = new System.Drawing.Size(151, 30);
+            this.txtCodDictaminante2.Size = new System.Drawing.Size(184, 30);
             this.txtCodDictaminante2.TabIndex = 196;
+            this.txtCodDictaminante2.TextChanged += new System.EventHandler(this.txtCodDictaminante2_TextChanged);
             // 
             // txtCodDictaminante3
             // 
             this.txtCodDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante3.Location = new System.Drawing.Point(75, 183);
+            this.txtCodDictaminante3.Location = new System.Drawing.Point(52, 183);
             this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante3.Name = "txtCodDictaminante3";
-            this.txtCodDictaminante3.Size = new System.Drawing.Size(151, 30);
+            this.txtCodDictaminante3.Size = new System.Drawing.Size(195, 30);
             this.txtCodDictaminante3.TabIndex = 201;
+            this.txtCodDictaminante3.TextChanged += new System.EventHandler(this.txtCodDictaminante3_TextChanged);
             // 
             // TxtApellidosDictaminante3
             // 
@@ -954,10 +896,10 @@ namespace LibFormularios
             // TxtNombresDictaminante3
             // 
             this.TxtNombresDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(232, 183);
+            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(303, 183);
             this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante3.Name = "TxtNombresDictaminante3";
-            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(279, 30);
+            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(208, 30);
             this.TxtNombresDictaminante3.TabIndex = 198;
             // 
             // TxtDNIDictaminante3
@@ -974,9 +916,9 @@ namespace LibFormularios
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(15, 241);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1073, 178);
             this.groupBox2.TabIndex = 234;
             this.groupBox2.TabStop = false;
@@ -1007,7 +949,7 @@ namespace LibFormularios
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmNombrarJuradoSustentacionOral";
             this.Text = "FrmNombrarSustentacionOral";
             this.groupBox3.ResumeLayout(false);
@@ -1055,25 +997,20 @@ namespace LibFormularios
         protected System.Windows.Forms.Button BtnNombrarCR;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CboNroReplicantes;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtApellidosAsesor;
-        private System.Windows.Forms.TextBox txtNombreAsesor;
-        private System.Windows.Forms.TextBox txtDNIAsesor;
-        private System.Windows.Forms.TextBox txtCodAsesor;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtApellidosReplicante1;
         private System.Windows.Forms.TextBox txtNombresReplicante1;
         private System.Windows.Forms.TextBox txtDNIReplicante1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnBuscarReplicante1;
         private System.Windows.Forms.TextBox txtCodReplicante1;
         private System.Windows.Forms.TextBox txtApellidosReplicante2;
         private System.Windows.Forms.TextBox txtNombresReplicante2;
         private System.Windows.Forms.TextBox txtDNIReplicante2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnBuscarReplicante2;
         private System.Windows.Forms.TextBox txtCodReplicante2;
         private System.Windows.Forms.TextBox txtCodReplicante3;
         private System.Windows.Forms.TextBox txtApellidosReplicante3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnBuscarReplicante3;
         private System.Windows.Forms.TextBox txtNombresReplicante3;
         private System.Windows.Forms.TextBox txtDNIReplicante3;
         private System.Windows.Forms.Label label5;
@@ -1083,14 +1020,8 @@ namespace LibFormularios
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TxtPresidenteDNI;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnBuscarPresidente;
         private System.Windows.Forms.TextBox TxtPresidente;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtApellidosSecretario;
-        private System.Windows.Forms.TextBox txtNombresSecretario;
-        private System.Windows.Forms.TextBox txtDNISecretario;
-        private System.Windows.Forms.TextBox txtCodSecretario;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
@@ -1100,5 +1031,8 @@ namespace LibFormularios
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button BtnBuscarDictaminante3;
+        private System.Windows.Forms.Button BtnBuscarDictaminante2;
+        private System.Windows.Forms.Button BtnBuscarDictaminante1;
     }
 }
