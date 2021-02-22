@@ -86,5 +86,42 @@ namespace LibFormularios
         {
 
         }
+
+        private void btnResolucionDictaminantesTesis_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtCodTesis.Text != "")
+                {
+                    if (oPlanDeTesis.VerificarSiEmitioResolucionTesisAprobadaComisionRevisora(TxtCodTesis.Text) == false)
+                    {
+                        String NResolucion = "R-004-N°" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-UNSAAC";
+                        oPlanDeTesis.EmitirResolucionNombramientoDictaminantes(NResolucion, TxtCodTesis.Text);
+                        //actualizar el estado del tramite a atendido
+                        //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
+                        MessageBox.Show("Resolucion: " + NResolucion + " EMITIDA EXITOSAMENTE", "CONFIRMACION");
+                        //RellenarTablaTramites();
+                    }
+                    else
+                    {
+                        MessageBox.Show("YA SE EMITIO UNA RESOLUCION PARA ESTA TESIS APROBADA", "ERROR");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("EXISTEN CAMPOS VACIOS, CARGUE LOS DATOS", "ERROR AL REALIZAR LA OPERACION");
+                }
+            }
+            catch (Exception eRR)
+            {
+                MessageBox.Show(eRR.ToString(), "ERROR AL REALIZAR LA OPERACION");
+            }
+        }
+
+        private void btnMostrarResoluciones_Click(object sender, EventArgs e)
+        {
+            FrmMostrarResolucion A = new FrmMostrarResolucion();
+            A.Show();
+        }
     }
 }

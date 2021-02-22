@@ -18,6 +18,7 @@ namespace LibFormularios
         {
             InitializeComponent();
             esconderSubMenu();
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -31,8 +32,8 @@ namespace LibFormularios
             panelSubMenuMantenimiento.Visible = false;
             panelSubMenuOperaciones.Visible = false;
             panelSubMenuConsultas.Visible = false;
+            panelSubMenuSustentacionOral.Visible = false;
             panelSubMenuReportes.Visible = false;
-          
             //PARA MAS SUBMENUS ...
         }
         private void mostrarSubMenu(Panel subMenu)
@@ -135,7 +136,7 @@ namespace LibFormularios
         }
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            mostrarSubMenu(panelSubMenuReportes);
+            mostrarSubMenu(panelSubMenuSustentacionOral);
         }
 
         private void panelTop_MouseDown(object sender, MouseEventArgs e)
@@ -151,8 +152,34 @@ namespace LibFormularios
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            //Cuando se maximiza el formulario
 
+            //normalises window
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                //this.Bounds = default;
+                //this.WindowState = FormWindowState.Maximized;
+                //this.Bounds = 
+
+                //Rectangle a = new Rectangle(1, 1, 300, 400);
+                //this.Bounds = a;
+                //this.Size = Screen.GetWorkingArea(this);
+                this.MaximumSize = this.Size;
+                this.WindowState = FormWindowState.Normal;
+                this.CenterToScreen();
+
+            }
+            //maximises window 
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+                //this.Bounds = Screen.GetWorkingArea(this);
+                //this.Bounds = Screen.GetWorkingArea(this);
+                //this.Bounds = default;
+                //this.WindowState = FormWindowState.Maximized;
+                //Size= new Size(400,600);
+                this.CenterToScreen();
+            }
         }
 
         private void btnMaximize_MouseEnter(object sender, EventArgs e)
@@ -245,6 +272,16 @@ namespace LibFormularios
         private void BtnActaDictamen_Click(object sender, EventArgs e)
         {
             abrirFormHijoEnPanel(new FrmInformeDictaminantesDeTesis());
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+            mostrarSubMenu(panelSubMenuReportes);
+        }
+
+        private void btnNombrarJuradoSustentacionOral_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmNombrarJuradoSustentacionOral());
         }
     }
 }

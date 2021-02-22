@@ -28,6 +28,11 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
-
+        public DataTable ListarDocentesNombrados()
+        {   //-- retorna una tabla con la lista completa de libros 
+            string Consulta = "select * from " + aNombreTabla+" where Categoria = 'NOMBRADO'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
     }
 }

@@ -119,3 +119,103 @@ C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibF
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarDictaminantescs.resources
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionDictamen.resources
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarExpediente.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarTesista.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDocente.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmEditarRegistrosXTramite.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmGenerarExpediente.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarDocente.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeComisionRevisora.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeDictaminantesDeTesis.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmIniciarTramiteEstudiante.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarComisionRevisoracs.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarDictaminantescs.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPadre.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPrincipal.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisito.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisitosXTramite.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionDictamen.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesis.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesista.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesisXTesista.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTramite.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmMostrarResolucion.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.dll
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csprojAssemblyReference.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarExpediente.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarTesista.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDocente.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmEditarRegistrosXTramite.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmGenerarExpediente.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarDocente.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeComisionRevisora.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeDictaminantesDeTesis.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmIniciarTramiteEstudiante.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmMostrarResolucion.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarComisionRevisoracs.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarDictaminantescs.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPadre.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPrincipal.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisito.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisitosXTramite.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionDictamen.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesis.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesista.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesisXTesista.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTramite.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarExpediente.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarTesista.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmDocente.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmEditarRegistrosXTramite.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmGenerarExpediente.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarDocente.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeComisionRevisora.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmInformeDictaminantesDeTesis.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmIniciarTramiteEstudiante.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmMostrarResolucion.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarComisionRevisoracs.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarDictaminantescs.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPadre.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmPrincipal.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisito.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmRequisitosXTramite.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionDictamen.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionPlanTesis.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesis.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesista.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTesisXTesista.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmTramite.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarJuradoSustentacionOral.resources

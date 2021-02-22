@@ -193,5 +193,52 @@ namespace LibClases
             return aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
         }
 
+        public string GenerarCodigoResolucionNombramientoDictaminantes()
+        {   //-- retorna una tabla con la lista completa de libros 
+
+            try
+            {
+                string codigo;
+                string consulta = "select top 1 id from TResolucion ORDER BY id DESC";
+                aConexion.EjecutarSelect(consulta);
+                codigo = aConexion.Datos.Tables[0].Rows[0]["id"].ToString();
+                int valorcodigo = int.Parse(codigo) + 1;
+                return valorcodigo.ToString();
+            }
+            catch
+            {
+                return "1000";
+            }
+        }
+        public void EmitirResolucionNombramientoDictaminantes(string codigo,string codTesis)
+        {
+            string consulta = " insert into TResolucion values ('" + codigo + "','TESIS APROBADA PARA DICTAMINAR',GETDATE(),'"+codTesis+"')";
+            aConexion.EjecutarComando(consulta);
+        }
+        public DataTable MostrarResolucion()
+        {
+            string consulta = "select * from TResolucion";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public void EmitirResolucionSuficienciaTesis(string codigo,string codTesis)
+        {
+            string consulta = " insert into TResolucion values ('" + codigo + "','TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL',GETDATE(),'" + codTesis + "')";
+            aConexion.EjecutarComando(consulta);
+        }
+        public bool VerificarSiEmitioResolucionTesisAprobadaComisionRevisora(string codTesis)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS APROBADA PARA DICTAMINAR'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
+        public bool VerificarSiEmitioResolucionSuficienciaTesis(string codTesis)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
     }
 }

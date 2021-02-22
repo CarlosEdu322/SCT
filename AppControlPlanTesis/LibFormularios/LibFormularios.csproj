@@ -100,6 +100,12 @@
     <Compile Include="FrmIniciarTramiteEstudiante.Designer.cs">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMostrarResolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarResolucion.Designer.cs">
+      <DependentUpon>FrmMostrarResolucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNombrarComisionRevisoracs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="FrmNombrarDictaminantescs.Designer.cs">
       <DependentUpon>FrmNombrarDictaminantescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNombrarJuradoSustentacionOral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNombrarJuradoSustentacionOral.Designer.cs">
+      <DependentUpon>FrmNombrarJuradoSustentacionOral.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
@@ -207,11 +219,17 @@
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarResolucion.resx">
+      <DependentUpon>FrmMostrarResolucion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNombrarComisionRevisoracs.resx">
       <DependentUpon>FrmNombrarComisionRevisoracs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNombrarDictaminantescs.resx">
       <DependentUpon>FrmNombrarDictaminantescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNombrarJuradoSustentacionOral.resx">
+      <DependentUpon>FrmNombrarJuradoSustentacionOral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>

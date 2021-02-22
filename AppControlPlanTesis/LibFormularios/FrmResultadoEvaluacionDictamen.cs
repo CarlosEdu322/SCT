@@ -95,6 +95,9 @@ namespace LibFormularios
         {
             DgvInteresados.DataSource = oDictaminanteDeTesis.ListarInteresados(TxtCodTesis.Text);
             DgvTesis.DataSource = oDictaminanteDeTesis.ListarDatosTesis(TxtCodTesis.Text);
+            DgvTesis.Columns["Estado"].Visible = false;
+            DgvTesis.Columns["CodTesis"].Visible = false;
+            DgvTesis.Columns["CodDocente"].Visible = false;
         }
 
         private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,11 +107,11 @@ namespace LibFormularios
 
 
                 ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
-                if (oDictaminanteDeTesis.VerificarSiEmitioEvaluacion(CboCodDictaminantes.Text, CboCodDocente.Text))
+                if (oDictaminanteDeTesis.VerificarSiEmitioEvaluacionDictamen(CboCodDictaminantes.Text, CboCodDocente.Text))
                 {
                     GbxRubrica.Enabled = false;
                     LblNotificacion.Visible = true;
-                    LblNotificacion.Text = "Usted ya reviso este plan de tesis";
+                    LblNotificacion.Text = "Usted ya dictamino esta tesis";
                 }
                 else
                 {
@@ -118,16 +121,65 @@ namespace LibFormularios
                 if (CboCodDocente.Text == "")
                     RefrescarTxt();
             }
-            catch
+            catch (Exception eRR)
             {
-
+                MessageBox.Show(eRR.ToString(), "ERROR AL REALIZAR LA OPERACION");
             }
 
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            //insert into TActaDictamenDeTesis values('350000','D00001',0,'puede mejorar')
+            try
+            {
+                List<string> Lista = new List<string>();
+                DataRowView oDataRowView = CboCodDictaminantes.SelectedItem as DataRowView;
+                string CodEvaluacionDictamenDeTesis = string.Empty;
 
+                if (oDataRowView != null)
+                {
+                    CodEvaluacionDictamenDeTesis = oDataRowView.Row["CodDictamenDeTesis"] as string;
+                }
+                Lista.Add(CodEvaluacionDictamenDeTesis);
+                DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
+                string CodDocente = string.Empty;
+
+                if (oDataRowView != null)
+                {
+                    CodDocente = oDataRowView2.Row["CodDocente"] as string;
+                }
+
+
+
+                Lista.Add(CodDocente);
+                string juicio;
+                //emitir juicio
+                if (RbAprobado.Checked)
+                {
+                    juicio = "APROBADO";
+                }
+                else
+                {
+                    juicio = "DESAPROBADO";
+                }
+
+
+                Lista.Add(juicio);
+                Lista.Add(TxtObservaciones.Text);
+
+                oDictaminanteDeTesis.AgregarDictamenPlanDeTesis(Lista);
+                MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+            }
+            catch (Exception eRR)
+            {
+                MessageBox.Show(eRR.ToString(), "ERROR AL REALIZAR LA OPERACION");
+            }
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

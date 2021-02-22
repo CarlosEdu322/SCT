@@ -73,12 +73,6 @@
             this.CboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCategoria.FormattingEnabled = true;
-            this.CboCategoria.Items.AddRange(new object[] {
-            "Apellidos",
-            "Nombres",
-            "DNI",
-            "Categoria",
-            "Especialidad"});
             this.CboCategoria.Location = new System.Drawing.Point(545, 33);
             this.CboCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CboCategoria.Name = "CboCategoria";
@@ -101,6 +95,7 @@
             this.BtnSeleccionar.TabIndex = 176;
             this.BtnSeleccionar.Text = "Seleccionar";
             this.BtnSeleccionar.UseVisualStyleBackColor = false;
+            this.BtnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click_1);
             // 
             // TxtBuscar
             // 
@@ -110,6 +105,7 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(384, 30);
             this.TxtBuscar.TabIndex = 139;
+            this.TxtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyUp);
             // 
             // LblCodTesista1
             // 

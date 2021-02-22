@@ -68,3 +68,45 @@ C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppCo
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
 C:\Users\etson\Documents\GitHub\Back_UpPrincipal\AppControlPlanTesis_Etson\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\apprar\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\ASUS\Videos\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe.config
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\AppControlPlanTesis.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.dll
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.dll
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibFormularios.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\bin\Debug\LibClases.pdb
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csprojAssemblyReference.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.Properties.Resources.resources
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.GenerateResource.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CoreCompileInputs.cache
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.csproj.CopyComplete
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.exe
+C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\AppControlPlanTesis\obj\Debug\AppControlPlanTesis.pdb

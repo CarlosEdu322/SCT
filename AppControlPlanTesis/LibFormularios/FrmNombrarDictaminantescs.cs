@@ -20,12 +20,20 @@ namespace LibFormularios
             InitializeComponent();
             oDictaminanteDeTesis = new CDictaminanteDeTesis();
             LlenarTesisPendientes();
+            DgvEvaluadoresDePlanDeTesis.Visible = false;
         }
         public void LlenarTesisPendientes()
         {
             DgvTesisPendientesDeDictaminantes.DataSource = oDictaminanteDeTesis.TesisPendientesDeDictamen();
             DgvTesisPendientesDeDictaminantes.Columns["CodTesis"].Visible = false;
             DgvTesisPendientesDeDictaminantes.Columns["CodEvaluacionPlanDeTesis"].Visible = false;
+            //checks
+            DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
+            CBColumn.HeaderText = "";
+            CBColumn.FalseValue = "0";
+            CBColumn.TrueValue = "1";
+            DgvTesisPendientesDeDictaminantes.Columns.Insert(0, CBColumn);
+
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeCR.Columns["CodSustentacionOral"].Visible = false;
@@ -119,7 +127,7 @@ namespace LibFormularios
         {
             try
             {
-                if (!((TxtCodDictaminantesDeTesis.Text == "") || (txtCodDocente1.Text == "") || (txtCodDocente2.Text == "") || (txtCodDocente3.Text == "")))
+                if (!((TxtCodDictaminantesDeTesis.Text == "") || (txtCodDocente1.Text == "") || (txtCodDocente2.Text == "") ))
                 {
                     //AGREGAR EXPEDIENTE
                     oDictaminanteDeTesis.UpdateExpediente(TxtExpediente.Text, TxtCodDictaminantesDeTesis.Text);
@@ -128,7 +136,8 @@ namespace LibFormularios
                     List<string> ComisionRevisora = new List<string>();
                     ComisionRevisora.Add(txtCodDocente1.Text);
                     ComisionRevisora.Add(txtCodDocente2.Text);
-                    ComisionRevisora.Add(txtCodDocente3.Text);
+                    if(txtCodDocente2.Text.CompareTo("")!=0)
+                        ComisionRevisora.Add(txtCodDocente3.Text);
                     oDictaminanteDeTesis.AgregarDocentesDictaminantes(ComisionRevisora, TxtCodDictaminantesDeTesis.Text);
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
                     LlenarTesisPendientes();
@@ -144,5 +153,27 @@ namespace LibFormularios
                 MessageBox.Show(ex.ToString(), "ERROR AL REALIZAR LA OPERACION");
             }
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnConsultarEvaluadores_Click(object sender, EventArgs e)
+        {
+            if (DgvEvaluadoresDePlanDeTesis.Visible == false)
+            {
+                DgvEvaluadoresDePlanDeTesis.DataSource = oDictaminanteDeTesis.ListarRevisores(TxtExpediente.Text);
+                DgvEvaluadoresDePlanDeTesis.Columns["Correo"].Visible = false;
+                DgvEvaluadoresDePlanDeTesis.Columns["Telefono"].Visible = false;
+                DgvEvaluadoresDePlanDeTesis.Visible = true;
+            }
+            else
+            {
+                DgvEvaluadoresDePlanDeTesis.Visible = false;
+            }
+        }
+
+
     }
 }

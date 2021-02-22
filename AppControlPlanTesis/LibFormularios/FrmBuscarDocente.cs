@@ -27,7 +27,7 @@ namespace LibFormularios
         public void InicializarCamposCboNroEstudiantes()
         {
             CboCategoria.SelectedIndex = 0;
-            dgvDocentes.DataSource = oDocente.ListaGeneral();
+            dgvDocentes.DataSource = oDocente.ListarDocentesNombrados();
             dgvDocentes.Columns["CodDocente"].Visible = false;
             dgvDocentes.Columns["Correo"].Visible = false;
             dgvDocentes.Columns["Telefono"].Visible = false;
@@ -35,7 +35,7 @@ namespace LibFormularios
 
         private void TxtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
-            string Consulta = "select * from TDocente where " + CboCategoria.SelectedItem.ToString() + " like'" + TxtBuscar.Text + "%';";
+            string Consulta = "select * from TDocente where " + CboCategoria.SelectedItem.ToString() + " like'" + TxtBuscar.Text + "%' and Categoria like 'Nombrado';";
             dgvDocentes.DataSource = oDocente.Busqueda(Consulta);
             dgvDocentes.Columns["CodDocente"].Visible = false;
             dgvDocentes.Columns["Correo"].Visible = false;
