@@ -219,3 +219,5 @@ C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\A
 C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.dll
 C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.pdb
 C:\Users\etson\Documents\GitHub\APP-PLAN-TESIS - 21-02-2021\APP-PLAN-TESIS (1)\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarJuradoSustentacionOral.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmMostrarResolucion.resources
+C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmNombrarJuradoSustentacionOral.resources

@@ -123,11 +123,11 @@ namespace LibFormularios
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.DgvTesisPendientesDeDictaminantes);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(11, 11);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(15, 14);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(805, 180);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(1073, 222);
             this.groupBox3.TabIndex = 236;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tesis Pendientes de Sustentacion Oral";
@@ -141,10 +141,10 @@ namespace LibFormularios
             this.BtnCargar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCargar.Location = new System.Drawing.Point(635, 24);
-            this.BtnCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCargar.Location = new System.Drawing.Point(847, 30);
+            this.BtnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCargar.Name = "BtnCargar";
-            this.BtnCargar.Size = new System.Drawing.Size(165, 48);
+            this.BtnCargar.Size = new System.Drawing.Size(220, 59);
             this.BtnCargar.TabIndex = 207;
             this.BtnCargar.Text = "Cargar";
             this.BtnCargar.UseVisualStyleBackColor = false;
@@ -152,29 +152,28 @@ namespace LibFormularios
             // TxtCodTesis
             // 
             this.TxtCodTesis.Enabled = false;
-            this.TxtCodTesis.Location = new System.Drawing.Point(635, 145);
-            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCodTesis.Location = new System.Drawing.Point(847, 178);
+            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesis.Name = "TxtCodTesis";
-            this.TxtCodTesis.Size = new System.Drawing.Size(165, 27);
+            this.TxtCodTesis.Size = new System.Drawing.Size(219, 32);
             this.TxtCodTesis.TabIndex = 210;
             // 
             // TxtExpediente
             // 
             this.TxtExpediente.Enabled = false;
-            this.TxtExpediente.Location = new System.Drawing.Point(635, 95);
-            this.TxtExpediente.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtExpediente.Location = new System.Drawing.Point(847, 117);
+            this.TxtExpediente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtExpediente.Name = "TxtExpediente";
-            this.TxtExpediente.Size = new System.Drawing.Size(165, 27);
+            this.TxtExpediente.Size = new System.Drawing.Size(219, 32);
             this.TxtExpediente.TabIndex = 211;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(631, 74);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(841, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 19);
+            this.label3.Size = new System.Drawing.Size(204, 21);
             this.label3.TabIndex = 212;
             this.label3.Text = "Codigo de Expediente:";
             // 
@@ -182,10 +181,9 @@ namespace LibFormularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(634, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(845, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 19);
+            this.label4.Size = new System.Drawing.Size(146, 21);
             this.label4.TabIndex = 213;
             this.label4.Text = "Codigo de Tesis:";
             // 
@@ -195,12 +193,12 @@ namespace LibFormularios
             this.DgvTesisPendientesDeDictaminantes.AllowUserToDeleteRows = false;
             this.DgvTesisPendientesDeDictaminantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DgvTesisPendientesDeDictaminantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTesisPendientesDeDictaminantes.Location = new System.Drawing.Point(14, 24);
-            this.DgvTesisPendientesDeDictaminantes.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvTesisPendientesDeDictaminantes.Location = new System.Drawing.Point(19, 30);
+            this.DgvTesisPendientesDeDictaminantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvTesisPendientesDeDictaminantes.Name = "DgvTesisPendientesDeDictaminantes";
             this.DgvTesisPendientesDeDictaminantes.RowHeadersWidth = 51;
             this.DgvTesisPendientesDeDictaminantes.RowTemplate.Height = 24;
-            this.DgvTesisPendientesDeDictaminantes.Size = new System.Drawing.Size(617, 150);
+            this.DgvTesisPendientesDeDictaminantes.Size = new System.Drawing.Size(823, 185);
             this.DgvTesisPendientesDeDictaminantes.TabIndex = 202;
             // 
             // groupBox1
@@ -266,11 +264,11 @@ namespace LibFormularios
             this.groupBox1.Controls.Add(this.TxtNombresDictaminante3);
             this.groupBox1.Controls.Add(this.TxtDNIDictaminante3);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(11, 347);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 427);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(805, 526);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1073, 647);
             this.groupBox1.TabIndex = 235;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nombrar Jurado ";
@@ -280,19 +278,19 @@ namespace LibFormularios
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(13, 404);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(17, 497);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 20);
+            this.label14.Size = new System.Drawing.Size(68, 22);
             this.label14.TabIndex = 282;
             this.label14.Text = "Lugar:";
             // 
             // txtLugarSustentacion
             // 
-            this.txtLugarSustentacion.Location = new System.Drawing.Point(68, 399);
+            this.txtLugarSustentacion.Location = new System.Drawing.Point(91, 491);
+            this.txtLugarSustentacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLugarSustentacion.Multiline = true;
             this.txtLugarSustentacion.Name = "txtLugarSustentacion";
-            this.txtLugarSustentacion.Size = new System.Drawing.Size(723, 56);
+            this.txtLugarSustentacion.Size = new System.Drawing.Size(963, 68);
             this.txtLugarSustentacion.TabIndex = 281;
             // 
             // label27
@@ -300,10 +298,9 @@ namespace LibFormularios
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label27.Location = new System.Drawing.Point(10, 155);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(13, 191);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 20);
+            this.label27.Size = new System.Drawing.Size(44, 22);
             this.label27.TabIndex = 280;
             this.label27.Text = "3er:";
             // 
@@ -316,9 +313,11 @@ namespace LibFormularios
             this.groupBox4.Controls.Add(this.LblCodEvaluacionPlanDeTesis);
             this.groupBox4.Controls.Add(this.BtnNombrarCR);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox4.Location = new System.Drawing.Point(7, 448);
+            this.groupBox4.Location = new System.Drawing.Point(9, 551);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(793, 77);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(1057, 95);
             this.groupBox4.TabIndex = 230;
             this.groupBox4.TabStop = false;
             // 
@@ -327,9 +326,10 @@ namespace LibFormularios
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 13);
+            this.dateTimePicker1.Location = new System.Drawing.Point(157, 16);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(303, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(403, 30);
             this.dateTimePicker1.TabIndex = 228;
             // 
             // label1
@@ -337,10 +337,9 @@ namespace LibFormularios
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(3, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(4, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(138, 22);
             this.label1.TabIndex = 227;
             this.label1.Text = "Fecha y Hora:";
             // 
@@ -348,10 +347,10 @@ namespace LibFormularios
             // 
             this.TxtCodDictaminantesDeTesis.Enabled = false;
             this.TxtCodDictaminantesDeTesis.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodDictaminantesDeTesis.Location = new System.Drawing.Point(227, 43);
-            this.TxtCodDictaminantesDeTesis.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCodDictaminantesDeTesis.Location = new System.Drawing.Point(303, 53);
+            this.TxtCodDictaminantesDeTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodDictaminantesDeTesis.Name = "TxtCodDictaminantesDeTesis";
-            this.TxtCodDictaminantesDeTesis.Size = new System.Drawing.Size(194, 25);
+            this.TxtCodDictaminantesDeTesis.Size = new System.Drawing.Size(257, 30);
             this.TxtCodDictaminantesDeTesis.TabIndex = 221;
             // 
             // BtnCerrar
@@ -363,10 +362,10 @@ namespace LibFormularios
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(453, 13);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCerrar.Location = new System.Drawing.Point(604, 16);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
+            this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
             this.BtnCerrar.TabIndex = 233;
             this.BtnCerrar.Text = "Cerrar Ventana";
             this.BtnCerrar.UseVisualStyleBackColor = false;
@@ -376,10 +375,9 @@ namespace LibFormularios
             // 
             this.LblCodEvaluacionPlanDeTesis.AutoSize = true;
             this.LblCodEvaluacionPlanDeTesis.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCodEvaluacionPlanDeTesis.Location = new System.Drawing.Point(3, 46);
-            this.LblCodEvaluacionPlanDeTesis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblCodEvaluacionPlanDeTesis.Location = new System.Drawing.Point(4, 57);
             this.LblCodEvaluacionPlanDeTesis.Name = "LblCodEvaluacionPlanDeTesis";
-            this.LblCodEvaluacionPlanDeTesis.Size = new System.Drawing.Size(220, 20);
+            this.LblCodEvaluacionPlanDeTesis.Size = new System.Drawing.Size(276, 22);
             this.LblCodEvaluacionPlanDeTesis.TabIndex = 220;
             this.LblCodEvaluacionPlanDeTesis.Text = "Codigo de dictaminantes N°:";
             // 
@@ -392,10 +390,10 @@ namespace LibFormularios
             this.BtnNombrarCR.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNombrarCR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnNombrarCR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNombrarCR.Location = new System.Drawing.Point(621, 13);
-            this.BtnNombrarCR.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNombrarCR.Location = new System.Drawing.Point(828, 16);
+            this.BtnNombrarCR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnNombrarCR.Name = "BtnNombrarCR";
-            this.BtnNombrarCR.Size = new System.Drawing.Size(164, 48);
+            this.BtnNombrarCR.Size = new System.Drawing.Size(219, 59);
             this.BtnNombrarCR.TabIndex = 232;
             this.BtnNombrarCR.Text = "Enviar Proveido";
             this.BtnNombrarCR.UseVisualStyleBackColor = false;
@@ -405,10 +403,9 @@ namespace LibFormularios
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label26.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label26.Location = new System.Drawing.Point(10, 127);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(13, 156);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(41, 20);
+            this.label26.Size = new System.Drawing.Size(51, 22);
             this.label26.TabIndex = 279;
             this.label26.Text = "2do:";
             // 
@@ -417,10 +414,9 @@ namespace LibFormularios
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label25.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label25.Location = new System.Drawing.Point(10, 97);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(13, 119);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(36, 20);
+            this.label25.Size = new System.Drawing.Size(44, 22);
             this.label25.TabIndex = 278;
             this.label25.Text = "1er:";
             // 
@@ -433,10 +429,10 @@ namespace LibFormularios
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(130, 369);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(222, 454);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(33, 24);
+            this.button5.Size = new System.Drawing.Size(44, 30);
             this.button5.TabIndex = 277;
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -445,47 +441,46 @@ namespace LibFormularios
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label21.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label21.Location = new System.Drawing.Point(9, 347);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(4, 426);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(179, 20);
+            this.label21.Size = new System.Drawing.Size(221, 22);
             this.label21.TabIndex = 275;
             this.label21.Text = "Secretario Academico:";
             // 
             // txtApellidosSecretario
             // 
             this.txtApellidosSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosSecretario.Location = new System.Drawing.Point(387, 369);
-            this.txtApellidosSecretario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosSecretario.Location = new System.Drawing.Point(516, 454);
+            this.txtApellidosSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosSecretario.Name = "txtApellidosSecretario";
-            this.txtApellidosSecretario.Size = new System.Drawing.Size(264, 25);
+            this.txtApellidosSecretario.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosSecretario.TabIndex = 272;
             // 
             // txtNombresSecretario
             // 
             this.txtNombresSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombresSecretario.Location = new System.Drawing.Point(173, 369);
-            this.txtNombresSecretario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombresSecretario.Location = new System.Drawing.Point(272, 454);
+            this.txtNombresSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresSecretario.Name = "txtNombresSecretario";
-            this.txtNombresSecretario.Size = new System.Drawing.Size(210, 25);
+            this.txtNombresSecretario.Size = new System.Drawing.Size(238, 30);
             this.txtNombresSecretario.TabIndex = 273;
             // 
             // txtDNISecretario
             // 
             this.txtDNISecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNISecretario.Location = new System.Drawing.Point(655, 369);
-            this.txtDNISecretario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNISecretario.Location = new System.Drawing.Point(873, 454);
+            this.txtDNISecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNISecretario.Name = "txtDNISecretario";
-            this.txtDNISecretario.Size = new System.Drawing.Size(136, 25);
+            this.txtDNISecretario.Size = new System.Drawing.Size(180, 30);
             this.txtDNISecretario.TabIndex = 274;
             // 
             // txtCodSecretario
             // 
             this.txtCodSecretario.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodSecretario.Location = new System.Drawing.Point(12, 369);
-            this.txtCodSecretario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodSecretario.Location = new System.Drawing.Point(91, 454);
+            this.txtCodSecretario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodSecretario.Name = "txtCodSecretario";
-            this.txtCodSecretario.Size = new System.Drawing.Size(114, 25);
+            this.txtCodSecretario.Size = new System.Drawing.Size(133, 30);
             this.txtCodSecretario.TabIndex = 276;
             // 
             // label17
@@ -493,47 +488,46 @@ namespace LibFormularios
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label17.Location = new System.Drawing.Point(3, 320);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(4, 394);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 20);
+            this.label17.Size = new System.Drawing.Size(74, 22);
             this.label17.TabIndex = 267;
             this.label17.Text = "Asesor:";
             // 
             // txtApellidosAsesor
             // 
             this.txtApellidosAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosAsesor.Location = new System.Drawing.Point(387, 320);
-            this.txtApellidosAsesor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosAsesor.Location = new System.Drawing.Point(516, 394);
+            this.txtApellidosAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosAsesor.Name = "txtApellidosAsesor";
-            this.txtApellidosAsesor.Size = new System.Drawing.Size(264, 25);
+            this.txtApellidosAsesor.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosAsesor.TabIndex = 264;
             // 
             // txtNombreAsesor
             // 
             this.txtNombreAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombreAsesor.Location = new System.Drawing.Point(173, 320);
-            this.txtNombreAsesor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreAsesor.Location = new System.Drawing.Point(272, 394);
+            this.txtNombreAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreAsesor.Name = "txtNombreAsesor";
-            this.txtNombreAsesor.Size = new System.Drawing.Size(210, 25);
+            this.txtNombreAsesor.Size = new System.Drawing.Size(238, 30);
             this.txtNombreAsesor.TabIndex = 265;
             // 
             // txtDNIAsesor
             // 
             this.txtDNIAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNIAsesor.Location = new System.Drawing.Point(655, 320);
-            this.txtDNIAsesor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNIAsesor.Location = new System.Drawing.Point(873, 394);
+            this.txtDNIAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNIAsesor.Name = "txtDNIAsesor";
-            this.txtDNIAsesor.Size = new System.Drawing.Size(136, 25);
+            this.txtDNIAsesor.Size = new System.Drawing.Size(180, 30);
             this.txtDNIAsesor.TabIndex = 266;
             // 
             // txtCodAsesor
             // 
             this.txtCodAsesor.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodAsesor.Location = new System.Drawing.Point(68, 320);
-            this.txtCodAsesor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodAsesor.Location = new System.Drawing.Point(91, 394);
+            this.txtCodAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodAsesor.Name = "txtCodAsesor";
-            this.txtCodAsesor.Size = new System.Drawing.Size(101, 25);
+            this.txtCodAsesor.Size = new System.Drawing.Size(133, 30);
             this.txtCodAsesor.TabIndex = 268;
             // 
             // label13
@@ -541,38 +535,37 @@ namespace LibFormularios
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label13.Location = new System.Drawing.Point(10, 211);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(13, 260);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 20);
+            this.label13.Size = new System.Drawing.Size(121, 22);
             this.label13.TabIndex = 249;
             this.label13.Text = "Replicantes:";
             // 
             // txtApellidosReplicante1
             // 
             this.txtApellidosReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante1.Location = new System.Drawing.Point(388, 233);
-            this.txtApellidosReplicante1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosReplicante1.Location = new System.Drawing.Point(517, 287);
+            this.txtApellidosReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante1.Name = "txtApellidosReplicante1";
-            this.txtApellidosReplicante1.Size = new System.Drawing.Size(264, 25);
+            this.txtApellidosReplicante1.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosReplicante1.TabIndex = 245;
             // 
             // txtNombresReplicante1
             // 
             this.txtNombresReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombresReplicante1.Location = new System.Drawing.Point(174, 233);
-            this.txtNombresReplicante1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombresReplicante1.Location = new System.Drawing.Point(232, 287);
+            this.txtNombresReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante1.Name = "txtNombresReplicante1";
-            this.txtNombresReplicante1.Size = new System.Drawing.Size(210, 25);
+            this.txtNombresReplicante1.Size = new System.Drawing.Size(279, 30);
             this.txtNombresReplicante1.TabIndex = 246;
             // 
             // txtDNIReplicante1
             // 
             this.txtDNIReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNIReplicante1.Location = new System.Drawing.Point(656, 233);
-            this.txtDNIReplicante1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNIReplicante1.Location = new System.Drawing.Point(875, 287);
+            this.txtDNIReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNIReplicante1.Name = "txtDNIReplicante1";
-            this.txtDNIReplicante1.Size = new System.Drawing.Size(136, 25);
+            this.txtDNIReplicante1.Size = new System.Drawing.Size(180, 30);
             this.txtDNIReplicante1.TabIndex = 247;
             // 
             // button2
@@ -584,47 +577,47 @@ namespace LibFormularios
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(131, 233);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(175, 287);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 24);
+            this.button2.Size = new System.Drawing.Size(44, 30);
             this.button2.TabIndex = 248;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // txtCodReplicante1
             // 
             this.txtCodReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodReplicante1.Location = new System.Drawing.Point(13, 233);
-            this.txtCodReplicante1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodReplicante1.Location = new System.Drawing.Point(17, 287);
+            this.txtCodReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante1.Name = "txtCodReplicante1";
-            this.txtCodReplicante1.Size = new System.Drawing.Size(114, 25);
+            this.txtCodReplicante1.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante1.TabIndex = 250;
             // 
             // txtApellidosReplicante2
             // 
             this.txtApellidosReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante2.Location = new System.Drawing.Point(388, 263);
-            this.txtApellidosReplicante2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosReplicante2.Location = new System.Drawing.Point(517, 324);
+            this.txtApellidosReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante2.Name = "txtApellidosReplicante2";
-            this.txtApellidosReplicante2.Size = new System.Drawing.Size(264, 25);
+            this.txtApellidosReplicante2.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosReplicante2.TabIndex = 251;
             // 
             // txtNombresReplicante2
             // 
             this.txtNombresReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombresReplicante2.Location = new System.Drawing.Point(174, 263);
-            this.txtNombresReplicante2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombresReplicante2.Location = new System.Drawing.Point(232, 324);
+            this.txtNombresReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante2.Name = "txtNombresReplicante2";
-            this.txtNombresReplicante2.Size = new System.Drawing.Size(210, 25);
+            this.txtNombresReplicante2.Size = new System.Drawing.Size(279, 30);
             this.txtNombresReplicante2.TabIndex = 252;
             // 
             // txtDNIReplicante2
             // 
             this.txtDNIReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNIReplicante2.Location = new System.Drawing.Point(655, 263);
-            this.txtDNIReplicante2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNIReplicante2.Location = new System.Drawing.Point(873, 324);
+            this.txtDNIReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNIReplicante2.Name = "txtDNIReplicante2";
-            this.txtDNIReplicante2.Size = new System.Drawing.Size(136, 25);
+            this.txtDNIReplicante2.Size = new System.Drawing.Size(180, 30);
             this.txtDNIReplicante2.TabIndex = 253;
             // 
             // button3
@@ -636,38 +629,38 @@ namespace LibFormularios
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(132, 261);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(176, 321);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 24);
+            this.button3.Size = new System.Drawing.Size(43, 30);
             this.button3.TabIndex = 254;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // txtCodReplicante2
             // 
             this.txtCodReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodReplicante2.Location = new System.Drawing.Point(13, 261);
-            this.txtCodReplicante2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodReplicante2.Location = new System.Drawing.Point(17, 321);
+            this.txtCodReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante2.Name = "txtCodReplicante2";
-            this.txtCodReplicante2.Size = new System.Drawing.Size(114, 25);
+            this.txtCodReplicante2.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante2.TabIndex = 255;
             // 
             // txtCodReplicante3
             // 
             this.txtCodReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodReplicante3.Location = new System.Drawing.Point(13, 288);
-            this.txtCodReplicante3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodReplicante3.Location = new System.Drawing.Point(17, 354);
+            this.txtCodReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante3.Name = "txtCodReplicante3";
-            this.txtCodReplicante3.Size = new System.Drawing.Size(114, 25);
+            this.txtCodReplicante3.Size = new System.Drawing.Size(151, 30);
             this.txtCodReplicante3.TabIndex = 260;
             // 
             // txtApellidosReplicante3
             // 
             this.txtApellidosReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante3.Location = new System.Drawing.Point(387, 291);
-            this.txtApellidosReplicante3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidosReplicante3.Location = new System.Drawing.Point(516, 358);
+            this.txtApellidosReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante3.Name = "txtApellidosReplicante3";
-            this.txtApellidosReplicante3.Size = new System.Drawing.Size(264, 25);
+            this.txtApellidosReplicante3.Size = new System.Drawing.Size(351, 30);
             this.txtApellidosReplicante3.TabIndex = 256;
             // 
             // button4
@@ -679,29 +672,29 @@ namespace LibFormularios
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(131, 288);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(175, 354);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 24);
+            this.button4.Size = new System.Drawing.Size(44, 30);
             this.button4.TabIndex = 259;
             this.button4.UseVisualStyleBackColor = false;
             // 
             // txtNombresReplicante3
             // 
             this.txtNombresReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtNombresReplicante3.Location = new System.Drawing.Point(174, 291);
-            this.txtNombresReplicante3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombresReplicante3.Location = new System.Drawing.Point(232, 358);
+            this.txtNombresReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante3.Name = "txtNombresReplicante3";
-            this.txtNombresReplicante3.Size = new System.Drawing.Size(210, 25);
+            this.txtNombresReplicante3.Size = new System.Drawing.Size(279, 30);
             this.txtNombresReplicante3.TabIndex = 257;
             // 
             // txtDNIReplicante3
             // 
             this.txtDNIReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtDNIReplicante3.Location = new System.Drawing.Point(656, 291);
-            this.txtDNIReplicante3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNIReplicante3.Location = new System.Drawing.Point(875, 358);
+            this.txtDNIReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNIReplicante3.Name = "txtDNIReplicante3";
-            this.txtDNIReplicante3.Size = new System.Drawing.Size(136, 25);
+            this.txtDNIReplicante3.Size = new System.Drawing.Size(180, 30);
             this.txtDNIReplicante3.TabIndex = 258;
             // 
             // label5
@@ -709,10 +702,9 @@ namespace LibFormularios
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(10, 22);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(13, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 20);
+            this.label5.Size = new System.Drawing.Size(110, 22);
             this.label5.TabIndex = 240;
             this.label5.Text = "Presidente:";
             // 
@@ -721,29 +713,28 @@ namespace LibFormularios
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(384, 22);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(512, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(96, 22);
             this.label6.TabIndex = 233;
             this.label6.Text = "Apellidos:";
             // 
             // TxtApellidosPresidente
             // 
             this.TxtApellidosPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosPresidente.Location = new System.Drawing.Point(387, 45);
-            this.TxtApellidosPresidente.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtApellidosPresidente.Location = new System.Drawing.Point(516, 55);
+            this.TxtApellidosPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosPresidente.Name = "TxtApellidosPresidente";
-            this.TxtApellidosPresidente.Size = new System.Drawing.Size(264, 25);
+            this.TxtApellidosPresidente.Size = new System.Drawing.Size(351, 30);
             this.TxtApellidosPresidente.TabIndex = 236;
             // 
             // TxtNombresPresidente
             // 
             this.TxtNombresPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresPresidente.Location = new System.Drawing.Point(174, 45);
-            this.TxtNombresPresidente.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtNombresPresidente.Location = new System.Drawing.Point(232, 55);
+            this.TxtNombresPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresPresidente.Name = "TxtNombresPresidente";
-            this.TxtNombresPresidente.Size = new System.Drawing.Size(210, 25);
+            this.TxtNombresPresidente.Size = new System.Drawing.Size(279, 30);
             this.TxtNombresPresidente.TabIndex = 237;
             // 
             // label8
@@ -751,10 +742,9 @@ namespace LibFormularios
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(652, 22);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(869, 27);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 20);
+            this.label8.Size = new System.Drawing.Size(48, 22);
             this.label8.TabIndex = 235;
             this.label8.Text = "DNI:";
             // 
@@ -763,20 +753,19 @@ namespace LibFormularios
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(172, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(229, 27);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 20);
+            this.label10.Size = new System.Drawing.Size(91, 22);
             this.label10.TabIndex = 234;
             this.label10.Text = "Nombres";
             // 
             // TxtPresidenteDNI
             // 
             this.TxtPresidenteDNI.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtPresidenteDNI.Location = new System.Drawing.Point(656, 45);
-            this.TxtPresidenteDNI.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPresidenteDNI.Location = new System.Drawing.Point(875, 55);
+            this.TxtPresidenteDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtPresidenteDNI.Name = "TxtPresidenteDNI";
-            this.TxtPresidenteDNI.Size = new System.Drawing.Size(136, 25);
+            this.TxtPresidenteDNI.Size = new System.Drawing.Size(180, 30);
             this.TxtPresidenteDNI.TabIndex = 238;
             // 
             // button1
@@ -788,30 +777,29 @@ namespace LibFormularios
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(131, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(175, 55);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 24);
+            this.button1.Size = new System.Drawing.Size(44, 30);
             this.button1.TabIndex = 239;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // TxtPresidente
             // 
             this.TxtPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtPresidente.Location = new System.Drawing.Point(12, 44);
-            this.TxtPresidente.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPresidente.Location = new System.Drawing.Point(16, 54);
+            this.TxtPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtPresidente.Name = "TxtPresidente";
-            this.TxtPresidente.Size = new System.Drawing.Size(114, 25);
+            this.TxtPresidente.Size = new System.Drawing.Size(151, 30);
             this.TxtPresidente.TabIndex = 241;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 184);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(13, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 20);
+            this.label2.Size = new System.Drawing.Size(223, 22);
             this.label2.TabIndex = 223;
             this.label2.Text = "Numero de replicantes:";
             // 
@@ -823,9 +811,10 @@ namespace LibFormularios
             this.CboNroReplicantes.Items.AddRange(new object[] {
             "2",
             "3"});
-            this.CboNroReplicantes.Location = new System.Drawing.Point(195, 181);
+            this.CboNroReplicantes.Location = new System.Drawing.Point(260, 223);
+            this.CboNroReplicantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CboNroReplicantes.Name = "CboNroReplicantes";
-            this.CboNroReplicantes.Size = new System.Drawing.Size(84, 27);
+            this.CboNroReplicantes.Size = new System.Drawing.Size(111, 29);
             this.CboNroReplicantes.TabIndex = 232;
             // 
             // label12
@@ -833,10 +822,9 @@ namespace LibFormularios
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label12.Location = new System.Drawing.Point(10, 72);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(13, 89);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 20);
+            this.label12.Size = new System.Drawing.Size(147, 22);
             this.label12.TabIndex = 190;
             this.label12.Text = "Dictaminantes:";
             // 
@@ -845,29 +833,28 @@ namespace LibFormularios
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(384, 72);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(512, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.Size = new System.Drawing.Size(96, 22);
             this.label7.TabIndex = 183;
             this.label7.Text = "Apellidos:";
             // 
             // TxtApellidosDictaminante1
             // 
             this.TxtApellidosDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(388, 94);
-            this.TxtApellidosDictaminante1.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(517, 116);
+            this.TxtApellidosDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante1.Name = "TxtApellidosDictaminante1";
-            this.TxtApellidosDictaminante1.Size = new System.Drawing.Size(264, 25);
+            this.TxtApellidosDictaminante1.Size = new System.Drawing.Size(351, 30);
             this.TxtApellidosDictaminante1.TabIndex = 186;
             // 
             // TxtNombresDictaminante1
             // 
             this.TxtNombresDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(174, 94);
-            this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(232, 116);
+            this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante1.Name = "TxtNombresDictaminante1";
-            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(210, 25);
+            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(279, 30);
             this.TxtNombresDictaminante1.TabIndex = 187;
             // 
             // label11
@@ -875,10 +862,9 @@ namespace LibFormularios
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(652, 72);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(869, 89);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 20);
+            this.label11.Size = new System.Drawing.Size(48, 22);
             this.label11.TabIndex = 185;
             this.label11.Text = "DNI:";
             // 
@@ -887,110 +873,111 @@ namespace LibFormularios
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(172, 72);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(229, 89);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 20);
+            this.label9.Size = new System.Drawing.Size(96, 22);
             this.label9.TabIndex = 184;
             this.label9.Text = "Nombres:";
             // 
             // TxtDNIDictaminante1
             // 
             this.TxtDNIDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNIDictaminante1.Location = new System.Drawing.Point(656, 94);
-            this.TxtDNIDictaminante1.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDNIDictaminante1.Location = new System.Drawing.Point(875, 116);
+            this.TxtDNIDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNIDictaminante1.Name = "TxtDNIDictaminante1";
-            this.TxtDNIDictaminante1.Size = new System.Drawing.Size(136, 25);
+            this.TxtDNIDictaminante1.Size = new System.Drawing.Size(180, 30);
             this.TxtDNIDictaminante1.TabIndex = 188;
             // 
             // txtCodDictaminante1
             // 
             this.txtCodDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante1.Location = new System.Drawing.Point(56, 94);
-            this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDictaminante1.Location = new System.Drawing.Point(75, 116);
+            this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante1.Name = "txtCodDictaminante1";
-            this.txtCodDictaminante1.Size = new System.Drawing.Size(114, 25);
+            this.txtCodDictaminante1.Size = new System.Drawing.Size(151, 30);
             this.txtCodDictaminante1.TabIndex = 191;
             // 
             // TxtApellidosDictaminante2
             // 
             this.TxtApellidosDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(388, 122);
-            this.TxtApellidosDictaminante2.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(517, 150);
+            this.TxtApellidosDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante2.Name = "TxtApellidosDictaminante2";
-            this.TxtApellidosDictaminante2.Size = new System.Drawing.Size(264, 25);
+            this.TxtApellidosDictaminante2.Size = new System.Drawing.Size(351, 30);
             this.TxtApellidosDictaminante2.TabIndex = 192;
             // 
             // TxtNombresDictaminante2
             // 
             this.TxtNombresDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(174, 122);
-            this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(232, 150);
+            this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante2.Name = "TxtNombresDictaminante2";
-            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(210, 25);
+            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(279, 30);
             this.TxtNombresDictaminante2.TabIndex = 193;
             // 
             // TxtDNIDictaminante2
             // 
             this.TxtDNIDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNIDictaminante2.Location = new System.Drawing.Point(656, 122);
-            this.TxtDNIDictaminante2.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDNIDictaminante2.Location = new System.Drawing.Point(875, 150);
+            this.TxtDNIDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNIDictaminante2.Name = "TxtDNIDictaminante2";
-            this.TxtDNIDictaminante2.Size = new System.Drawing.Size(136, 25);
+            this.TxtDNIDictaminante2.Size = new System.Drawing.Size(180, 30);
             this.TxtDNIDictaminante2.TabIndex = 194;
             // 
             // txtCodDictaminante2
             // 
             this.txtCodDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante2.Location = new System.Drawing.Point(56, 122);
-            this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDictaminante2.Location = new System.Drawing.Point(75, 150);
+            this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante2.Name = "txtCodDictaminante2";
-            this.txtCodDictaminante2.Size = new System.Drawing.Size(114, 25);
+            this.txtCodDictaminante2.Size = new System.Drawing.Size(151, 30);
             this.txtCodDictaminante2.TabIndex = 196;
             // 
             // txtCodDictaminante3
             // 
             this.txtCodDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante3.Location = new System.Drawing.Point(56, 149);
-            this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodDictaminante3.Location = new System.Drawing.Point(75, 183);
+            this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante3.Name = "txtCodDictaminante3";
-            this.txtCodDictaminante3.Size = new System.Drawing.Size(114, 25);
+            this.txtCodDictaminante3.Size = new System.Drawing.Size(151, 30);
             this.txtCodDictaminante3.TabIndex = 201;
             // 
             // TxtApellidosDictaminante3
             // 
             this.TxtApellidosDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(388, 149);
-            this.TxtApellidosDictaminante3.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(517, 183);
+            this.TxtApellidosDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante3.Name = "TxtApellidosDictaminante3";
-            this.TxtApellidosDictaminante3.Size = new System.Drawing.Size(264, 25);
+            this.TxtApellidosDictaminante3.Size = new System.Drawing.Size(351, 30);
             this.TxtApellidosDictaminante3.TabIndex = 197;
             // 
             // TxtNombresDictaminante3
             // 
             this.TxtNombresDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(174, 149);
-            this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(232, 183);
+            this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante3.Name = "TxtNombresDictaminante3";
-            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(210, 25);
+            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(279, 30);
             this.TxtNombresDictaminante3.TabIndex = 198;
             // 
             // TxtDNIDictaminante3
             // 
             this.TxtDNIDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtDNIDictaminante3.Location = new System.Drawing.Point(656, 149);
-            this.TxtDNIDictaminante3.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDNIDictaminante3.Location = new System.Drawing.Point(875, 183);
+            this.TxtDNIDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDNIDictaminante3.Name = "TxtDNIDictaminante3";
-            this.TxtDNIDictaminante3.Size = new System.Drawing.Size(136, 25);
+            this.TxtDNIDictaminante3.Size = new System.Drawing.Size(180, 30);
             this.TxtDNIDictaminante3.TabIndex = 199;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 196);
+            this.groupBox2.Location = new System.Drawing.Point(15, 241);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(805, 145);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1073, 178);
             this.groupBox2.TabIndex = 234;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tesista(s):";
@@ -1001,25 +988,26 @@ namespace LibFormularios
             this.DgvInteresados.AllowUserToDeleteRows = false;
             this.DgvInteresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvInteresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvInteresados.Location = new System.Drawing.Point(12, 25);
-            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvInteresados.Location = new System.Drawing.Point(16, 31);
+            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvInteresados.Name = "DgvInteresados";
             this.DgvInteresados.ReadOnly = true;
             this.DgvInteresados.RowHeadersWidth = 51;
             this.DgvInteresados.RowTemplate.Height = 24;
-            this.DgvInteresados.Size = new System.Drawing.Size(788, 115);
+            this.DgvInteresados.Size = new System.Drawing.Size(1051, 142);
             this.DgvInteresados.TabIndex = 208;
             // 
             // FrmNombrarJuradoSustentacionOral
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(836, 884);
+            this.ClientSize = new System.Drawing.Size(1115, 1088);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNombrarJuradoSustentacionOral";
             this.Text = "FrmNombrarSustentacionOral";
             this.groupBox3.ResumeLayout(false);
