@@ -19,7 +19,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodEvaluacionPlanDeTesis != '' and CodSustentacionOral=''";
+            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral=''";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -76,21 +76,23 @@ namespace LibClases
             }
         }
 
-        public void UpdateExpediente(string pCodExpediente, string pCodDictamen)
+        public void UpdateExpediente(string pCodExpediente, string pCodJuradoEvaluador)
         {
             string consulta;
-            consulta = "UPDATE TExpediente set CodDictamenDeTesis='" + pCodDictamen + "' WHERE NroExpediente='" + pCodExpediente + "'";
+            consulta = "UPDATE TExpediente set CodSustentacionOral='" + pCodJuradoEvaluador + "' WHERE NroExpediente='" + pCodExpediente + "'";
             aConexion.EjecutarComando(consulta);
         }
-        public void AgregarDocentesDictaminantes(List<string> NombrarCR, string pCodEvaluacionDictamen)
+        public void UpdateFinalEstadoTesis(string pCodTesis)
         {
             string consulta;
-
-            for (int i = 0; i < NombrarCR.Count; i++)
-            {
-                consulta = " insert into TDictaminantesDeTesis values ('" + pCodEvaluacionDictamen + "','" + NombrarCR[i] + "')";
-                aConexion.EjecutarComando(consulta);
-            }
+            consulta = "UPDATE TTesis set Estado='TESIS APROBADA Y CONCLUIDA' WHERE CodTesis='" + pCodTesis + "'";
+            aConexion.EjecutarComando(consulta);
+        }
+        public void AgregarCodYJuradoEvaluador(List<string> NombrarJE)
+        {
+            string consulta;
+            consulta = " insert into TJuradoEvaluador values ('" + NombrarJE[0] + "','" + NombrarJE[1] + "','" + NombrarJE[2] + "','" + NombrarJE[3] + "','" + NombrarJE[4] + "','" + NombrarJE[5] + "','" + NombrarJE[6] + "','" + NombrarJE[7] + "','" + NombrarJE[8] + "','" + NombrarJE[9] + "','" + NombrarJE[10] + "','" + NombrarJE[11] + "')";
+            aConexion.EjecutarComando(consulta);
         }
         public DataTable ListarDatosTesis(string pCodTesis)
         {
@@ -191,6 +193,26 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
 
+        }
+        //PARTE FUNCIONAL
+        public void EmitirResolucionNombramientoJuradoEvaluador(string codigo, string codTesis)
+        {
+            string consulta = " insert into TResolucion values ('" + codigo + "','DESIGNACION DE LA FECHA, HORA Y JURADO EVALUADOR PARA SUSTENTACION ORAL',GETDATE(),'" + codTesis + "')";
+            aConexion.EjecutarComando(consulta);
+        }
+        public bool VerificarSiEmitioResolucionFHJuradoEvaluador(string codTesis)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='DESIGNACION DE LA FECHA, HORA Y JURADO EVALUADOR PARA SUSTENTACION ORAL'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
+        public bool VerificarSiEmitioResolucionSuficienciaTesis(string codTesis)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
         }
     }
 }

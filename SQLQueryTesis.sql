@@ -70,7 +70,7 @@ Observaciones varchar(100),
 foreign key (CodDocente) references TDocente
 )
 go
-
+--select * from TTesis where CodTesis='700007'
 --------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
@@ -101,11 +101,6 @@ TipoRequisito varchar(100),
 primary key (CodRequisito),
 )
 go
-select * from TExpediente
-UPDATE TExpediente set CodDictamenDeTesis='" + pCodCR + "' WHERE NroExpediente='" + pCodExpediente + "'
-insert into TDictaminantesDeTesis
-select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,b.Estado,b.Observaciones  from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis=''
---------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
 --------------------------------------------------
@@ -127,7 +122,7 @@ primary key (CodTramITTesis),
 foreign key (CodTesis) references TTesis,
 foreign key (CodTramite) references TTramite,
 )
-select * from TDocente
+--select * from TDocente
 create table TIniciarTramiteDictamen
 (
 CodTramDictamen varchar(6),--desde 800000
@@ -172,8 +167,11 @@ Observaciones=''
 
 
 select * from TIniciarTramiteInscripcionPlanDeTesis
-
+select CodTesista,Apellidos,Nombres,DNI from TTesista WHERE CodTesista IN
+(select CodTesista from TTesisXTesista)
 select * from TTesis*/
+
+--select * from TTesis where CodTesis='700012'
 create table TExpediente
 ( -- lista de atributos
 NroExpediente varchar(6),
@@ -255,16 +253,33 @@ CodDocente varchar(6),
 foreign key (CodDocente) references TDocente
 )
 go
-select * from TActaDictamenDeTesis
+--select * from TActaDictamenDeTesis
+--select * from TDictaminantesDeTesis
+--select * from 
 create table TJuradoEvaluador
 ( -- lista de atributos
-CodDictamenDeTesis varchar(6),
-CodDocente varchar(6),
+CodSustentacionOral varchar(6),      --1
+Presidente varchar(6),			    --2
+PrimerDictaminante varchar(6),	    --3
+SegundoDictaminante varchar(6),	    --4
+TercerDictaminante varchar(6),	    --5
+PrimerReplicante varchar(6),	    --6
+SegundoReplicante varchar(6),	    --7
+TercerReplicante varchar(6),	    --8
+Asesor varchar(6),				    --9
+SecretarioAcademico varchar(6),     --10
+Lugar varchar(100),				    --11
+FechaHoraSustentacion smalldatetime,--12	
 -- especificacion de claves
-primary key (CodDictamenDeTesis),
-foreign key (CodDocente) references TDocente
+primary key (CodSustentacionOral),
 )
-go
+
+--select * from TJuradoEvaluador
+
+--SELECT * FROM TExpediente
+--go
+--select * from TJuradoEvaluador
+--insert into TJuradoEvaluador values('D00001','D00001','D00001','D00001','D00001','D00001','D00001','D00001','D00001','D00001','D00001','02/22/2021 10:00:00')
 /*
 select * from TExpediente
 
@@ -329,14 +344,18 @@ create table TActaDictamenDeTesis
 CodDictamenDeTesis varchar(6),
 CodDocente varchar(6),
 --CodTesis varchar(6),
-SuficienciaJuicio bit,
+SuficienciaJuicio varchar(12),
+Observaciones varchar(100),
 -- especificacion de claves
 --primary key (CodDictamenDeTesis),
 foreign key (CodDocente) references TDocente,
 )
 go
---select * from TComisionRevisora
+--insert into TActaDictamenDeTesis values('350000','D00001','APROBADO','puede mejorar')
 
+--select * from TActaDictamenDeTesis where CodDictamenDeTesis
+--select * from TComisionRevisora
+--SELECT * FROM TActaDictamenDeTesis WHERE CodDictamenDeTesis='300001' AND CodDocente='D00001'
 create table TActaSustentacionOral
 ( -- lista de atributos
 CodSustentacionOral varchar(6),
@@ -367,6 +386,15 @@ Estado varchar(6),
 foreign key (CodDocente) references TDocente,
 )
 
+create Table TResolucion(
+id int identity(1000,1),
+Resolucion varchar(50),
+Considerando varchar(100),
+FechaEmision smalldatetime,
+CodTesis varchar(6),
+foreign key (CodTesis) references TTesis,
+)
+--ALTER TABLE TRESOLUCION ALTER COLUMN Resolucion VARCHAR (50)
 --select * from TExpediente where CodEvaluacionPlanDeTesis!=''
 
 --select * from TComisionRevisora where CodEvaluacionPlanDeTesis='300003'
@@ -447,9 +475,8 @@ select * from TTesista
 select * from TIniciarTramiteInscripcionPlanDeTesis
 
 insert into TTramite values ('TR0001','Nombramiento de Asesor e Inscripcion de Plan de Tesis')
-insert into TTramite values ('TR0002','Solicitar Nombramiento de la Comision Revisora y su posterior Revision')
-insert into TTramite values ('TR0003','Solicitar Nombramiento de dictaminadores de Tesis y su posterior Revision')
-insert into TTramite values ('TR0004','Determinacion de Fecha, Hora y Lugar para Sustentacion de Tesis')
+insert into TTramite values ('TR0002','Solicitar Nombramiento de dictaminadores de Tesis y su posterior Revision')
+insert into TTramite values ('TR0003','Determinacion de Fecha, Hora y Lugar para Sustentacion de Tesis')
 
 
 
@@ -470,26 +497,20 @@ insert into TRequisitoXTramite values('TR0001' ,'REQ002')
 insert into TRequisitoXTramite values('TR0001' ,'REQ003')
 insert into TRequisitoXTramite values('TR0001' ,'REQ004')
 
+
+
 insert into TRequisitoXTramite values('TR0002' ,'REQ001')
-insert into TRequisitoXTramite values('TR0002' ,'REQ002')
-insert into TRequisitoXTramite values('TR0002' ,'REQ003')
+insert into TRequisitoXTramite values('TR0002' ,'REQ005')
+insert into TRequisitoXTramite values('TR0002' ,'REQ006')
+insert into TRequisitoXTramite values('TR0002' ,'REQ007')
+insert into TRequisitoXTramite values('TR0002' ,'REQ008')
+insert into TRequisitoXTramite values('TR0002' ,'REQ009')
 
-select * from TTramite where CodTramite='TR0002'
-
-
-delete from TTramite where CodTramite='TR0005'
 insert into TRequisitoXTramite values('TR0003' ,'REQ001')
-insert into TRequisitoXTramite values('TR0003' ,'REQ005')
-insert into TRequisitoXTramite values('TR0003' ,'REQ006')
-insert into TRequisitoXTramite values('TR0003' ,'REQ007')
-insert into TRequisitoXTramite values('TR0003' ,'REQ008')
+insert into TRequisitoXTramite values('TR0003' ,'REQ010')
+insert into TRequisitoXTramite values('TR0003' ,'REQ011')
 insert into TRequisitoXTramite values('TR0003' ,'REQ009')
-
-insert into TRequisitoXTramite values('TR0004' ,'REQ001')
-insert into TRequisitoXTramite values('TR0004' ,'REQ010')
-insert into TRequisitoXTramite values('TR0004' ,'REQ011')
-insert into TRequisitoXTramite values('TR0004' ,'REQ009')
-
+select * from TExpediente
 select * from TExpediente
 SELECT * FROM TTesis
 DELETE FROM TTesis
@@ -554,13 +575,10 @@ and b.CodEvaluacionPlanDeTesis='300004'
 
 select * from TTesis where CodTesis='700002'
 
-create Table Resolucion(
-	
 
-)
 
 	
-CREATE PROCEDURE ObtenerCodigoMayorExpediente 
+CREATE OR ALTER PROCEDURE ObtenerCodigoMayorExpediente 
  
 AS
 select top 1 NroExpediente from TExpediente ORDER BY NroExpediente DESC
@@ -569,8 +587,25 @@ GO
 
 exec ObtenerCodigoMayorExpediente
 
+select * from TExpediente where NroExpediente=400000
 
 
+CREATE OR ALTER PROCEDURE GenerarExpediente 
+	@NroExpediente varchar(6),   
+    @CodTesis nvarchar(6)  
+AS
+insert into TExpediente values(@NroExpediente,@CodTesis,'','','')
+GO 
+
+
+select * from tdocente where coddocente in(select CodDocente from TExpediente a,TComisionRevisora b where a.CodEvaluacionPlanDeTesis=b.CodEvaluacionPlanDeTesis and a.NroExpediente='')
+
+
+select * from TExpediente
+select  * from TExpediente a , TDictaminantesDeTesis b where a.CodDictamenDeTesis = b.CodDictamenDeTesis and b.CodDictamenDeTesis = '" + pCodDictamen + "'";
+select * from TDictaminantesDeTesis
+select CodDictamenDeTesis from TDictaminantesDeTesis where CodDictamenDeTesis='" + pCodComisionRevisora +,
+SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL'
 
 CREATE PROCEDURE GenerarExpediente 
 	@NroExpediente varchar(6),   
@@ -580,8 +615,3 @@ insert into TExpediente values(@NroExpediente,@CodTesis,'','','')
 GO 
 
 exec GenerarExpediente
-
-select * from TExpediente
-select  * from TExpediente a , TDictaminantesDeTesis b where a.CodDictamenDeTesis = b.CodDictamenDeTesis and b.CodDictamenDeTesis = '" + pCodDictamen + "'";
-select * from TDictaminantesDeTesis
-select CodDictamenDeTesis from TDictaminantesDeTesis where CodDictamenDeTesis='" + pCodComisionRevisora + "'
