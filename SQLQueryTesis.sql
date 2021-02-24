@@ -356,7 +356,9 @@ go
 --select * from TActaDictamenDeTesis where CodDictamenDeTesis
 --select * from TComisionRevisora
 --SELECT * FROM TActaDictamenDeTesis WHERE CodDictamenDeTesis='300001' AND CodDocente='D00001'
+select * from TResolucion
 
+select * from TJuradoEvaluador where CodSustentacionOral
 create table TActaSustentacionOral
 ( -- lista de atributos
 CodSustentacionOral varchar(6),
@@ -379,6 +381,8 @@ EstadoVotacion varchar(40),
 --foreign key (CodTesista) references TTesista,
 )
 go
+
+select * from TActaSustentacionOral where CodSustentacionOral='300000'
 
 
 insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')

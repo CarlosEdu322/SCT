@@ -19,6 +19,8 @@ namespace LibFormularios
             InitializeComponent();
             oEvaluacionTesis = new CEvaluacionTesis();
             LlenarDatosCboCodDictamen();
+
+            //Evaluar();
         }
 
 
@@ -60,7 +62,9 @@ namespace LibFormularios
 
                 if (oEvaluacionTesis.VerificarSiEmitioEvaluoJuradoEvaluador(CboCodJuradoEvaluador.Text))
                 {
+                    LblNotificacion.Visible = true;
                     LblNotificacion.Text = "Ya se ha emitido votacion secreta";
+                    BtnGuardar.Enabled = false;
                 }
                 else
                 {
@@ -79,6 +83,12 @@ namespace LibFormularios
         {
             DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
             DgvTesis.DataSource = oEvaluacionTesis.ListarDatosTesis(TxtCodTesis.Text);
+            DgvTesis.Columns["Estado"].Visible = false;
+            List<string>p1= oEvaluacionTesis.ListarDocentesJuradoEvaluador(CboCodJuradoEvaluador.Text);
+            txtCodDictaminante1.Text = p1[0];
+
+            txtCodDictaminante2.Text = p1[1];
+            txtCodDictaminante3.Text = p1[2];
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -160,6 +170,37 @@ namespace LibFormularios
         {
 
             Evaluar();
+        }
+        public void ConsultarDocente(TextBox tbox1, TextBox tbox2, string codigotesista)
+        {
+            CDocente docente = new CDocente();
+            if (codigotesista != "")
+            {
+                if (docente.ExisteClavePrimaria(codigotesista))
+                {
+                    //-- Recuperar atributos, el primer atributo es la clave 
+                    tbox1.Text = docente.ValorAtributo("Nombres");
+                    tbox2.Text = docente.ValorAtributo("Apellidos");
+                }
+                else
+                {
+                    tbox1.Clear(); tbox2.Clear();
+                }
+            }
+        }
+        private void txtCodDictaminante1_TextChanged(object sender, EventArgs e)
+        {
+            ConsultarDocente(TxtNombresDictaminante1, TxtApellidosDictaminante1, txtCodDictaminante1.Text);
+        }
+
+        private void txtCodDictaminante2_TextChanged(object sender, EventArgs e)
+        {
+            ConsultarDocente(TxtNombresDictaminante2, TxtApellidosDictaminante2, txtCodDictaminante2.Text);
+        }
+
+        private void txtCodDictaminante3_TextChanged(object sender, EventArgs e)
+        {
+            ConsultarDocente(TxtNombresDictaminante3, TxtApellidosDictaminante3, txtCodDictaminante3.Text);
         }
     }
 }

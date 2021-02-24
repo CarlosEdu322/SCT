@@ -293,5 +293,10 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmInformeJuradoEvaluador());
         }
+
+        private void BtnResoluciones_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmMostrarResolucion());
+        }
     }
 }

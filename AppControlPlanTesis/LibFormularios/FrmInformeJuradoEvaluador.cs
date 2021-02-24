@@ -52,9 +52,70 @@ namespace LibFormularios
 
         private void TxtCodTesis_TextChanged(object sender, EventArgs e)
         {
-            DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
-            DgvTesis.DataSource = oEvaluacionTesis.ListarDatosTesis(TxtCodTesis.Text);
+            try
+            {
+                DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
+                DgvTesis.DataSource = oEvaluacionTesis.ListarDatosTesis(TxtCodTesis.Text);
+
+
+                List<string> atributos = oEvaluacionTesis.LlenarCamposSustentacionOral(CboCodJuradoEvaluador.Text);
+                TxtResultado.Text = atributos[0];
+                TxtJuicio.Text = atributos[1];
+                TxtConsenso.Text = atributos[2];
+
+            }
+            catch
+            {
+
+            }
         }
-    
+
+
+        private void btnEResolucionDeLosDictaminantes_Click(object sender, EventArgs e)
+        {
+            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+            try
+            {
+                if (Double.Parse(TxtJuicio.Text) >= 14)
+                {
+                    if ((TxtCodTesis.Text != "") || (TxtResolucion.Text != ""))
+                    {
+                        if (oPlanDeTesis.VerificarSiEmitioResolucionAprobacionFinalTesis(TxtCodTesis.Text) == false)
+                        {
+
+
+                            oPlanDeTesis.EmitirResolucionAprobacion(TxtResolucion.Text, TxtCodTesis.Text);
+                            //actualizar el estado del tramite a atendido
+                            //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
+                            MessageBox.Show("Resolucion: " + TxtResolucion.Text + " EMITIDA EXITOSAMENTE", "CONFIRMACION");
+                            //RellenarTablaTramites();
+                        }
+                        else
+                        {
+                            MessageBox.Show("YA SE EMITIO UNA RESOLUCION PARA ESTE DICTAMEN", "ERROR");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("EXISTEN CAMPOS VACIOS, CARGUE LOS DATOS", "ERROR AL REALIZAR LA OPERACION");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SU TESIS NO ESTA APROBADA");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("EXISTEN CAMPOS VACIOS, CARGUE LOS DATOS", "ERROR AL REALIZAR LA OPERACION");
+            }
+        }
+
+        private void BtnGenerar_Click(object sender, EventArgs e)
+        {
+            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+            String NResolucion = "R-006-N°" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-UNSAAC";
+            TxtResolucion.Text = NResolucion;
+        }
     }
 }

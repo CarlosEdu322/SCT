@@ -27,6 +27,7 @@ namespace LibFormularios
             DgvTesisPendientesDeSustentacion.Columns["CodTesis"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["Tema"].Visible = false;
+            DgvTesisPendientesDeSustentacion.Columns["Estado"].Visible = false;
             //checks
             //DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
             //CBColumn.HeaderText = "";

@@ -34,7 +34,7 @@
             this.panelSubMenuReportes = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnResoluciones = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelSubMenuSustentacionOral = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -133,10 +133,10 @@
             this.panelSubMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelSubMenuReportes.Controls.Add(this.button3);
             this.panelSubMenuReportes.Controls.Add(this.button4);
-            this.panelSubMenuReportes.Controls.Add(this.button5);
+            this.panelSubMenuReportes.Controls.Add(this.BtnResoluciones);
             this.panelSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuReportes.Location = new System.Drawing.Point(0, 1493);
-            this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuReportes.Name = "panelSubMenuReportes";
             this.panelSubMenuReportes.Size = new System.Drawing.Size(312, 165);
             this.panelSubMenuReportes.TabIndex = 16;
@@ -152,7 +152,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 98);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(312, 49);
@@ -171,7 +171,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.button4.Location = new System.Drawing.Point(0, 49);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(312, 49);
@@ -180,23 +180,24 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // BtnResoluciones
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(312, 49);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Iniciar Tramite";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnResoluciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnResoluciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnResoluciones.FlatAppearance.BorderSize = 0;
+            this.BtnResoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnResoluciones.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnResoluciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnResoluciones.Location = new System.Drawing.Point(0, 0);
+            this.BtnResoluciones.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnResoluciones.Name = "BtnResoluciones";
+            this.BtnResoluciones.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.BtnResoluciones.Size = new System.Drawing.Size(312, 49);
+            this.BtnResoluciones.TabIndex = 2;
+            this.BtnResoluciones.Text = "Resoluciones";
+            this.BtnResoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnResoluciones.UseVisualStyleBackColor = false;
+            this.BtnResoluciones.Click += new System.EventHandler(this.BtnResoluciones_Click);
             // 
             // btnReportes
             // 
@@ -209,7 +210,7 @@
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.Location = new System.Drawing.Point(0, 1438);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(312, 55);
@@ -229,7 +230,7 @@
             this.panelSubMenuSustentacionOral.Controls.Add(this.btnNombrarJuradoSustentacionOral);
             this.panelSubMenuSustentacionOral.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuSustentacionOral.Location = new System.Drawing.Point(0, 1231);
-            this.panelSubMenuSustentacionOral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuSustentacionOral.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuSustentacionOral.Name = "panelSubMenuSustentacionOral";
             this.panelSubMenuSustentacionOral.Size = new System.Drawing.Size(312, 207);
             this.panelSubMenuSustentacionOral.TabIndex = 14;
@@ -245,7 +246,7 @@
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(0, 147);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(312, 49);
@@ -267,7 +268,7 @@
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(0, 98);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(312, 49);
@@ -288,7 +289,7 @@
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(0, 49);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(312, 49);
@@ -310,7 +311,7 @@
             this.btnNombrarJuradoSustentacionOral.Image = ((System.Drawing.Image)(resources.GetObject("btnNombrarJuradoSustentacionOral.Image")));
             this.btnNombrarJuradoSustentacionOral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNombrarJuradoSustentacionOral.Location = new System.Drawing.Point(0, 0);
-            this.btnNombrarJuradoSustentacionOral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNombrarJuradoSustentacionOral.Margin = new System.Windows.Forms.Padding(4);
             this.btnNombrarJuradoSustentacionOral.Name = "btnNombrarJuradoSustentacionOral";
             this.btnNombrarJuradoSustentacionOral.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnNombrarJuradoSustentacionOral.Size = new System.Drawing.Size(312, 49);
@@ -332,7 +333,7 @@
             this.btnSustentacionOral.Image = ((System.Drawing.Image)(resources.GetObject("btnSustentacionOral.Image")));
             this.btnSustentacionOral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSustentacionOral.Location = new System.Drawing.Point(0, 1176);
-            this.btnSustentacionOral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSustentacionOral.Margin = new System.Windows.Forms.Padding(4);
             this.btnSustentacionOral.Name = "btnSustentacionOral";
             this.btnSustentacionOral.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnSustentacionOral.Size = new System.Drawing.Size(312, 55);
@@ -352,7 +353,7 @@
             this.panelSubMenuConsultas.Controls.Add(this.BtnNombrarDictaminantes);
             this.panelSubMenuConsultas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuConsultas.Location = new System.Drawing.Point(0, 959);
-            this.panelSubMenuConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuConsultas.Name = "panelSubMenuConsultas";
             this.panelSubMenuConsultas.Size = new System.Drawing.Size(312, 217);
             this.panelSubMenuConsultas.TabIndex = 12;
@@ -368,7 +369,7 @@
             this.BtnActaDictamen.Image = ((System.Drawing.Image)(resources.GetObject("BtnActaDictamen.Image")));
             this.BtnActaDictamen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnActaDictamen.Location = new System.Drawing.Point(0, 150);
-            this.BtnActaDictamen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnActaDictamen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnActaDictamen.Name = "BtnActaDictamen";
             this.BtnActaDictamen.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnActaDictamen.Size = new System.Drawing.Size(312, 52);
@@ -390,7 +391,7 @@
             this.BtnEvaluacionDictaminantes.Image = ((System.Drawing.Image)(resources.GetObject("BtnEvaluacionDictaminantes.Image")));
             this.BtnEvaluacionDictaminantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEvaluacionDictaminantes.Location = new System.Drawing.Point(0, 98);
-            this.BtnEvaluacionDictaminantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEvaluacionDictaminantes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEvaluacionDictaminantes.Name = "BtnEvaluacionDictaminantes";
             this.BtnEvaluacionDictaminantes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnEvaluacionDictaminantes.Size = new System.Drawing.Size(312, 52);
@@ -412,7 +413,7 @@
             this.BtnAceptarCargoDictaminantes.Image = ((System.Drawing.Image)(resources.GetObject("BtnAceptarCargoDictaminantes.Image")));
             this.BtnAceptarCargoDictaminantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAceptarCargoDictaminantes.Location = new System.Drawing.Point(0, 49);
-            this.BtnAceptarCargoDictaminantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAceptarCargoDictaminantes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAceptarCargoDictaminantes.Name = "BtnAceptarCargoDictaminantes";
             this.BtnAceptarCargoDictaminantes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnAceptarCargoDictaminantes.Size = new System.Drawing.Size(312, 49);
@@ -435,7 +436,7 @@
             this.BtnNombrarDictaminantes.Image = ((System.Drawing.Image)(resources.GetObject("BtnNombrarDictaminantes.Image")));
             this.BtnNombrarDictaminantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNombrarDictaminantes.Location = new System.Drawing.Point(0, 0);
-            this.BtnNombrarDictaminantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnNombrarDictaminantes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNombrarDictaminantes.Name = "BtnNombrarDictaminantes";
             this.BtnNombrarDictaminantes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnNombrarDictaminantes.Size = new System.Drawing.Size(312, 49);
@@ -457,7 +458,7 @@
             this.BtnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("BtnConsultas.Image")));
             this.BtnConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConsultas.Location = new System.Drawing.Point(0, 904);
-            this.BtnConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.BtnConsultas.Name = "BtnConsultas";
             this.BtnConsultas.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.BtnConsultas.Size = new System.Drawing.Size(312, 55);
@@ -477,7 +478,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnSalir.Location = new System.Drawing.Point(0, 1658);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(312, 55);
@@ -497,7 +498,7 @@
             this.panelSubMenuOperaciones.Controls.Add(this.BtnIniciarTramite);
             this.panelSubMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuOperaciones.Location = new System.Drawing.Point(0, 632);
-            this.panelSubMenuOperaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuOperaciones.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuOperaciones.Name = "panelSubMenuOperaciones";
             this.panelSubMenuOperaciones.Size = new System.Drawing.Size(312, 272);
             this.panelSubMenuOperaciones.TabIndex = 9;
@@ -513,7 +514,7 @@
             this.BtnResultadoComisionRevisora.Image = ((System.Drawing.Image)(resources.GetObject("BtnResultadoComisionRevisora.Image")));
             this.BtnResultadoComisionRevisora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnResultadoComisionRevisora.Location = new System.Drawing.Point(0, 210);
-            this.BtnResultadoComisionRevisora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnResultadoComisionRevisora.Margin = new System.Windows.Forms.Padding(4);
             this.BtnResultadoComisionRevisora.Name = "BtnResultadoComisionRevisora";
             this.BtnResultadoComisionRevisora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnResultadoComisionRevisora.Size = new System.Drawing.Size(312, 59);
@@ -535,7 +536,7 @@
             this.btnActaComisionRevisora.Image = ((System.Drawing.Image)(resources.GetObject("btnActaComisionRevisora.Image")));
             this.btnActaComisionRevisora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActaComisionRevisora.Location = new System.Drawing.Point(0, 147);
-            this.btnActaComisionRevisora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActaComisionRevisora.Margin = new System.Windows.Forms.Padding(4);
             this.btnActaComisionRevisora.Name = "btnActaComisionRevisora";
             this.btnActaComisionRevisora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnActaComisionRevisora.Size = new System.Drawing.Size(312, 63);
@@ -557,7 +558,7 @@
             this.btnNombrarCRevisora.Image = ((System.Drawing.Image)(resources.GetObject("btnNombrarCRevisora.Image")));
             this.btnNombrarCRevisora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNombrarCRevisora.Location = new System.Drawing.Point(0, 98);
-            this.btnNombrarCRevisora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNombrarCRevisora.Margin = new System.Windows.Forms.Padding(4);
             this.btnNombrarCRevisora.Name = "btnNombrarCRevisora";
             this.btnNombrarCRevisora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnNombrarCRevisora.Size = new System.Drawing.Size(312, 49);
@@ -579,7 +580,7 @@
             this.BtnGenerarExpediente.Image = ((System.Drawing.Image)(resources.GetObject("BtnGenerarExpediente.Image")));
             this.BtnGenerarExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGenerarExpediente.Location = new System.Drawing.Point(0, 49);
-            this.BtnGenerarExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGenerarExpediente.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGenerarExpediente.Name = "BtnGenerarExpediente";
             this.BtnGenerarExpediente.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnGenerarExpediente.Size = new System.Drawing.Size(312, 49);
@@ -601,7 +602,7 @@
             this.BtnIniciarTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnIniciarTramite.Image")));
             this.BtnIniciarTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnIniciarTramite.Location = new System.Drawing.Point(0, 0);
-            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnIniciarTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIniciarTramite.Name = "BtnIniciarTramite";
             this.BtnIniciarTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnIniciarTramite.Size = new System.Drawing.Size(312, 49);
@@ -623,7 +624,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 577);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(312, 55);
@@ -647,7 +648,7 @@
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesista);
             this.panelSubMenuMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuMantenimiento.Location = new System.Drawing.Point(0, 178);
-            this.panelSubMenuMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSubMenuMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuMantenimiento.Name = "panelSubMenuMantenimiento";
             this.panelSubMenuMantenimiento.Size = new System.Drawing.Size(312, 399);
             this.panelSubMenuMantenimiento.TabIndex = 7;
@@ -663,7 +664,7 @@
             this.BtnManTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnManTramite.Image")));
             this.BtnManTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManTramite.Location = new System.Drawing.Point(0, 339);
-            this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManTramite.Name = "BtnManTramite";
             this.BtnManTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnManTramite.Size = new System.Drawing.Size(312, 49);
@@ -685,7 +686,7 @@
             this.BtnTesisXTesista.Image = ((System.Drawing.Image)(resources.GetObject("BtnTesisXTesista.Image")));
             this.BtnTesisXTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnTesisXTesista.Location = new System.Drawing.Point(0, 290);
-            this.BtnTesisXTesista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnTesisXTesista.Margin = new System.Windows.Forms.Padding(4);
             this.BtnTesisXTesista.Name = "BtnTesisXTesista";
             this.BtnTesisXTesista.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnTesisXTesista.Size = new System.Drawing.Size(312, 49);
@@ -707,7 +708,7 @@
             this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEditar.Location = new System.Drawing.Point(0, 246);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnEditar.Size = new System.Drawing.Size(312, 44);
@@ -730,7 +731,7 @@
             this.BtnManRequisitosXTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnManRequisitosXTramite.Image")));
             this.BtnManRequisitosXTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManRequisitosXTramite.Location = new System.Drawing.Point(0, 196);
-            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManRequisitosXTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManRequisitosXTramite.Name = "BtnManRequisitosXTramite";
             this.BtnManRequisitosXTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnManRequisitosXTramite.Size = new System.Drawing.Size(312, 50);
@@ -752,7 +753,7 @@
             this.BtnManRequisitos.Image = ((System.Drawing.Image)(resources.GetObject("BtnManRequisitos.Image")));
             this.BtnManRequisitos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnManRequisitos.Location = new System.Drawing.Point(0, 147);
-            this.BtnManRequisitos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnManRequisitos.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManRequisitos.Name = "BtnManRequisitos";
             this.BtnManRequisitos.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.BtnManRequisitos.Size = new System.Drawing.Size(312, 49);
@@ -774,7 +775,7 @@
             this.btnManTesis.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesis.Image")));
             this.btnManTesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManTesis.Location = new System.Drawing.Point(0, 98);
-            this.btnManTesis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManTesis.Margin = new System.Windows.Forms.Padding(4);
             this.btnManTesis.Name = "btnManTesis";
             this.btnManTesis.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManTesis.Size = new System.Drawing.Size(312, 49);
@@ -796,7 +797,7 @@
             this.btnManDocente.Image = ((System.Drawing.Image)(resources.GetObject("btnManDocente.Image")));
             this.btnManDocente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManDocente.Location = new System.Drawing.Point(0, 49);
-            this.btnManDocente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManDocente.Margin = new System.Windows.Forms.Padding(4);
             this.btnManDocente.Name = "btnManDocente";
             this.btnManDocente.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManDocente.Size = new System.Drawing.Size(312, 49);
@@ -818,7 +819,7 @@
             this.btnManTesista.Image = ((System.Drawing.Image)(resources.GetObject("btnManTesista.Image")));
             this.btnManTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManTesista.Location = new System.Drawing.Point(0, 0);
-            this.btnManTesista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManTesista.Margin = new System.Windows.Forms.Padding(4);
             this.btnManTesista.Name = "btnManTesista";
             this.btnManTesista.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnManTesista.Size = new System.Drawing.Size(312, 49);
@@ -840,7 +841,7 @@
             this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimiento.Location = new System.Drawing.Point(0, 123);
-            this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnMantenimiento.Size = new System.Drawing.Size(312, 55);
@@ -858,7 +859,7 @@
             this.panelLogos.Controls.Add(this.pictureBox2);
             this.panelLogos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogos.Location = new System.Drawing.Point(0, 0);
-            this.panelLogos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogos.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogos.Name = "panelLogos";
             this.panelLogos.Size = new System.Drawing.Size(312, 123);
             this.panelLogos.TabIndex = 4;
@@ -920,7 +921,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(7, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 31);
             this.pictureBox4.TabIndex = 3;
@@ -951,7 +952,7 @@
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
             this.btnMinimizar.Location = new System.Drawing.Point(947, 4);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(57, 28);
             this.btnMinimizar.TabIndex = 5;
@@ -972,7 +973,7 @@
             this.btnMaximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
             this.btnMaximize.Location = new System.Drawing.Point(1004, 4);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(57, 28);
             this.btnMaximize.TabIndex = 4;
@@ -993,7 +994,7 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrar.ForeColor = System.Drawing.Color.White;
             this.BtnCerrar.Location = new System.Drawing.Point(1061, 4);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(57, 28);
             this.BtnCerrar.TabIndex = 3;
@@ -1093,7 +1094,7 @@
         private System.Windows.Forms.Panel panelSubMenuReportes;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnResoluciones;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button button6;
     }

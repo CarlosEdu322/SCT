@@ -58,7 +58,7 @@ namespace LibClases
                 return "250000";
             }
         }
-        
+
 
 
 
@@ -134,6 +134,20 @@ namespace LibClases
 
             return aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
         }
+
+        public List<string> ListarDocentesJuradoEvaluador(string pJuradoEvaluador)
+        {
+            string consulta = "select * from TJuradoEvaluador where CodSustentacionOral = '" + pJuradoEvaluador + "'";
+            aConexion.EjecutarSelect(consulta);
+            List<string> ListaCodigosDocentes = new List<string>();
+            ListaCodigosDocentes.Add(aConexion.Datos.Tables[0].Rows[0]["PrimerDictaminante"].ToString());
+            ListaCodigosDocentes.Add(aConexion.Datos.Tables[0].Rows[0]["SegundoDictaminante"].ToString());
+            ListaCodigosDocentes.Add(aConexion.Datos.Tables[0].Rows[0]["TercerDictaminante"].ToString());
+
+            return ListaCodigosDocentes;
+        }
+
+
         public DataTable ListarDocentesDictaminantes(string pCodComisionRevisora)
         {
             string consulta = "select * from TDictaminantesDeTesis where CodDictamenDeTesis = '" + pCodComisionRevisora + "'";
@@ -241,7 +255,24 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0].Rows.Count > 0;
         }
+        public List<string> LlenarCamposSustentacionOral(string pCodJurado)
+        {
 
+            string Consulta = "select * from TActaSustentacionOral where CodSustentacionOral='" + pCodJurado + "'";
+            aConexion.EjecutarSelect(Consulta);
+            DataTable tablaresultado = aConexion.Datos.Tables[0];
+            List<string> Resultados = new List<string>();
+            string Atributo;
+            
+            DataRow drv = tablaresultado.Rows[0];
+            Resultados.Add(drv["Resultado"].ToString());
+            Resultados.Add(drv["Nota"].ToString());
+            Resultados.Add(drv["EstadoVotacion"].ToString());
+
+            return Resultados;
+
+
+        }
         public bool VerificarSiEmitioResolucionSuficienciaTesis(string codTesis)
         {
             //bool encontrado = false;

@@ -125,7 +125,7 @@ namespace LibFormularios
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1009, 390);
+            this.groupBox3.Size = new System.Drawing.Size(988, 390);
             this.groupBox3.TabIndex = 236;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tesis Pendientes de Sustentacion Oral";
@@ -225,7 +225,7 @@ namespace LibFormularios
             this.BtnCargar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCargar.Location = new System.Drawing.Point(847, 30);
+            this.BtnCargar.Location = new System.Drawing.Point(826, 30);
             this.BtnCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCargar.Name = "BtnCargar";
             this.BtnCargar.Size = new System.Drawing.Size(151, 59);
@@ -238,7 +238,7 @@ namespace LibFormularios
             // 
             this.TxtCodTesis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCodTesis.Enabled = false;
-            this.TxtCodTesis.Location = new System.Drawing.Point(847, 178);
+            this.TxtCodTesis.Location = new System.Drawing.Point(826, 178);
             this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesis.Name = "TxtCodTesis";
             this.TxtCodTesis.Size = new System.Drawing.Size(149, 32);
@@ -248,7 +248,7 @@ namespace LibFormularios
             // 
             this.TxtExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtExpediente.Enabled = false;
-            this.TxtExpediente.Location = new System.Drawing.Point(847, 117);
+            this.TxtExpediente.Location = new System.Drawing.Point(826, 117);
             this.TxtExpediente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtExpediente.Name = "TxtExpediente";
             this.TxtExpediente.Size = new System.Drawing.Size(149, 32);
@@ -259,7 +259,7 @@ namespace LibFormularios
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(845, 91);
+            this.label3.Location = new System.Drawing.Point(824, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 21);
             this.label3.TabIndex = 212;
@@ -270,7 +270,7 @@ namespace LibFormularios
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(843, 153);
+            this.label4.Location = new System.Drawing.Point(822, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 21);
             this.label4.TabIndex = 213;
@@ -289,7 +289,7 @@ namespace LibFormularios
             this.DgvTesisPendientesDeSustentacion.Name = "DgvTesisPendientesDeSustentacion";
             this.DgvTesisPendientesDeSustentacion.RowHeadersWidth = 51;
             this.DgvTesisPendientesDeSustentacion.RowTemplate.Height = 24;
-            this.DgvTesisPendientesDeSustentacion.Size = new System.Drawing.Size(819, 185);
+            this.DgvTesisPendientesDeSustentacion.Size = new System.Drawing.Size(798, 185);
             this.DgvTesisPendientesDeSustentacion.TabIndex = 202;
             // 
             // groupBox1
@@ -352,7 +352,7 @@ namespace LibFormularios
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1009, 608);
+            this.groupBox1.Size = new System.Drawing.Size(988, 608);
             this.groupBox1.TabIndex = 235;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nombrar Jurado ";
@@ -363,7 +363,7 @@ namespace LibFormularios
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(120, 260);
+            this.label11.Location = new System.Drawing.Point(110, 260);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 22);
             this.label11.TabIndex = 291;
@@ -375,7 +375,7 @@ namespace LibFormularios
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(112, 226);
+            this.label8.Location = new System.Drawing.Point(102, 226);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(155, 22);
             this.label8.TabIndex = 290;
@@ -387,7 +387,7 @@ namespace LibFormularios
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label17.Location = new System.Drawing.Point(72, 457);
+            this.label17.Location = new System.Drawing.Point(62, 457);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(205, 22);
             this.label17.TabIndex = 289;
@@ -402,7 +402,7 @@ namespace LibFormularios
             this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(294, 450);
+            this.dateTimePicker3.Location = new System.Drawing.Point(284, 450);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(372, 30);
@@ -418,7 +418,7 @@ namespace LibFormularios
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(542, 519);
+            this.BtnCerrar.Location = new System.Drawing.Point(521, 519);
             this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
@@ -437,7 +437,7 @@ namespace LibFormularios
             this.BtnGenerarNroResolucion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnGenerarNroResolucion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGenerarNroResolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenerarNroResolucion.Location = new System.Drawing.Point(370, 514);
+            this.BtnGenerarNroResolucion.Location = new System.Drawing.Point(360, 514);
             this.BtnGenerarNroResolucion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGenerarNroResolucion.Name = "BtnGenerarNroResolucion";
             this.BtnGenerarNroResolucion.Size = new System.Drawing.Size(147, 30);
@@ -456,7 +456,7 @@ namespace LibFormularios
             this.BtnNombrarJE.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNombrarJE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnNombrarJE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNombrarJE.Location = new System.Drawing.Point(766, 519);
+            this.BtnNombrarJE.Location = new System.Drawing.Point(745, 519);
             this.BtnNombrarJE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnNombrarJE.Name = "BtnNombrarJE";
             this.BtnNombrarJE.Size = new System.Drawing.Size(219, 59);
@@ -470,7 +470,7 @@ namespace LibFormularios
             this.TxtCodJuradoEvaluador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtCodJuradoEvaluador.Enabled = false;
             this.TxtCodJuradoEvaluador.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtCodJuradoEvaluador.Location = new System.Drawing.Point(294, 414);
+            this.TxtCodJuradoEvaluador.Location = new System.Drawing.Point(284, 414);
             this.TxtCodJuradoEvaluador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodJuradoEvaluador.Name = "TxtCodJuradoEvaluador";
             this.TxtCodJuradoEvaluador.Size = new System.Drawing.Size(224, 30);
@@ -480,7 +480,7 @@ namespace LibFormularios
             // 
             this.TxtResolucion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtResolucion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtResolucion.Location = new System.Drawing.Point(76, 512);
+            this.TxtResolucion.Location = new System.Drawing.Point(66, 512);
             this.TxtResolucion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtResolucion.Name = "TxtResolucion";
             this.TxtResolucion.Size = new System.Drawing.Size(287, 30);
@@ -491,7 +491,7 @@ namespace LibFormularios
             this.LblCodEvaluacionPlanDeTesis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblCodEvaluacionPlanDeTesis.AutoSize = true;
             this.LblCodEvaluacionPlanDeTesis.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCodEvaluacionPlanDeTesis.Location = new System.Drawing.Point(70, 417);
+            this.LblCodEvaluacionPlanDeTesis.Location = new System.Drawing.Point(60, 417);
             this.LblCodEvaluacionPlanDeTesis.Name = "LblCodEvaluacionPlanDeTesis";
             this.LblCodEvaluacionPlanDeTesis.Size = new System.Drawing.Size(207, 22);
             this.LblCodEvaluacionPlanDeTesis.TabIndex = 220;
@@ -503,7 +503,7 @@ namespace LibFormularios
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label16.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label16.Location = new System.Drawing.Point(70, 485);
+            this.label16.Location = new System.Drawing.Point(60, 485);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(425, 22);
             this.label16.TabIndex = 235;
@@ -516,7 +516,7 @@ namespace LibFormularios
             this.dateTimePicker2.CustomFormat = "hh:mm tt";
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(762, 369);
+            this.dateTimePicker2.Location = new System.Drawing.Point(752, 369);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.ShowUpDown = true;
@@ -530,7 +530,7 @@ namespace LibFormularios
             this.dateTimePicker1.CustomFormat = "dddd, dd/mm/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(498, 369);
+            this.dateTimePicker1.Location = new System.Drawing.Point(488, 369);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(255, 30);
@@ -542,7 +542,7 @@ namespace LibFormularios
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(90, 375);
+            this.label1.Location = new System.Drawing.Point(80, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(380, 22);
             this.label1.TabIndex = 227;
@@ -558,7 +558,7 @@ namespace LibFormularios
             this.BtnBuscarDictaminante3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarDictaminante3.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarDictaminante3.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante3.Image")));
-            this.BtnBuscarDictaminante3.Location = new System.Drawing.Point(400, 154);
+            this.BtnBuscarDictaminante3.Location = new System.Drawing.Point(390, 154);
             this.BtnBuscarDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarDictaminante3.Name = "BtnBuscarDictaminante3";
             this.BtnBuscarDictaminante3.Size = new System.Drawing.Size(44, 30);
@@ -576,7 +576,7 @@ namespace LibFormularios
             this.BtnBuscarDictaminante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarDictaminante2.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarDictaminante2.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante2.Image")));
-            this.BtnBuscarDictaminante2.Location = new System.Drawing.Point(400, 119);
+            this.BtnBuscarDictaminante2.Location = new System.Drawing.Point(390, 119);
             this.BtnBuscarDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarDictaminante2.Name = "BtnBuscarDictaminante2";
             this.BtnBuscarDictaminante2.Size = new System.Drawing.Size(44, 30);
@@ -594,7 +594,7 @@ namespace LibFormularios
             this.BtnBuscarDictaminante1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarDictaminante1.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarDictaminante1.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarDictaminante1.Image")));
-            this.BtnBuscarDictaminante1.Location = new System.Drawing.Point(400, 85);
+            this.BtnBuscarDictaminante1.Location = new System.Drawing.Point(390, 85);
             this.BtnBuscarDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarDictaminante1.Name = "BtnBuscarDictaminante1";
             this.BtnBuscarDictaminante1.Size = new System.Drawing.Size(44, 30);
@@ -608,7 +608,7 @@ namespace LibFormularios
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(195, 300);
+            this.label14.Location = new System.Drawing.Point(185, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 22);
             this.label14.TabIndex = 282;
@@ -617,7 +617,7 @@ namespace LibFormularios
             // txtLugarSustentacion
             // 
             this.txtLugarSustentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtLugarSustentacion.Location = new System.Drawing.Point(291, 294);
+            this.txtLugarSustentacion.Location = new System.Drawing.Point(281, 294);
             this.txtLugarSustentacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtLugarSustentacion.Multiline = true;
             this.txtLugarSustentacion.Name = "txtLugarSustentacion";
@@ -630,7 +630,7 @@ namespace LibFormularios
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label27.Location = new System.Drawing.Point(95, 156);
+            this.label27.Location = new System.Drawing.Point(85, 156);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(174, 22);
             this.label27.TabIndex = 280;
@@ -642,7 +642,7 @@ namespace LibFormularios
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label26.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label26.Location = new System.Drawing.Point(88, 122);
+            this.label26.Location = new System.Drawing.Point(78, 122);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(181, 22);
             this.label26.TabIndex = 279;
@@ -654,7 +654,7 @@ namespace LibFormularios
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label25.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label25.Location = new System.Drawing.Point(95, 87);
+            this.label25.Location = new System.Drawing.Point(85, 87);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(174, 22);
             this.label25.TabIndex = 278;
@@ -666,7 +666,7 @@ namespace LibFormularios
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label13.Location = new System.Drawing.Point(120, 192);
+            this.label13.Location = new System.Drawing.Point(110, 192);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(148, 22);
             this.label13.TabIndex = 249;
@@ -677,7 +677,7 @@ namespace LibFormularios
             this.txtApellidosReplicante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidosReplicante1.Enabled = false;
             this.txtApellidosReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante1.Location = new System.Drawing.Point(684, 190);
+            this.txtApellidosReplicante1.Location = new System.Drawing.Point(674, 190);
             this.txtApellidosReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante1.Name = "txtApellidosReplicante1";
             this.txtApellidosReplicante1.Size = new System.Drawing.Size(208, 30);
@@ -689,7 +689,7 @@ namespace LibFormularios
             this.txtNombresReplicante1.Enabled = false;
             this.txtNombresReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtNombresReplicante1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNombresReplicante1.Location = new System.Drawing.Point(448, 190);
+            this.txtNombresReplicante1.Location = new System.Drawing.Point(438, 190);
             this.txtNombresReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante1.Name = "txtNombresReplicante1";
             this.txtNombresReplicante1.Size = new System.Drawing.Size(228, 30);
@@ -705,7 +705,7 @@ namespace LibFormularios
             this.BtnBuscarReplicante1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarReplicante1.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarReplicante1.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante1.Image")));
-            this.BtnBuscarReplicante1.Location = new System.Drawing.Point(400, 190);
+            this.BtnBuscarReplicante1.Location = new System.Drawing.Point(390, 190);
             this.BtnBuscarReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarReplicante1.Name = "BtnBuscarReplicante1";
             this.BtnBuscarReplicante1.Size = new System.Drawing.Size(44, 30);
@@ -719,7 +719,7 @@ namespace LibFormularios
             this.txtCodReplicante1.Enabled = false;
             this.txtCodReplicante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtCodReplicante1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCodReplicante1.Location = new System.Drawing.Point(291, 188);
+            this.txtCodReplicante1.Location = new System.Drawing.Point(281, 188);
             this.txtCodReplicante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante1.Name = "txtCodReplicante1";
             this.txtCodReplicante1.Size = new System.Drawing.Size(103, 30);
@@ -731,7 +731,7 @@ namespace LibFormularios
             this.txtApellidosReplicante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidosReplicante2.Enabled = false;
             this.txtApellidosReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante2.Location = new System.Drawing.Point(684, 224);
+            this.txtApellidosReplicante2.Location = new System.Drawing.Point(674, 224);
             this.txtApellidosReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante2.Name = "txtApellidosReplicante2";
             this.txtApellidosReplicante2.Size = new System.Drawing.Size(208, 30);
@@ -743,7 +743,7 @@ namespace LibFormularios
             this.txtNombresReplicante2.Enabled = false;
             this.txtNombresReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtNombresReplicante2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNombresReplicante2.Location = new System.Drawing.Point(448, 224);
+            this.txtNombresReplicante2.Location = new System.Drawing.Point(438, 224);
             this.txtNombresReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante2.Name = "txtNombresReplicante2";
             this.txtNombresReplicante2.Size = new System.Drawing.Size(228, 30);
@@ -759,7 +759,7 @@ namespace LibFormularios
             this.BtnBuscarReplicante2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarReplicante2.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarReplicante2.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante2.Image")));
-            this.BtnBuscarReplicante2.Location = new System.Drawing.Point(400, 224);
+            this.BtnBuscarReplicante2.Location = new System.Drawing.Point(390, 224);
             this.BtnBuscarReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarReplicante2.Name = "BtnBuscarReplicante2";
             this.BtnBuscarReplicante2.Size = new System.Drawing.Size(43, 30);
@@ -773,7 +773,7 @@ namespace LibFormularios
             this.txtCodReplicante2.Enabled = false;
             this.txtCodReplicante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtCodReplicante2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCodReplicante2.Location = new System.Drawing.Point(291, 223);
+            this.txtCodReplicante2.Location = new System.Drawing.Point(281, 223);
             this.txtCodReplicante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante2.Name = "txtCodReplicante2";
             this.txtCodReplicante2.Size = new System.Drawing.Size(103, 30);
@@ -786,7 +786,7 @@ namespace LibFormularios
             this.txtCodReplicante3.Enabled = false;
             this.txtCodReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtCodReplicante3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCodReplicante3.Location = new System.Drawing.Point(291, 256);
+            this.txtCodReplicante3.Location = new System.Drawing.Point(281, 256);
             this.txtCodReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodReplicante3.Name = "txtCodReplicante3";
             this.txtCodReplicante3.Size = new System.Drawing.Size(103, 30);
@@ -798,7 +798,7 @@ namespace LibFormularios
             this.txtApellidosReplicante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidosReplicante3.Enabled = false;
             this.txtApellidosReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtApellidosReplicante3.Location = new System.Drawing.Point(684, 257);
+            this.txtApellidosReplicante3.Location = new System.Drawing.Point(674, 257);
             this.txtApellidosReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosReplicante3.Name = "txtApellidosReplicante3";
             this.txtApellidosReplicante3.Size = new System.Drawing.Size(208, 30);
@@ -814,7 +814,7 @@ namespace LibFormularios
             this.BtnBuscarReplicante3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarReplicante3.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarReplicante3.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarReplicante3.Image")));
-            this.BtnBuscarReplicante3.Location = new System.Drawing.Point(400, 257);
+            this.BtnBuscarReplicante3.Location = new System.Drawing.Point(390, 257);
             this.BtnBuscarReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarReplicante3.Name = "BtnBuscarReplicante3";
             this.BtnBuscarReplicante3.Size = new System.Drawing.Size(44, 30);
@@ -828,7 +828,7 @@ namespace LibFormularios
             this.txtNombresReplicante3.Enabled = false;
             this.txtNombresReplicante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.txtNombresReplicante3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNombresReplicante3.Location = new System.Drawing.Point(448, 257);
+            this.txtNombresReplicante3.Location = new System.Drawing.Point(438, 257);
             this.txtNombresReplicante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresReplicante3.Name = "txtNombresReplicante3";
             this.txtNombresReplicante3.Size = new System.Drawing.Size(228, 30);
@@ -840,7 +840,7 @@ namespace LibFormularios
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(159, 52);
+            this.label5.Location = new System.Drawing.Point(149, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 22);
             this.label5.TabIndex = 240;
@@ -852,7 +852,7 @@ namespace LibFormularios
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(680, 22);
+            this.label6.Location = new System.Drawing.Point(670, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 22);
             this.label6.TabIndex = 233;
@@ -863,7 +863,7 @@ namespace LibFormularios
             this.TxtApellidosPresidente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosPresidente.Enabled = false;
             this.TxtApellidosPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosPresidente.Location = new System.Drawing.Point(684, 50);
+            this.TxtApellidosPresidente.Location = new System.Drawing.Point(674, 50);
             this.TxtApellidosPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosPresidente.Name = "TxtApellidosPresidente";
             this.TxtApellidosPresidente.Size = new System.Drawing.Size(208, 30);
@@ -874,7 +874,7 @@ namespace LibFormularios
             this.TxtNombresPresidente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresPresidente.Enabled = false;
             this.TxtNombresPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresPresidente.Location = new System.Drawing.Point(448, 50);
+            this.TxtNombresPresidente.Location = new System.Drawing.Point(438, 50);
             this.TxtNombresPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresPresidente.Name = "TxtNombresPresidente";
             this.TxtNombresPresidente.Size = new System.Drawing.Size(229, 30);
@@ -886,7 +886,7 @@ namespace LibFormularios
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(443, 22);
+            this.label10.Location = new System.Drawing.Point(433, 22);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 22);
             this.label10.TabIndex = 234;
@@ -902,7 +902,7 @@ namespace LibFormularios
             this.BtnBuscarPresidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarPresidente.ForeColor = System.Drawing.SystemColors.Control;
             this.BtnBuscarPresidente.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarPresidente.Image")));
-            this.BtnBuscarPresidente.Location = new System.Drawing.Point(400, 49);
+            this.BtnBuscarPresidente.Location = new System.Drawing.Point(390, 49);
             this.BtnBuscarPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnBuscarPresidente.Name = "BtnBuscarPresidente";
             this.BtnBuscarPresidente.Size = new System.Drawing.Size(44, 30);
@@ -915,7 +915,7 @@ namespace LibFormularios
             this.TxtPresidente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtPresidente.Enabled = false;
             this.TxtPresidente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtPresidente.Location = new System.Drawing.Point(291, 48);
+            this.TxtPresidente.Location = new System.Drawing.Point(281, 48);
             this.TxtPresidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtPresidente.Name = "TxtPresidente";
             this.TxtPresidente.Size = new System.Drawing.Size(103, 30);
@@ -927,7 +927,7 @@ namespace LibFormularios
             this.TxtApellidosDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante1.Enabled = false;
             this.TxtApellidosDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(684, 86);
+            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(674, 86);
             this.TxtApellidosDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante1.Name = "TxtApellidosDictaminante1";
             this.TxtApellidosDictaminante1.Size = new System.Drawing.Size(208, 30);
@@ -938,7 +938,7 @@ namespace LibFormularios
             this.TxtNombresDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante1.Enabled = false;
             this.TxtNombresDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(448, 86);
+            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(438, 86);
             this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante1.Name = "TxtNombresDictaminante1";
             this.TxtNombresDictaminante1.Size = new System.Drawing.Size(229, 30);
@@ -949,7 +949,7 @@ namespace LibFormularios
             this.txtCodDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante1.Enabled = false;
             this.txtCodDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante1.Location = new System.Drawing.Point(291, 85);
+            this.txtCodDictaminante1.Location = new System.Drawing.Point(281, 85);
             this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante1.Name = "txtCodDictaminante1";
             this.txtCodDictaminante1.Size = new System.Drawing.Size(103, 30);
@@ -961,7 +961,7 @@ namespace LibFormularios
             this.TxtApellidosDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante2.Enabled = false;
             this.TxtApellidosDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(684, 121);
+            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(674, 121);
             this.TxtApellidosDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante2.Name = "TxtApellidosDictaminante2";
             this.TxtApellidosDictaminante2.Size = new System.Drawing.Size(208, 30);
@@ -972,7 +972,7 @@ namespace LibFormularios
             this.TxtNombresDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante2.Enabled = false;
             this.TxtNombresDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(448, 121);
+            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(438, 121);
             this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante2.Name = "TxtNombresDictaminante2";
             this.TxtNombresDictaminante2.Size = new System.Drawing.Size(228, 30);
@@ -983,7 +983,7 @@ namespace LibFormularios
             this.txtCodDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante2.Enabled = false;
             this.txtCodDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante2.Location = new System.Drawing.Point(291, 119);
+            this.txtCodDictaminante2.Location = new System.Drawing.Point(281, 119);
             this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante2.Name = "txtCodDictaminante2";
             this.txtCodDictaminante2.Size = new System.Drawing.Size(104, 30);
@@ -995,7 +995,7 @@ namespace LibFormularios
             this.txtCodDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante3.Enabled = false;
             this.txtCodDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante3.Location = new System.Drawing.Point(291, 153);
+            this.txtCodDictaminante3.Location = new System.Drawing.Point(281, 153);
             this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante3.Name = "txtCodDictaminante3";
             this.txtCodDictaminante3.Size = new System.Drawing.Size(104, 30);
@@ -1007,7 +1007,7 @@ namespace LibFormularios
             this.TxtApellidosDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante3.Enabled = false;
             this.TxtApellidosDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(684, 154);
+            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(674, 154);
             this.TxtApellidosDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante3.Name = "TxtApellidosDictaminante3";
             this.TxtApellidosDictaminante3.Size = new System.Drawing.Size(208, 30);
@@ -1018,7 +1018,7 @@ namespace LibFormularios
             this.TxtNombresDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante3.Enabled = false;
             this.TxtNombresDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(448, 154);
+            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(438, 154);
             this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante3.Name = "TxtNombresDictaminante3";
             this.TxtNombresDictaminante3.Size = new System.Drawing.Size(228, 30);

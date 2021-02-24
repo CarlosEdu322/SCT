@@ -39,6 +39,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.DgvInteresados = new System.Windows.Forms.DataGridView();
             this.GbxRubricaDeEvaluacion = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtConsenso = new System.Windows.Forms.TextBox();
+            this.TxtResultado = new System.Windows.Forms.TextBox();
             this.LblCondicion = new System.Windows.Forms.Label();
             this.TxtJuicio = new System.Windows.Forms.TextBox();
             this.LblCodTesista1 = new System.Windows.Forms.Label();
@@ -47,12 +50,8 @@
             this.BtnGenerar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtResolucion = new System.Windows.Forms.TextBox();
-            this.btnMostrarResoluciones = new System.Windows.Forms.Button();
             this.btnEResolucionDeLosDictaminantes = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
-            this.TxtResultado = new System.Windows.Forms.TextBox();
-            this.TxtConsenso = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTesis)).BeginInit();
@@ -200,6 +199,37 @@
             this.GbxRubricaDeEvaluacion.TabStop = false;
             this.GbxRubricaDeEvaluacion.Text = "Rubrica de evaluacion";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(367, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 22);
+            this.label2.TabIndex = 174;
+            this.label2.Text = "Consenso";
+            // 
+            // TxtConsenso
+            // 
+            this.TxtConsenso.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtConsenso.Location = new System.Drawing.Point(485, 117);
+            this.TxtConsenso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtConsenso.Name = "TxtConsenso";
+            this.TxtConsenso.ReadOnly = true;
+            this.TxtConsenso.Size = new System.Drawing.Size(288, 30);
+            this.TxtConsenso.TabIndex = 173;
+            // 
+            // TxtResultado
+            // 
+            this.TxtResultado.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.TxtResultado.Location = new System.Drawing.Point(485, 70);
+            this.TxtResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtResultado.Name = "TxtResultado";
+            this.TxtResultado.ReadOnly = true;
+            this.TxtResultado.Size = new System.Drawing.Size(288, 30);
+            this.TxtResultado.TabIndex = 172;
+            // 
             // LblCondicion
             // 
             this.LblCondicion.AutoSize = true;
@@ -270,6 +300,7 @@
             this.BtnGenerar.TabIndex = 236;
             this.BtnGenerar.Text = "Generar";
             this.BtnGenerar.UseVisualStyleBackColor = false;
+            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
             // 
             // label1
             // 
@@ -290,23 +321,6 @@
             this.TxtResolucion.Size = new System.Drawing.Size(342, 32);
             this.TxtResolucion.TabIndex = 234;
             // 
-            // btnMostrarResoluciones
-            // 
-            this.btnMostrarResoluciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.btnMostrarResoluciones.FlatAppearance.BorderSize = 0;
-            this.btnMostrarResoluciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.btnMostrarResoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarResoluciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnMostrarResoluciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.btnMostrarResoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarResoluciones.Location = new System.Drawing.Point(25, 668);
-            this.btnMostrarResoluciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMostrarResoluciones.Name = "btnMostrarResoluciones";
-            this.btnMostrarResoluciones.Size = new System.Drawing.Size(219, 59);
-            this.btnMostrarResoluciones.TabIndex = 239;
-            this.btnMostrarResoluciones.Text = "Ver Resoluciones Emitidas";
-            this.btnMostrarResoluciones.UseVisualStyleBackColor = false;
-            // 
             // btnEResolucionDeLosDictaminantes
             // 
             this.btnEResolucionDeLosDictaminantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
@@ -323,6 +337,7 @@
             this.btnEResolucionDeLosDictaminantes.TabIndex = 238;
             this.btnEResolucionDeLosDictaminantes.Text = "Emitir Resolucion";
             this.btnEResolucionDeLosDictaminantes.UseVisualStyleBackColor = false;
+            this.btnEResolucionDeLosDictaminantes.Click += new System.EventHandler(this.btnEResolucionDeLosDictaminantes_Click);
             // 
             // BtnCerrar
             // 
@@ -341,43 +356,11 @@
             this.BtnCerrar.Text = "Cerrar Ventana";
             this.BtnCerrar.UseVisualStyleBackColor = false;
             // 
-            // TxtResultado
-            // 
-            this.TxtResultado.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtResultado.Location = new System.Drawing.Point(485, 70);
-            this.TxtResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtResultado.Name = "TxtResultado";
-            this.TxtResultado.ReadOnly = true;
-            this.TxtResultado.Size = new System.Drawing.Size(288, 30);
-            this.TxtResultado.TabIndex = 172;
-            // 
-            // TxtConsenso
-            // 
-            this.TxtConsenso.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtConsenso.Location = new System.Drawing.Point(485, 117);
-            this.TxtConsenso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtConsenso.Name = "TxtConsenso";
-            this.TxtConsenso.ReadOnly = true;
-            this.TxtConsenso.Size = new System.Drawing.Size(288, 30);
-            this.TxtConsenso.TabIndex = 173;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(367, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 22);
-            this.label2.TabIndex = 174;
-            this.label2.Text = "Consenso";
-            // 
             // FrmInformeJuradoEvaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 783);
-            this.Controls.Add(this.btnMostrarResoluciones);
             this.Controls.Add(this.btnEResolucionDeLosDictaminantes);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnGenerar);
@@ -425,7 +408,6 @@
         protected System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtResolucion;
         private System.Windows.Forms.TextBox TxtResultado;
-        protected System.Windows.Forms.Button btnMostrarResoluciones;
         protected System.Windows.Forms.Button btnEResolucionDeLosDictaminantes;
         protected System.Windows.Forms.Button BtnCerrar;
         protected System.Windows.Forms.Label label2;

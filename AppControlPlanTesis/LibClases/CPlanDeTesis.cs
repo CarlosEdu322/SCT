@@ -226,6 +226,12 @@ namespace LibClases
             string consulta = " insert into TResolucion values ('" + codigo + "','TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL',GETDATE(),'" + codTesis + "')";
             aConexion.EjecutarComando(consulta);
         }
+
+        public void EmitirResolucionAprobacion(string codigo, string codTesis)
+        {
+            string consulta = " insert into TResolucion values ('" + codigo + "','TESIS EVALUADA Y APROBADA',GETDATE(),'" + codTesis + "')";
+            aConexion.EjecutarComando(consulta);
+        }
         public bool VerificarSiEmitioResolucionTesisAprobadaComisionRevisora(string codTesis)
         {
             //bool encontrado = false;
@@ -237,6 +243,14 @@ namespace LibClases
         {
             //bool encontrado = false;
             string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
+
+        public bool VerificarSiEmitioResolucionAprobacionFinalTesis(string codTesis)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS EVALUADA Y APROBADA'";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0].Rows.Count > 0;
         }
