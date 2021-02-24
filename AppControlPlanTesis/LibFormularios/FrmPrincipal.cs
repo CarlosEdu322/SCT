@@ -283,5 +283,15 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmNombrarJuradoSustentacionOral());
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmResultadoEvaluacionSustentacionOral());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmInformeJuradoEvaluador());
+        }
     }
 }

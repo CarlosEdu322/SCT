@@ -58,6 +58,9 @@ namespace LibClases
                 return "250000";
             }
         }
+        
+
+
 
         public string GenerarCodigoResolucionJuradoEvaluacion()
         {   //-- retorna una tabla con la lista completa de libros 
@@ -82,6 +85,17 @@ namespace LibClases
             consulta = "UPDATE TExpediente set CodSustentacionOral='" + pCodJuradoEvaluador + "' WHERE NroExpediente='" + pCodExpediente + "'";
             aConexion.EjecutarComando(consulta);
         }
+
+        public DataTable ListarCodJuradoEvaluador()
+        {
+            string consulta = "select * from TExpediente where CodSustentacionOral!=''";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+
+
+
+
         public void UpdateFinalEstadoTesis(string pCodTesis)
         {
             string consulta;
@@ -115,7 +129,7 @@ namespace LibClases
         }
         public string MostrarCodTesis(string pCodDictamen)
         {
-            string consulta = "select  * from TExpediente a , TDictaminantesDeTesis b where a.CodDictamenDeTesis = b.CodDictamenDeTesis and b.CodDictamenDeTesis = '" + pCodDictamen + "'";
+            string consulta = "select  * from TExpediente a , TJuradoEvaluador b where a.CodSustentacionOral = b.CodSustentacionOral and b.CodSustentacionOral = '" + pCodDictamen + "'";
             aConexion.EjecutarSelect(consulta);
 
             return aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
@@ -207,6 +221,27 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0].Rows.Count > 0;
         }
+        public void GuardarDeliberacion(List<String> Parametros)
+        {
+            string consulta = "insert into TActaSustentacionOral values ('"+ Parametros [0]+ "','"+ Parametros[1] + "',"+Parametros [2]+",'"+ Parametros[3] + "')";
+            aConexion.EjecutarComando(consulta);
+        }
+
+        //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
+        public DataTable ListarCodJuradosEvaluadores()
+        {
+            string Consulta = "SELECT * FROM TActaSustentacionOral";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public bool VerificarSiEmitioEvaluoJuradoEvaluador(string pJurado)
+        {
+            //bool encontrado = false;
+            string Consulta = "SELECT * FROM TActaSustentacionOral where CodSustentacionOral='"+ pJurado + "'";
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
+
         public bool VerificarSiEmitioResolucionSuficienciaTesis(string codTesis)
         {
             //bool encontrado = false;

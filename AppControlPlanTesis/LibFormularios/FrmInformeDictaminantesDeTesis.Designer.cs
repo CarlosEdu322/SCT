@@ -66,9 +66,9 @@
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 95);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1073, 297);
             this.groupBox2.TabIndex = 227;
             this.groupBox2.TabStop = false;
@@ -170,7 +170,7 @@
             this.GbxRubricaDeEvaluacion.Controls.Add(this.TxtJuicio);
             this.GbxRubricaDeEvaluacion.Controls.Add(this.LblCodTesista1);
             this.GbxRubricaDeEvaluacion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.GbxRubricaDeEvaluacion.Location = new System.Drawing.Point(15, 398);
+            this.GbxRubricaDeEvaluacion.Location = new System.Drawing.Point(16, 398);
             this.GbxRubricaDeEvaluacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxRubricaDeEvaluacion.Name = "GbxRubricaDeEvaluacion";
             this.GbxRubricaDeEvaluacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -228,7 +228,7 @@
             // 
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(15, 29);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(385, 30);
             this.dateTimePicker2.TabIndex = 229;
@@ -277,9 +277,9 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox3.Location = new System.Drawing.Point(16, 15);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1073, 73);
             this.groupBox3.TabIndex = 228;
             this.groupBox3.TabStop = false;

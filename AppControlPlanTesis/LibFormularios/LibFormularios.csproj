@@ -94,6 +94,12 @@
     <Compile Include="FrmInformeDictaminantesDeTesis.Designer.cs">
       <DependentUpon>FrmInformeDictaminantesDeTesis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInformeJuradoEvaluador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformeJuradoEvaluador.Designer.cs">
+      <DependentUpon>FrmInformeJuradoEvaluador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIniciarTramiteEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,12 @@
     <Compile Include="FrmResultadoEvaluacionPlanTesis.Designer.cs">
       <DependentUpon>FrmResultadoEvaluacionPlanTesis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmResultadoEvaluacionSustentacionOral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultadoEvaluacionSustentacionOral.Designer.cs">
+      <DependentUpon>FrmResultadoEvaluacionSustentacionOral.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTesis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,9 @@
     <EmbeddedResource Include="FrmInformeDictaminantesDeTesis.resx">
       <DependentUpon>FrmInformeDictaminantesDeTesis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformeJuradoEvaluador.resx">
+      <DependentUpon>FrmInformeJuradoEvaluador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarTramiteEstudiante.resx">
       <DependentUpon>FrmIniciarTramiteEstudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmResultadoEvaluacionPlanTesis.resx">
       <DependentUpon>FrmResultadoEvaluacionPlanTesis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultadoEvaluacionSustentacionOral.resx">
+      <DependentUpon>FrmResultadoEvaluacionSustentacionOral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTesis.resx">
       <DependentUpon>FrmTesis.cs</DependentUpon>

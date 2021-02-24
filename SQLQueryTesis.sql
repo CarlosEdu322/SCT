@@ -356,27 +356,33 @@ go
 --select * from TActaDictamenDeTesis where CodDictamenDeTesis
 --select * from TComisionRevisora
 --SELECT * FROM TActaDictamenDeTesis WHERE CodDictamenDeTesis='300001' AND CodDocente='D00001'
+
 create table TActaSustentacionOral
 ( -- lista de atributos
 CodSustentacionOral varchar(6),
-CodDocente varchar(6),
-CodTesis varchar(6),
-CodTesista varchar(6),
-NotaPresentacion int,
-NotaDominio int,
-NotaSintesis int,
-NotaDesenvolvimientoTesis int,
-NotaPresentacionTrabajo int,
-NotaDominioTema int,
-NotaCapacidadExposicion int,
-NotaDesenvolvimientoAbsolucionPreguntas int,
+Resultado varchar(40),
+Nota int,
+EstadoVotacion varchar(40),
+--CodTesis varchar(6),
+--CodTesista varchar(6),
+--NotaPresentacion int,
+--NotaDominio int,
+--NotaSintesis int,
+--NotaDesenvolvimientoTesis int,
+--NotaPresentacionTrabajo int,
+--NotaDominioTema int,
+--NotaCapacidadExposicion int,
+--NotaDesenvolvimientoAbsolucionPreguntas int,
 -- especificacion de claves
-primary key (CodSustentacionOral),
-foreign key (CodTesis) references TTesis,
-foreign key (CodTesista) references TTesista,
+--primary key (CodSustentacionOral),
+--foreign key (CodTesis) references TTesis,
+--foreign key (CodTesista) references TTesista,
 )
 go
 
+
+insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
+SELECT * FROM TActaSustentacionOral where CodSustentacionOral='250000'
 create table TNotificacionDeCargo
 ( -- lista de atributos
 CodDocente varchar(6),
@@ -562,7 +568,10 @@ SELECT * FROM TRequisito
 select TOP 1 CodTesis from TTesis ORDER BY CodTesis DESC
 
 SELECT * FROM TTesisXTesista
+select * from TExpediente where CodSustentacionOral!=''
 
+
+select  * from TExpediente a , TJuradoEvaluador b where a.CodSustentacionOral = b.CodSustentacionOral and b.CodSustentacionOral = '250000'
 
 select CodEvaluacionPlanDeTesis from TExpediente order by CodDictamenDeTesis desc
 
@@ -607,7 +616,7 @@ select * from TDictaminantesDeTesis
 select CodDictamenDeTesis from TDictaminantesDeTesis where CodDictamenDeTesis='" + pCodComisionRevisora +,
 SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS DICTAMINADA Y APROBADA PARA SUSTENCIACION ORAL'
 
-CREATE PROCEDURE GenerarExpediente 
+CREATE or alter PROCEDURE GenerarExpediente 
 	@NroExpediente varchar(6),   
     @CodTesis nvarchar(6)  
 AS
@@ -615,3 +624,11 @@ insert into TExpediente values(@NroExpediente,@CodTesis,'','','')
 GO 
 
 exec GenerarExpediente
+
+select * from TTesis
+select * from TIniciarTramiteInscripcionPlanDeTesis
+
+select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,b.Estado,b.Observaciones  from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where CodEvaluacionPlanDeTesis=''
+select * from TExpediente
+
+select a.CodTramITTesis,a.CodTesis,b.Titulo,b.Tema,a.Estado,a.Observaciones from TIniciarTramiteInscripcionPlanDeTesis a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='RECIBIDO'";
