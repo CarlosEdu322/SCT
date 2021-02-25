@@ -83,7 +83,9 @@ namespace LibFormularios
         {
             DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
             DgvTesis.DataSource = oEvaluacionTesis.ListarDatosTesis(TxtCodTesis.Text);
+            DgvTesis.Columns["CodTesis"].Visible = false;
             DgvTesis.Columns["Estado"].Visible = false;
+            DgvTesis.Columns["CodDocente"].Visible = false;
             List<string>p1= oEvaluacionTesis.ListarDocentesJuradoEvaluador(CboCodJuradoEvaluador.Text);
             txtCodDictaminante1.Text = p1[0];
 
@@ -104,7 +106,8 @@ namespace LibFormularios
             Lista.Add(CodJuradoEvaluados);
             Lista.Add(LblEstado.Text);
             Lista.Add(TxtNotaFinal.Text);
-            Lista.Add(LblConsenso.Text);
+            //Lista.Add(LblConsenso.Text);
+            Lista.Add(cbxConsenso.SelectedItem.ToString());
             //GuardarDeliberacion
             //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
             oEvaluacionTesis.GuardarDeliberacion(Lista);
@@ -151,25 +154,46 @@ namespace LibFormularios
             }
             if (double.Parse(TxtNotaFinal.Text) >= 14)
             {
+                cbxConsenso.Items.Add("APROBADO POR UNANIMIDAD");
+                cbxConsenso.Items.Add("APROBADO POR MAYORIA");
+                cbxConsenso.Items.Remove("DESAPROBADO POR MAYORIA");
                 if (consenso)
                 {
                     LblConsenso.Text = "APROBADO POR UNANIMIDAD";
+                    cbxConsenso.Items.Remove("DESAPROBADO POR MAYORIA");
+                    cbxConsenso.SelectedIndex = 0;
 
                 }
                 else
                 {
                     LblConsenso.Text = "APROBADO POR MAYORIA";
+                    cbxConsenso.Items.Remove("DESAPROBADO POR MAYORIA");
+                    cbxConsenso.SelectedIndex = 1;
                 }
             }
             else
             {
                 LblConsenso.Text = "DESAPROBADO POR MAYORIA";
+                cbxConsenso.Items.Remove("APROBADO POR UNANIMIDAD");
+                cbxConsenso.Items.Remove("APROBADO POR MAYORIA");
+                if (cbxConsenso.Items.Count == 0)
+                {
+                    cbxConsenso.Items.Add("DESAPROBADO POR MAYORIA");
+                }
+                cbxConsenso.SelectedIndex = 0;
             }
         }
         private void TxtNotaFinal_TextChanged_1(object sender, EventArgs e)
         {
-
-            Evaluar();
+            if (TxtNotaFinal.Text != "")
+            {
+                Evaluar();
+            }
+            else
+            {
+                cbxConsenso.Items.Clear();
+                LblEstado.Text = "-";
+            }
         }
         public void ConsultarDocente(TextBox tbox1, TextBox tbox2, string codigotesista)
         {
@@ -201,6 +225,11 @@ namespace LibFormularios
         private void txtCodDictaminante3_TextChanged(object sender, EventArgs e)
         {
             ConsultarDocente(TxtNombresDictaminante3, TxtApellidosDictaminante3, txtCodDictaminante3.Text);
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

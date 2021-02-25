@@ -38,7 +38,6 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelSubMenuSustentacionOral = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnNombrarJuradoSustentacionOral = new System.Windows.Forms.Button();
             this.btnSustentacionOral = new System.Windows.Forms.Button();
@@ -135,7 +134,7 @@
             this.panelSubMenuReportes.Controls.Add(this.button4);
             this.panelSubMenuReportes.Controls.Add(this.BtnResoluciones);
             this.panelSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuReportes.Location = new System.Drawing.Point(0, 1493);
+            this.panelSubMenuReportes.Location = new System.Drawing.Point(0, 1440);
             this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuReportes.Name = "panelSubMenuReportes";
             this.panelSubMenuReportes.Size = new System.Drawing.Size(312, 165);
@@ -157,7 +156,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(312, 49);
             this.button3.TabIndex = 7;
-            this.button3.Text = "TesisXTesista";
+            this.button3.Text = "Tesis aprobadas";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -168,7 +167,7 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.button4.Location = new System.Drawing.Point(0, 49);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
@@ -176,7 +175,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(312, 49);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Generar Expediente";
+            this.button4.Text = "Tesis Inscritas";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -186,7 +185,7 @@
             this.BtnResoluciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnResoluciones.FlatAppearance.BorderSize = 0;
             this.BtnResoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnResoluciones.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.BtnResoluciones.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnResoluciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnResoluciones.Location = new System.Drawing.Point(0, 0);
             this.BtnResoluciones.Margin = new System.Windows.Forms.Padding(4);
@@ -209,7 +208,7 @@
             this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 1438);
+            this.btnReportes.Location = new System.Drawing.Point(0, 1385);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -225,14 +224,13 @@
             // 
             this.panelSubMenuSustentacionOral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.panelSubMenuSustentacionOral.Controls.Add(this.button6);
-            this.panelSubMenuSustentacionOral.Controls.Add(this.button7);
             this.panelSubMenuSustentacionOral.Controls.Add(this.button8);
             this.panelSubMenuSustentacionOral.Controls.Add(this.btnNombrarJuradoSustentacionOral);
             this.panelSubMenuSustentacionOral.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuSustentacionOral.Location = new System.Drawing.Point(0, 1231);
             this.panelSubMenuSustentacionOral.Margin = new System.Windows.Forms.Padding(4);
             this.panelSubMenuSustentacionOral.Name = "panelSubMenuSustentacionOral";
-            this.panelSubMenuSustentacionOral.Size = new System.Drawing.Size(312, 207);
+            this.panelSubMenuSustentacionOral.Size = new System.Drawing.Size(312, 154);
             this.panelSubMenuSustentacionOral.TabIndex = 14;
             // 
             // button6
@@ -245,7 +243,7 @@
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 147);
+            this.button6.Location = new System.Drawing.Point(0, 98);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -256,27 +254,6 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 98);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(312, 49);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Evaluacion";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -294,7 +271,7 @@
             this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(312, 49);
             this.button8.TabIndex = 3;
-            this.button8.Text = "Acta de Nombramiento";
+            this.button8.Text = "Evaluacion de Tesis";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
@@ -477,7 +454,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.btnSalir.Location = new System.Drawing.Point(0, 1658);
+            this.btnSalir.Location = new System.Drawing.Point(0, 1605);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -1068,7 +1045,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panelSubMenuSustentacionOral;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnNombrarJuradoSustentacionOral;
         private System.Windows.Forms.Button btnSustentacionOral;

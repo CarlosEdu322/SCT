@@ -45,7 +45,7 @@ namespace LibFormularios
             this.dgvResoluciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dgvResoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResoluciones.Location = new System.Drawing.Point(12, 24);
-            this.dgvResoluciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvResoluciones.Margin = new System.Windows.Forms.Padding(2);
             this.dgvResoluciones.Name = "dgvResoluciones";
             this.dgvResoluciones.RowHeadersWidth = 51;
             this.dgvResoluciones.RowTemplate.Height = 24;
@@ -60,9 +60,9 @@ namespace LibFormularios
             this.groupBox1.Controls.Add(this.dgvResoluciones);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(907, 236);
             this.groupBox1.TabIndex = 180;
             this.groupBox1.TabStop = false;
@@ -79,7 +79,7 @@ namespace LibFormularios
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActualizar.Location = new System.Drawing.Point(581, 249);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(164, 48);
             this.btnActualizar.TabIndex = 179;
@@ -98,7 +98,7 @@ namespace LibFormularios
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCerrar.Location = new System.Drawing.Point(752, 249);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
             this.BtnCerrar.TabIndex = 178;
@@ -114,7 +114,7 @@ namespace LibFormularios
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMostrarResolucion";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;

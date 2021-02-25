@@ -19,6 +19,8 @@ namespace LibFormularios
             InitializeComponent();
             oEvaluacionTesis = new CEvaluacionTesis();
             LlenarTesisPendientes();
+            String NResolucion = "D-" + oEvaluacionTesis.GenerarCodigoResolucionJuradoEvaluacion() + "-2021-FIEEIM-UNSAAC";
+            TxtResolucion.Text = NResolucion;
         }
 
         public void LlenarTesisPendientes()
@@ -174,6 +176,9 @@ namespace LibFormularios
                 txtCodDictaminante2.Text = dgvDictaminantes.Rows[1].Cells[0].Value.ToString();
                 txtCodDictaminante3.Text = dgvDictaminantes.Rows[2].Cells[0].Value.ToString();
                 TxtNombreTesis.Text = DgvTesisPendientesDeSustentacion.CurrentRow.Cells["Titulo"].Value.ToString();
+                TxtPresidente.Text = "D90021";
+                TxtNombresPresidente.Text = "DAVID REYNALDO";
+                TxtApellidosPresidente.Text = "BERRIOS BECERRA";
             }
             catch
             {
@@ -225,11 +230,11 @@ namespace LibFormularios
         private bool EstanVaciosLosCampos()
         {
             bool a = true;
-            if (TxtPresidente.Text == "" || txtCodDictaminante1.Text == "" || txtCodDictaminante2.Text == "" || txtCodDictaminante3.Text == "")
+            if (TxtPresidente.Text == "" || txtCodDictaminante1.Text == "" || txtCodDictaminante2.Text == "" )
             {
                 return a=false;
             }
-            if (txtCodReplicante1.Text == "" || txtCodReplicante2.Text == "" || txtCodReplicante3.Text == "" || txtLugarSustentacion.Text == ""||TxtResolucion.Text=="")
+            if (txtCodReplicante1.Text == "" || txtCodReplicante2.Text == "" || txtLugarSustentacion.Text == ""||TxtResolucion.Text=="")
             {
                 return a=false;
             }

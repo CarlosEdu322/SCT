@@ -19,6 +19,9 @@ namespace LibFormularios
             InitializeComponent();
 
             LlenarDatosCboCodRevisionDeTesis();
+            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+            String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
+            TxtResolucion.Text = NResolucion;
         }
 
         public void LlenarDatosCboCodRevisionDeTesis()
@@ -56,6 +59,9 @@ namespace LibFormularios
             {
                 DgvInteresados.DataSource = oEvaluacionTesis.ListarInteresados(TxtCodTesis.Text);
                 DgvTesis.DataSource = oEvaluacionTesis.ListarDatosTesis(TxtCodTesis.Text);
+                DgvTesis.Columns["CodTesis"].Visible = false;
+                DgvTesis.Columns["CodDocente"].Visible = false;
+                DgvTesis.Columns["Estado"].Visible = false;
 
 
                 List<string> atributos = oEvaluacionTesis.LlenarCamposSustentacionOral(CboCodJuradoEvaluador.Text);
@@ -92,7 +98,7 @@ namespace LibFormularios
                         }
                         else
                         {
-                            MessageBox.Show("YA SE EMITIO UNA RESOLUCION PARA ESTE DICTAMEN", "ERROR");
+                            MessageBox.Show("YA SE EMITIO UNA RESOLUCION PARA ESTE PROCESO", "ERROR");
                         }
                     }
                     else
@@ -114,8 +120,13 @@ namespace LibFormularios
         private void BtnGenerar_Click(object sender, EventArgs e)
         {
             CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
-            String NResolucion = "R-006-N°" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-UNSAAC";
+            String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
             TxtResolucion.Text = NResolucion;
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
