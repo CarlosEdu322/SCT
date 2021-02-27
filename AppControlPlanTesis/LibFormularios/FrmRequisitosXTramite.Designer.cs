@@ -92,7 +92,7 @@
             // TxtNombreTramite
             // 
             this.TxtNombreTramite.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombreTramite.Location = new System.Drawing.Point(441, 216);
+            this.TxtNombreTramite.Location = new System.Drawing.Point(441, 211);
             this.TxtNombreTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombreTramite.Name = "TxtNombreTramite";
             this.TxtNombreTramite.Size = new System.Drawing.Size(279, 30);
@@ -115,7 +115,7 @@
             this.CboCodTramite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboCodTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodTramite.FormattingEnabled = true;
-            this.CboCodTramite.Location = new System.Drawing.Point(387, 155);
+            this.CboCodTramite.Location = new System.Drawing.Point(441, 155);
             this.CboCodTramite.Name = "CboCodTramite";
             this.CboCodTramite.Size = new System.Drawing.Size(333, 30);
             this.CboCodTramite.TabIndex = 145;

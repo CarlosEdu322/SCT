@@ -58,7 +58,6 @@
             this.panelSubMenuMantenimiento = new System.Windows.Forms.Panel();
             this.BtnManTramite = new System.Windows.Forms.Button();
             this.BtnTesisXTesista = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnManRequisitosXTramite = new System.Windows.Forms.Button();
             this.BtnManRequisitos = new System.Windows.Forms.Button();
             this.btnManTesis = new System.Windows.Forms.Button();
@@ -617,7 +616,6 @@
             this.panelSubMenuMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnManTramite);
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnTesisXTesista);
-            this.panelSubMenuMantenimiento.Controls.Add(this.BtnEditar);
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnManRequisitosXTramite);
             this.panelSubMenuMantenimiento.Controls.Add(this.BtnManRequisitos);
             this.panelSubMenuMantenimiento.Controls.Add(this.btnManTesis);
@@ -640,7 +638,7 @@
             this.BtnManTramite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnManTramite.Image = ((System.Drawing.Image)(resources.GetObject("BtnManTramite.Image")));
             this.BtnManTramite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnManTramite.Location = new System.Drawing.Point(0, 339);
+            this.BtnManTramite.Location = new System.Drawing.Point(0, 295);
             this.BtnManTramite.Margin = new System.Windows.Forms.Padding(4);
             this.BtnManTramite.Name = "BtnManTramite";
             this.BtnManTramite.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -662,7 +660,7 @@
             this.BtnTesisXTesista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnTesisXTesista.Image = ((System.Drawing.Image)(resources.GetObject("BtnTesisXTesista.Image")));
             this.BtnTesisXTesista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnTesisXTesista.Location = new System.Drawing.Point(0, 290);
+            this.BtnTesisXTesista.Location = new System.Drawing.Point(0, 246);
             this.BtnTesisXTesista.Margin = new System.Windows.Forms.Padding(4);
             this.BtnTesisXTesista.Name = "BtnTesisXTesista";
             this.BtnTesisXTesista.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
@@ -673,28 +671,6 @@
             this.BtnTesisXTesista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnTesisXTesista.UseVisualStyleBackColor = false;
             this.BtnTesisXTesista.Click += new System.EventHandler(this.BtnTesisXTesista_Click_1);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEditar.FlatAppearance.BorderSize = 0;
-            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
-            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(0, 246);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.BtnEditar.Size = new System.Drawing.Size(312, 44);
-            this.BtnEditar.TabIndex = 6;
-            this.BtnEditar.Text = "EditarRXT";
-            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnManRequisitosXTramite
             // 
@@ -1038,7 +1014,6 @@
         private System.Windows.Forms.Panel panelSubMenuOperaciones;
         private System.Windows.Forms.Button BtnGenerarExpediente;
         private System.Windows.Forms.Button BtnIniciarTramite;
-        private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnManRequisitosXTramite;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;

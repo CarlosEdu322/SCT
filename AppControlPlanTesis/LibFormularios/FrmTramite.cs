@@ -87,5 +87,11 @@ namespace LibFormularios
         {
             ProcesarClave();
         }
+
+        private void BtnManTramite_Click(object sender, EventArgs e)
+        {
+            FrmRequisitosXTramite f = new FrmRequisitosXTramite();
+            f.ShowDialog();
+        }
     }
 }
