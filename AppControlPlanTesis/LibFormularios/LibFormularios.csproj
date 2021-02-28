@@ -149,6 +149,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportesVariios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesVariios.Designer.cs">
+      <DependentUpon>FrmReportesVariios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRequisito.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -57,21 +57,30 @@ namespace LibFormularios
                     BtnGuardar.Enabled = false;
                     cbxConsenso.Enabled = false;
                     LblEstado.Enabled = false;
-                    TxtNotaFinal.Enabled = false;
+                    NudNotaFinal.Enabled = false;
+
+                    List<string> ListaResultado = oEvaluacionTesis.ConsultarNotas(CboCodJuradoEvaluador.Text);
+                    cbxConsenso.Text = ListaResultado[0];
+                    NudNotaFinal.Value = int.Parse(ListaResultado[1]);
+                    LblEstado.Text = ListaResultado[2];
                 }
                 else
                 {
+                    cbxConsenso.Text = "";
+                    NudNotaFinal.Value = 0;
+                    LblEstado.Text = "";
+
                     cbxConsenso.Enabled = true;
                     LblNotificacion.Visible = false;
                     LblEstado.Enabled = true;
-                    TxtNotaFinal.Enabled = true;
+                    NudNotaFinal.Enabled = true;
                     BtnGuardar.Enabled = true;
                 }
                 TxtCodTesis.Text = oEvaluacionTesis.MostrarCodTesis(CboCodJuradoEvaluador.Text);
+                
             }
             catch
             {
-
             }
         }
 
@@ -101,7 +110,7 @@ namespace LibFormularios
             }
             Lista.Add(CodJuradoEvaluados);
             Lista.Add(LblEstado.Text);
-            Lista.Add(TxtNotaFinal.Text);
+            Lista.Add(NudNotaFinal.Text);
             //Lista.Add(LblConsenso.Text);
             Lista.Add(cbxConsenso.SelectedItem.ToString());
             //GuardarDeliberacion
@@ -115,31 +124,28 @@ namespace LibFormularios
         public void Evaluar()
         {
             //estado segun nota
-            if ((14 <= double.Parse(TxtNotaFinal.Text)) && (double.Parse(TxtNotaFinal.Text) <= 15))
+            if ((14 <= double.Parse(NudNotaFinal.Value.ToString())) && (double.Parse(NudNotaFinal.Value.ToString()) < 16))
             {
                 LblEstado.Text = "APROBADO";
             }
-            if ((15 <= double.Parse(TxtNotaFinal.Text)) && (double.Parse(TxtNotaFinal.Text) <= 17))
+            else if ((16 <= double.Parse(NudNotaFinal.Value.ToString())) && (double.Parse(NudNotaFinal.Value.ToString()) < 18))
             {
                 LblEstado.Text = "APROBADO CON DISTINCION";
             }
-            if ((18 <= double.Parse(TxtNotaFinal.Text)) && (double.Parse(TxtNotaFinal.Text) <= 20))
+            else if ((18 <= double.Parse(NudNotaFinal.Value.ToString())) && (double.Parse(NudNotaFinal.Value.ToString()) <= 20))
             {
                 LblEstado.Text = "APROBADO CON EXCELENCIA";
             }
+            else if(double.Parse(NudNotaFinal.Value.ToString()) < 14)
+            {
+                LblEstado.Text = "DESAPROBADO";
+            }
             //consenso de docentes
+
         }
         private void TxtNotaFinal_TextChanged_1(object sender, EventArgs e)
         {
-            if (TxtNotaFinal.Text != "")
-            {
-                Evaluar();
-            }
-            else
-            {
-                cbxConsenso.Items.Clear();
-                LblEstado.Text = "-";
-            }
+        
         }
         public void ConsultarDocente(TextBox tbox1, TextBox tbox2, string codigotesista)
         {
@@ -180,16 +186,43 @@ namespace LibFormularios
 
         private void cbxConsenso_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             if (cbxConsenso.SelectedItem.ToString() == "DESAPROBADO")
             {
-                TxtNotaFinal.Enabled = false;
+                NudNotaFinal.Enabled = false;
                 LblEstado.Enabled = false;
             }
             else
             {
-                TxtNotaFinal.Enabled = true;
+                NudNotaFinal.Enabled = true;
                 LblEstado.Enabled = true;
+            }*/
+            if (cbxConsenso.Text.CompareTo("APROBADO POR UNANIMIDAD") == 0)
+            {
+                NudNotaFinal.Value = 14;
             }
+            if (cbxConsenso.Text.CompareTo("APROBADO POR MAYORIA") == 0)
+            {
+                NudNotaFinal.Value = 14;
+            }
+            if (cbxConsenso.Text.CompareTo("DESAPROBADO") == 0)
+            {
+                NudNotaFinal.Value = 0;
+            }
+        }
+
+        private void TxtNotaFinal_ValueChanged(object sender, EventArgs e)
+        {
+            if (NudNotaFinal.Text != "")
+            {
+                
+            }
+            else
+            {
+                cbxConsenso.Items.Clear();
+                LblEstado.Text = "-";
+            }
+            Evaluar();
         }
     }
 }

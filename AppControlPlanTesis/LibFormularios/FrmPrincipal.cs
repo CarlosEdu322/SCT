@@ -311,5 +311,12 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmEstadoTesis());
         }
+
+
+
+        private void BtnReportesVarios_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmEstadoTesis());
+        }
     }
 }

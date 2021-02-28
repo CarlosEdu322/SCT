@@ -17,6 +17,7 @@ namespace LibFormularios
     public partial class FrmBuscarDocente : Form
     {
         public TextBox CajadeTexto;
+        public List<string> ListaDocentes=new List<string>();
         private CDocente oDocente = new CDocente();
         public FrmBuscarDocente()
         {
@@ -41,13 +42,33 @@ namespace LibFormularios
             dgvDocentes.Columns["Correo"].Visible = false;
             dgvDocentes.Columns["Telefono"].Visible = false;
         }
-
+        public bool ExisteDocente(string pCodDocente)
+        {
+            bool encontrado = false;
+            for (int k = 0; k < ListaDocentes.Count; k++)
+            {
+                if (ListaDocentes[k].CompareTo(pCodDocente) == 0)
+                    encontrado = true;
+            }
+            return encontrado;
+        }
+        
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
             FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
             //frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
-            CajadeTexto.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
-            this.Close();
+            string codigoDocente= dgvDocentes.CurrentRow.Cells[0].Value.ToString();
+            if (!ExisteDocente(codigoDocente))
+            {
+                CajadeTexto.Text = codigoDocente;
+                this.Close();
+            }
+            else
+            {
+
+                MessageBox.Show("EL DOCENTE SELECCIONADO YA FUE DESIGNADO", "ALERTA");
+            }
+            
         }
     }
 }

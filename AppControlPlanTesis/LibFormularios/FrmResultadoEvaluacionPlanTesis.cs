@@ -142,6 +142,15 @@ namespace LibFormularios
                     GbxRubrica.Enabled = false;
                     LblNotificacion.Visible = true;
                     LblNotificacion.Text = "Usted ya reviso este plan de tesis";
+                    List<string> ListaNotas = oPlanDeTesis.ConsultarNotas(CboCodComisionRevisora.Text, CboCodDocente.Text);
+                    NudNotaIdentificacionProblema.Text = ListaNotas[0];
+                    NudNotaHipotesis.Text = ListaNotas[1];
+                    NudNotaAlcanceResultados.Text = ListaNotas[2];
+                    NudNotaMetodologia.Text = ListaNotas[3];
+                    NudNotaRevisionBibliografica.Text = ListaNotas[4];
+                    NudNotaRecursosPresupuesto.Text = ListaNotas[5];
+                    NudNotaImpacto.Text = ListaNotas[6];
+                    NudNotaOrganizacionDocTesis.Text = ListaNotas[7];
                 }
                 else
                 {

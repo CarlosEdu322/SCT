@@ -17,6 +17,7 @@ namespace LibFormularios
     {
         public TextBox CajadeTexto;
         private CTesista oTesista = new CTesista();
+        public List<string> ListaEstudiantes;
         public FrmBuscarTesista()
         {
             InitializeComponent();
@@ -39,13 +40,33 @@ namespace LibFormularios
             //dgvTesista.Columns["Correo"].Visible = false;
             //dgvTesista.Columns["Telefono"].Visible = false;
         }
-
+        public bool listaEstudiantes(string pCodDocente)
+        {
+            bool encontrado = false;
+            for (int k = 0; k < ListaEstudiantes.Count; k++)
+            {
+                if (ListaEstudiantes[k].CompareTo(pCodDocente) == 0)
+                    encontrado = true;
+            }
+            return encontrado;
+        }
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
             FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
             //frm.CodigoBusquedaTesista1.Text = dgvTesista.CurrentRow.Cells[0].Value.ToString();
-            CajadeTexto.Text= dgvTesista.CurrentRow.Cells[0].Value.ToString();
-            this.Close();
+            string codigoTesista = dgvTesista.CurrentRow.Cells[0].Value.ToString();
+            if (!listaEstudiantes(codigoTesista))
+            {
+                CajadeTexto.Text = codigoTesista;
+                this.Close();
+            }
+            
+            else
+            {
+
+                MessageBox.Show("EL TESISTA SELECCIONADO YA FUE SELECCIONADO", "ALERTA");
+            }
+
         }
 
     }

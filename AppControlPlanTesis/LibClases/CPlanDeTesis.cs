@@ -312,5 +312,24 @@ namespace LibClases
                 return "ERROR";
             }
         }
+        public List<string> ConsultarNotas(string pcodexpediente,string pcoddocente)
+        {
+            string consulta = "select* from TActaDePlanDeTesis where CodEvaluacionPlanDeTesis = '"+ pcodexpediente + "' and CodDocente = '"+pcoddocente+"'";
+            aConexion.EjecutarSelect(consulta);
+            List<string> NotasEmitidas = new List<string>();
+            DataTable tablaresultado = aConexion.Datos.Tables[0];
+            DataRow drv = tablaresultado.Rows[0];
+            NotasEmitidas.Add(drv["NotaIdentificacionProblema"].ToString());
+            NotasEmitidas.Add(drv["NotaHipotesis"].ToString());
+            NotasEmitidas.Add(drv["NotaAlcanceResultados"].ToString());
+            NotasEmitidas.Add(drv["NotaMetodologia"].ToString());
+            NotasEmitidas.Add(drv["NotaRevisionBibliografica"].ToString());
+            NotasEmitidas.Add(drv["NotaRecursosPresupuesto"].ToString());
+            NotasEmitidas.Add(drv["NotaImpacto"].ToString());
+            NotasEmitidas.Add(drv["NotaOrganizacionDocTesis"].ToString());
+
+            return NotasEmitidas;
+
+        }
     }
 }

@@ -112,6 +112,15 @@ namespace LibFormularios
                     GbxRubrica.Enabled = false;
                     LblNotificacion.Visible = true;
                     LblNotificacion.Text = "Usted ya dictamino esta tesis";
+                    List<string> ListaNotas = oDictaminanteDeTesis.ConsultarNotas(CboCodDictaminantes.Text, CboCodDocente.Text);
+                    if (ListaNotas[0].CompareTo("APROBADO")==0)
+                    {
+                        RbAprobado.Checked = true;
+                    }
+                    else
+                    {
+                        RbDesaprobado.Checked = true;
+                    }
                 }
                 else
                 {

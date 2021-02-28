@@ -280,5 +280,18 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0].Rows.Count > 0;
         }
+        public List<string> ConsultarNotas(string pcodexpediente)
+        {
+            string consulta = "select * from TActaSustentacionOral where CodSustentacionOral='"+ pcodexpediente + "'";
+            aConexion.EjecutarSelect(consulta);
+            List<string> NotasEmitidas = new List<string>();
+            DataTable tablaresultado = aConexion.Datos.Tables[0];
+            DataRow drv = tablaresultado.Rows[0];
+            NotasEmitidas.Add(drv["EstadoVotacion"].ToString());
+            NotasEmitidas.Add(drv["Nota"].ToString());
+            NotasEmitidas.Add(drv["Resultado"].ToString());
+            return NotasEmitidas;
+
+        }
     }
 }

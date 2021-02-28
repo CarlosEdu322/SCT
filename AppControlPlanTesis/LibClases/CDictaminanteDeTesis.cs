@@ -169,6 +169,16 @@ namespace LibClases
             return aConexion.Datos.Tables[0];
 
         }
+        public List<string> ConsultarNotas(string pcodexpediente, string pcoddocente)
+        {
+            string consulta = "SELECT * FROM TActaDictamenDeTesis where CodDictamenDeTesis='"+ pcodexpediente + "' and CodDocente='"+pcoddocente+"'";
+            aConexion.EjecutarSelect(consulta);
+            List<string> NotasEmitidas = new List<string>();
+            DataTable tablaresultado = aConexion.Datos.Tables[0];
+            DataRow drv = tablaresultado.Rows[0];
+            NotasEmitidas.Add(drv["SuficienciaJuicio"].ToString());
+            return NotasEmitidas;
 
+        }
     }
 }

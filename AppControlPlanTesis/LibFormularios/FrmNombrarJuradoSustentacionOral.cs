@@ -70,6 +70,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDictaminante1;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void BtnBuscarDictaminante2_Click(object sender, EventArgs e)
@@ -78,6 +87,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDictaminante2;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void BtnBuscarDictaminante3_Click(object sender, EventArgs e)
@@ -86,6 +104,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDictaminante3;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void BtnBuscarReplicante1_Click(object sender, EventArgs e)
@@ -94,6 +121,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodReplicante1;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void BtnBuscarReplicante2_Click(object sender, EventArgs e)
@@ -102,6 +138,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodReplicante2;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void BtnBuscarReplicante3_Click(object sender, EventArgs e)
@@ -110,6 +155,15 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodReplicante3;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(TxtPresidente.Text);
+            ListaDocentes.Add(txtCodDictaminante1.Text);
+            ListaDocentes.Add(txtCodDictaminante2.Text);
+            ListaDocentes.Add(txtCodDictaminante3.Text);
+            ListaDocentes.Add(txtCodReplicante1.Text);
+            ListaDocentes.Add(txtCodReplicante2.Text);
+            ListaDocentes.Add(txtCodReplicante3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
         public void ConsultarDocente(TextBox tbox1, TextBox tbox2, string codigotesista)
         {

@@ -198,7 +198,11 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = TxtCodTesista1;
-
+            List<string> ListaEstudiantes = new List<string>();
+            ListaEstudiantes.Add(TxtCodTesista1.Text);
+            ListaEstudiantes.Add(TxtCodTesista2.Text);
+            ListaEstudiantes.Add(TxtCodTesista3.Text);
+            A.ListaEstudiantes = ListaEstudiantes;
 
             ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
         }
@@ -215,6 +219,12 @@ namespace LibFormularios
                 ConsultarEstudiante(TxtNombreTesista2, TxtApeTesista2, TxtDniTesista2, TxtCodTesista2.Text);
             }
             */
+            List<string> ListaEstudiantes = new List<string>();
+            ListaEstudiantes.Add(TxtCodTesista1.Text);
+            ListaEstudiantes.Add(TxtCodTesista2.Text);
+            ListaEstudiantes.Add(TxtCodTesista3.Text);
+            A.ListaEstudiantes = ListaEstudiantes;
+            ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
         }
 
         private void BtnBuscarT3_Click(object sender, EventArgs e)
@@ -224,11 +234,12 @@ namespace LibFormularios
             A.Show();
             A.CajadeTexto = TxtCodTesista3;
 
-            /*
-            if ((ComprobarDuplicidad(TxtCodTesista1, TxtCodTesista2) == false) && (ComprobarDuplicidad(TxtCodTesista1, TxtCodTesista3) == false) && (ComprobarDuplicidad(TxtCodTesista2, TxtCodTesista3) == false))
-            {
-                ConsultarEstudiante(TxtNombreTesista3, TxtApeTesista3, TxtDniTesista3, TxtCodTesista3.Text);
-            }*/
+            List<string> ListaEstudiantes = new List<string>();
+            ListaEstudiantes.Add(TxtCodTesista1.Text);
+            ListaEstudiantes.Add(TxtCodTesista2.Text);
+            ListaEstudiantes.Add(TxtCodTesista3.Text);
+            A.ListaEstudiantes = ListaEstudiantes;
+            ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
         }
 
         public void ConsultarDocente(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
@@ -352,6 +363,8 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDocente;
+            List<string> ListaDocentes = new List<string>();
+            A.ListaDocentes = ListaDocentes;
 
         }
 

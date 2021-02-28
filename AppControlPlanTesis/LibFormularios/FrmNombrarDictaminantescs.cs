@@ -35,8 +35,8 @@ namespace LibFormularios
             DgvTesisPendientesDeDictaminantes.Columns.Insert(0, CBColumn);
             if (DgvEvaluadoresDePlanDeTesis.DataSource == null)
             {
-                BtnCargar.Enabled = false;
-                BtnNombrarCR.Enabled = false;
+                //BtnCargar.Enabled = false;
+                //BtnNombrarCR.Enabled = false;
             }
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
@@ -49,6 +49,11 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDocente1;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(txtCodDocente1.Text);
+            ListaDocentes.Add(txtCodDocente2.Text);
+            ListaDocentes.Add(txtCodDocente3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void btnBuscarDocente2_Click(object sender, EventArgs e)
@@ -57,6 +62,11 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDocente2;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(txtCodDocente1.Text);
+            ListaDocentes.Add(txtCodDocente2.Text);
+            ListaDocentes.Add(txtCodDocente3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
 
         private void btnBuscarDocente3_Click(object sender, EventArgs e)
@@ -65,6 +75,11 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = txtCodDocente3;
+            List<string> ListaDocentes = new List<string>();
+            ListaDocentes.Add(txtCodDocente1.Text);
+            ListaDocentes.Add(txtCodDocente2.Text);
+            ListaDocentes.Add(txtCodDocente3.Text);
+            A.ListaDocentes = ListaDocentes;
         }
         public void ConsultarDocente(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
         {
