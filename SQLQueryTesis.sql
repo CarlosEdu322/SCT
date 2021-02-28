@@ -132,11 +132,15 @@ CodTesis varchar(6),
 CodEvaluacionPlanDeTesis varchar(6) ,
 CodDictamenDeTesis varchar(6),
 CodSustentacionOral varchar(6),
-Estado varchar(50),
+Estado varchar(100),
 					--TESIS PREINSCRITA
 					--TESIS APROBADA POR COMISION REVISORA
 					--TESIS DESAPROBADA POR COMISION REVISORA
+					--TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE
+					--TESIS CON EVALUACION DE DICTAMINANTES PENDIENTE
 					--TESIS APROBADA POR DICTAMINANTES
+					--TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE
+					--TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE
 					--TESIS DESAPROBADA POR DICTAMINANTES
 					--TESIS DESAPROBADA POR JURADO EVALUADOR
 					--TESIS CONCLUIDA
@@ -145,7 +149,14 @@ primary key (NroExpediente),
 foreign key (CodTesis) references TTesis,
 )
 go
+select * from TTesis
 
+UPDATE TExpediente set Estado='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE' where NroExpediente='" + pNroTramite + "' and CodTesis='" + pcodtesis + "' 
+select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA'
+
+select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE'
+
+UPDATE TExpediente set Estado='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE' where NroExpediente='' and CodTesis='' 
 --------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
@@ -209,6 +220,7 @@ create table TTesisXTesista(
 	foreign key (CodTesis) references TTesis,
 	foreign key (CodTesista) references TTesista,
 )
+select * from TActaDePlanDeTesis where CodEvaluacionPlanDeTesis='300001' and CodDocente='D00001'
 
 create table TActaDePlanDeTesis
 ( -- lista de atributos
@@ -241,6 +253,7 @@ foreign key (CodDocente) references TDocente,
 )
 go
 
+
 create table TActaSustentacionOral
 ( -- lista de atributos
 CodSustentacionOral varchar(6),
@@ -250,7 +263,7 @@ EstadoVotacion varchar(40),
 FechaEvaluacionOral smalldatetime,
 )
 go
-
+select * from TActaSustentacionOral where CodSustentacionOral=''
 create table TNotificacionDeCargo
 ( -- lista de atributos
 CodDocente varchar(6),
@@ -429,3 +442,4 @@ GO
 --select Estado, COUNT(Estado) as Numero
 --from TExpediente
 --group by Estado
+select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA' and CodTesis in (select CodTesis from TResolucion where Considerando='TESIS APROBADA PARA DICTAMINAR')

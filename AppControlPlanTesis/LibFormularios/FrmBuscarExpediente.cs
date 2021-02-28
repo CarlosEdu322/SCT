@@ -16,18 +16,28 @@ namespace LibFormularios
     {
         public TextBox CajadeTexto;
         private CDictaminanteDeTesis oDictaminanteDeTesis = new CDictaminanteDeTesis();
-        public FrmBuscarExpediente()
+        public FrmBuscarExpediente(string tipodebusqueda)
         {
             InitializeComponent();
-            InicializarCamposCboNroEstudiantes();
+            InicializarCamposCboNroEstudiantes(tipodebusqueda);
+
         }
-        public void InicializarCamposCboNroEstudiantes()
+        public void InicializarCamposCboNroEstudiantes(string tipodebusqueda)
         {
-            //CboCategoria.SelectedIndex = 0;
-            DgvExpediente.DataSource = oDictaminanteDeTesis.ListarExpediente();
-            //DgvExpediente.Columns["CodDocente"].Visible = false;
-            //DgvExpediente.Columns["Correo"].Visible = false;
-            //DgvExpediente.Columns["Telefono"].Visible = false;
+
+            if(tipodebusqueda.CompareTo("SOLO TESIS A SER DICTAMINADAS") == 0) {
+                //CboCategoria.SelectedIndex = 0;
+                
+            DgvExpediente.DataSource = oDictaminanteDeTesis.ListarExpedienteSoloTesisRevisadas();
+                //DgvExpediente.Columns["CodDocente"].Visible = false;
+                //DgvExpediente.Columns["Correo"].Visible = false;
+                //DgvExpediente.Columns["Telefono"].Visible = false;
+            }
+            
+            else if (tipodebusqueda.CompareTo("SOLO TESIS A SER EVALUADAS ORALMENTE") == 0)
+            {
+                DgvExpediente.DataSource = oDictaminanteDeTesis.ListarExpedienteSoloTesisDictaminadas();
+            }
         }
 
         private void TxtBuscar_KeyUp(object sender, KeyEventArgs e)

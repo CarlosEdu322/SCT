@@ -19,7 +19,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral='' and a.Estado='TESIS APROBADA POR DICTAMINANTES'";
+            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral='' and a.Estado='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -293,5 +293,11 @@ namespace LibClases
             return NotasEmitidas;
 
         }
+        public void UpdateEstadoTramiteEvaluadoresPendientes(string pNroTramite, string pcodtesis)
+        {
+            string consulta = "UPDATE TExpediente set Estado='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE' where NroExpediente='" + pNroTramite + "' and CodTesis='" + pcodtesis + "' ";
+            aConexion.EjecutarComando(consulta);
+        }
+
     }
 }

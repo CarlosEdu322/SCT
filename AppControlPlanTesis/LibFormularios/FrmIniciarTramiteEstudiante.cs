@@ -43,6 +43,24 @@ namespace LibFormularios
             CboNroEstudiantes.SelectedIndex = 0;
             CboCodTramite.SelectedIndex = 0;
             //GbxTramiteDeInscripcion.Visible = false;
+            CargarDatosEspecialidad();
+        }
+
+        public void CargarDatosEspecialidad()
+        {
+            try
+            {
+                //-- muestra la lista de libros en el combo
+                CboExpecialidad.DataSource = oTesis.ListaGeneral();
+                CboExpecialidad.DisplayMember = "Tema";
+                CboExpecialidad.ValueMember = "Tema";
+                //-- dejar el combo sin libro seleccionado
+                CboExpecialidad.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         public void InicializarCamposCboNroEstudiantes()
         {
@@ -143,6 +161,14 @@ namespace LibFormularios
         private void CboCodTramite_SelectedIndexChanged(object sender, EventArgs e)
         {
             RellenarRequisitosXTramite();
+            if (RbMarcarTodo.Checked == true)
+            {
+                MarcarTodosRequisitos();
+            }
+            else
+            {
+                desMarcarTodosRequisitos();
+            }
         }
         public void ConsultarEstudiante(TextBox tbox1, TextBox tbox2, TextBox tbox3, string codigotesista)
         {
@@ -291,7 +317,7 @@ namespace LibFormularios
                         //insert into TTesis values ('tema','coddocente','titulo','','')
                         List<string> CadenaTesis = new List<string>();
                         CadenaTesis.Add(TxtCodTesis.Text);
-                        CadenaTesis.Add(TxtTema.Text);
+                        CadenaTesis.Add(CboExpecialidad.Text);
                         CadenaTesis.Add(txtCodDocente.Text);
                         CadenaTesis.Add(TxtTitulo.Text);
                         oTesis.AgregarTesis(CadenaTesis);
@@ -410,11 +436,15 @@ namespace LibFormularios
             int indice = CboCodTramite.SelectedIndex;
             if (indice == 0)
             {
-                TbCTramites.SelectedIndex = 0;
+                TabTramites.SelectedIndex = 0;
             }
             if (indice == 1)
             {
-                TbCTramites.SelectedIndex = 1;
+                TabTramites.SelectedIndex = 1;
+            }
+            if (indice == 2)
+            {
+                TabTramites.SelectedIndex = 2;
             }
             /*
             if(VerificarRequisitos())
@@ -430,10 +460,10 @@ namespace LibFormularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmBuscarExpediente A = new FrmBuscarExpediente();
+            FrmBuscarExpediente A = new FrmBuscarExpediente("SOLO TESIS A SER DICTAMINADAS");
             AddOwnedForm(A);
             A.Show();
-            A.CajadeTexto = TxtNroExpediente;
+            A.CajadeTexto = dicTxtNroExpediente;
 
 
 
@@ -443,8 +473,7 @@ namespace LibFormularios
 
             //ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
         }
-
-        private void RbMarcarTodo_CheckedChanged(object sender, EventArgs e)
+        public void MarcarTodosRequisitos()
         {
             if (RbMarcarTodo.Checked == true)
             {
@@ -454,8 +483,11 @@ namespace LibFormularios
                 }
             }
         }
-
-        private void RbDesmarcarTodo_CheckedChanged(object sender, EventArgs e)
+        private void RbMarcarTodo_CheckedChanged(object sender, EventArgs e)
+        {
+            MarcarTodosRequisitos();
+        }
+        public void desMarcarTodosRequisitos()
         {
             if (RbDesmarcarTodo.Checked == true)
             {
@@ -465,10 +497,14 @@ namespace LibFormularios
                 }
             }
         }
+        private void RbDesmarcarTodo_CheckedChanged(object sender, EventArgs e)
+        {
+            desMarcarTodosRequisitos();
+        }
 
         private void TxtNroExpediente_TextChanged(object sender, EventArgs e)
         {
-            dicTxtCodTesis.Text = oDictaminanteDeTesis.BuscarTesisXExpediente(TxtNroExpediente.Text);
+            dicTxtCodTesis.Text = oDictaminanteDeTesis.BuscarTesisXExpediente(dicTxtNroExpediente.Text);
             ConsultarTesis(dicTxtTituloTesis,dicTxtTemaTesis,dicTxtObservacionesTesis,dicTxtCodTesis.Text);
 
         }
@@ -516,6 +552,98 @@ namespace LibFormularios
         private void dicTxtCodDocente_TextChanged(object sender, EventArgs e)
         {
             ConsultarDocente(dicTxtNombresDocente, dicTxtApellidosDocente, dicTxtDNIDocente, dicTxtCodDocente.Text);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            { 
+            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+            oPlanDeTesis.UpdateEstadoTramite(dicTxtNroExpediente.Text, dicTxtCodTesis.Text);
+            MessageBox.Show("HA REGISTRADO EL TRAMITE", "CONFIRMACION");
+            }
+            catch
+            {
+
+            }
+        }
+        //tramite de evaluacion oral
+        private void evoTxtNroExpediente_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                evoTxtCodTesis.Text = oDictaminanteDeTesis.BuscarTesisXExpediente(evoTxtNroExpediente.Text);
+                ConsultarTesis(evoTxtTituloTesis, evoTxtTemaTesis, evoTxtObservacionesTesis, evoTxtCodTesis.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void evoTxtCodTesis_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //buscar Estudiantes Interesados
+                DataTable d1 = oDictaminanteDeTesis.ListarInteresados(evoTxtCodTesis.Text);
+                //MessageBox.Show(d1.Rows.Count.ToString());
+                if (d1.Rows.Count == 1)
+                {
+                    //aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
+                    evoTxtCodTesista1.Text = d1.Rows[0]["CodTesista"].ToString();
+                    ConsultarEstudiante(evoTxtNombreTesista1, evoTxtApeTesista1, evoTxtDniTesista1, evoTxtCodTesista1.Text);
+                }
+                if (d1.Rows.Count == 2)
+                {
+                    //aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
+                    evoTxtCodTesista1.Text = d1.Rows[0]["CodTesista"].ToString();
+                    evoTxtCodTesista2.Text = d1.Rows[1]["CodTesista"].ToString();
+                    ConsultarEstudiante(evoTxtNombreTesista1, evoTxtApeTesista1, evoTxtDniTesista1, evoTxtCodTesista1.Text);
+                    ConsultarEstudiante(evoTxtNombreTesista2, evoTxtApeTesista2, evoTxtDniTesista2, evoTxtCodTesista2.Text);
+                }
+                if (d1.Rows.Count == 3)
+                {
+                    //aConexion.Datos.Tables[0].Rows[0]["CodTesis"].ToString();
+                    evoTxtCodTesista1.Text = d1.Rows[0]["CodTesista"].ToString();
+                    evoTxtCodTesista2.Text = d1.Rows[1]["CodTesista"].ToString();
+                    evoTxtCodTesista3.Text = d1.Rows[2]["CodTesista"].ToString();
+                    ConsultarEstudiante(evoTxtNombreTesista1, evoTxtApeTesista1, evoTxtDniTesista1, evoTxtCodTesista1.Text);
+                    ConsultarEstudiante(evoTxtNombreTesista2, evoTxtApeTesista2, evoTxtDniTesista2, evoTxtCodTesista2.Text);
+                    ConsultarEstudiante(evoTxtNombreTesista3, evoTxtApeTesista3, evoTxtDniTesista3, evoTxtCodTesista3.Text);
+                }
+                //CARGAR Datos del docente
+                evoTxtCodDocente.Text = oDictaminanteDeTesis.BuscarDocenteAsesorPorTesis(evoTxtCodTesis.Text);
+                ConsultarDocente(evoTxtNombresDocente, evoTxtApellidosDocente, evoTxtDNIDocente, evoTxtCodDocente.Text);
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.ToString(), "ERROR AL REALIZAR LA OPERACION");
+            }
+        }
+
+        private void evoBtnBuscarExpediente_Click(object sender, EventArgs e)
+        {
+            FrmBuscarExpediente A = new FrmBuscarExpediente("SOLO TESIS A SER EVALUADAS ORALMENTE");
+            AddOwnedForm(A);
+            A.Show();
+            A.CajadeTexto = evoTxtNroExpediente;
+        }
+
+        private void BtnSolicitarEvaluadoresOrales_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CEvaluacionTesis oEvaluacionTesis = new CEvaluacionTesis();
+                oEvaluacionTesis.UpdateEstadoTramiteEvaluadoresPendientes(evoTxtNroExpediente.Text, evoTxtCodTesis.Text);
+                MessageBox.Show("HA REGISTRADO EL TRAMITE", "CONFIRMACION");
+            }
+            catch(Exception eeee)
+            {
+                MessageBox.Show(eeee.ToString());
+            }
         }
     }
 }

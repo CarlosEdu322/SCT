@@ -331,5 +331,10 @@ namespace LibClases
             return NotasEmitidas;
 
         }
+        public void UpdateEstadoTramite(string pNroTramite, string pcodtesis)
+        {
+            string consulta = "UPDATE TExpediente set Estado='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE' where NroExpediente='" + pNroTramite + "' and CodTesis='" + pcodtesis + "' ";
+            aConexion.EjecutarComando(consulta);
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = '' and a.Estado ='TESIS APROBADA POR COMISION REVISORA'";
+            string consulta = "select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -180,5 +180,27 @@ namespace LibClases
             return NotasEmitidas;
 
         }
-    }
+
+
+        public DataTable ListarExpedienteSoloTesisRevisadas(){
+            string consulta = "select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA'";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public void UpdateEstadoTramiteEvaluacionDictaminantesPendiente(string pNroTramite, string pcodtesis)
+        {
+            string consulta = "UPDATE TExpediente set Estado='TESIS CON EVALUACION DE DICTAMINANTES PENDIENTE' where NroExpediente='" + pNroTramite + "' and CodTesis='" + pcodtesis + "' ";
+            aConexion.EjecutarComando(consulta);
+        }
+
+
+        /////
+        ///ListarExpedienteSoloTesisDictaminadas
+        public DataTable ListarExpedienteSoloTesisDictaminadas()
+        {
+            string consulta = "select * from TExpediente where Estado='TESIS APROBADA POR DICTAMINANTES'";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+}
 }

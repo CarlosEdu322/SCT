@@ -28,11 +28,13 @@ namespace LibFormularios
             DgvTesisPendientesDeDictaminantes.Columns["CodTesis"].Visible = false;
             DgvTesisPendientesDeDictaminantes.Columns["CodEvaluacionPlanDeTesis"].Visible = false;
             //checks
+            /*
             DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
             CBColumn.HeaderText = "";
             CBColumn.FalseValue = "0";
             CBColumn.TrueValue = "1";
             DgvTesisPendientesDeDictaminantes.Columns.Insert(0, CBColumn);
+            */
             if (DgvEvaluadoresDePlanDeTesis.DataSource == null)
             {
                 //BtnCargar.Enabled = false;
@@ -159,6 +161,9 @@ namespace LibFormularios
                         ComisionRevisora.Add(txtCodDocente3.Text);
                     oDictaminanteDeTesis.AgregarDocentesDictaminantes(ComisionRevisora, TxtCodDictaminantesDeTesis.Text);
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+                    
+                    oDictaminanteDeTesis.UpdateEstadoTramiteEvaluacionDictaminantesPendiente(TxtExpediente.Text,TxtCodTesis.Text);
+
                     LlenarTesisPendientes();
                 }
                 else
