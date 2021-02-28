@@ -55,6 +55,7 @@
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTesis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInteresados)).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -77,9 +79,10 @@
             // 
             // TxtCodTesis
             // 
+            this.TxtCodTesis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtCodTesis.Enabled = false;
             this.TxtCodTesis.Location = new System.Drawing.Point(642, 20);
-            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCodTesis.Name = "TxtCodTesis";
             this.TxtCodTesis.Size = new System.Drawing.Size(159, 27);
             this.TxtCodTesis.TabIndex = 225;
@@ -87,12 +90,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.DgvTesis);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 193);
+            this.groupBox2.Location = new System.Drawing.Point(11, 214);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(807, 236);
             this.groupBox2.TabIndex = 228;
@@ -103,10 +108,12 @@
             // 
             this.DgvTesis.AllowUserToAddRows = false;
             this.DgvTesis.AllowUserToDeleteRows = false;
+            this.DgvTesis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvTesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTesis.Location = new System.Drawing.Point(5, 178);
-            this.DgvTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvTesis.Margin = new System.Windows.Forms.Padding(2);
             this.DgvTesis.Name = "DgvTesis";
             this.DgvTesis.ReadOnly = true;
             this.DgvTesis.RowHeadersWidth = 51;
@@ -139,10 +146,12 @@
             // 
             this.DgvInteresados.AllowUserToAddRows = false;
             this.DgvInteresados.AllowUserToDeleteRows = false;
+            this.DgvInteresados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvInteresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvInteresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvInteresados.Location = new System.Drawing.Point(5, 48);
-            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2);
             this.DgvInteresados.Name = "DgvInteresados";
             this.DgvInteresados.ReadOnly = true;
             this.DgvInteresados.RowHeadersWidth = 51;
@@ -152,6 +161,8 @@
             // 
             // GbxDatosDelDocente
             // 
+            this.GbxDatosDelDocente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxDatosDelDocente.Controls.Add(this.label10);
             this.GbxDatosDelDocente.Controls.Add(this.label12);
             this.GbxDatosDelDocente.Controls.Add(this.TxtDNIDocente);
@@ -160,10 +171,10 @@
             this.GbxDatosDelDocente.Controls.Add(this.TxtNombresDocente);
             this.GbxDatosDelDocente.Controls.Add(this.label11);
             this.GbxDatosDelDocente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GbxDatosDelDocente.Location = new System.Drawing.Point(11, 101);
-            this.GbxDatosDelDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxDatosDelDocente.Location = new System.Drawing.Point(11, 122);
+            this.GbxDatosDelDocente.Margin = new System.Windows.Forms.Padding(2);
             this.GbxDatosDelDocente.Name = "GbxDatosDelDocente";
-            this.GbxDatosDelDocente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxDatosDelDocente.Padding = new System.Windows.Forms.Padding(2);
             this.GbxDatosDelDocente.Size = new System.Drawing.Size(807, 87);
             this.GbxDatosDelDocente.TabIndex = 227;
             this.GbxDatosDelDocente.TabStop = false;
@@ -171,6 +182,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -183,6 +195,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -195,26 +208,29 @@
             // 
             // TxtDNIDocente
             // 
+            this.TxtDNIDocente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtDNIDocente.Enabled = false;
             this.TxtDNIDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtDNIDocente.Location = new System.Drawing.Point(360, 51);
-            this.TxtDNIDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDNIDocente.Margin = new System.Windows.Forms.Padding(2);
             this.TxtDNIDocente.Name = "TxtDNIDocente";
             this.TxtDNIDocente.Size = new System.Drawing.Size(136, 25);
             this.TxtDNIDocente.TabIndex = 217;
             // 
             // TxtApellidosDocente
             // 
+            this.TxtApellidosDocente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDocente.Enabled = false;
             this.TxtApellidosDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtApellidosDocente.Location = new System.Drawing.Point(187, 51);
-            this.TxtApellidosDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtApellidosDocente.Margin = new System.Windows.Forms.Padding(2);
             this.TxtApellidosDocente.Name = "TxtApellidosDocente";
             this.TxtApellidosDocente.Size = new System.Drawing.Size(169, 25);
             this.TxtApellidosDocente.TabIndex = 215;
             // 
             // LblNotificacion
             // 
+            this.LblNotificacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblNotificacion.AutoSize = true;
             this.LblNotificacion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblNotificacion.ForeColor = System.Drawing.Color.Red;
@@ -227,16 +243,18 @@
             // 
             // TxtNombresDocente
             // 
+            this.TxtNombresDocente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDocente.Enabled = false;
             this.TxtNombresDocente.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtNombresDocente.Location = new System.Drawing.Point(8, 51);
-            this.TxtNombresDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNombresDocente.Margin = new System.Windows.Forms.Padding(2);
             this.TxtNombresDocente.Name = "TxtNombresDocente";
             this.TxtNombresDocente.Size = new System.Drawing.Size(175, 25);
             this.TxtNombresDocente.TabIndex = 216;
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -249,6 +267,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(5, 52);
@@ -260,10 +279,11 @@
             // 
             // CboCodDocente
             // 
+            this.CboCodDocente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CboCodDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodDocente.FormattingEnabled = true;
             this.CboCodDocente.Location = new System.Drawing.Point(226, 52);
-            this.CboCodDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CboCodDocente.Margin = new System.Windows.Forms.Padding(2);
             this.CboCodDocente.Name = "CboCodDocente";
             this.CboCodDocente.Size = new System.Drawing.Size(259, 25);
             this.CboCodDocente.TabIndex = 223;
@@ -271,6 +291,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(5, 23);
@@ -282,10 +303,11 @@
             // 
             // CboCodDictaminantes
             // 
+            this.CboCodDictaminantes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CboCodDictaminantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodDictaminantes.FormattingEnabled = true;
             this.CboCodDictaminantes.Location = new System.Drawing.Point(226, 23);
-            this.CboCodDictaminantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CboCodDictaminantes.Margin = new System.Windows.Forms.Padding(2);
             this.CboCodDictaminantes.Name = "CboCodDictaminantes";
             this.CboCodDictaminantes.Size = new System.Drawing.Size(259, 25);
             this.CboCodDictaminantes.TabIndex = 221;
@@ -293,15 +315,18 @@
             // 
             // GbxRubrica
             // 
+            this.GbxRubrica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxRubrica.Controls.Add(this.RbDesaprobado);
             this.GbxRubrica.Controls.Add(this.RbAprobado);
             this.GbxRubrica.Controls.Add(this.label20);
             this.GbxRubrica.Controls.Add(this.TxtObservaciones);
             this.GbxRubrica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GbxRubrica.Location = new System.Drawing.Point(12, 434);
-            this.GbxRubrica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxRubrica.Location = new System.Drawing.Point(12, 455);
+            this.GbxRubrica.Margin = new System.Windows.Forms.Padding(2);
             this.GbxRubrica.Name = "GbxRubrica";
-            this.GbxRubrica.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxRubrica.Padding = new System.Windows.Forms.Padding(2);
             this.GbxRubrica.Size = new System.Drawing.Size(807, 149);
             this.GbxRubrica.TabIndex = 229;
             this.GbxRubrica.TabStop = false;
@@ -309,9 +334,10 @@
             // 
             // RbDesaprobado
             // 
+            this.RbDesaprobado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbDesaprobado.AutoSize = true;
             this.RbDesaprobado.Location = new System.Drawing.Point(406, 24);
-            this.RbDesaprobado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RbDesaprobado.Margin = new System.Windows.Forms.Padding(2);
             this.RbDesaprobado.Name = "RbDesaprobado";
             this.RbDesaprobado.Size = new System.Drawing.Size(124, 25);
             this.RbDesaprobado.TabIndex = 1;
@@ -321,9 +347,10 @@
             // 
             // RbAprobado
             // 
+            this.RbAprobado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RbAprobado.AutoSize = true;
             this.RbAprobado.Location = new System.Drawing.Point(291, 24);
-            this.RbAprobado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RbAprobado.Margin = new System.Windows.Forms.Padding(2);
             this.RbAprobado.Name = "RbAprobado";
             this.RbAprobado.Size = new System.Drawing.Size(111, 25);
             this.RbAprobado.TabIndex = 0;
@@ -344,9 +371,12 @@
             // 
             // TxtObservaciones
             // 
+            this.TxtObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtObservaciones.Location = new System.Drawing.Point(133, 53);
-            this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtObservaciones.Margin = new System.Windows.Forms.Padding(2);
             this.TxtObservaciones.Multiline = true;
             this.TxtObservaciones.Name = "TxtObservaciones";
             this.TxtObservaciones.Size = new System.Drawing.Size(669, 92);
@@ -354,6 +384,7 @@
             // 
             // BtnCerrar
             // 
+            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
             this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
@@ -361,8 +392,8 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(655, 587);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Location = new System.Drawing.Point(655, 608);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
             this.BtnCerrar.TabIndex = 233;
@@ -372,6 +403,7 @@
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
@@ -379,8 +411,8 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(487, 587);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuardar.Location = new System.Drawing.Point(487, 608);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(164, 48);
             this.BtnGuardar.TabIndex = 232;
@@ -390,6 +422,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.CboCodDictaminantes);
             this.groupBox1.Controls.Add(this.CboCodDocente);
@@ -397,24 +431,40 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.TxtCodTesis);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(807, 84);
             this.groupBox1.TabIndex = 234;
             this.groupBox1.TabStop = false;
+            // 
+            // LblTitulo
+            // 
+            this.LblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.LblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.LblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(830, 31);
+            this.LblTitulo.TabIndex = 239;
+            this.LblTitulo.Text = "Evaluacion de Dictaminantes de Tesis";
+            this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmResultadoEvaluacionDictamen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 680);
+            this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.GbxRubrica);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.GbxDatosDelDocente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmResultadoEvaluacionDictamen";
             this.Text = "FrmResultadoEvaluacionDictamen";
             this.groupBox2.ResumeLayout(false);
@@ -460,5 +510,6 @@
         protected System.Windows.Forms.Button BtnCerrar;
         protected System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.GroupBox groupBox1;
+        protected System.Windows.Forms.Label LblTitulo;
     }
 }

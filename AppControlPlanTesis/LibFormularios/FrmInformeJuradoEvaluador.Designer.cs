@@ -52,6 +52,9 @@
             this.TxtResolucion = new System.Windows.Forms.TextBox();
             this.btnEResolucionDeLosDictaminantes = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtExpediente = new System.Windows.Forms.TextBox();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTesis)).BeginInit();
@@ -62,12 +65,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.CboCodJuradoEvaluador);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.TxtCodTesis);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(10, 20);
+            this.groupBox3.Location = new System.Drawing.Point(10, 32);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(805, 59);
             this.groupBox3.TabIndex = 229;
@@ -75,10 +80,11 @@
             // 
             // CboCodJuradoEvaluador
             // 
+            this.CboCodJuradoEvaluador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CboCodJuradoEvaluador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodJuradoEvaluador.FormattingEnabled = true;
             this.CboCodJuradoEvaluador.Location = new System.Drawing.Point(249, 23);
-            this.CboCodJuradoEvaluador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CboCodJuradoEvaluador.Margin = new System.Windows.Forms.Padding(2);
             this.CboCodJuradoEvaluador.Name = "CboCodJuradoEvaluador";
             this.CboCodJuradoEvaluador.Size = new System.Drawing.Size(235, 25);
             this.CboCodJuradoEvaluador.TabIndex = 222;
@@ -86,6 +92,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(5, 23);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -96,9 +103,10 @@
             // 
             // TxtCodTesis
             // 
+            this.TxtCodTesis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtCodTesis.Enabled = false;
             this.TxtCodTesis.Location = new System.Drawing.Point(637, 20);
-            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCodTesis.Name = "TxtCodTesis";
             this.TxtCodTesis.Size = new System.Drawing.Size(163, 27);
             this.TxtCodTesis.TabIndex = 225;
@@ -106,6 +114,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -118,12 +127,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.DgvTesis);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 93);
+            this.groupBox2.Location = new System.Drawing.Point(10, 105);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(805, 226);
             this.groupBox2.TabIndex = 230;
@@ -134,10 +145,12 @@
             // 
             this.DgvTesis.AllowUserToAddRows = false;
             this.DgvTesis.AllowUserToDeleteRows = false;
+            this.DgvTesis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvTesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvTesis.Location = new System.Drawing.Point(9, 164);
-            this.DgvTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvTesis.Margin = new System.Windows.Forms.Padding(2);
             this.DgvTesis.Name = "DgvTesis";
             this.DgvTesis.ReadOnly = true;
             this.DgvTesis.RowHeadersWidth = 51;
@@ -170,10 +183,12 @@
             // 
             this.DgvInteresados.AllowUserToAddRows = false;
             this.DgvInteresados.AllowUserToDeleteRows = false;
+            this.DgvInteresados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvInteresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvInteresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvInteresados.Location = new System.Drawing.Point(110, 25);
-            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2);
             this.DgvInteresados.Name = "DgvInteresados";
             this.DgvInteresados.ReadOnly = true;
             this.DgvInteresados.RowHeadersWidth = 51;
@@ -183,6 +198,8 @@
             // 
             // GbxRubricaDeEvaluacion
             // 
+            this.GbxRubricaDeEvaluacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbxRubricaDeEvaluacion.Controls.Add(this.label2);
             this.GbxRubricaDeEvaluacion.Controls.Add(this.TxtConsenso);
             this.GbxRubricaDeEvaluacion.Controls.Add(this.TxtResultado);
@@ -190,10 +207,10 @@
             this.GbxRubricaDeEvaluacion.Controls.Add(this.TxtJuicio);
             this.GbxRubricaDeEvaluacion.Controls.Add(this.LblCodTesista1);
             this.GbxRubricaDeEvaluacion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.GbxRubricaDeEvaluacion.Location = new System.Drawing.Point(10, 332);
-            this.GbxRubricaDeEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxRubricaDeEvaluacion.Location = new System.Drawing.Point(10, 344);
+            this.GbxRubricaDeEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.GbxRubricaDeEvaluacion.Name = "GbxRubricaDeEvaluacion";
-            this.GbxRubricaDeEvaluacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxRubricaDeEvaluacion.Padding = new System.Windows.Forms.Padding(2);
             this.GbxRubricaDeEvaluacion.Size = new System.Drawing.Size(805, 132);
             this.GbxRubricaDeEvaluacion.TabIndex = 231;
             this.GbxRubricaDeEvaluacion.TabStop = false;
@@ -201,6 +218,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -213,9 +232,11 @@
             // 
             // TxtConsenso
             // 
+            this.TxtConsenso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtConsenso.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtConsenso.Location = new System.Drawing.Point(364, 95);
-            this.TxtConsenso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtConsenso.Margin = new System.Windows.Forms.Padding(2);
             this.TxtConsenso.Name = "TxtConsenso";
             this.TxtConsenso.ReadOnly = true;
             this.TxtConsenso.Size = new System.Drawing.Size(217, 25);
@@ -223,9 +244,11 @@
             // 
             // TxtResultado
             // 
+            this.TxtResultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtResultado.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtResultado.Location = new System.Drawing.Point(364, 57);
-            this.TxtResultado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtResultado.Margin = new System.Windows.Forms.Padding(2);
             this.TxtResultado.Name = "TxtResultado";
             this.TxtResultado.ReadOnly = true;
             this.TxtResultado.Size = new System.Drawing.Size(217, 25);
@@ -233,6 +256,8 @@
             // 
             // LblCondicion
             // 
+            this.LblCondicion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCondicion.AutoSize = true;
             this.LblCondicion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblCondicion.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -245,9 +270,11 @@
             // 
             // TxtJuicio
             // 
+            this.TxtJuicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtJuicio.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.TxtJuicio.Location = new System.Drawing.Point(364, 22);
-            this.TxtJuicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtJuicio.Margin = new System.Windows.Forms.Padding(2);
             this.TxtJuicio.Name = "TxtJuicio";
             this.TxtJuicio.ReadOnly = true;
             this.TxtJuicio.Size = new System.Drawing.Size(217, 25);
@@ -255,6 +282,8 @@
             // 
             // LblCodTesista1
             // 
+            this.LblCodTesista1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCodTesista1.AutoSize = true;
             this.LblCodTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblCodTesista1.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -269,10 +298,10 @@
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.groupBox1.Location = new System.Drawing.Point(19, 467);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(19, 479);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(314, 54);
             this.groupBox1.TabIndex = 232;
             this.groupBox1.TabStop = false;
@@ -288,6 +317,7 @@
             // 
             // BtnGenerar
             // 
+            this.BtnGenerar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnGenerar.FlatAppearance.BorderSize = 0;
             this.BtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
@@ -295,8 +325,8 @@
             this.BtnGenerar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenerar.Location = new System.Drawing.Point(608, 495);
-            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGenerar.Location = new System.Drawing.Point(608, 507);
+            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGenerar.Name = "BtnGenerar";
             this.BtnGenerar.Size = new System.Drawing.Size(110, 24);
             this.BtnGenerar.TabIndex = 236;
@@ -307,10 +337,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(344, 470);
+            this.label1.Location = new System.Drawing.Point(344, 482);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 20);
@@ -319,16 +350,18 @@
             // 
             // TxtResolucion
             // 
+            this.TxtResolucion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtResolucion.Enabled = false;
             this.TxtResolucion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtResolucion.Location = new System.Drawing.Point(346, 493);
-            this.TxtResolucion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtResolucion.Location = new System.Drawing.Point(346, 505);
+            this.TxtResolucion.Margin = new System.Windows.Forms.Padding(2);
             this.TxtResolucion.Name = "TxtResolucion";
             this.TxtResolucion.Size = new System.Drawing.Size(258, 27);
             this.TxtResolucion.TabIndex = 234;
             // 
             // btnEResolucionDeLosDictaminantes
             // 
+            this.btnEResolucionDeLosDictaminantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEResolucionDeLosDictaminantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.btnEResolucionDeLosDictaminantes.FlatAppearance.BorderSize = 0;
             this.btnEResolucionDeLosDictaminantes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
@@ -336,8 +369,8 @@
             this.btnEResolucionDeLosDictaminantes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnEResolucionDeLosDictaminantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.btnEResolucionDeLosDictaminantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEResolucionDeLosDictaminantes.Location = new System.Drawing.Point(480, 561);
-            this.btnEResolucionDeLosDictaminantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEResolucionDeLosDictaminantes.Location = new System.Drawing.Point(480, 573);
+            this.btnEResolucionDeLosDictaminantes.Margin = new System.Windows.Forms.Padding(2);
             this.btnEResolucionDeLosDictaminantes.Name = "btnEResolucionDeLosDictaminantes";
             this.btnEResolucionDeLosDictaminantes.Size = new System.Drawing.Size(164, 48);
             this.btnEResolucionDeLosDictaminantes.TabIndex = 238;
@@ -347,6 +380,7 @@
             // 
             // BtnCerrar
             // 
+            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
             this.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
@@ -354,8 +388,8 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(651, 561);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Location = new System.Drawing.Point(651, 573);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
             this.BtnCerrar.TabIndex = 237;
@@ -363,11 +397,51 @@
             this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label10.Location = new System.Drawing.Point(17, 542);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 20);
+            this.label10.TabIndex = 240;
+            this.label10.Text = "Expediente Nro:";
+            // 
+            // TxtExpediente
+            // 
+            this.TxtExpediente.Enabled = false;
+            this.TxtExpediente.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.TxtExpediente.Location = new System.Drawing.Point(146, 537);
+            this.TxtExpediente.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtExpediente.Name = "TxtExpediente";
+            this.TxtExpediente.Size = new System.Drawing.Size(97, 27);
+            this.TxtExpediente.TabIndex = 239;
+            // 
+            // LblTitulo
+            // 
+            this.LblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.LblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.LblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(841, 31);
+            this.LblTitulo.TabIndex = 293;
+            this.LblTitulo.Text = "Resolucion de Sustentacion Oral de Tesis";
+            this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmInformeJuradoEvaluador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 636);
+            this.Controls.Add(this.LblTitulo);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.TxtExpediente);
             this.Controls.Add(this.btnEResolucionDeLosDictaminantes);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnGenerar);
@@ -377,7 +451,7 @@
             this.Controls.Add(this.GbxRubricaDeEvaluacion);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmInformeJuradoEvaluador";
             this.Text = "FrmInformeJuradoEvaluador";
             this.groupBox3.ResumeLayout(false);
@@ -420,5 +494,8 @@
         protected System.Windows.Forms.Button BtnCerrar;
         protected System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtConsenso;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtExpediente;
+        protected System.Windows.Forms.Label LblTitulo;
     }
 }

@@ -19,7 +19,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral=''";
+            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral='' and a.Estado='TESIS APROBADA POR DICTAMINANTES'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -237,7 +237,7 @@ namespace LibClases
         }
         public void GuardarDeliberacion(List<String> Parametros)
         {
-            string consulta = "insert into TActaSustentacionOral values ('"+ Parametros [0]+ "','"+ Parametros[1] + "',"+Parametros [2]+",'"+ Parametros[3] + "')";
+            string consulta = "insert into TActaSustentacionOral values ('"+ Parametros [0]+ "','"+ Parametros[1] + "',"+Parametros [2]+",'"+ Parametros[3] + "',GETDATE())";
             aConexion.EjecutarComando(consulta);
         }
 

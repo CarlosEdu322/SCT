@@ -18,7 +18,7 @@ namespace LibFormularios
         {
             InitializeComponent();
             esconderSubMenu();
-
+            panelTiempo.Visible = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -165,6 +165,7 @@ namespace LibFormularios
                 //this.Size = Screen.GetWorkingArea(this);
                 this.MaximumSize = this.Size;
                 this.WindowState = FormWindowState.Normal;
+                panelTiempo.Visible = false;
                 this.CenterToScreen();
 
             }
@@ -179,6 +180,7 @@ namespace LibFormularios
                 //this.WindowState = FormWindowState.Maximized;
                 //Size= new Size(400,600);
                 this.CenterToScreen();
+                panelTiempo.Visible = true;
             }
         }
 
@@ -297,6 +299,17 @@ namespace LibFormularios
         private void BtnResoluciones_Click(object sender, EventArgs e)
         {
             abrirFormHijoEnPanel(new FrmMostrarResolucion());
+        }
+
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            lblFecha.Text = DateTime.Now.ToString("dddd dd MMMM yyy");
+        }
+
+        private void btnEstadoTesis_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmEstadoTesis());
         }
     }
 }

@@ -26,6 +26,12 @@ namespace LibFormularios
             DgvTesisPendientesDeCR.DataSource = oPlanDeTesis.TesisPendientesDeDCR();
             DgvTesisPendientesDeCR.Columns["CodTesis"].Visible = false;
             DgvTesisPendientesDeCR.Columns["CodEvaluacionPlanDeTesis"].Visible = false;
+            if (DgvTesisPendientesDeCR.Rows.Count == 0)
+            {
+                BtnCargar.Enabled = false;
+                BtnGenerar.Enabled = false;
+                BtnNombrarCR.Enabled = false;
+            }
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeCR.Columns["CodSustentacionOral"].Visible = false;

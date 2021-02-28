@@ -51,7 +51,7 @@ namespace LibClases
         }
         public DataTable TesisPendientesDeDCR()
         {
-            string consulta = "select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,b.Estado,b.Observaciones  from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where CodEvaluacionPlanDeTesis=''";
+            string consulta = "select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,a.Estado,b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado ='TESIS PREINSCRITA' and a.CodEvaluacionPlanDeTesis=''";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -84,7 +84,7 @@ namespace LibClases
 
             for (int i = 0; i < NombrarCR.Count; i++)
             {
-                consulta = " insert into TComisionRevisora values ('"+ pCodEvaluacionPlanDeTesis + "','"+ NombrarCR [i]+ "')";
+                consulta = " insert into TComisionRevisora values ('"+ pCodEvaluacionPlanDeTesis + "','"+ NombrarCR [i]+ "',GETDATE())";
                 aConexion.EjecutarComando(consulta);
             }
         }
@@ -108,7 +108,7 @@ namespace LibClases
         }
         public void AgregarEvaluacionPlanDeTesis(List<string> Cadena)
         {
-            string consulta= "insert into TActaDePlanDeTesis values('"+ Cadena [0]+ "','" + Cadena[1] + "'," + Cadena[2] + "," + Cadena[3] + "," + Cadena[4] + "," + Cadena[5] + "," + Cadena[6] + "," + Cadena[7] + "," + Cadena[8] + "," + Cadena[9] + ")";
+            string consulta= "insert into TActaDePlanDeTesis values('"+ Cadena [0]+ "','" + Cadena[1] + "'," + Cadena[2] + "," + Cadena[3] + "," + Cadena[4] + "," + Cadena[5] + "," + Cadena[6] + "," + Cadena[7] + "," + Cadena[8] + "," + Cadena[9] + ",GETDATE())";
             aConexion.EjecutarComando(consulta);
         }
         public bool VerificarSiEmitioEvaluacion(string pCodPlanTesis,string pCodDocente)
@@ -207,7 +207,7 @@ namespace LibClases
             }
             catch
             {
-                return "1000";
+                return "100";
             }
         }
         public void EmitirResolucionNombramientoDictaminantes(string codigo,string codTesis)
@@ -253,6 +253,64 @@ namespace LibClases
             string Consulta = "SELECT * FROM TResolucion WHERE CodTesis='" + codTesis + "' AND Considerando='TESIS EVALUADA Y APROBADA'";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0].Rows.Count > 0;
+        }
+
+        public void UpdateTesis(string pCodTesis,string pEstado)
+        {
+            string consulta;
+            consulta = "UPDATE TTesis set Estado='" + pEstado + "' WHERE CodTesis='" + pCodTesis + "'";
+            aConexion.EjecutarComando(consulta);
+        }
+        public void UpdateEstadoExpediente(string pCodExpediente, string pEstado)
+        {
+            string consulta;
+            consulta = "UPDATE TExpediente set Estado='" + pEstado + "' WHERE NroExpediente='" + pCodExpediente + "'";
+            aConexion.EjecutarComando(consulta);
+        }
+        public string ObtenerCodExpediente(string pCodComisionRevisora)
+        {
+            try
+            {
+                string codigo;
+                string consulta = "select top 1 a.NroExpediente from TExpediente a inner join TComisionRevisora b on a.CodEvaluacionPlanDeTesis= b.CodEvaluacionPlanDeTesis where a.CodEvaluacionPlanDeTesis='"+pCodComisionRevisora+"'";
+                aConexion.EjecutarSelect(consulta);
+                codigo = aConexion.Datos.Tables[0].Rows[0]["NroExpediente"].ToString();
+                return codigo;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+        public string ObtenerCodExpedienteDictaminantes(string pCodComisionDictaminadora)
+        {
+            try
+            {
+                string codigo;
+                string consulta = "select top 1 a.NroExpediente from TExpediente a inner join TDictaminantesDeTesis b on a.CodDictamenDeTesis= b.CodDictamenDeTesis where a.CodDictamenDeTesis='" + pCodComisionDictaminadora + "'";
+                aConexion.EjecutarSelect(consulta);
+                codigo = aConexion.Datos.Tables[0].Rows[0]["NroExpediente"].ToString();
+                return codigo;
+            }
+            catch
+            {
+                return "ERROR";
+            }
+        }
+        public string ObtenerCodExpedienteJuradoEvaluador(string pCodComisionDictaminadora)
+        {
+            try
+            {
+                string codigo;
+                string consulta = "select top 1 a.NroExpediente from TExpediente a inner join TJuradoEvaluador b on a.CodSustentacionOral= b.CodSustentacionOral where a.CodSustentacionOral='" + pCodComisionDictaminadora + "'";
+                aConexion.EjecutarSelect(consulta);
+                codigo = aConexion.Datos.Tables[0].Rows[0]["NroExpediente"].ToString();
+                return codigo;
+            }
+            catch
+            {
+                return "ERROR";
+            }
         }
     }
 }

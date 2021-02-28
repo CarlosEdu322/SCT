@@ -33,7 +33,11 @@ namespace LibFormularios
             CBColumn.FalseValue = "0";
             CBColumn.TrueValue = "1";
             DgvTesisPendientesDeDictaminantes.Columns.Insert(0, CBColumn);
-
+            if (DgvEvaluadoresDePlanDeTesis.DataSource == null)
+            {
+                BtnCargar.Enabled = false;
+                BtnNombrarCR.Enabled = false;
+            }
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeCR.Columns["CodSustentacionOral"].Visible = false;

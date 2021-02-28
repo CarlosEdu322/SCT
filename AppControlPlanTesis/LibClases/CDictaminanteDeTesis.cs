@@ -18,7 +18,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''";
+            string consulta = "select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = '' and a.Estado ='TESIS APROBADA POR COMISION REVISORA'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -65,7 +65,7 @@ namespace LibClases
 
             for (int i = 0; i < NombrarCR.Count; i++)
             {
-                consulta = " insert into TDictaminantesDeTesis values ('" + pCodEvaluacionDictamen + "','" + NombrarCR[i] + "')";
+                consulta = " insert into TDictaminantesDeTesis values ('" + pCodEvaluacionDictamen + "','" + NombrarCR[i] + "',GETDATE())";
                 aConexion.EjecutarComando(consulta);
             }
         }
@@ -128,7 +128,7 @@ namespace LibClases
         public void AgregarDictamenPlanDeTesis(List<string> Cadena)
         {
             //insert into TActaDictamenDeTesis values('350000','D00001',0,'puede mejorar')
-            string consulta = "insert into TActaDictamenDeTesis values('" + Cadena[0] + "','" + Cadena[1] + "','" + Cadena[2] + "','" + Cadena[3] +"')";
+            string consulta = "insert into TActaDictamenDeTesis values('" + Cadena[0] + "','" + Cadena[1] + "','" + Cadena[2] + "','" + Cadena[3] +"',GETDATE())";
             aConexion.EjecutarComando(consulta);
         }
         public List<string> ObtenerResultadoDictamen(string pCodDictamenDeTesis)

@@ -45,7 +45,7 @@ namespace LibFormularios
 
 
                 TxtCodTesis.Text = oPlanDeTesis.MostrarCodTesis(CboCodComisionRevisora.Text);
-
+                TxtExpediente.Text = oPlanDeTesis.ObtenerCodExpediente(CboCodComisionRevisora.Text);
                 List<string> Resultados = oPlanDeTesis.ObtenerResultadoCR(CboCodComisionRevisora.Text);
                 TxtNotaIdentificacionProblema.Text = Resultados[0];
                 TxtNotaHipotesis.Text = Resultados[1];
@@ -75,6 +75,9 @@ namespace LibFormularios
         {
             DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
             DgvTesis.DataSource = oPlanDeTesis.ListarDatosTesis(TxtCodTesis.Text);
+            DgvTesis.Columns["CodDocente"].Visible = false;
+            DgvTesis.Columns["Observaciones"].Visible = false;
+            DgvTesis.Columns["CodTesis"].Visible = false;
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -95,8 +98,10 @@ namespace LibFormularios
                 {
                     if (oPlanDeTesis.VerificarSiEmitioResolucionTesisAprobadaComisionRevisora(TxtCodTesis.Text) == false)
                     {
-                        String NResolucion = "R-004-N°" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-UNSAAC";
+                        String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
                         oPlanDeTesis.EmitirResolucionNombramientoDictaminantes(NResolucion, TxtCodTesis.Text);
+                        oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS APROBADA POR COMISION REVISORA");
+                        oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS APROBADA POR COMISION REVISORA");
                         //actualizar el estado del tramite a atendido
                         //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
                         MessageBox.Show("Resolucion: " + NResolucion + " EMITIDA EXITOSAMENTE", "CONFIRMACION");

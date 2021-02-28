@@ -29,7 +29,7 @@ namespace LibFormularios
             DgvTesisPendientesDeSustentacion.Columns["CodTesis"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["Tema"].Visible = false;
-            DgvTesisPendientesDeSustentacion.Columns["Estado"].Visible = false;
+            DgvTesisPendientesDeSustentacion.Columns["Observaciones"].Visible = false;
             //checks
             //DataGridViewCheckBoxColumn CBColumn = new DataGridViewCheckBoxColumn();
             //CBColumn.HeaderText = "";
@@ -40,6 +40,11 @@ namespace LibFormularios
 
             string codigo = oEvaluacionTesis.GenerarCodigoNombrarComisionRevisora();
             TxtCodJuradoEvaluador.Text = codigo;
+            if (DgvTesisPendientesDeSustentacion.Rows.Count == 0)
+            {
+                BtnCargar.Enabled = false;
+                BtnNombrarJE.Enabled = false;
+            }
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeCR.Columns["CodSustentacionOral"].Visible = false;

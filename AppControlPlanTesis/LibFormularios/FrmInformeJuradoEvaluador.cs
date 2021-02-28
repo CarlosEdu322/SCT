@@ -14,6 +14,7 @@ namespace LibFormularios
     public partial class FrmInformeJuradoEvaluador : Form
     {
         private CEvaluacionTesis oEvaluacionTesis = new CEvaluacionTesis();
+        private CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
         public FrmInformeJuradoEvaluador()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace LibFormularios
             try
             {
                 TxtCodTesis.Text = oEvaluacionTesis.MostrarCodTesis(CboCodJuradoEvaluador.Text);
+                TxtExpediente.Text = oPlanDeTesis.ObtenerCodExpedienteJuradoEvaluador(CboCodJuradoEvaluador.Text);
             }
             catch
             {
@@ -91,6 +93,8 @@ namespace LibFormularios
 
 
                             oPlanDeTesis.EmitirResolucionAprobacion(TxtResolucion.Text, TxtCodTesis.Text);
+                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS CONCLUIDA");
+                            oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS CONCLUIDA");
                             //actualizar el estado del tramite a atendido
                             //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
                             MessageBox.Show("Resolucion: " + TxtResolucion.Text + " EMITIDA EXITOSAMENTE", "CONFIRMACION");

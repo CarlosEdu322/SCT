@@ -27,6 +27,7 @@ namespace LibFormularios
             dataGridView1.Columns.Insert(0, CBColumn);
             //InicializarGrid();
             ccf.Visible = false;
+            RellenarTablaTramites();
         }
 
         public void InicializarGrid()
@@ -41,6 +42,12 @@ namespace LibFormularios
         {
             DgvTramitesDeInscripcion.DataSource = oTramite.ListaTramitesDeInscripcionDeTesis();
             DgvTramitesDeInscripcion.Columns["CodTesis"].Visible = false;
+            if (DgvTramitesDeInscripcion.Rows.Count == 0)
+            {
+                BtnCargar.Enabled = false;
+                BtnGenerar.Enabled = false;
+                BtnGenerarExpediente.Enabled = false;
+            }
         }
 
 
@@ -71,8 +78,6 @@ namespace LibFormularios
             {
                 if (TxtNroExpediente.Text != "")
                 {
-
-
                     //generar expediente
                     List<string> listaExpediente = new List<string>();
                     listaExpediente.Add(TxtNroExpediente.Text);

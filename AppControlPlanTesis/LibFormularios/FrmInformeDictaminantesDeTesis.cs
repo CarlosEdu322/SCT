@@ -15,6 +15,7 @@ namespace LibFormularios
     public partial class FrmInformeDictaminantesDeTesis : Form
     {
         private CDictaminanteDeTesis oDictaminanteDeTesis = new CDictaminanteDeTesis();
+        private CPlanDeTesis oPlanDeTesis = new CPlanDeTesis(); 
         public FrmInformeDictaminantesDeTesis()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace LibFormularios
             try
             {
                 TxtCodTesis.Text = oDictaminanteDeTesis.MostrarCodTesis(CboCodTramDictamen.Text);
+                TxtExpediente.Text = oPlanDeTesis.ObtenerCodExpedienteDictaminantes(CboCodTramDictamen.Text);
                 List<string> Resultados = oDictaminanteDeTesis.ObtenerResultadoDictamen(CboCodTramDictamen.Text);
                 //MessageBox.Show(Resultados[0]);
 
@@ -94,6 +96,8 @@ namespace LibFormularios
                             
                             
                             oPlanDeTesis.EmitirResolucionSuficienciaTesis(TxtResolucion.Text, TxtCodTesis.Text);
+                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS APROBADA POR DICTAMINANTES");
+                            oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS APROBADA POR DICTAMINANTES");
                             //actualizar el estado del tramite a atendido
                             //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
                             MessageBox.Show("Resolucion: " + TxtResolucion.Text + " EMITIDA EXITOSAMENTE", "CONFIRMACION");
@@ -134,7 +138,7 @@ namespace LibFormularios
         private void BtnGenerar_Click(object sender, EventArgs e)
         {
             CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
-            String NResolucion = "R-005-N°" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-UNSAAC";
+            String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
             TxtResolucion.Text = NResolucion;
         }
     }
