@@ -135,7 +135,7 @@
             this.LblTitulo.Name = "LblTitulo";
             this.LblTitulo.Size = new System.Drawing.Size(686, 38);
             this.LblTitulo.TabIndex = 234;
-            this.LblTitulo.Text = "Login Evaluadores";
+            this.LblTitulo.Text = "Login";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmLoginDocente
