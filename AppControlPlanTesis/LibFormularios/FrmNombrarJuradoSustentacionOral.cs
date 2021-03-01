@@ -330,6 +330,8 @@ namespace LibFormularios
                     if (oEvaluacionTesis.VerificarSiEmitioResolucionFHJuradoEvaluador(TxtCodTesis.Text) == false)
                     {
                         oEvaluacionTesis.EmitirResolucionNombramientoJuradoEvaluador(TxtResolucion.Text, TxtCodTesis.Text);
+                        CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+                        oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE");
                         MessageBox.Show("RESOLUCION: "+TxtResolucion.Text+" EMITIDA", "CONFIRMACION");
                     }
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");

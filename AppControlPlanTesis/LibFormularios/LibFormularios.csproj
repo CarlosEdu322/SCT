@@ -53,6 +53,12 @@
     <Compile Include="FrmBuscarExpediente.Designer.cs">
       <DependentUpon>FrmBuscarExpediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarTesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarTesis.Designer.cs">
+      <DependentUpon>FrmBuscarTesis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarTesista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmBuscarExpediente.resx">
       <DependentUpon>FrmBuscarExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarTesis.resx">
+      <DependentUpon>FrmBuscarTesis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarTesista.resx">
       <DependentUpon>FrmBuscarTesista.cs</DependentUpon>

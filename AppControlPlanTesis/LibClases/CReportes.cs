@@ -18,13 +18,34 @@ namespace LibClases
         }
         public void NumeroDeTesis(ArrayList a, ArrayList b)
         {
-            string consulta = "select Estado, COUNT(Estado) as Numero from TExpediente group by Estado";
+            string consulta = "select Estado, COUNT(Estado) as Numero from TTesis group by Estado";
             aConexion.EjecutarSelect(consulta);
             foreach (DataRow dtRow in aConexion.Datos.Tables[0].Rows)
             {
                     a.Add(dtRow["Estado"]);
                     b.Add(dtRow["Numero"]);
             }
+        }
+        public void NumeroDeTesisPorEspecialidad(ArrayList a, ArrayList b)
+        {
+            string consulta = "select Tema, COUNT(Tema) as Numero from TTesis group by Tema";
+            aConexion.EjecutarSelect(consulta);
+            foreach (DataRow dtRow in aConexion.Datos.Tables[0].Rows)
+            {
+                a.Add(dtRow["Tema"]);
+                b.Add(dtRow["Numero"]);
+            }
+        }
+        public string EstadoProcesoTesis(string pcodTesis)
+        {
+            string estado="";
+            string consulta = "select b.NroExpediente, b.Estado from TTesis a inner join TExpediente b on a.CodTesis=b.CodTesis where a.CodTesis='"+pcodTesis+"'";
+            aConexion.EjecutarSelect(consulta);
+            foreach (DataRow dtRow in aConexion.Datos.Tables[0].Rows)
+            {
+                estado=(dtRow["Estado"]).ToString();
+            }
+            return estado;
         }
     }
 }

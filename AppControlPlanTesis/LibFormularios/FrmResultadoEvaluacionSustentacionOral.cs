@@ -116,6 +116,9 @@ namespace LibFormularios
             //GuardarDeliberacion
             //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
             oEvaluacionTesis.GuardarDeliberacion(Lista);
+            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+            string codExpediente = oPlanDeTesis.ObtenerCodExpedienteJuradoEvaluador(CboCodJuradoEvaluador.Text);
+            oPlanDeTesis.UpdateEstadoExpediente(codExpediente, "TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE");
             MessageBox.Show("OPERACION REALIZADA CON EXITO", "CONFIRMACION");
 
 

@@ -61,13 +61,14 @@ CodTesis varchar(6) PRIMARY KEY,
 --
 Tema varchar(80),
 CodDocente varchar(6),
-Titulo varchar(80),
+Titulo varchar(200),
 Estado varchar(50),--Tesis Inscrita--Tesis Revisada--Tesis Dictaminada--
 Observaciones varchar(100),
 -- especificacion de claves
 foreign key (CodDocente) references TDocente
 )
 go
+
 --------------------------------------------------
 --------------------------------------------------
 --Tablas No Modificar
@@ -442,4 +443,7 @@ GO
 --select Estado, COUNT(Estado) as Numero
 --from TExpediente
 --group by Estado
-select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA' and CodTesis in (select CodTesis from TResolucion where Considerando='TESIS APROBADA PARA DICTAMINAR')
+--select * from ttesis
+--select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA' and CodTesis in (select CodTesis from TResolucion where Considerando='TESIS APROBADA PARA DICTAMINAR')
+
+--select Tema, COUNT(Tema) as Numero from TTesis group by Tema

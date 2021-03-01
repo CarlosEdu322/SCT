@@ -104,5 +104,10 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
+        public DataTable Busqueda(string Consulta)
+        {   //-- retorna una tabla con la lista completa de libros 
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
     }
 }

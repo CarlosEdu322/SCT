@@ -35,10 +35,10 @@ namespace LibFormularios
             CBColumn.TrueValue = "1";
             DgvTesisPendientesDeDictaminantes.Columns.Insert(0, CBColumn);
             */
-            if (DgvEvaluadoresDePlanDeTesis.DataSource == null)
+            if (DgvTesisPendientesDeDictaminantes.Rows.Count == 0)
             {
-                //BtnCargar.Enabled = false;
-                //BtnNombrarCR.Enabled = false;
+                BtnCargar.Enabled = false;
+                BtnNombrarCR.Enabled = false;
             }
             /*
             DgvTesisPendientesDeCR.Columns["CodDictamenDeTesis"].Visible = false;

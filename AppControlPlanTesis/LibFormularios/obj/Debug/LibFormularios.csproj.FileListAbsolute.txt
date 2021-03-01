@@ -229,3 +229,4 @@ C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibF
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmResultadoEvaluacionSustentacionOral.resources
 C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmEstadoTesis.resources
 C:\Users\ASUS\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmEstadoTesis.resources
+C:\Users\etson\Documents\GitHub\SistemaDeControlDeTesis\AppControlPlanTesis\LibFormularios\obj\Debug\LibFormularios.FrmBuscarTesis.resources

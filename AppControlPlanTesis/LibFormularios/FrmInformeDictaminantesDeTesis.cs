@@ -96,7 +96,7 @@ namespace LibFormularios
                             
                             
                             oPlanDeTesis.EmitirResolucionSuficienciaTesis(TxtResolucion.Text, TxtCodTesis.Text);
-                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS APROBADA POR DICTAMINANTES");
+                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE");
                             oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS APROBADA POR DICTAMINANTES");
                             //actualizar el estado del tramite a atendido
                             //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
