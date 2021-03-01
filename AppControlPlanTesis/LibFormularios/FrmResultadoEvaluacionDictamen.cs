@@ -129,6 +129,7 @@ namespace LibFormularios
                 }
                 if (CboCodDocente.Text == "")
                     RefrescarTxt();
+                TxtLogin.Text = "-";
             }
             catch (Exception eRR)
             {
@@ -142,43 +143,51 @@ namespace LibFormularios
             //insert into TActaDictamenDeTesis values('350000','D00001',0,'puede mejorar')
             try
             {
-                List<string> Lista = new List<string>();
-                DataRowView oDataRowView = CboCodDictaminantes.SelectedItem as DataRowView;
-                string CodEvaluacionDictamenDeTesis = string.Empty;
-
-                if (oDataRowView != null)
+                if (TxtLogin.Text.CompareTo("LOGUEADO") == 0)
                 {
-                    CodEvaluacionDictamenDeTesis = oDataRowView.Row["CodDictamenDeTesis"] as string;
-                }
-                Lista.Add(CodEvaluacionDictamenDeTesis);
-                DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
-                string CodDocente = string.Empty;
+                    List<string> Lista = new List<string>();
+                    DataRowView oDataRowView = CboCodDictaminantes.SelectedItem as DataRowView;
+                    string CodEvaluacionDictamenDeTesis = string.Empty;
 
-                if (oDataRowView != null)
-                {
-                    CodDocente = oDataRowView2.Row["CodDocente"] as string;
-                }
+                    if (oDataRowView != null)
+                    {
+                        CodEvaluacionDictamenDeTesis = oDataRowView.Row["CodDictamenDeTesis"] as string;
+                    }
+                    Lista.Add(CodEvaluacionDictamenDeTesis);
+                    DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
+                    string CodDocente = string.Empty;
+
+                    if (oDataRowView != null)
+                    {
+                        CodDocente = oDataRowView2.Row["CodDocente"] as string;
+                    }
 
 
 
-                Lista.Add(CodDocente);
-                string juicio;
-                //emitir juicio
-                if (RbAprobado.Checked)
-                {
-                    juicio = "APROBADO";
+                    Lista.Add(CodDocente);
+                    string juicio;
+                    //emitir juicio
+                    if (RbAprobado.Checked)
+                    {
+                        juicio = "APROBADO";
+                    }
+                    else
+                    {
+                        juicio = "DESAPROBADO";
+                    }
+
+
+                    Lista.Add(juicio);
+                    Lista.Add(TxtObservaciones.Text);
+
+                    oDictaminanteDeTesis.AgregarDictamenPlanDeTesis(Lista);
+                    MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+
                 }
                 else
                 {
-                    juicio = "DESAPROBADO";
+                    MessageBox.Show("DEBE LOGUEARSE", "ALERTA");
                 }
-
-
-                Lista.Add(juicio);
-                Lista.Add(TxtObservaciones.Text);
-
-                oDictaminanteDeTesis.AgregarDictamenPlanDeTesis(Lista);
-                MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
             }
             catch (Exception eRR)
             {
@@ -189,6 +198,14 @@ namespace LibFormularios
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLoginDocente A = new FrmLoginDocente(CboCodDocente.Text);
+            AddOwnedForm(A);
+            A.Show();
+            A.CajadeTexto = TxtLogin;
         }
     }
 }

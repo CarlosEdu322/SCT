@@ -77,7 +77,7 @@ namespace LibFormularios
                     BtnGuardar.Enabled = true;
                 }
                 TxtCodTesis.Text = oEvaluacionTesis.MostrarCodTesis(CboCodJuradoEvaluador.Text);
-                
+                TxtLogin.Text = "-";
             }
             catch
             {
@@ -100,28 +100,35 @@ namespace LibFormularios
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            List<string> Lista = new List<string>();
-            DataRowView oDataRowView = CboCodJuradoEvaluador.SelectedItem as DataRowView;
-            string CodJuradoEvaluados = string.Empty;
-
-            if (oDataRowView != null)
+            if (TxtLogin.Text.CompareTo("LOGUEADO") == 0)
             {
-                CodJuradoEvaluados = oDataRowView.Row["CodSustentacionOral"] as string;
+                List<string> Lista = new List<string>();
+                DataRowView oDataRowView = CboCodJuradoEvaluador.SelectedItem as DataRowView;
+                string CodJuradoEvaluados = string.Empty;
+
+                if (oDataRowView != null)
+                {
+                    CodJuradoEvaluados = oDataRowView.Row["CodSustentacionOral"] as string;
+                }
+                Lista.Add(CodJuradoEvaluados);
+                Lista.Add(LblEstado.Text);
+                Lista.Add(NudNotaFinal.Text);
+                //Lista.Add(LblConsenso.Text);
+                Lista.Add(cbxConsenso.SelectedItem.ToString());
+                //GuardarDeliberacion
+                //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
+                oEvaluacionTesis.GuardarDeliberacion(Lista);
+                CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+                string codExpediente = oPlanDeTesis.ObtenerCodExpedienteJuradoEvaluador(CboCodJuradoEvaluador.Text);
+                oPlanDeTesis.UpdateEstadoExpediente(codExpediente, "TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE");
+                MessageBox.Show("OPERACION REALIZADA CON EXITO", "CONFIRMACION");
+
             }
-            Lista.Add(CodJuradoEvaluados);
-            Lista.Add(LblEstado.Text);
-            Lista.Add(NudNotaFinal.Text);
-            //Lista.Add(LblConsenso.Text);
-            Lista.Add(cbxConsenso.SelectedItem.ToString());
-            //GuardarDeliberacion
-            //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
-            oEvaluacionTesis.GuardarDeliberacion(Lista);
-            CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
-            string codExpediente = oPlanDeTesis.ObtenerCodExpedienteJuradoEvaluador(CboCodJuradoEvaluador.Text);
-            oPlanDeTesis.UpdateEstadoExpediente(codExpediente, "TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE");
-            MessageBox.Show("OPERACION REALIZADA CON EXITO", "CONFIRMACION");
 
-
+            else
+            {
+                MessageBox.Show("DEBE LOGUEARSE", "ALERTA");
+            }
 
         }
         public void Evaluar()
@@ -226,6 +233,14 @@ namespace LibFormularios
                 LblEstado.Text = "-";
             }
             Evaluar();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLoginDocente A = new FrmLoginDocente(CboCodJuradoEvaluador.Text);
+            AddOwnedForm(A);
+            A.Show();
+            A.CajadeTexto = TxtLogin;
         }
     }
 }

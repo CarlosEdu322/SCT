@@ -20,6 +20,13 @@ namespace LibFormularios
             InitializeComponent();
             oPlanDeTesis = new CPlanDeTesis();
             LlenarTesisPendientes();
+
+
+            /////////////////////////
+            string codigo = oPlanDeTesis.GenerarCodigoNombrarComisionRevisora();
+
+
+            TxtCodEvaluacionPlanDeTesis.Text = codigo;
         }
         public void LlenarTesisPendientes()
         {

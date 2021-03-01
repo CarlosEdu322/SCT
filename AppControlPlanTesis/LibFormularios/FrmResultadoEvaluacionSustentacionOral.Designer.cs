@@ -67,6 +67,8 @@
             this.LblTitulo = new System.Windows.Forms.Label();
             this.NudNotaFinal = new System.Windows.Forms.NumericUpDown();
             this.GbxResultadoEvaluacion = new System.Windows.Forms.GroupBox();
+            this.TxtLogin = new System.Windows.Forms.Label();
+            this.BtnLogin = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTesis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInteresados)).BeginInit();
@@ -128,17 +130,18 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.LblNotificacion);
+            this.groupBox2.Controls.Add(this.TxtLogin);
             this.groupBox2.Controls.Add(this.DgvTesis);
             this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.LblNotificacion);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 94);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(16, 122);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1068, 262);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1068, 233);
             this.groupBox2.TabIndex = 226;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la Tesis";
@@ -147,7 +150,7 @@
             // 
             this.LblNotificacion.AutoSize = true;
             this.LblNotificacion.ForeColor = System.Drawing.Color.Red;
-            this.LblNotificacion.Location = new System.Drawing.Point(607, 154);
+            this.LblNotificacion.Location = new System.Drawing.Point(738, 19);
             this.LblNotificacion.Name = "LblNotificacion";
             this.LblNotificacion.Size = new System.Drawing.Size(72, 23);
             this.LblNotificacion.TabIndex = 211;
@@ -161,7 +164,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvTesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTesis.Location = new System.Drawing.Point(7, 183);
+            this.DgvTesis.Location = new System.Drawing.Point(6, 212);
             this.DgvTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvTesis.Name = "DgvTesis";
             this.DgvTesis.ReadOnly = true;
@@ -174,7 +177,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 156);
+            this.label15.Location = new System.Drawing.Point(7, 179);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 22);
             this.label15.TabIndex = 210;
@@ -197,7 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvInteresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvInteresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvInteresados.Location = new System.Drawing.Point(152, 31);
+            this.DgvInteresados.Location = new System.Drawing.Point(132, 56);
             this.DgvInteresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvInteresados.Name = "DgvInteresados";
             this.DgvInteresados.ReadOnly = true;
@@ -251,7 +254,7 @@
             this.GbxRubrica.Controls.Add(this.TxtNombresDictaminante1);
             this.GbxRubrica.Controls.Add(this.txtCodDictaminante1);
             this.GbxRubrica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GbxRubrica.Location = new System.Drawing.Point(128, 391);
+            this.GbxRubrica.Location = new System.Drawing.Point(128, 415);
             this.GbxRubrica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxRubrica.Name = "GbxRubrica";
             this.GbxRubrica.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -313,7 +316,7 @@
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtCodDictaminante2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(132, 468);
+            this.groupBox1.Location = new System.Drawing.Point(132, 490);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -370,7 +373,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label18.Location = new System.Drawing.Point(797, 370);
+            this.label18.Location = new System.Drawing.Point(783, 392);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 21);
             this.label18.TabIndex = 157;
@@ -384,7 +387,7 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.txtCodDictaminante3);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(132, 556);
+            this.groupBox3.Location = new System.Drawing.Point(126, 574);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -441,7 +444,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label28.Location = new System.Drawing.Point(548, 370);
+            this.label28.Location = new System.Drawing.Point(533, 392);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(84, 21);
             this.label28.TabIndex = 157;
@@ -453,7 +456,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(420, 370);
+            this.label1.Location = new System.Drawing.Point(405, 392);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 231;
@@ -533,7 +536,7 @@
             this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker3.Location = new System.Drawing.Point(39, 798);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(372, 30);
             this.dateTimePicker3.TabIndex = 290;
@@ -574,11 +577,41 @@
             this.GbxResultadoEvaluacion.Controls.Add(this.LblCodTesista1);
             this.GbxResultadoEvaluacion.Controls.Add(this.label2);
             this.GbxResultadoEvaluacion.Controls.Add(this.cbxConsenso);
-            this.GbxResultadoEvaluacion.Location = new System.Drawing.Point(340, 627);
+            this.GbxResultadoEvaluacion.Location = new System.Drawing.Point(340, 645);
             this.GbxResultadoEvaluacion.Name = "GbxResultadoEvaluacion";
             this.GbxResultadoEvaluacion.Size = new System.Drawing.Size(542, 135);
             this.GbxResultadoEvaluacion.TabIndex = 294;
             this.GbxResultadoEvaluacion.TabStop = false;
+            // 
+            // TxtLogin
+            // 
+            this.TxtLogin.AutoSize = true;
+            this.TxtLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLogin.ForeColor = System.Drawing.Color.Green;
+            this.TxtLogin.Location = new System.Drawing.Point(389, 19);
+            this.TxtLogin.Name = "TxtLogin";
+            this.TxtLogin.Size = new System.Drawing.Size(18, 23);
+            this.TxtLogin.TabIndex = 296;
+            this.TxtLogin.Text = "-";
+            // 
+            // BtnLogin
+            // 
+            this.BtnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
+            this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogin.Location = new System.Drawing.Point(550, 89);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(145, 33);
+            this.BtnLogin.TabIndex = 295;
+            this.BtnLogin.Text = "Login";
+            this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // FrmResultadoEvaluacionSustentacionOral
             // 
@@ -586,6 +619,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1143, 862);
+            this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.GbxResultadoEvaluacion);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.label3);
@@ -665,5 +699,7 @@
         protected System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.NumericUpDown NudNotaFinal;
         private System.Windows.Forms.GroupBox GbxResultadoEvaluacion;
+        private System.Windows.Forms.Label TxtLogin;
+        protected System.Windows.Forms.Button BtnLogin;
     }
 }

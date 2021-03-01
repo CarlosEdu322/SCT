@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnGenerar = new System.Windows.Forms.Button();
             this.ccf = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnGenerarExpediente = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DgvTramitesDeInscripcion = new System.Windows.Forms.DataGridView();
             this.LblTitulo = new System.Windows.Forms.Label();
+            this.BtnGenerar = new System.Windows.Forms.Button();
             this.ccf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInteresados)).BeginInit();
@@ -56,25 +56,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTramitesDeInscripcion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnGenerar
-            // 
-            this.BtnGenerar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
-            this.BtnGenerar.FlatAppearance.BorderSize = 0;
-            this.BtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
-            this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGenerar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
-            this.BtnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenerar.Location = new System.Drawing.Point(436, 25);
-            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnGenerar.Name = "BtnGenerar";
-            this.BtnGenerar.Size = new System.Drawing.Size(115, 37);
-            this.BtnGenerar.TabIndex = 181;
-            this.BtnGenerar.Text = "Generar";
-            this.BtnGenerar.UseVisualStyleBackColor = false;
-            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
             // 
             // ccf
             // 
@@ -96,7 +77,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 28);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1052, 172);
@@ -217,7 +198,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(769, 25);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 30);
             this.dateTimePicker1.TabIndex = 178;
@@ -268,9 +249,9 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.groupBox1.Location = new System.Drawing.Point(28, 535);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1043, 87);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -347,6 +328,25 @@
             this.LblTitulo.Text = "Generar Expediente para Plan de Tesis";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BtnGenerar
+            // 
+            this.BtnGenerar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
+            this.BtnGenerar.FlatAppearance.BorderSize = 0;
+            this.BtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(62)))), ((int)(((byte)(95)))));
+            this.BtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGenerar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
+            this.BtnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGenerar.Location = new System.Drawing.Point(436, 25);
+            this.BtnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnGenerar.Name = "BtnGenerar";
+            this.BtnGenerar.Size = new System.Drawing.Size(115, 37);
+            this.BtnGenerar.TabIndex = 181;
+            this.BtnGenerar.Text = "Generar";
+            this.BtnGenerar.UseVisualStyleBackColor = false;
+            this.BtnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
+            // 
             // FrmGenerarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,7 +379,6 @@
         #endregion
         private System.Windows.Forms.GroupBox ccf;
         private System.Windows.Forms.DataGridView dataGridView1;
-        protected System.Windows.Forms.Button BtnGenerar;
         protected System.Windows.Forms.Button BtnGenerarExpediente;
         protected System.Windows.Forms.Button BtnCerrar;
         protected System.Windows.Forms.Button BtnCargar;
@@ -397,5 +396,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView DgvTramitesDeInscripcion;
         protected System.Windows.Forms.Label LblTitulo;
+        protected System.Windows.Forms.Button BtnGenerar;
     }
 }

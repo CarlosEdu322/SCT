@@ -71,34 +71,42 @@ namespace LibFormularios
         {
             try
             {
-                List<string> Lista = new List<string>();
-                DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
-                string CodEvaluacionPlanDeTesis = string.Empty;
-
-                if (oDataRowView != null)
+                if (TxtLogin.Text.CompareTo("LOGUEADO") == 0)
                 {
-                    CodEvaluacionPlanDeTesis = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
-                }
-                Lista.Add(CodEvaluacionPlanDeTesis);
-                DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
-                string CodDocente = string.Empty;
+                    List<string> Lista = new List<string>();
+                    DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
+                    string CodEvaluacionPlanDeTesis = string.Empty;
 
-                if (oDataRowView != null)
+                    if (oDataRowView != null)
+                    {
+                        CodEvaluacionPlanDeTesis = oDataRowView.Row["CodEvaluacionPlanDeTesis"] as string;
+                    }
+                    Lista.Add(CodEvaluacionPlanDeTesis);
+                    DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
+                    string CodDocente = string.Empty;
+
+                    if (oDataRowView != null)
+                    {
+                        CodDocente = oDataRowView2.Row["CodDocente"] as string;
+                    }
+
+                    Lista.Add(CodDocente);
+                    Lista.Add(NudNotaIdentificacionProblema.Value.ToString());
+                    Lista.Add(NudNotaHipotesis.Value.ToString());
+                    Lista.Add(NudNotaAlcanceResultados.Value.ToString());
+                    Lista.Add(NudNotaMetodologia.Value.ToString());
+                    Lista.Add(NudNotaRevisionBibliografica.Value.ToString());
+                    Lista.Add(NudNotaRecursosPresupuesto.Value.ToString());
+                    Lista.Add(NudNotaImpacto.Value.ToString());
+                    Lista.Add(NudNotaOrganizacionDocTesis.Value.ToString());
+                    oPlanDeTesis.AgregarEvaluacionPlanDeTesis(Lista);
+                    MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+
+                }
+                else
                 {
-                    CodDocente = oDataRowView2.Row["CodDocente"] as string;
+                    MessageBox.Show("DEBE LOGUEARSE", "ALERTA");
                 }
-
-                Lista.Add(CodDocente);
-                Lista.Add(NudNotaIdentificacionProblema.Value.ToString());
-                Lista.Add(NudNotaHipotesis.Value.ToString());
-                Lista.Add(NudNotaAlcanceResultados.Value.ToString());
-                Lista.Add(NudNotaMetodologia.Value.ToString());
-                Lista.Add(NudNotaRevisionBibliografica.Value.ToString());
-                Lista.Add(NudNotaRecursosPresupuesto.Value.ToString());
-                Lista.Add(NudNotaImpacto.Value.ToString());
-                Lista.Add(NudNotaOrganizacionDocTesis.Value.ToString());
-                oPlanDeTesis.AgregarEvaluacionPlanDeTesis(Lista);
-                MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
             }
             catch (Exception eRR)
             {
@@ -151,6 +159,7 @@ namespace LibFormularios
                     NudNotaRecursosPresupuesto.Text = ListaNotas[5];
                     NudNotaImpacto.Text = ListaNotas[6];
                     NudNotaOrganizacionDocTesis.Text = ListaNotas[7];
+                
                 }
                 else
                 {
@@ -159,6 +168,7 @@ namespace LibFormularios
                 }
                 if (CboCodDocente.Text == "")
                     RefrescarTxt();
+                TxtLogin.Text = "-";
             }
             catch
             {
@@ -175,6 +185,14 @@ namespace LibFormularios
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLoginDocente A = new FrmLoginDocente(CboCodDocente.Text);
+            AddOwnedForm(A);
+            A.Show();
+            A.CajadeTexto = TxtLogin;
         }
     }
 }

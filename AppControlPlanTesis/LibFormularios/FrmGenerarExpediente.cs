@@ -28,6 +28,10 @@ namespace LibFormularios
             //InicializarGrid();
             ccf.Visible = false;
             RellenarTablaTramites();
+
+
+            ///
+            TxtNroExpediente.Text = oPlanDeTesis.GenerarCodigoTesis();
         }
 
         public void InicializarGrid()
@@ -45,7 +49,7 @@ namespace LibFormularios
             if (DgvTramitesDeInscripcion.Rows.Count == 0)
             {
                 BtnCargar.Enabled = false;
-                BtnGenerar.Enabled = false;
+                //BtnGenerar.Enabled = false;
                 BtnGenerarExpediente.Enabled = false;
             }
         }

@@ -44,6 +44,11 @@ namespace LibFormularios
             CboCodTramite.SelectedIndex = 0;
             //GbxTramiteDeInscripcion.Visible = false;
             CargarDatosEspecialidad();
+
+            string codigo = oTesis.GenerarCodigoTesis();
+
+
+            TxtCodTesis.Text = codigo;
         }
 
         public void CargarDatosEspecialidad()
