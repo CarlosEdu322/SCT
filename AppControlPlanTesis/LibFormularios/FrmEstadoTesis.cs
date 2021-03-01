@@ -69,21 +69,8 @@ namespace LibFormularios
             txtETesis = new TextBox();
             ConsultarTesis(txtNombreTesis, txtEspecialidadTesis, txtETesis, txtCodTesis.Text);
             txtEstadoTesis.Text = oReportes.EstadoProcesoTesis(txtCodTesis.Text);
-        }
-        private void InicializarState()
-        {
-            pb1.Value = 0;
-            picture1OK.Visible = false;
-            pb2.Value = 0;
-            picture2OK.Visible = false;
-            pb3.Value = 0;
-            picture3OK.Visible = false;
-            pb4.Value = 0;
-            picture4OK.Visible = false;
-            txtEstadoTesis.Visible = false;
-        }
-        private void txtEstadoTesis_TextChanged(object sender, EventArgs e)
-        {
+
+            //PRUEBA
             A.Close();
             InicializarState();
             if (txtETesis.Text == "TESIS PREINSCRITA")
@@ -192,7 +179,131 @@ namespace LibFormularios
                 imgCargando.Visible = false;
                 lblCargando.Visible = false;
                 txtEstadoTesis.Visible = true;
-            }     
+            }
+        }
+        private void InicializarState()
+        {
+            pb1.Value = 0;
+            picture1OK.Visible = false;
+            pb2.Value = 0;
+            picture2OK.Visible = false;
+            pb3.Value = 0;
+            picture3OK.Visible = false;
+            pb4.Value = 0;
+            picture4OK.Visible = false;
+            txtEstadoTesis.Visible = false;
+        }
+        private void txtEstadoTesis_TextChanged(object sender, EventArgs e)
+        {
+            //A.Close();
+            //InicializarState();
+            //if (txtETesis.Text == "TESIS PREINSCRITA")
+            //{
+            //    txtEstadoTesis.Visible = false;
+            //    imgCargando.Visible = true;
+            //    lblCargando.Visible = true;
+            //    if (pb1.Value == 0)
+            //    {
+            //        pb1.Value = 100;
+            //        Wait(500);
+            //        picture1OK.Visible = true;
+            //        pb2.Value = 50;
+            //    }
+            //    imgCargando.Visible = false;
+            //    lblCargando.Visible = false;
+            //    txtEstadoTesis.Visible = true;
+            //}
+            //if (txtETesis.Text == "TESIS APROBADA POR COMISION REVISORA")
+            //{
+            //    txtEstadoTesis.Visible = false;
+            //    imgCargando.Visible = true;
+            //    lblCargando.Visible = true;
+            //    if (pb1.Value == 0)
+            //    {
+            //        pb1.Value = 100;
+            //        Wait(500);
+            //        picture1OK.Visible = true;
+            //        pb2.Value = 50;
+            //    }
+            //    if (pb2.Value == 50)
+            //    {
+            //        pb2.Value = 100;
+            //        Wait(500);
+            //        picture2OK.Visible = true;
+            //        pb3.Value = 50;
+            //        Wait(500);
+            //    }
+            //    imgCargando.Visible = false;
+            //    lblCargando.Visible = false;
+            //    txtEstadoTesis.Visible = true;
+            //}
+            //if (txtETesis.Text == "TESIS APROBADA POR DICTAMINANTES")
+            //{
+            //    txtEstadoTesis.Visible = false;
+            //    imgCargando.Visible = true;
+            //    lblCargando.Visible = true;
+            //    if (pb1.Value == 0)
+            //    {
+            //        pb1.Value = 100;
+            //        Wait(500);
+            //        picture1OK.Visible = true;
+            //        pb2.Value = 50;
+            //    }
+            //    if (pb2.Value == 50)
+            //    {
+            //        pb2.Value = 100;
+            //        Wait(500);
+            //        picture2OK.Visible = true;
+            //        pb3.Value = 50;
+            //    }
+            //    if (pb3.Value == 50)
+            //    {
+            //        pb3.Value = 100;
+            //        Wait(500);
+            //        picture3OK.Visible = true;
+            //        pb4.Value = 50;
+            //        Wait(500);
+            //    }
+            //    imgCargando.Visible = false;
+            //    lblCargando.Visible = false;
+            //    txtEstadoTesis.Visible = true;
+            //}
+            //if (txtETesis.Text == "TESIS CONCLUIDA")
+            //{
+            //    txtEstadoTesis.Visible = false;
+            //    imgCargando.Visible = true;
+            //    lblCargando.Visible = true;
+            //    if (pb1.Value == 0)
+            //    {
+            //        pb1.Value = 100;
+            //        Wait(500);
+            //        picture1OK.Visible = true;
+            //        pb2.Value = 50;
+            //    }
+            //    if (pb2.Value == 50)
+            //    {
+            //        pb2.Value = 100;
+            //        Wait(500);
+            //        picture2OK.Visible = true;
+            //        pb3.Value = 50;
+            //    }
+            //    if (pb3.Value == 50)
+            //    {
+            //        pb3.Value = 100;
+            //        Wait(500);
+            //        picture3OK.Visible = true;
+            //        pb4.Value = 50;
+            //    }
+            //    if (pb4.Value == 50)
+            //    {
+            //        pb4.Value = 100;
+            //        Wait(500);
+            //        picture4OK.Visible = true;
+            //    }
+            //    imgCargando.Visible = false;
+            //    lblCargando.Visible = false;
+            //    txtEstadoTesis.Visible = true;
+            //}     
         }
     }
 }

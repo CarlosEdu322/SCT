@@ -90,7 +90,7 @@ namespace LibFormularios
 
         private void BtnManTramite_Click(object sender, EventArgs e)
         {
-            FrmRequisitosXTramite f = new FrmRequisitosXTramite();
+            FrmEditarRegistrosXTramite f = new FrmEditarRegistrosXTramite();
             f.ShowDialog();
         }
     }

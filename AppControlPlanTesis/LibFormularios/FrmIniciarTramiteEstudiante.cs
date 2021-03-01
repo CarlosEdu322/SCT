@@ -56,7 +56,7 @@ namespace LibFormularios
             try
             {
                 //-- muestra la lista de libros en el combo
-                CboExpecialidad.DataSource = oTesis.ListaGeneral();
+                CboExpecialidad.DataSource = oTesis.ListaGeneralEspecialidades();
                 CboExpecialidad.DisplayMember = "Tema";
                 CboExpecialidad.ValueMember = "Tema";
                 //-- dejar el combo sin libro seleccionado
@@ -469,13 +469,6 @@ namespace LibFormularios
             AddOwnedForm(A);
             A.Show();
             A.CajadeTexto = dicTxtNroExpediente;
-
-
-
-
-
-
-
             //ConsultarEstudiante(TxtNombreTesista1, TxtApeTesista1, TxtDniTesista1, TxtCodTesista1.Text);
         }
         public void MarcarTodosRequisitos()
@@ -577,8 +570,6 @@ namespace LibFormularios
         {
             try
             {
-
-
                 evoTxtCodTesis.Text = oDictaminanteDeTesis.BuscarTesisXExpediente(evoTxtNroExpediente.Text);
                 ConsultarTesis(evoTxtTituloTesis, evoTxtTemaTesis, evoTxtObservacionesTesis, evoTxtCodTesis.Text);
             }

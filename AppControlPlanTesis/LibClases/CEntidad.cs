@@ -153,6 +153,12 @@ namespace LibClases
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }
+        public DataTable ListaGeneralEspecialidades()
+        {   //-- retorna una tabla con la lista completa de libros 
+            string Consulta = "select distinct Tema from " + aNombreTabla;
+            aConexion.EjecutarSelect(Consulta);
+            return aConexion.Datos.Tables[0];
+        }
 
 
     }

@@ -37,8 +37,8 @@
             // ChlRequisitosXTramite
             // 
             this.ChlRequisitosXTramite.FormattingEnabled = true;
-            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(196, 128);
-            this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChlRequisitosXTramite.Location = new System.Drawing.Point(244, 75);
+            this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(2);
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
             this.ChlRequisitosXTramite.Size = new System.Drawing.Size(212, 184);
             this.ChlRequisitosXTramite.TabIndex = 0;
@@ -50,7 +50,7 @@
             this.CboCodTramite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodTramite.FormattingEnabled = true;
             this.CboCodTramite.Location = new System.Drawing.Point(231, 46);
-            this.CboCodTramite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CboCodTramite.Margin = new System.Windows.Forms.Padding(2);
             this.CboCodTramite.Name = "CboCodTramite";
             this.CboCodTramite.Size = new System.Drawing.Size(251, 25);
             this.CboCodTramite.TabIndex = 147;
@@ -61,12 +61,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(120, 46);
+            this.label4.Location = new System.Drawing.Point(163, 48);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 20);
+            this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 146;
-            this.label4.Text = "CodTramite:";
+            this.label4.Text = "Tramite:";
             // 
             // BtnGuardar
             // 
@@ -77,7 +77,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(244, 330);
+            this.BtnGuardar.Location = new System.Drawing.Point(270, 263);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(164, 48);
@@ -96,7 +96,7 @@
             this.Controls.Add(this.CboCodTramite);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ChlRequisitosXTramite);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmEditarRegistrosXTramite";
             this.Text = "d";
             this.Load += new System.EventHandler(this.FrmEditarRegistrosXTramite_Load);
