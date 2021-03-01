@@ -24,11 +24,12 @@ namespace LibFormularios
             if (TxtUsuario.Text.CompareTo(TxtContraseña.Text)==0)
             {
                 CajadeTexto.Text = "LOGUEADO";
+                MessageBox.Show("LOGIN EXITOSO", "NOTIFICACION");
                 this.Close();
             }
             else
             {
-
+                MessageBox.Show("LOGIN FALLIDO", "NOTIFICACION");
             }
         }
 
