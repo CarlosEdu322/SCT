@@ -199,7 +199,7 @@
             this.ChlRequisitosXTramite.Location = new System.Drawing.Point(316, 11);
             this.ChlRequisitosXTramite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChlRequisitosXTramite.Name = "ChlRequisitosXTramite";
-            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(700, 29);
+            this.ChlRequisitosXTramite.Size = new System.Drawing.Size(705, 79);
             this.ChlRequisitosXTramite.TabIndex = 145;
             this.ChlRequisitosXTramite.SelectedIndexChanged += new System.EventHandler(this.ChlRequisitosXTramite_SelectedIndexChanged);
             // 
@@ -1300,7 +1300,7 @@
             this.TabTramites.Controls.Add(this.tabPage1);
             this.TabTramites.Controls.Add(this.tabPage2);
             this.TabTramites.Controls.Add(this.tabPage3);
-            this.TabTramites.Location = new System.Drawing.Point(-35, 169);
+            this.TabTramites.Location = new System.Drawing.Point(-45, 169);
             this.TabTramites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabTramites.Name = "TabTramites";
             this.TabTramites.SelectedIndex = 0;
@@ -1937,7 +1937,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.CboCodTramite);
             this.panel1.Controls.Add(this.ChlRequisitosXTramite);
-            this.panel1.Location = new System.Drawing.Point(-35, 41);
+            this.panel1.Location = new System.Drawing.Point(-45, 41);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 142);
