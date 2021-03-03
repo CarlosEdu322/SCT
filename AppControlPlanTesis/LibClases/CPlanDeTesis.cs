@@ -219,7 +219,7 @@ namespace LibClases
         }
         public DataTable MostrarResolucion()
         {
-            string consulta = "select * from TResolucion";
+            string consulta = "select id,Resolucion,Considerando,FechaEmision,a.CodTesis,Titulo,Tema from TResolucion a INNER join TTesis b on a.CodTesis=b.CodTesis ";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }

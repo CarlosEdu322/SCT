@@ -206,8 +206,11 @@ namespace LibClases
         }
 
 
-        public DataTable ListarExpedienteSoloTesisRevisadas(){
-            string consulta = "select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA'";
+        public DataTable ListarExpedienteSoloTesisRevisadas()
+        {
+            //select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA'
+            //select NroExpediente,a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS APROBADA POR COMISION REVISORA'
+            string consulta = "select NroExpediente,a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS APROBADA POR COMISION REVISORA'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }
@@ -222,7 +225,9 @@ namespace LibClases
         ///ListarExpedienteSoloTesisDictaminadas
         public DataTable ListarExpedienteSoloTesisDictaminadas()
         {
-            string consulta = "select * from TExpediente where Estado='TESIS APROBADA POR DICTAMINANTES'";
+            //select NroExpediente,a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS APROBADA POR COMISION REVISORA'
+            //select * from TExpediente where Estado='TESIS APROBADA POR DICTAMINANTES'
+            string consulta = "select NroExpediente,a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS APROBADA POR DICTAMINANTES'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }

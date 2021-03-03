@@ -47,5 +47,11 @@ namespace LibClases
             }
             return estado;
         }
+        public DataTable TesisNoConcluidas()
+        {
+            string consulta = "select a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado!='TESIS CONCLUIDA'";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
     }
 }

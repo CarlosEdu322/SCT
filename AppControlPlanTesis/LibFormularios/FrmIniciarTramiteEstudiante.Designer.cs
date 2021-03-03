@@ -844,7 +844,7 @@
             this.groupBox1.Controls.Add(this.dicTxtNroExpediente);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 18);
+            this.groupBox1.Location = new System.Drawing.Point(37, 19);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1300,7 +1300,7 @@
             this.TabTramites.Controls.Add(this.tabPage1);
             this.TabTramites.Controls.Add(this.tabPage2);
             this.TabTramites.Controls.Add(this.tabPage3);
-            this.TabTramites.Location = new System.Drawing.Point(-25, 169);
+            this.TabTramites.Location = new System.Drawing.Point(-35, 169);
             this.TabTramites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabTramites.Name = "TabTramites";
             this.TabTramites.SelectedIndex = 0;
@@ -1937,7 +1937,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.CboCodTramite);
             this.panel1.Controls.Add(this.ChlRequisitosXTramite);
-            this.panel1.Location = new System.Drawing.Point(-25, 41);
+            this.panel1.Location = new System.Drawing.Point(-35, 41);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 142);

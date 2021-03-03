@@ -423,9 +423,10 @@ SELECT * FROM TActaDictamenDeTesis WHERE CodDictamenDeTesis='350005' AND CodDoce
 
 select * from TExpediente where Estado='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE' OR Estado='TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE'
 
+select NroExpediente,a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS APROBADA POR COMISION REVISORA'
 
-
-
+select a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado!='TESIS CONCLUIDA'
 
 select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE'
 
+select id,Resolucion,Considerando,FechaEmision,a.CodTesis,Titulo,Tema from TResolucion a INNER join TTesis b on a.CodTesis=b.CodTesis 
