@@ -43,7 +43,7 @@
             // 
             this.TxtUsuario.Location = new System.Drawing.Point(239, 40);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(146, 30);
+            this.TxtUsuario.Size = new System.Drawing.Size(186, 30);
             this.TxtUsuario.TabIndex = 0;
             // 
             // groupBox1
@@ -83,7 +83,7 @@
             this.TxtContraseña.Location = new System.Drawing.Point(239, 89);
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PasswordChar = '*';
-            this.TxtContraseña.Size = new System.Drawing.Size(146, 30);
+            this.TxtContraseña.Size = new System.Drawing.Size(186, 30);
             this.TxtContraseña.TabIndex = 1;
             // 
             // BtnIngresar
@@ -96,7 +96,7 @@
             this.BtnIngresar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIngresar.Location = new System.Drawing.Point(370, 355);
+            this.BtnIngresar.Location = new System.Drawing.Point(364, 333);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(137, 58);
@@ -115,10 +115,10 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(128, 355);
+            this.button1.Location = new System.Drawing.Point(29, 467);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 58);
+            this.button1.Size = new System.Drawing.Size(126, 58);
             this.button1.TabIndex = 181;
             this.button1.Text = "Limpiar";
             this.button1.UseVisualStyleBackColor = false;
