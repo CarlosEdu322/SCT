@@ -20,6 +20,7 @@ namespace LibFormularios
         {
             InitializeComponent();
             InicializarCamposCboNroEstudiantes();
+            CboCategoria.SelectedIndex = 0;
         }
         public void InicializarCamposCboNroEstudiantes()
         {
