@@ -46,6 +46,7 @@ namespace LibFormularios
         {
             DgvTramitesDeInscripcion.DataSource = oTramite.ListaTramitesDeInscripcionDeTesis();
             DgvTramitesDeInscripcion.Columns["CodTesis"].Visible = false;
+            DgvTramitesDeInscripcion.Columns["CodDocente"].Visible = false;
             if (DgvTramitesDeInscripcion.Rows.Count == 0)
             {
                 BtnCargar.Enabled = false;
@@ -75,7 +76,13 @@ namespace LibFormularios
         {
             TxtNroExpediente.Text = oPlanDeTesis.GenerarCodigoTesis();
         }
-
+        public void RefrescarForm()
+        {
+            TxtNroExpediente.Text = "";
+            TxtCodTesis.Text = "";
+            //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+            DgvInteresados.DataSource = null;
+        }
         private void BtnGenerarExpediente_Click(object sender, EventArgs e)
         {
             try
@@ -88,18 +95,19 @@ namespace LibFormularios
                     listaExpediente.Add(TxtCodTesis.Text);
                     oPlanDeTesis.GenerarExpediente(listaExpediente);
                     //actualizar el estado del tramite a atendido
-                    oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
+                    //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
                     RellenarTablaTramites();
+                    RefrescarForm();
                 }
                 else
                 {
                     MessageBox.Show("INGRESE UN NUMERO DE EXPEDIENTE", "ALERTA");
                 }
             }
-            catch
+            catch(Exception eee)
             {
-                MessageBox.Show("NUMERO DE EXPEDIENTE YA EXISTE", "ERROR");
+                MessageBox.Show(eee.ToString(), "ERROR");
             }
         }
 
@@ -109,7 +117,7 @@ namespace LibFormularios
             {
                 //int filat= DgvTramitesDeInscripcion.CurrentRow.Index;
                 TxtCodTesis.Text = DgvTramitesDeInscripcion.CurrentRow.Cells["CodTesis"].Value.ToString();
-                TxtCodTramite.Text = DgvTramitesDeInscripcion.CurrentRow.Cells["CodTramITTesis"].Value.ToString();
+                //TxtCodTramite.Text = DgvTramitesDeInscripcion.CurrentRow.Cells["NroExpediente"].Value.ToString();
                 //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
                 DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
             }

@@ -110,6 +110,7 @@ CodDictamenDeTesis varchar(6),
 CodSustentacionOral varchar(6),
 Estado varchar(100),
 					--TESIS PREINSCRITA
+					--TESIS CON NOMBRAMIENTO DE COMISION REVISORA PENDIENTE
 					--TESIS APROBADA POR COMISION REVISORA
 					--TESIS DESAPROBADA POR COMISION REVISORA
 					--TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE
@@ -125,6 +126,8 @@ primary key (NroExpediente),
 foreign key (CodTesis) references TTesis,
 )
 go
+
+select a.CodTramITTesis,a.CodTesis,b.Titulo,b.Tema,b.Estado,a.Observaciones from TIniciarTramiteInscripcionPlanDeTesis a inner join TTesis b on a.CodTesis=b.CodTesis where b.Estado='TESIS PREINSCRITA'
 
 create table TRequisitoXTramite
 (
@@ -394,7 +397,7 @@ CREATE or alter PROCEDURE GenerarExpediente
 AS
 insert into TExpediente values(@NroExpediente,@CodTesis,'','','','TESIS PREINSCRITA')
 GO 
-
+SELECT * FROM TExpediente
 --exec GenerarExpediente
 
 
@@ -405,3 +408,24 @@ GO
 --select * from TExpediente where Estado='TESIS APROBADA POR COMISION REVISORA' and CodTesis in (select CodTesis from TResolucion where Considerando='TESIS APROBADA PARA DICTAMINAR')
 
 --select Tema, COUNT(Tema) as Numero from TTesis group by Tema
+
+select * from TExpediente where Estado='TESIS CON EVALUACION DE PLAN DE TESIS PENDIENTE'
+select * from TDictaminantesDeTesis
+select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON EVALUACION DE DICTAMINANTES PENDIENTE'
+select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE'
+select * from TExpediente where Estado='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE'
+select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE'
+
+select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE'
+
+select * from TTesis where CodTesis not in (select CodTesis from TExpediente)
+SELECT * FROM TActaDictamenDeTesis WHERE CodDictamenDeTesis='350005' AND CodDocente='D00002'
+
+select * from TExpediente where Estado='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE' OR Estado='TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE'
+
+
+
+
+
+select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE'
+

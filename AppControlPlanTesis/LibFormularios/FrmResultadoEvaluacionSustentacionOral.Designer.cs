@@ -85,10 +85,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(550, 47);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(723, 58);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(143, 20);
+            this.label14.Size = new System.Drawing.Size(176, 22);
             this.label14.TabIndex = 224;
             this.label14.Text = "Codigo de la Tesis:";
             // 
@@ -97,10 +96,10 @@
             this.TxtCodTesis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtCodTesis.Enabled = false;
             this.TxtCodTesis.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.TxtCodTesis.Location = new System.Drawing.Point(695, 45);
-            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCodTesis.Location = new System.Drawing.Point(917, 55);
+            this.TxtCodTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCodTesis.Name = "TxtCodTesis";
-            this.TxtCodTesis.Size = new System.Drawing.Size(76, 27);
+            this.TxtCodTesis.Size = new System.Drawing.Size(100, 32);
             this.TxtCodTesis.TabIndex = 223;
             this.TxtCodTesis.TextChanged += new System.EventHandler(this.TxtCodTesis_TextChanged);
             // 
@@ -109,10 +108,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 46);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(13, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(237, 21);
+            this.label8.Size = new System.Drawing.Size(299, 23);
             this.label8.TabIndex = 220;
             this.label8.Text = "Codigo De Jurado Evaluador";
             // 
@@ -121,10 +119,10 @@
             this.CboCodJuradoEvaluador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CboCodJuradoEvaluador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCodJuradoEvaluador.FormattingEnabled = true;
-            this.CboCodJuradoEvaluador.Location = new System.Drawing.Point(271, 45);
-            this.CboCodJuradoEvaluador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CboCodJuradoEvaluador.Location = new System.Drawing.Point(351, 55);
+            this.CboCodJuradoEvaluador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CboCodJuradoEvaluador.Name = "CboCodJuradoEvaluador";
-            this.CboCodJuradoEvaluador.Size = new System.Drawing.Size(259, 25);
+            this.CboCodJuradoEvaluador.Size = new System.Drawing.Size(344, 30);
             this.CboCodJuradoEvaluador.TabIndex = 219;
             this.CboCodJuradoEvaluador.SelectedIndexChanged += new System.EventHandler(this.CboCodJuradoEvaluador_SelectedIndexChanged);
             // 
@@ -139,9 +137,11 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.DgvInteresados);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 99);
+            this.groupBox2.Location = new System.Drawing.Point(16, 122);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(801, 238);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1047, 293);
             this.groupBox2.TabIndex = 226;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la Tesis";
@@ -151,10 +151,9 @@
             this.TxtLogin.AutoSize = true;
             this.TxtLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLogin.ForeColor = System.Drawing.Color.Green;
-            this.TxtLogin.Location = new System.Drawing.Point(292, 15);
-            this.TxtLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TxtLogin.Location = new System.Drawing.Point(389, 18);
             this.TxtLogin.Name = "TxtLogin";
-            this.TxtLogin.Size = new System.Drawing.Size(16, 19);
+            this.TxtLogin.Size = new System.Drawing.Size(18, 23);
             this.TxtLogin.TabIndex = 296;
             this.TxtLogin.Text = "-";
             // 
@@ -166,23 +165,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvTesis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTesis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTesis.Location = new System.Drawing.Point(4, 172);
-            this.DgvTesis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvTesis.Location = new System.Drawing.Point(5, 212);
+            this.DgvTesis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvTesis.Name = "DgvTesis";
             this.DgvTesis.ReadOnly = true;
             this.DgvTesis.RowHeadersWidth = 51;
             this.DgvTesis.RowTemplate.Height = 24;
-            this.DgvTesis.Size = new System.Drawing.Size(791, 59);
+            this.DgvTesis.Size = new System.Drawing.Size(1034, 73);
             this.DgvTesis.TabIndex = 210;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, 145);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(7, 178);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 20);
+            this.label15.Size = new System.Drawing.Size(68, 22);
             this.label15.TabIndex = 210;
             this.label15.Text = "Datos:";
             // 
@@ -190,20 +188,18 @@
             // 
             this.LblNotificacion.AutoSize = true;
             this.LblNotificacion.ForeColor = System.Drawing.Color.Red;
-            this.LblNotificacion.Location = new System.Drawing.Point(554, 15);
-            this.LblNotificacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblNotificacion.Location = new System.Drawing.Point(739, 18);
             this.LblNotificacion.Name = "LblNotificacion";
-            this.LblNotificacion.Size = new System.Drawing.Size(57, 21);
+            this.LblNotificacion.Size = new System.Drawing.Size(72, 23);
             this.LblNotificacion.TabIndex = 211;
             this.LblNotificacion.Text = "label1";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(5, 25);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(7, 31);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 21);
+            this.label13.Size = new System.Drawing.Size(128, 23);
             this.label13.TabIndex = 209;
             this.label13.Text = "Interesados:";
             // 
@@ -215,13 +211,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvInteresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvInteresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvInteresados.Location = new System.Drawing.Point(99, 46);
-            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvInteresados.Location = new System.Drawing.Point(132, 57);
+            this.DgvInteresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvInteresados.Name = "DgvInteresados";
             this.DgvInteresados.ReadOnly = true;
             this.DgvInteresados.RowHeadersWidth = 51;
             this.DgvInteresados.RowTemplate.Height = 24;
-            this.DgvInteresados.Size = new System.Drawing.Size(682, 100);
+            this.DgvInteresados.Size = new System.Drawing.Size(888, 123);
             this.DgvInteresados.TabIndex = 208;
             // 
             // BtnCerrar
@@ -234,10 +230,10 @@
             this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.BtnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrar.Location = new System.Drawing.Point(633, 660);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCerrar.Location = new System.Drawing.Point(823, 812);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(164, 48);
+            this.BtnCerrar.Size = new System.Drawing.Size(219, 59);
             this.BtnCerrar.TabIndex = 229;
             this.BtnCerrar.Text = "Cerrar Ventana";
             this.BtnCerrar.UseVisualStyleBackColor = false;
@@ -253,10 +249,10 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(465, 660);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuardar.Location = new System.Drawing.Point(599, 812);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(164, 48);
+            this.BtnGuardar.Size = new System.Drawing.Size(219, 59);
             this.BtnGuardar.TabIndex = 228;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -269,11 +265,11 @@
             this.GbxRubrica.Controls.Add(this.TxtNombresDictaminante1);
             this.GbxRubrica.Controls.Add(this.txtCodDictaminante1);
             this.GbxRubrica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GbxRubrica.Location = new System.Drawing.Point(89, 359);
-            this.GbxRubrica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxRubrica.Location = new System.Drawing.Point(109, 442);
+            this.GbxRubrica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxRubrica.Name = "GbxRubrica";
-            this.GbxRubrica.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GbxRubrica.Size = new System.Drawing.Size(655, 58);
+            this.GbxRubrica.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GbxRubrica.Size = new System.Drawing.Size(873, 71);
             this.GbxRubrica.TabIndex = 227;
             this.GbxRubrica.TabStop = false;
             this.GbxRubrica.Text = "Primer Dictaminante";
@@ -283,10 +279,10 @@
             this.TxtApellidosDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante1.Enabled = false;
             this.TxtApellidosDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(494, 15);
-            this.TxtApellidosDictaminante1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtApellidosDictaminante1.Location = new System.Drawing.Point(659, 18);
+            this.TxtApellidosDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante1.Name = "TxtApellidosDictaminante1";
-            this.TxtApellidosDictaminante1.Size = new System.Drawing.Size(157, 25);
+            this.TxtApellidosDictaminante1.Size = new System.Drawing.Size(208, 30);
             this.TxtApellidosDictaminante1.TabIndex = 231;
             // 
             // TxtNombresDictaminante1
@@ -294,10 +290,10 @@
             this.TxtNombresDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante1.Enabled = false;
             this.TxtNombresDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(307, 15);
-            this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNombresDictaminante1.Location = new System.Drawing.Point(409, 18);
+            this.TxtNombresDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante1.Name = "TxtNombresDictaminante1";
-            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(173, 25);
+            this.TxtNombresDictaminante1.Size = new System.Drawing.Size(229, 30);
             this.TxtNombresDictaminante1.TabIndex = 232;
             // 
             // txtCodDictaminante1
@@ -305,10 +301,10 @@
             this.txtCodDictaminante1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante1.Enabled = false;
             this.txtCodDictaminante1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante1.Location = new System.Drawing.Point(211, 15);
-            this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodDictaminante1.Location = new System.Drawing.Point(281, 18);
+            this.txtCodDictaminante1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante1.Name = "txtCodDictaminante1";
-            this.txtCodDictaminante1.Size = new System.Drawing.Size(78, 25);
+            this.txtCodDictaminante1.Size = new System.Drawing.Size(103, 30);
             this.txtCodDictaminante1.TabIndex = 233;
             this.txtCodDictaminante1.TextChanged += new System.EventHandler(this.txtCodDictaminante1_TextChanged);
             // 
@@ -317,10 +313,9 @@
             this.LblEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblEstado.AutoSize = true;
             this.LblEstado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEstado.Location = new System.Drawing.Point(132, 84);
-            this.LblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblEstado.Location = new System.Drawing.Point(176, 103);
             this.LblEstado.Name = "LblEstado";
-            this.LblEstado.Size = new System.Drawing.Size(12, 17);
+            this.LblEstado.Size = new System.Drawing.Size(14, 20);
             this.LblEstado.TabIndex = 159;
             this.LblEstado.Text = "-";
             // 
@@ -332,11 +327,11 @@
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtCodDictaminante2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(92, 420);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(113, 517);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(652, 58);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(869, 71);
             this.groupBox1.TabIndex = 228;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Segundo Dictaminante";
@@ -346,10 +341,10 @@
             this.TxtApellidosDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante2.Enabled = false;
             this.TxtApellidosDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(491, 13);
-            this.TxtApellidosDictaminante2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtApellidosDictaminante2.Location = new System.Drawing.Point(655, 16);
+            this.TxtApellidosDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante2.Name = "TxtApellidosDictaminante2";
-            this.TxtApellidosDictaminante2.Size = new System.Drawing.Size(157, 25);
+            this.TxtApellidosDictaminante2.Size = new System.Drawing.Size(208, 30);
             this.TxtApellidosDictaminante2.TabIndex = 234;
             // 
             // TxtNombresDictaminante2
@@ -357,19 +352,18 @@
             this.TxtNombresDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante2.Enabled = false;
             this.TxtNombresDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(303, 14);
-            this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNombresDictaminante2.Location = new System.Drawing.Point(404, 17);
+            this.TxtNombresDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante2.Name = "TxtNombresDictaminante2";
-            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(173, 25);
+            this.TxtNombresDictaminante2.Size = new System.Drawing.Size(229, 30);
             this.TxtNombresDictaminante2.TabIndex = 235;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(95, 191);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(127, 235);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(0, 21);
+            this.label17.Size = new System.Drawing.Size(0, 23);
             this.label17.TabIndex = 159;
             // 
             // txtCodDictaminante2
@@ -377,10 +371,10 @@
             this.txtCodDictaminante2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante2.Enabled = false;
             this.txtCodDictaminante2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante2.Location = new System.Drawing.Point(207, 13);
-            this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodDictaminante2.Location = new System.Drawing.Point(276, 16);
+            this.txtCodDictaminante2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante2.Name = "txtCodDictaminante2";
-            this.txtCodDictaminante2.Size = new System.Drawing.Size(78, 25);
+            this.txtCodDictaminante2.Size = new System.Drawing.Size(103, 30);
             this.txtCodDictaminante2.TabIndex = 236;
             this.txtCodDictaminante2.TextChanged += new System.EventHandler(this.txtCodDictaminante2_TextChanged);
             // 
@@ -390,10 +384,9 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label18.Location = new System.Drawing.Point(580, 340);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(763, 418);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 19);
+            this.label18.Size = new System.Drawing.Size(85, 21);
             this.label18.TabIndex = 157;
             this.label18.Text = "Apellidos";
             // 
@@ -405,11 +398,11 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.txtCodDictaminante3);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(87, 488);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Location = new System.Drawing.Point(106, 601);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(652, 54);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(869, 66);
             this.groupBox3.TabIndex = 228;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tercer Dictaminante";
@@ -419,10 +412,10 @@
             this.TxtApellidosDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtApellidosDictaminante3.Enabled = false;
             this.TxtApellidosDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(491, 15);
-            this.TxtApellidosDictaminante3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtApellidosDictaminante3.Location = new System.Drawing.Point(655, 18);
+            this.TxtApellidosDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtApellidosDictaminante3.Name = "TxtApellidosDictaminante3";
-            this.TxtApellidosDictaminante3.Size = new System.Drawing.Size(157, 25);
+            this.TxtApellidosDictaminante3.Size = new System.Drawing.Size(208, 30);
             this.TxtApellidosDictaminante3.TabIndex = 237;
             // 
             // TxtNombresDictaminante3
@@ -430,19 +423,18 @@
             this.TxtNombresDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNombresDictaminante3.Enabled = false;
             this.TxtNombresDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(303, 15);
-            this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNombresDictaminante3.Location = new System.Drawing.Point(404, 18);
+            this.TxtNombresDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombresDictaminante3.Name = "TxtNombresDictaminante3";
-            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(173, 25);
+            this.TxtNombresDictaminante3.Size = new System.Drawing.Size(229, 30);
             this.TxtNombresDictaminante3.TabIndex = 238;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(95, 191);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(127, 235);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(0, 21);
+            this.label27.Size = new System.Drawing.Size(0, 23);
             this.label27.TabIndex = 159;
             // 
             // txtCodDictaminante3
@@ -450,10 +442,10 @@
             this.txtCodDictaminante3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCodDictaminante3.Enabled = false;
             this.txtCodDictaminante3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.txtCodDictaminante3.Location = new System.Drawing.Point(207, 15);
-            this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodDictaminante3.Location = new System.Drawing.Point(276, 18);
+            this.txtCodDictaminante3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodDictaminante3.Name = "txtCodDictaminante3";
-            this.txtCodDictaminante3.Size = new System.Drawing.Size(78, 25);
+            this.txtCodDictaminante3.Size = new System.Drawing.Size(103, 30);
             this.txtCodDictaminante3.TabIndex = 239;
             this.txtCodDictaminante3.TextChanged += new System.EventHandler(this.txtCodDictaminante3_TextChanged);
             // 
@@ -463,10 +455,9 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label28.Location = new System.Drawing.Point(393, 340);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Location = new System.Drawing.Point(514, 418);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(69, 19);
+            this.label28.Size = new System.Drawing.Size(84, 21);
             this.label28.TabIndex = 157;
             this.label28.Text = "Nombres";
             // 
@@ -476,10 +467,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(297, 340);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(386, 418);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 19);
+            this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 231;
             this.label1.Text = "Codigo";
             // 
@@ -489,10 +479,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(23, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(31, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 234;
             this.label2.Text = "Consenso:";
             // 
@@ -502,10 +491,9 @@
             this.LblCondicion.AutoSize = true;
             this.LblCondicion.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblCondicion.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.LblCondicion.Location = new System.Drawing.Point(22, 83);
-            this.LblCondicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblCondicion.Location = new System.Drawing.Point(29, 102);
             this.LblCondicion.Name = "LblCondicion";
-            this.LblCondicion.Size = new System.Drawing.Size(85, 20);
+            this.LblCondicion.Size = new System.Drawing.Size(106, 22);
             this.LblCondicion.TabIndex = 233;
             this.LblCondicion.Text = "Resultado:";
             // 
@@ -515,10 +503,9 @@
             this.LblCodTesista1.AutoSize = true;
             this.LblCodTesista1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.LblCodTesista1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.LblCodTesista1.Location = new System.Drawing.Point(23, 52);
-            this.LblCodTesista1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblCodTesista1.Location = new System.Drawing.Point(31, 64);
             this.LblCodTesista1.Name = "LblCodTesista1";
-            this.LblCodTesista1.Size = new System.Drawing.Size(49, 20);
+            this.LblCodTesista1.Size = new System.Drawing.Size(61, 22);
             this.LblCodTesista1.TabIndex = 232;
             this.LblCodTesista1.Text = "Nota:";
             // 
@@ -532,10 +519,10 @@
             "APROBADO POR UNANIMIDAD",
             "APROBADO POR MAYORIA",
             "DESAPROBADO"});
-            this.cbxConsenso.Location = new System.Drawing.Point(134, 24);
-            this.cbxConsenso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxConsenso.Location = new System.Drawing.Point(179, 30);
+            this.cbxConsenso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxConsenso.Name = "cbxConsenso";
-            this.cbxConsenso.Size = new System.Drawing.Size(212, 25);
+            this.cbxConsenso.Size = new System.Drawing.Size(281, 28);
             this.cbxConsenso.TabIndex = 235;
             this.cbxConsenso.SelectedIndexChanged += new System.EventHandler(this.cbxConsenso_SelectedIndexChanged);
             // 
@@ -545,10 +532,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(19, 647);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(15, 796);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 20);
+            this.label3.Size = new System.Drawing.Size(205, 22);
             this.label3.TabIndex = 291;
             this.label3.Text = "Fecha y Hora Actual:";
             // 
@@ -560,9 +546,10 @@
             this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(22, 670);
+            this.dateTimePicker3.Location = new System.Drawing.Point(19, 825);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(280, 25);
+            this.dateTimePicker3.Size = new System.Drawing.Size(372, 30);
             this.dateTimePicker3.TabIndex = 290;
             // 
             // LblTitulo
@@ -573,9 +560,8 @@
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(70)))));
             this.LblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.LblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(840, 31);
+            this.LblTitulo.Size = new System.Drawing.Size(1122, 38);
             this.LblTitulo.TabIndex = 292;
             this.LblTitulo.Text = "Evaluacion del Jurado Evaluador de Tesis";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -583,15 +569,15 @@
             // NudNotaFinal
             // 
             this.NudNotaFinal.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NudNotaFinal.Location = new System.Drawing.Point(135, 50);
-            this.NudNotaFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NudNotaFinal.Location = new System.Drawing.Point(180, 62);
+            this.NudNotaFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NudNotaFinal.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
             this.NudNotaFinal.Name = "NudNotaFinal";
-            this.NudNotaFinal.Size = new System.Drawing.Size(90, 25);
+            this.NudNotaFinal.Size = new System.Drawing.Size(120, 30);
             this.NudNotaFinal.TabIndex = 293;
             this.NudNotaFinal.ValueChanged += new System.EventHandler(this.TxtNotaFinal_ValueChanged);
             // 
@@ -603,11 +589,11 @@
             this.GbxResultadoEvaluacion.Controls.Add(this.LblCodTesista1);
             this.GbxResultadoEvaluacion.Controls.Add(this.label2);
             this.GbxResultadoEvaluacion.Controls.Add(this.cbxConsenso);
-            this.GbxResultadoEvaluacion.Location = new System.Drawing.Point(256, 546);
-            this.GbxResultadoEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxResultadoEvaluacion.Location = new System.Drawing.Point(341, 672);
+            this.GbxResultadoEvaluacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GbxResultadoEvaluacion.Name = "GbxResultadoEvaluacion";
-            this.GbxResultadoEvaluacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GbxResultadoEvaluacion.Size = new System.Drawing.Size(406, 110);
+            this.GbxResultadoEvaluacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GbxResultadoEvaluacion.Size = new System.Drawing.Size(541, 135);
             this.GbxResultadoEvaluacion.TabIndex = 294;
             this.GbxResultadoEvaluacion.TabStop = false;
             // 
@@ -621,10 +607,10 @@
             this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(155)))), ((int)(((byte)(64)))));
             this.BtnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLogin.Location = new System.Drawing.Point(411, 72);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnLogin.Location = new System.Drawing.Point(538, 89);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(109, 27);
+            this.BtnLogin.Size = new System.Drawing.Size(145, 33);
             this.BtnLogin.TabIndex = 295;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = false;
@@ -632,10 +618,10 @@
             // 
             // FrmResultadoEvaluacionSustentacionOral
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(857, 687);
+            this.ClientSize = new System.Drawing.Size(1143, 846);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.GbxResultadoEvaluacion);
             this.Controls.Add(this.LblTitulo);
@@ -654,7 +640,7 @@
             this.Controls.Add(this.TxtCodTesis);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CboCodJuradoEvaluador);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmResultadoEvaluacionSustentacionOral";
             this.Text = "FrmResultadoEvaluacionSustentacionOral";
             this.groupBox2.ResumeLayout(false);

@@ -21,6 +21,8 @@ namespace LibFormularios
             oDictaminanteDeTesis = new CDictaminanteDeTesis();
             LlenarTesisPendientes();
             DgvEvaluadoresDePlanDeTesis.Visible = false;
+            TxtCodDictaminantesDeTesis.Text = oDictaminanteDeTesis.GenerarCodigoNombrarComisionRevisora();
+
         }
         public void LlenarTesisPendientes()
         {
@@ -138,12 +140,34 @@ namespace LibFormularios
 
         private void BtnGenerar_Click(object sender, EventArgs e)
         {
-            string codigo = oDictaminanteDeTesis.GenerarCodigoNombrarComisionRevisora();
+            TxtCodDictaminantesDeTesis.Text = oDictaminanteDeTesis.GenerarCodigoNombrarComisionRevisora();
 
-
-            TxtCodDictaminantesDeTesis.Text = codigo;
         }
+        public void RefrescarDocentes()
+        {
+            txtCodDocente1.Text = "";
+            txtCodDocente2.Text = "";
+            txtCodDocente3.Text = "";
 
+            TxtNombresDocente1.Text = "";
+            TxtNombresDocente2.Text = "";
+            TxtNombresDocente3.Text = "";
+            TxtApellidosDocente1.Text = "";
+            TxtApellidosDocente2.Text = "";
+            TxtApellidosDocente3.Text = "";
+            TxtDNIDocente1.Text = "";
+            TxtDNIDocente2.Text = "";
+            TxtDNIDocente3.Text = "";
+        }
+        public void RefrescarForm()
+        {
+            TxtCodTesis.Text = "";
+            TxtExpediente.Text = "";
+            //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+            DgvInteresados.DataSource = null;
+
+            RefrescarDocentes();
+        }
         private void BtnNombrarCR_Click(object sender, EventArgs e)
         {
             try
@@ -165,6 +189,7 @@ namespace LibFormularios
                     oDictaminanteDeTesis.UpdateEstadoTramiteEvaluacionDictaminantesPendiente(TxtExpediente.Text,TxtCodTesis.Text);
 
                     LlenarTesisPendientes();
+                    RefrescarForm();
                 }
                 else
                 {
@@ -185,16 +210,29 @@ namespace LibFormularios
 
         private void BtnConsultarEvaluadores_Click(object sender, EventArgs e)
         {
-            if (DgvEvaluadoresDePlanDeTesis.Visible == false)
+            try
             {
-                DgvEvaluadoresDePlanDeTesis.DataSource = oDictaminanteDeTesis.ListarRevisores(TxtExpediente.Text);
-                DgvEvaluadoresDePlanDeTesis.Columns["Correo"].Visible = false;
-                DgvEvaluadoresDePlanDeTesis.Columns["Telefono"].Visible = false;
-                DgvEvaluadoresDePlanDeTesis.Visible = true;
+                if (DgvEvaluadoresDePlanDeTesis.Visible == false)
+                {
+                    List<string> revisores = oDictaminanteDeTesis.SolicitarRevisores(TxtExpediente.Text);
+                    /*
+                    DgvEvaluadoresDePlanDeTesis.DataSource = oDictaminanteDeTesis.ListarRevisores(TxtExpediente.Text);
+                    DgvEvaluadoresDePlanDeTesis.Columns["Correo"].Visible = false;
+                    DgvEvaluadoresDePlanDeTesis.Columns["Telefono"].Visible = false;
+                    DgvEvaluadoresDePlanDeTesis.Visible = true;
+                    */
+                    txtCodDocente1.Text = revisores[0];
+                    txtCodDocente2.Text = revisores[1];
+                    txtCodDocente3.Text = revisores[2];
+                }
+                else
+                {
+                    DgvEvaluadoresDePlanDeTesis.Visible = false;
+                }
             }
-            else
+            catch
             {
-                DgvEvaluadoresDePlanDeTesis.Visible = false;
+
             }
         }
 

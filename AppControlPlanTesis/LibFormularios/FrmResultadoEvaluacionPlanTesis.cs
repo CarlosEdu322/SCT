@@ -28,7 +28,7 @@ namespace LibFormularios
             try
             {
                 //-- muestra la lista de libros en el combo
-                CboCodComisionRevisora.DataSource = oPlanDeTesis.ListarCodComisionRevisora();
+                CboCodComisionRevisora.DataSource = oPlanDeTesis.ListarCodComisionRevisoraEstadoCRRevisionpendiente();
                 CboCodComisionRevisora.DisplayMember = "CodEvaluacionPlanDeTesis";
                 CboCodComisionRevisora.ValueMember = "CodEvaluacionPlanDeTesis";
                 //-- dejar el combo sin libro seleccionado
@@ -55,11 +55,25 @@ namespace LibFormularios
             //-- dejar el combo sin libro seleccionado
             CboCodDocente.SelectedIndex = -1;
         }
+        public void RefrescarVentana()
+        {
+            
+            NudNotaIdentificacionProblema.Value = 0;
+            NudNotaHipotesis.Value = 0;
+            NudNotaAlcanceResultados.Value = 0;
+            NudNotaMetodologia.Value = 0;
+            NudNotaRevisionBibliografica.Value = 0;
+            NudNotaRecursosPresupuesto.Value = 0;
+            NudNotaImpacto.Value = 0;
+            NudNotaOrganizacionDocTesis.Value = 0;
+        }
         private void CboCodComisionRevisora_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                
                 LlemarDatosDocente();
+                LlenarGrids();
             }
             catch
             {
@@ -73,6 +87,7 @@ namespace LibFormularios
             {
                 if (TxtLogin.Text.CompareTo("LOGUEADO") == 0)
                 {
+
                     List<string> Lista = new List<string>();
                     DataRowView oDataRowView = CboCodComisionRevisora.SelectedItem as DataRowView;
                     string CodEvaluacionPlanDeTesis = string.Empty;
@@ -101,7 +116,8 @@ namespace LibFormularios
                     Lista.Add(NudNotaOrganizacionDocTesis.Value.ToString());
                     oPlanDeTesis.AgregarEvaluacionPlanDeTesis(Lista);
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
-
+                    RefrescarVentana();
+                    LlenarDatosEvaluacionPlanTesis();
                 }
                 else
                 {
@@ -138,48 +154,83 @@ namespace LibFormularios
             TxtNombresDocente.Text = "";
             TxtDNIDocente.Text = "";
         }
+        public void LlenarDatosEvaluacionPlanTesis()
+        {
+            ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
+            if (oPlanDeTesis.VerificarSiEmitioEvaluacion(CboCodComisionRevisora.Text, CboCodDocente.Text))
+            {
+                DesactivarVotacion();
+                LblNotificacion.Visible = true;
+                LblNotificacion.Text = "Usted ya reviso este plan de tesis";
+                List<string> ListaNotas = oPlanDeTesis.ConsultarNotas(CboCodComisionRevisora.Text, CboCodDocente.Text);
+                NudNotaIdentificacionProblema.Text = ListaNotas[0];
+                NudNotaHipotesis.Text = ListaNotas[1];
+                NudNotaAlcanceResultados.Text = ListaNotas[2];
+                NudNotaMetodologia.Text = ListaNotas[3];
+                NudNotaRevisionBibliografica.Text = ListaNotas[4];
+                NudNotaRecursosPresupuesto.Text = ListaNotas[5];
+                NudNotaImpacto.Text = ListaNotas[6];
+                NudNotaOrganizacionDocTesis.Text = ListaNotas[7];
+                BtnGuardar.Enabled = false;
+                LlenarGrids();
+            }
+            else
+            {
+                BtnGuardar.Enabled = true;
+                ActivarVotacion();
+                LblNotificacion.Visible = false;
+            }
+            if (CboCodDocente.Text == "")
+                RefrescarTxt();
+            TxtLogin.Text = "-";
+        }
+
+        public void DesactivarVotacion()
+        {
+            NudNotaIdentificacionProblema.ReadOnly = true;
+            NudNotaHipotesis.ReadOnly = true;
+            NudNotaAlcanceResultados.ReadOnly = true;
+            NudNotaMetodologia.ReadOnly = true;
+            NudNotaRevisionBibliografica.ReadOnly = true;
+            NudNotaRecursosPresupuesto.ReadOnly = true;
+            NudNotaImpacto.ReadOnly = true;
+            NudNotaOrganizacionDocTesis.ReadOnly = true;
+        }
+        public void ActivarVotacion()
+        {
+            NudNotaIdentificacionProblema.ReadOnly = false;
+            NudNotaHipotesis.ReadOnly = false;
+            NudNotaAlcanceResultados.ReadOnly = false;
+            NudNotaMetodologia.ReadOnly = false;
+            NudNotaRevisionBibliografica.ReadOnly = false;
+            NudNotaRecursosPresupuesto.ReadOnly = false;
+            NudNotaImpacto.ReadOnly = false;
+            NudNotaOrganizacionDocTesis.ReadOnly = false;
+        }
         private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-
-
-                ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
-                if (oPlanDeTesis.VerificarSiEmitioEvaluacion(CboCodComisionRevisora.Text, CboCodDocente.Text))
-                {
-                    GbxRubrica.Enabled = false;
-                    LblNotificacion.Visible = true;
-                    LblNotificacion.Text = "Usted ya reviso este plan de tesis";
-                    List<string> ListaNotas = oPlanDeTesis.ConsultarNotas(CboCodComisionRevisora.Text, CboCodDocente.Text);
-                    NudNotaIdentificacionProblema.Text = ListaNotas[0];
-                    NudNotaHipotesis.Text = ListaNotas[1];
-                    NudNotaAlcanceResultados.Text = ListaNotas[2];
-                    NudNotaMetodologia.Text = ListaNotas[3];
-                    NudNotaRevisionBibliografica.Text = ListaNotas[4];
-                    NudNotaRecursosPresupuesto.Text = ListaNotas[5];
-                    NudNotaImpacto.Text = ListaNotas[6];
-                    NudNotaOrganizacionDocTesis.Text = ListaNotas[7];
-                
-                }
-                else
-                {
-                    GbxRubrica.Enabled = true;
-                    LblNotificacion.Visible = false;
-                }
-                if (CboCodDocente.Text == "")
-                    RefrescarTxt();
-                TxtLogin.Text = "-";
+                LlenarDatosEvaluacionPlanTesis();
             }
             catch
             {
 
             }
         }
-
-        private void TxtCodTesis_TextChanged(object sender, EventArgs e)
+        public void VaciarGrids()
+        {
+            DgvInteresados.DataSource = null;
+            DgvTesis.DataSource = null;
+        }
+        public void LlenarGrids()
         {
             DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
             DgvTesis.DataSource = oPlanDeTesis.ListarDatosTesis(TxtCodTesis.Text);
+        }
+        private void TxtCodTesis_TextChanged(object sender, EventArgs e)
+        {
+            LlenarGrids();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)

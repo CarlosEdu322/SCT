@@ -101,9 +101,9 @@ namespace LibFormularios
                         String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
                         oPlanDeTesis.EmitirResolucionNombramientoDictaminantes(NResolucion, TxtCodTesis.Text);
                         oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS APROBADA POR COMISION REVISORA");
-                        oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE");
+                        oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS APROBADA POR COMISION REVISORA");
                         //actualizar el estado del tramite a atendido
-                        //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
+                        //oPlanDeTesis.ActualizarEstadoDelTramite(TxtExpediente.Text, TxtCodTesis.Text);
                         MessageBox.Show("Resolucion: " + NResolucion + " EMITIDA EXITOSAMENTE", "CONFIRMACION");
                         //RellenarTablaTramites();
                     }

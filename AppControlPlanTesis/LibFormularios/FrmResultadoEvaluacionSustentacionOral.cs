@@ -19,7 +19,7 @@ namespace LibFormularios
             InitializeComponent();
             oEvaluacionTesis = new CEvaluacionTesis();
             LlenarDatosCboCodDictamen();
-
+            cbxConsenso.SelectedIndex = 0;
             //Evaluar();
         }
 
@@ -66,10 +66,8 @@ namespace LibFormularios
                 }
                 else
                 {
-                    cbxConsenso.Text = "";
-                    NudNotaFinal.Value = 0;
-                    LblEstado.Text = "";
-
+                    //cbxConsenso.Text = "";
+                    //LblEstado.Text = "";
                     cbxConsenso.Enabled = true;
                     LblNotificacion.Visible = false;
                     LblEstado.Enabled = true;
@@ -81,6 +79,7 @@ namespace LibFormularios
             }
             catch
             {
+
             }
         }
 
@@ -209,15 +208,23 @@ namespace LibFormularios
             }*/
             if (cbxConsenso.Text.CompareTo("APROBADO POR UNANIMIDAD") == 0)
             {
+                NudNotaFinal.Minimum = 14;
+                NudNotaFinal.Maximum = 20;
                 NudNotaFinal.Value = 14;
+                
             }
             if (cbxConsenso.Text.CompareTo("APROBADO POR MAYORIA") == 0)
             {
+                NudNotaFinal.Minimum = 14;
+                NudNotaFinal.Maximum = 20;
                 NudNotaFinal.Value = 14;
             }
             if (cbxConsenso.Text.CompareTo("DESAPROBADO") == 0)
             {
-                NudNotaFinal.Value = 0;
+
+                NudNotaFinal.Minimum = 0;
+                NudNotaFinal.Maximum = 13;
+                NudNotaFinal.Value = 13;
             }
         }
 

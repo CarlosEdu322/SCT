@@ -42,7 +42,7 @@ namespace LibFormularios
             try
             {
                 //-- muestra la lista de libros en el combo
-                CboCodDictaminantes.DataSource = oDictaminanteDeTesis.ListarCodGrupoDictaminantes();
+                CboCodDictaminantes.DataSource = oDictaminanteDeTesis.ListarCodDictamenesPendientes();
                 CboCodDictaminantes.DisplayMember = "CodDictamenDeTesis";
                 CboCodDictaminantes.ValueMember = "CodDictamenDeTesis";
                 //-- dejar el combo sin libro seleccionado
@@ -99,37 +99,57 @@ namespace LibFormularios
             DgvTesis.Columns["CodTesis"].Visible = false;
             DgvTesis.Columns["CodDocente"].Visible = false;
         }
-
+        public void DesactivarVotacion()
+        {
+            TxtObservaciones.ReadOnly = true;
+            RbAprobado.Enabled = false;
+            RbDesaprobado.Enabled = false;
+            BtnGuardar.Enabled = false;
+        }
+        public void ActivarVotacion()
+        {
+            TxtObservaciones.ReadOnly = false;
+            RbAprobado.Enabled = true;
+            RbDesaprobado.Enabled = true;
+            BtnGuardar.Enabled = true;
+        }
+        public void LlenarDatosDocente()
+        {
+            ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
+            if (oDictaminanteDeTesis.VerificarSiEmitioEvaluacionDictamen(CboCodDictaminantes.Text, CboCodDocente.Text))
+            {
+                //GbxRubrica.Enabled = false;
+                DesactivarVotacion();
+                LblNotificacion.Visible = true;
+                LblNotificacion.Text = "Usted ya dictamino esta tesis";
+                List<string> ListaNotas = oDictaminanteDeTesis.ConsultarNotas(CboCodDictaminantes.Text, CboCodDocente.Text);
+                if (ListaNotas[0].CompareTo("APROBADO") == 0)
+                {
+                    RbAprobado.Checked = true;
+                }
+                else
+                {
+                    RbDesaprobado.Checked = true;
+                }
+            }
+            else
+            {
+                //GbxRubrica.Enabled = true;
+                ActivarVotacion();
+                LblNotificacion.Visible = false;
+            }
+            if (CboCodDocente.Text == "")
+                RefrescarTxt();
+            TxtLogin.Text = "-";
+        }
         private void CboCodDocente_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                LlenarDatosDocente();
 
 
-                ConsultarDocente(TxtNombresDocente, TxtApellidosDocente, TxtDNIDocente, CboCodDocente.Text);
-                if (oDictaminanteDeTesis.VerificarSiEmitioEvaluacionDictamen(CboCodDictaminantes.Text, CboCodDocente.Text))
-                {
-                    GbxRubrica.Enabled = false;
-                    LblNotificacion.Visible = true;
-                    LblNotificacion.Text = "Usted ya dictamino esta tesis";
-                    List<string> ListaNotas = oDictaminanteDeTesis.ConsultarNotas(CboCodDictaminantes.Text, CboCodDocente.Text);
-                    if (ListaNotas[0].CompareTo("APROBADO")==0)
-                    {
-                        RbAprobado.Checked = true;
-                    }
-                    else
-                    {
-                        RbDesaprobado.Checked = true;
-                    }
-                }
-                else
-                {
-                    GbxRubrica.Enabled = true;
-                    LblNotificacion.Visible = false;
-                }
-                if (CboCodDocente.Text == "")
-                    RefrescarTxt();
-                TxtLogin.Text = "-";
+
             }
             catch (Exception eRR)
             {
@@ -145,44 +165,54 @@ namespace LibFormularios
             {
                 if (TxtLogin.Text.CompareTo("LOGUEADO") == 0)
                 {
-                    List<string> Lista = new List<string>();
-                    DataRowView oDataRowView = CboCodDictaminantes.SelectedItem as DataRowView;
-                    string CodEvaluacionDictamenDeTesis = string.Empty;
-
-                    if (oDataRowView != null)
+                    if (!oDictaminanteDeTesis.VerificarSiEmitioEvaluacionDictamen(CboCodDictaminantes.Text, CboCodDocente.Text))
                     {
-                        CodEvaluacionDictamenDeTesis = oDataRowView.Row["CodDictamenDeTesis"] as string;
-                    }
-                    Lista.Add(CodEvaluacionDictamenDeTesis);
-                    DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
-                    string CodDocente = string.Empty;
+                        
+                        List<string> Lista = new List<string>();
+                        DataRowView oDataRowView = CboCodDictaminantes.SelectedItem as DataRowView;
+                        string CodEvaluacionDictamenDeTesis = string.Empty;
 
-                    if (oDataRowView != null)
-                    {
-                        CodDocente = oDataRowView2.Row["CodDocente"] as string;
-                    }
+                        if (oDataRowView != null)
+                        {
+                            CodEvaluacionDictamenDeTesis = oDataRowView.Row["CodDictamenDeTesis"] as string;
+                        }
+                        Lista.Add(CodEvaluacionDictamenDeTesis);
+                        DataRowView oDataRowView2 = CboCodDocente.SelectedItem as DataRowView;
+                        string CodDocente = string.Empty;
+
+                        if (oDataRowView != null)
+                        {
+                            CodDocente = oDataRowView2.Row["CodDocente"] as string;
+                        }
 
 
 
-                    Lista.Add(CodDocente);
-                    string juicio;
-                    //emitir juicio
-                    if (RbAprobado.Checked)
-                    {
-                        juicio = "APROBADO";
+                        Lista.Add(CodDocente);
+                        string juicio;
+                        //emitir juicio
+                        if (RbAprobado.Checked)
+                        {
+                            juicio = "APROBADO";
+                        }
+                        else
+                        {
+                            juicio = "DESAPROBADO";
+                        }
+
+
+                        Lista.Add(juicio);
+                        Lista.Add(TxtObservaciones.Text);
+
+                        oDictaminanteDeTesis.AgregarDictamenPlanDeTesis(Lista);
+                        MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+                        DesactivarVotacion();
+                        LlenarDatosDocente();
                     }
                     else
                     {
-                        juicio = "DESAPROBADO";
+                        ActivarVotacion();
+                        MessageBox.Show("USTED YA DICTAMINO ESTA TESIS", "ALERTA");
                     }
-
-
-                    Lista.Add(juicio);
-                    Lista.Add(TxtObservaciones.Text);
-
-                    oDictaminanteDeTesis.AgregarDictamenPlanDeTesis(Lista);
-                    MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
-
                 }
                 else
                 {

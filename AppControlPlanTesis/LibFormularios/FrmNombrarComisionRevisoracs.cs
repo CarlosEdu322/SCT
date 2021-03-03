@@ -122,13 +122,15 @@ namespace LibFormularios
         {
             ConsultarDocente(TxtNombresDocente3, TxtApellidosDocente3, TxtDNIDocente3, txtCodDocente3.Text);
         }
-
+        public void Generarodigo()
+        {
+            TxtCodEvaluacionPlanDeTesis.Text = oPlanDeTesis.GenerarCodigoNombrarComisionRevisora();
+        }
         private void BtnGenerar_Click(object sender, EventArgs e)
         {
-            string codigo = oPlanDeTesis.GenerarCodigoNombrarComisionRevisora();
+            Generarodigo();
 
 
-            TxtCodEvaluacionPlanDeTesis.Text = codigo;
         }
 
         private void BtnNombrarCR_Click(object sender, EventArgs e)
@@ -148,6 +150,9 @@ namespace LibFormularios
                     oPlanDeTesis.AgregarDocentesCR(ComisionRevisora, TxtCodEvaluacionPlanDeTesis.Text);
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
                     LlenarTesisPendientes();
+                    oPlanDeTesis.UpdateEstadoExpedienteARevisionPendienteCR(TxtExpediente.Text);
+                    RefrescarForm();
+                    Generarodigo();
                 }
                 else
                 {
@@ -161,16 +166,44 @@ namespace LibFormularios
             }
 
         }
+        public void RefrescarDocentes()
+        {
+            txtCodDocente1.Text = "";
+            txtCodDocente2.Text = "";
+            txtCodDocente3.Text = "";
 
+            TxtNombresDocente1.Text = "";
+            TxtNombresDocente2.Text = "";
+            TxtNombresDocente3.Text = "";
+            TxtApellidosDocente1.Text = "";
+            TxtApellidosDocente2.Text = "";
+            TxtApellidosDocente3.Text = "";
+            TxtDNIDocente1.Text = "";
+            TxtDNIDocente2.Text = "";
+            TxtDNIDocente3.Text = "";
+        }
+        public void RefrescarForm()
+        {
+            TxtCodTesis.Text = "";
+            TxtExpediente.Text = "";
+            //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+            DgvInteresados.DataSource = null;
+
+            RefrescarDocentes();
+        }
+        public void LlenarCampos()
+        {
+            //int filat= DgvTramitesDeInscripcion.CurrentRow.Index;
+            TxtCodTesis.Text = DgvTesisPendientesDeCR.CurrentRow.Cells["CodTesis"].Value.ToString();
+            TxtExpediente.Text = DgvTesisPendientesDeCR.CurrentRow.Cells["NroExpediente"].Value.ToString();
+            //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
+            DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
+        }
         private void BtnCargar_Click(object sender, EventArgs e)
         {
             try
             {
-                //int filat= DgvTramitesDeInscripcion.CurrentRow.Index;
-                TxtCodTesis.Text = DgvTesisPendientesDeCR.CurrentRow.Cells["CodTesis"].Value.ToString();
-                TxtExpediente.Text = DgvTesisPendientesDeCR.CurrentRow.Cells["NroExpediente"].Value.ToString();
-                //DgvDocentes.DataSource= oPlanDeTesis.ListarTesistasXTesis();
-                DgvInteresados.DataSource = oPlanDeTesis.ListarInteresados(TxtCodTesis.Text);
+                LlenarCampos();
             }
             catch
             {

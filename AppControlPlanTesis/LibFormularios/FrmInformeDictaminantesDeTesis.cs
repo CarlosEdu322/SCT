@@ -15,11 +15,14 @@ namespace LibFormularios
     public partial class FrmInformeDictaminantesDeTesis : Form
     {
         private CDictaminanteDeTesis oDictaminanteDeTesis = new CDictaminanteDeTesis();
-        private CPlanDeTesis oPlanDeTesis = new CPlanDeTesis(); 
+        private CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
+        private CEvaluacionTesis oEvaluacionTesis=new CEvaluacionTesis();
         public FrmInformeDictaminantesDeTesis()
         {
             InitializeComponent();
-            LlenarDatosCboCodRevisionDeTesis();         
+
+            LlenarDatosCboCodRevisionDeTesis();
+            GenerarResoluicion();
         }
 
         private void CboCodTramDictamen_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +64,8 @@ namespace LibFormularios
             try
             {
                 //-- muestra la lista de libros en el combo
-                CboCodTramDictamen.DataSource = oDictaminanteDeTesis.ListarCodGrupoDictaminantes();
+                //CboCodTramDictamen.DataSource = oDictaminanteDeTesis.ListarCodDictamenesPendientes();
+                CboCodTramDictamen.DataSource = oDictaminanteDeTesis.ListarCodDictamenesPendientes();
                 CboCodTramDictamen.DisplayMember = "CodDictamenDeTesis";
                 CboCodTramDictamen.ValueMember = "CodDictamenDeTesis";
                 //-- dejar el combo sin libro seleccionado
@@ -87,16 +91,16 @@ namespace LibFormularios
             CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
             try
             {
-                if (TxtJuicio.Text.CompareTo("APROBADO")==0)
+                if (TxtJuicio.Text.CompareTo("APROBADO") == 0)
                 {
-                    if ((TxtCodTesis.Text != "")||(TxtResolucion.Text!=""))
+                    if ((TxtCodTesis.Text != "") || (TxtResolucion.Text != ""))
                     {
                         if (oPlanDeTesis.VerificarSiEmitioResolucionSuficienciaTesis(TxtCodTesis.Text) == false)
                         {
-                            
-                            
+
+
                             oPlanDeTesis.EmitirResolucionSuficienciaTesis(TxtResolucion.Text, TxtCodTesis.Text);
-                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE");
+                            oPlanDeTesis.UpdateEstadoExpediente(TxtExpediente.Text, "TESIS APROBADA POR DICTAMINANTES");
                             oPlanDeTesis.UpdateTesis(TxtCodTesis.Text, "TESIS APROBADA POR DICTAMINANTES");
                             //actualizar el estado del tramite a atendido
                             //oPlanDeTesis.ActualizarEstadoDelTramite(TxtCodTramite.Text, TxtCodTesis.Text);
@@ -134,12 +138,16 @@ namespace LibFormularios
             FrmMostrarResolucion A = new FrmMostrarResolucion();
             A.Show();
         }
-
-        private void BtnGenerar_Click(object sender, EventArgs e)
+        public void GenerarResoluicion()
         {
             CPlanDeTesis oPlanDeTesis = new CPlanDeTesis();
             String NResolucion = "D-" + oPlanDeTesis.GenerarCodigoResolucionNombramientoDictaminantes() + "-2021-FIEEIM-UNSAAC";
             TxtResolucion.Text = NResolucion;
+        }
+        private void BtnGenerar_Click(object sender, EventArgs e)
+        {
+            GenerarResoluicion();
+
         }
     }
 }

@@ -84,10 +84,18 @@ namespace LibClases
         }
         public DataTable ListarCodGrupoDictaminantes()
         {
-            string consulta = "select * from TExpediente where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis!=''";
+            string consulta = "select * from TExpediente where Estado='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }
+        public DataTable ListarCodDictamenesPendientes()
+        {
+            string consulta = "select * from TExpediente where Estado='TESIS CON EVALUACION DE DICTAMINANTES PENDIENTE'";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+
+
         public string MostrarCodTesis(string pCodDictamen)
         {
             string consulta = "select  * from TExpediente a , TDictaminantesDeTesis b where a.CodDictamenDeTesis = b.CodDictamenDeTesis and b.CodDictamenDeTesis = '" + pCodDictamen + "'";
@@ -169,6 +177,22 @@ namespace LibClases
             return aConexion.Datos.Tables[0];
 
         }
+        public List<string> SolicitarRevisores(string pExpediente)
+        {
+            string Consulta = "select* from tdocente where coddocente in(select CodDocente from TExpediente a, TComisionRevisora b where a.CodEvaluacionPlanDeTesis = b.CodEvaluacionPlanDeTesis and a.NroExpediente = '" + pExpediente + "')";
+            aConexion.EjecutarSelect(Consulta);
+            List<string> ListaDocente = new List<string>();
+            DataTable tablaresultado = aConexion.Datos.Tables[0];
+            for (int k = 0; k < tablaresultado.Rows.Count; k++)
+            {
+                DataRow drv = tablaresultado.Rows[k];
+                ListaDocente.Add(drv["CodDocente"].ToString());
+               
+            }
+            return ListaDocente;
+
+        }
+        
         public List<string> ConsultarNotas(string pcodexpediente, string pcoddocente)
         {
             string consulta = "SELECT * FROM TActaDictamenDeTesis where CodDictamenDeTesis='"+ pcodexpediente + "' and CodDocente='"+pcoddocente+"'";

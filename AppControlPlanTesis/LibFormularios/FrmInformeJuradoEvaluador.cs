@@ -30,7 +30,7 @@ namespace LibFormularios
             try
             {
                 //-- muestra la lista de libros en el combo
-                CboCodJuradoEvaluador.DataSource = oEvaluacionTesis.ListarCodJuradosEvaluadores();
+                CboCodJuradoEvaluador.DataSource = oEvaluacionTesis.ListarCodJuradoEvaluador();
                 CboCodJuradoEvaluador.DisplayMember = "CodSustentacionOral";
                 CboCodJuradoEvaluador.ValueMember = "CodSustentacionOral";
                 //-- dejar el combo sin libro seleccionado

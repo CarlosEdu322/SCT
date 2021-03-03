@@ -53,11 +53,17 @@ namespace LibFormularios
 
         private void BtnSeleccionar_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
+                //frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
+                CajadeTexto.Text = DgvExpediente.CurrentRow.Cells[0].Value.ToString();
+                this.Close();
+            }
+            catch
+            {
 
-            FrmIniciarTramiteEstudiante frm = Owner as FrmIniciarTramiteEstudiante;
-            //frm.CodigoBusqueda.Text = dgvDocentes.CurrentRow.Cells[0].Value.ToString();
-            CajadeTexto.Text = DgvExpediente.CurrentRow.Cells[0].Value.ToString();
-            this.Close();
+            }
         }
     }
 }

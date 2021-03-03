@@ -19,7 +19,7 @@ namespace LibClases
         //select a.NroExpediente, a.CodEvaluacionPlanDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis = ''
         public DataTable TesisPendientesDeDictamen()
         {
-            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, b.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where CodEvaluacionPlanDeTesis!='' and CodDictamenDeTesis != '' and CodSustentacionOral='' and a.Estado='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE'";
+            string consulta = "select a.NroExpediente, a.CodDictamenDeTesis, a.CodTesis, b.Titulo, b.Tema, a.Estado, b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis= b.CodTesis where  a.Estado ='TESIS CON NOMBRAMIENTO DE JURADO EVALUADOR PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -85,10 +85,13 @@ namespace LibClases
             consulta = "UPDATE TExpediente set CodSustentacionOral='" + pCodJuradoEvaluador + "' WHERE NroExpediente='" + pCodExpediente + "'";
             aConexion.EjecutarComando(consulta);
         }
-
+        /// <summary>
+        /// ///////////////
+        /// </summary>
+        /// <returns></returns>
         public DataTable ListarCodJuradoEvaluador()
         {
-            string consulta = "select * from TExpediente where CodSustentacionOral!=''";
+            string consulta = "select * from TExpediente where Estado='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE' OR Estado='TESIS CON CORRECCION DE OBSERVACIONES PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }
@@ -244,7 +247,8 @@ namespace LibClases
         //insert into TActaSustentacionOral values ('250000','APROBADO',20,'APROBADO POR UNANIMIDAD')
         public DataTable ListarCodJuradosEvaluadores()
         {
-            string Consulta = "SELECT * FROM TActaSustentacionOral";
+            //SELECT * FROM TActaSustentacionOral
+            string Consulta = "SELECT * FROM TActaSustentacionOralselect * from TExpediente where Estado='TESIS CON EVALUACION DE JURADO EVALUADOR PENDIENTE'";
             aConexion.EjecutarSelect(Consulta);
             return aConexion.Datos.Tables[0];
         }

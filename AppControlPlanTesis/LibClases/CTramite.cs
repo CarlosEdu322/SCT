@@ -26,7 +26,7 @@ namespace LibClases
         }
         public DataTable ListaTramitesDeInscripcionDeTesis()
         {
-            string consulta = "select a.CodTramITTesis,a.CodTesis,b.Titulo,b.Tema,a.Estado,a.Observaciones from TIniciarTramiteInscripcionPlanDeTesis a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='RECIBIDO'";
+            string consulta = "select * from TTesis where CodTesis not in (select CodTesis from TExpediente)";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*

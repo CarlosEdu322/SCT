@@ -20,7 +20,7 @@ namespace LibClases
             try
             {
                 string codigo;
-                string consulta = "exec ObtenerCodigoMayorExpediente";
+                string consulta = "select top 1 NroExpediente from TExpediente ORDER BY NroExpediente DESC;";
                 aConexion.EjecutarSelect(consulta);
                 codigo = aConexion.Datos.Tables[0].Rows[0]["NroExpediente"].ToString();
                 int valorcodigo = int.Parse(codigo) + 1;
@@ -33,16 +33,12 @@ namespace LibClases
         }
         public void GenerarExpediente(List<string> listaTesistas)
         {
-            //string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "','','','')";
-            string Consulta = "exec GenerarExpediente @NroExpediente='" + listaTesistas[0] + "' , @CodTesis='" + listaTesistas[1] + "'";
+            //string Consulta = "insert into TExpediente values('"+ listaTesistas[0]+ "','"+ listaTesistas[1] + "','','','TESIS PREINSCRITA')";
+            string Consulta = "insert into TExpediente values('" + listaTesistas[0] + "','" + listaTesistas[1] + "','','','','TESIS CON NOMBRAMIENTO DE COMISION REVISORA PENDIENTE')";
             aConexion.EjecutarComando(Consulta);
             
         }
-        public void ActualizarEstadoDelTramite(string pCodTramITTesis,string pCodTesis)
-        {
-            string update = "update TIniciarTramiteInscripcionPlanDeTesis set Estado='RESUELTO' where CodTramITTesis='" + pCodTramITTesis + "' and CodTesis='" + pCodTesis + "'";
-            aConexion.EjecutarComando(update);
-        }
+
         public DataTable ListarTesistasXTesis()
         {
             string consulta = "select CodTesis,a.CodTesista,Apellidos,Nombres,DNI from TTesisXTesista a inner join TTesista b on a.CodTesista=b.CodTesista where CodTesis='700014'";
@@ -51,7 +47,7 @@ namespace LibClases
         }
         public DataTable TesisPendientesDeDCR()
         {
-            string consulta = "select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,a.Estado,b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado ='TESIS PREINSCRITA' and a.CodEvaluacionPlanDeTesis=''";
+            string consulta = "select a.NroExpediente,a.CodEvaluacionPlanDeTesis,a.CodTesis,b.Titulo,b.Tema,a.Estado,b.Observaciones from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado ='TESIS CON NOMBRAMIENTO DE COMISION REVISORA PENDIENTE' and a.CodEvaluacionPlanDeTesis=''";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
             /*
@@ -97,6 +93,12 @@ namespace LibClases
         public DataTable ListarCodComisionRevisora()
         {
             string consulta = "select * from TExpediente where CodEvaluacionPlanDeTesis!=''";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable ListarCodComisionRevisoraEstadoCRRevisionpendiente()
+        {
+            string consulta = "select * from TExpediente where Estado='TESIS CON EVALUACION DE PLAN DE TESIS PENDIENTE'";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }
@@ -334,6 +336,11 @@ namespace LibClases
         public void UpdateEstadoTramite(string pNroTramite, string pcodtesis)
         {
             string consulta = "UPDATE TExpediente set Estado='TESIS CON NOMBRAMIENTO DE DICTAMINANTES PENDIENTE' where NroExpediente='" + pNroTramite + "' and CodTesis='" + pcodtesis + "' ";
+            aConexion.EjecutarComando(consulta);
+        }
+        public void UpdateEstadoExpedienteARevisionPendienteCR(string pNroTramite)
+        {
+            string consulta = "UPDATE TExpediente set Estado='TESIS CON EVALUACION DE PLAN DE TESIS PENDIENTE' where NroExpediente='" + pNroTramite + "'";
             aConexion.EjecutarComando(consulta);
         }
     }

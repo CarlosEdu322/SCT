@@ -27,7 +27,7 @@ namespace LibFormularios
         {
             DgvTesisPendientesDeSustentacion.DataSource = oEvaluacionTesis.TesisPendientesDeDictamen();
             DgvTesisPendientesDeSustentacion.Columns["CodTesis"].Visible = false;
-            DgvTesisPendientesDeSustentacion.Columns["CodDictamenDeTesis"].Visible = false;
+            //DgvTesisPendientesDeSustentacion.Columns["CodDictamenDeTesis"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["Tema"].Visible = false;
             DgvTesisPendientesDeSustentacion.Columns["Observaciones"].Visible = false;
             //checks
@@ -239,9 +239,9 @@ namespace LibFormularios
                 TxtNombresPresidente.Text = "DAVID REYNALDO";
                 TxtApellidosPresidente.Text = "BERRIOS BECERRA";
             }
-            catch
+            catch(Exception eee)
             {
-                MessageBox.Show("NO HA SELECCIONADO", "ERROR");
+                MessageBox.Show(eee.ToString());
             }
 
             //
@@ -299,6 +299,45 @@ namespace LibFormularios
             }
             return a;
         }
+        public void RefrescarCampos()
+        {
+            TxtExpediente.Text = "";
+            TxtCodTesis.Text = "";
+            TxtNombreTesis.Text = "";
+            TxtEspecialidad.Text = "";
+            DgvInteresados.DataSource = null;
+            TxtPresidente.Text = "";
+            TxtNombresPresidente.Text = "";
+            TxtApellidosPresidente.Text = "";
+
+            txtCodDictaminante1.Text = "";
+            TxtNombresDictaminante1.Text = "";
+            TxtApellidosDictaminante1.Text = "";
+
+            txtCodDictaminante2.Text = "";
+            TxtNombresDictaminante2.Text = "";
+            TxtApellidosDictaminante2.Text = "";
+
+            txtCodDictaminante3.Text = "";
+            TxtNombresDictaminante3.Text = "";
+            TxtApellidosDictaminante3.Text = "";
+
+            txtCodReplicante1.Text = "";
+            txtNombresReplicante1.Text = "";
+            txtApellidosReplicante1.Text = "";
+
+            txtCodReplicante2.Text = "";
+            txtNombresReplicante2.Text = "";
+            txtApellidosReplicante2.Text = "";
+
+            txtCodReplicante3.Text = "";
+            txtNombresReplicante3.Text = "";
+            txtApellidosReplicante3.Text = "";
+
+            txtLugarSustentacion.Text = "";
+
+
+        }
         private void BtnNombrarJE_Click(object sender, EventArgs e)
         {
             try
@@ -335,7 +374,9 @@ namespace LibFormularios
                         MessageBox.Show("RESOLUCION: "+TxtResolucion.Text+" EMITIDA", "CONFIRMACION");
                     }
                     MessageBox.Show("OPERACION REALIZADA EXITOSAMENTE", "CONFIRMACION");
+
                     LlenarTesisPendientes();
+                    RefrescarCampos();
                 }
                 else
                 {
