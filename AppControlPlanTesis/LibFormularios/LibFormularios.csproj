@@ -193,6 +193,12 @@
     <Compile Include="FrmReportesVariios.Designer.cs">
       <DependentUpon>FrmReportesVariios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportesVarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportesVarios.Designer.cs">
+      <DependentUpon>FrmReportesVarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRequisito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportesVariios.resx">
       <DependentUpon>FrmReportesVariios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportesVarios.resx">
+      <DependentUpon>FrmReportesVarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRequisito.resx">
       <DependentUpon>FrmRequisito.cs</DependentUpon>

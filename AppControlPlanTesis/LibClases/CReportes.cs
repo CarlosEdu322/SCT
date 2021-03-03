@@ -22,8 +22,8 @@ namespace LibClases
             aConexion.EjecutarSelect(consulta);
             foreach (DataRow dtRow in aConexion.Datos.Tables[0].Rows)
             {
-                    a.Add(dtRow["Estado"]);
-                    b.Add(dtRow["Numero"]);
+                a.Add(dtRow["Estado"]);
+                b.Add(dtRow["Numero"]);
             }
         }
         public void NumeroDeTesisPorEspecialidad(ArrayList a, ArrayList b)
@@ -38,18 +38,24 @@ namespace LibClases
         }
         public string EstadoProcesoTesis(string pcodTesis)
         {
-            string estado="";
-            string consulta = "select b.NroExpediente, b.Estado from TTesis a inner join TExpediente b on a.CodTesis=b.CodTesis where a.CodTesis='"+pcodTesis+"'";
+            string estado = "";
+            string consulta = "select b.NroExpediente, b.Estado from TTesis a inner join TExpediente b on a.CodTesis=b.CodTesis where a.CodTesis='" + pcodTesis + "'";
             aConexion.EjecutarSelect(consulta);
             foreach (DataRow dtRow in aConexion.Datos.Tables[0].Rows)
             {
-                estado=(dtRow["Estado"]).ToString();
+                estado = (dtRow["Estado"]).ToString();
             }
             return estado;
         }
         public DataTable TesisNoConcluidas()
         {
-            string consulta = "select a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado!='TESIS CONCLUIDA'";
+            string consulta = "select a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado!='TESIS CONCLUIDA' order by Tema";
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable TesisConcluidas()
+        {
+            string consulta = "select a.CodTesis,Titulo,Tema,a.Estado from TExpediente a inner join TTesis b on a.CodTesis=b.CodTesis where a.Estado='TESIS CONCLUIDA' order by Tema";
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }

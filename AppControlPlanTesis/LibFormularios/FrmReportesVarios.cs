@@ -13,17 +13,17 @@ using Microsoft.Reporting.WinForms;
 
 namespace LibFormularios
 {
-    public partial class FrmReportesVariios : Form
+    public partial class FrmReportesVarios : Form
     {
-        public FrmReportesVariios()
+        public FrmReportesVarios()
         {
             InitializeComponent();
         }
 
-        private void FrmReportesVariios_Load(object sender, EventArgs e)
+        private void FrmReportesVarios_Load(object sender, EventArgs e)
         {
             CReportes oReportes = new CReportes();
-            DataTable Resultado = oReportes.TesisNoConcluidas();
+            DataTable Resultado = oReportes.TesisConcluidas();
 
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DsReportes_TTesisPendientes";
@@ -40,13 +40,10 @@ namespace LibFormularios
 
             RvwReporteTesisPendientes.LocalReport.ReportPath = RutaRDLC;
             ReportParameter[] Parametros = new ReportParameter[1];
-            Parametros[0] = new ReportParameter("pTipo", "NO CONCLUIDAS");
+            Parametros[0] = new ReportParameter("pTipo", "CONCLUIDAS");
             RvwReporteTesisPendientes.LocalReport.SetParameters(Parametros);
-        
             RvwReporteTesisPendientes.RefreshReport();
             //this.RvwReporteTesisPendientes.RefreshReport();
         }
-
-
     }
 }

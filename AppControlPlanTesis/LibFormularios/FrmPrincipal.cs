@@ -318,5 +318,10 @@ namespace LibFormularios
         {
             abrirFormHijoEnPanel(new FrmReportesVariios());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirFormHijoEnPanel(new FrmReportesVarios());
+        }
     }
 }
