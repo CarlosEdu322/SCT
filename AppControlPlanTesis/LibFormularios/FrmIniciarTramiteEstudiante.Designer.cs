@@ -1300,7 +1300,7 @@
             this.TabTramites.Controls.Add(this.tabPage1);
             this.TabTramites.Controls.Add(this.tabPage2);
             this.TabTramites.Controls.Add(this.tabPage3);
-            this.TabTramites.Location = new System.Drawing.Point(-45, 169);
+            this.TabTramites.Location = new System.Drawing.Point(-55, 169);
             this.TabTramites.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabTramites.Name = "TabTramites";
             this.TabTramites.SelectedIndex = 0;
@@ -1937,7 +1937,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.CboCodTramite);
             this.panel1.Controls.Add(this.ChlRequisitosXTramite);
-            this.panel1.Location = new System.Drawing.Point(-45, 41);
+            this.panel1.Location = new System.Drawing.Point(-55, 41);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 142);
