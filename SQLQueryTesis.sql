@@ -77,6 +77,9 @@ primary key (CodRequisito),
 )
 go
 
+
+
+
 create table TIniciarTramiteInscripcionPlanDeTesis
 (
 CodTramITTesis varchar(6),--desde 800000
@@ -84,6 +87,7 @@ CodTramite varchar(6),
 CodTesis varchar(6),
 Estado varchar(30),--Recibido--Resuelto
 Observaciones varchar(100),
+FechaEmision smalldatetime,
 primary key (CodTramITTesis),
 foreign key (CodTesis) references TTesis,
 foreign key (CodTramite) references TTramite,
@@ -399,7 +403,40 @@ insert into TExpediente values(@NroExpediente,@CodTesis,'','','','TESIS PREINSCR
 GO 
 SELECT * FROM TExpediente
 --exec GenerarExpediente
+--select a.CodTesis,titulo,tema,fechaemision from TIniciarTramiteInscripcionPlanDeTesis a INNER JOIN TTesis b on a.CodTesis=b.CodTesis where a.CodTesis='700000'
 
+--select Apellidos,Nombres,Especialidad from TDocente where CodDocente in (select CodDocente from TTesis where CodTesis='700000')
+
+//select a.CodTesista,Apellidos,Nombres,DNI from TTesisXTesista a inner join TTesista b on a.CodTesista=b.CodTesista where CodTesis='700000'
+
+CREATE or alter PROCEDURE ConsultarDatosTesis
+    @CodTesis nvarchar(6)  
+AS
+select a.CodTesis,titulo,tema,fechaemision from TIniciarTramiteInscripcionPlanDeTesis a INNER JOIN TTesis b on a.CodTesis=b.CodTesis where a.CodTesis=@CodTesis
+GO 
+exec ConsultarDatosTesis 700000
+
+CREATE or alter PROCEDURE ConsultarDatosDocenteAsesor
+    @CodTesis nvarchar(6)  
+AS
+select Apellidos,Nombres,Especialidad from TDocente where CodDocente in (select CodDocente from TTesis where CodTesis=@CodTesis)
+GO 
+exec ConsultarDatosDocenteAsesor 700000
+
+
+CREATE or alter PROCEDURE ConsultarDatosTesistas
+    @CodTesis nvarchar(6)  
+AS
+select a.CodTesista,Apellidos,Nombres,DNI from TTesisXTesista a inner join TTesista b on a.CodTesista = b.CodTesista where CodTesis = @CodTesis
+GO 
+exec ConsultarDatosTesistas 700000
+
+Create or alter procedure ConsultarEstadoDeTesis
+@CodTesis nvarchar(6)  
+AS
+select Estado from TExpediente where CodTesis=@CodTesis
+GO 
+exec ConsultarEstadoDeTesis 700000
 
 --select Estado, COUNT(Estado) as Numero
 --from TExpediente

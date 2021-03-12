@@ -59,5 +59,31 @@ namespace LibClases
             aConexion.EjecutarSelect(consulta);
             return aConexion.Datos.Tables[0];
         }
+
+
+        public DataTable EstadoTesisInscrita(string pcodtesis)
+        {
+            string consulta = "exec ConsultarDatosTesis "+pcodtesis;
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable ConsultarAsesor(string pcodtesis)
+        {
+            string consulta = "exec ConsultarDatosDocenteAsesor " + pcodtesis;
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable ConsultarDatosTesistas(string pcodtesis)
+        {
+            string consulta = "exec ConsultarDatosTesistas " + pcodtesis;
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
+        public DataTable ConsultarEstadoTesis(string pcodtesis)
+        {
+            string consulta = "exec ConsultarEstadoDeTesis " + pcodtesis;
+            aConexion.EjecutarSelect(consulta);
+            return aConexion.Datos.Tables[0];
+        }
     }
 }

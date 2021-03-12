@@ -49,7 +49,7 @@ namespace LibClases
         public void AgregarTramiteDeInscripcionDePlanDeTesis(List<string> cadenaInscripciondePlanDeTesis)
         {
             //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
-            string consulta = "insert into TIniciarTramiteInscripcionPlanDeTesis values ('" + cadenaInscripciondePlanDeTesis[0] + "','" + cadenaInscripciondePlanDeTesis[1] + "','" + cadenaInscripciondePlanDeTesis[2] + "','RECIBIDO','" + cadenaInscripciondePlanDeTesis[3] + "')";
+            string consulta = "insert into TIniciarTramiteInscripcionPlanDeTesis values ('" + cadenaInscripciondePlanDeTesis[0] + "','" + cadenaInscripciondePlanDeTesis[1] + "','" + cadenaInscripciondePlanDeTesis[2] + "','RECIBIDO','" + cadenaInscripciondePlanDeTesis[3] + "','"+ cadenaInscripciondePlanDeTesis[4] + "')";
             aConexion.EjecutarComando(consulta);
 
 

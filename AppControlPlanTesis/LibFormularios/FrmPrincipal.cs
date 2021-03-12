@@ -321,6 +321,11 @@ namespace LibFormularios
 
         private void button3_Click(object sender, EventArgs e)
         {
+            abrirFormHijoEnPanel(new FrmReporteInscripcionTemaTesis());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             abrirFormHijoEnPanel(new FrmReportesVarios());
         }
     }

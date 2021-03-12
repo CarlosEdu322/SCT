@@ -365,6 +365,7 @@ namespace LibFormularios
                         IniciarTramiteInscripcionPlanDeTesis.Add(codTramite);
                         IniciarTramiteInscripcionPlanDeTesis.Add(TxtCodTesis.Text);
                         IniciarTramiteInscripcionPlanDeTesis.Add(TxtObservaciones.Text);
+                        IniciarTramiteInscripcionPlanDeTesis.Add(DtpFechaActual1.Value.ToShortDateString());
                         //insert into TIniciarTramiteInscripcionPlanDeTesis values ('TR0001','124813','124219','150409','100005','NINGUNA')
                         oTesis.AgregarTramiteDeInscripcionDePlanDeTesis(IniciarTramiteInscripcionPlanDeTesis);
                         MessageBox.Show("HA REGISTRADO EL TRAMITE", "CONFIRMACION");
